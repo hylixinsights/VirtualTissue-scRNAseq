@@ -1,10 +1,10 @@
 {
-  "created_at_utc": "2026-10-27T19:15:14.751593+00:00",
+  "created_at_utc": "2026-10-27T19:31:20.999925+00:00",
   "files": [
     {
       "path": "reports/STATUS.md",
-      "bytes": 1841,
-      "sha256": "4200d24bab45916e3a1b3b00e608c88981d5fd0c5b91bffc6288471165368b10"
+      "bytes": 2560,
+      "sha256": "657f271f3d5c7e568d51bb344ac8219c9ecb6b3a4a743b7b2d11dcd047020ae6"
     },
     {
       "path": "reports/T0.1_environment.md",
@@ -47,6 +47,11 @@
       "sha256": "5274edb924adf58cd1072afc73a55c7933a95be314874b5421f4a319a1a42f48"
     },
     {
+      "path": "reports/cohort_expansion_review.md",
+      "bytes": 10758,
+      "sha256": "edcaee6b9fb57127c26a2e5202eb5dd13541f5f65d459c3d8129d62d954e4e20"
+    },
+    {
       "path": "reports/evidence/PMC12409281.xml",
       "bytes": 170546,
       "sha256": "aa3e9a062f7c351a80385fab6ce44c6e220f5ef9d40c5c1685570cb01bb37795"
@@ -75,6 +80,76 @@
       "path": "reports/evidence/cohort-counts-r-validation.log",
       "bytes": 103,
       "sha256": "48345975508830cf1e7fe26edf02ba11955f7707b25febb9f8abc36cea4e0ee4"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/GSE120575-series.txt",
+      "bytes": 3433,
+      "sha256": "cbfa1e88ff0ff17890043e18d3d0fbb1ca96172cf2e2d9074926f149e058709c"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/GSE123813-series.txt",
+      "bytes": 7245,
+      "sha256": "7f940adeeaa85dbe8c8e5501d15aaf3c8dd669278b432f1710ce1b15288b1c0a"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/GSE164237-series.txt",
+      "bytes": 3981,
+      "sha256": "34ab8c5825e3119ee6e17ca2742683ef58c8678295c64f6caab0c13a4df8e83c"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/GSE272993-series.txt",
+      "bytes": 16462,
+      "sha256": "5fc91a888d2f369e8c055971dddf7edd74244e757efd74db61958cbd6d560ea5"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/Lin2026-EGA.html",
+      "bytes": 19545,
+      "sha256": "8622c92bcf6b5349effca09746aa838eaff8c900dc75149c346011d829553a68"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/Lin2026-article.xml",
+      "bytes": 1832,
+      "sha256": "bad1ab31eca7d182ec410014450d65ef4fd28f7c1f415903941867165f8be204"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/PMC13130630.xml",
+      "bytes": 323250,
+      "sha256": "301312127357b1840abeb62aaf45f7e8c9d784de06b0505dae87c41b4e522024"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/Sun2024.html",
+      "bytes": 127379,
+      "sha256": "41c2c2d68131cf96f8cb32fdc2d70f73ede1c6e76cad9424a18f42c378308112"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/audit.json",
+      "bytes": 2220,
+      "sha256": "82803ff03f1742b077b7e78444a96a7c8b1d4dc0b0b0e98e238a3b3cc6cc1928"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-download.log",
+      "bytes": 8216,
+      "sha256": "edfaedf1d2070b0ec3a50ed38786f61222ed499decbb7ae83ff124429b114bf3"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-s1-extraction.json",
+      "bytes": 5379,
+      "sha256": "9d93d60e1c6aba61b93a36b0a4e55ff39855013aa3edbb1889ef81c2ea6db3d1"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/validation.json",
+      "bytes": 1057,
+      "sha256": "b765792e0a24c5080c13249905c0d22d9fa959ea4dcd9d48e55476837355f00b"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/zenodo-18825477.json",
+      "bytes": 4698,
+      "sha256": "0838781c04eb6232ff53f1bf64c7c737b0879e53a17b155a99db8fb8a002a460"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/zenodo-19586163.json",
+      "bytes": 5831,
+      "sha256": "58a3715290bdfbc557ad06a44492cac555aa025c9b64d1cafd3b27b2041304c8"
     },
     {
       "path": "reports/evidence/environment-system.json",
@@ -203,8 +278,8 @@
     },
     {
       "path": "reports/task-board.json",
-      "bytes": 6910,
-      "sha256": "2e41c07d57185ba0424059bda0c23ea54547375bb570404678b247586fa4552d"
+      "bytes": 8033,
+      "sha256": "8174836d006eaa4feb099aa4575185904a81fc4dd4cb42008bf0fe236b154ccc"
     },
     {
       "path": "tables/S2_metadata_dictionary.tsv",
@@ -223,8 +298,33 @@
     },
     {
       "path": "tables/claims_ledger.tsv",
-      "bytes": 1280,
-      "sha256": "f41237d5a030223b7cf17c47c8aeb7820a0f078c367ef5eb57b865a0fd418afb"
+      "bytes": 2567,
+      "sha256": "bd58fcb1e905489048102d041647e0585cb4a7d664d2996146f1d3c19cf74181"
+    },
+    {
+      "path": "tables/cohort_expansion_candidates.tsv",
+      "bytes": 2606,
+      "sha256": "1f1c65e29c9299cbcad0d7fa5d755c00187bbb851ccbcf0313c5d9fa3c5924ed"
+    },
+    {
+      "path": "tables/cohort_expansion_lin_patients.tsv",
+      "bytes": 2964,
+      "sha256": "6f2a5bb2cca3cbcc358791e84dad1a3679b2d4b144808970061538410a553f42"
+    },
+    {
+      "path": "tables/cohort_expansion_lin_samples.tsv",
+      "bytes": 3455,
+      "sha256": "0e8716ce472ff5cf2d14155127e96d7bad5604b4bae0c071f522e286809376d7"
+    },
+    {
+      "path": "tables/cohort_expansion_sade_patients.tsv",
+      "bytes": 3108,
+      "sha256": "8d6c81eb388456f3ee15dba73748acb4e776fdfbbcbc051f3e6976130f6c602d"
+    },
+    {
+      "path": "tables/cohort_expansion_special_by_arm.tsv",
+      "bytes": 1552,
+      "sha256": "8b3f3061be7023962d9cd6106e96915484f89458929ed92fd75cb04dc2b98e63"
     },
     {
       "path": "tables/eligibility_pending.parquet",
@@ -262,6 +362,11 @@
       "sha256": "727b02f96cef435e044e36fb683a4b910f68049f73f27692042851f6a4351199"
     },
     {
+      "path": "data/COHORT_EXPANSION_MANIFEST.json",
+      "bytes": 5469,
+      "sha256": "c59dde3f61777d0dab50c5573c951ca4ff8c9af762f8894a3688fb709bdcf75a"
+    },
+    {
       "path": "data/MANIFEST.json",
       "bytes": 5609,
       "sha256": "4485211848e3d9099e902c953efce8ede61185a9ea94f6f21ab3b91e6c0372b2"
@@ -270,6 +375,11 @@
       "path": "prereg/FREEZE.json",
       "bytes": 794,
       "sha256": "90bdff3ae7b0cae443b0029ace2bc29e635ce158945898e08eed4e59a36f85df"
+    },
+    {
+      "path": "prereg/amendment-A02-cohort-expansion-draft-2026-10-27.md",
+      "bytes": 5291,
+      "sha256": "aa6601d74c98fea18a427eac53b2563ef6fb3031ac48a86a0f11674d0a2078b8"
     },
     {
       "path": "prereg/plan-v1-original-2026-10-27.md",
@@ -313,8 +423,8 @@
     },
     {
       "path": "DATA_LICENSE.md",
-      "bytes": 1634,
-      "sha256": "670da81c096ed6a894d423fdf0275e8b61c494893b1bab501a08986763aac68e"
+      "bytes": 2296,
+      "sha256": "c586a5b66e2c52de96d6592efb2443b0afca333d641f363bc073350ce1d2dd00"
     },
     {
       "path": ".python-version",

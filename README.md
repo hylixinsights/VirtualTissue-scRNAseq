@@ -2,13 +2,18 @@
 
 Patient-level SPECIAL analysis following the execution plan in the parent
 `scRNAseq` folder. Current outcome: the initial CD8 count audit cannot satisfy
-the planned feasibility threshold. Read
-[the feasibility report](reports/T1.7_preliminary_feasibility.md) and
+the planned feasibility threshold. The user selected cohort expansion; the
+[clinical-source review](reports/cohort_expansion_review.md) and
+[draft amendment](prereg/amendment-A02-cohort-expansion-draft-2026-10-27.md)
+document the next scope decision. Read
+[the original feasibility report](reports/T1.7_preliminary_feasibility.md) and
 [task status](reports/STATUS.md) before resuming.
 
 This is a working acquisition, provenance and cohort-audit project. Dynamics
 models, state calibration, lockbox selection and spatial/Jev integration have
-not been implemented or run. No state changes have been inspected.
+not been implemented or run. No state changes have been computed. Published
+Sade-Feldman state summaries were exposed during an initial workbook inventory;
+the review records why that cohort cannot be claimed as an untouched final test.
 
 ## Layout and data
 
@@ -16,6 +21,7 @@ not been implemented or run. No state changes have been inspected.
   inclusion of nivolumab and pembrolizumab monotherapy.
 - `prereg/`: original plan, amended frozen plan and local freeze record.
 - `data/MANIFEST.json`: source URLs, versions, sizes and verification hashes.
+- `data/COHORT_EXPANSION_MANIFEST.json`: candidate-source integrity and incomplete downloads.
 - `../data/SPECIAL/raw/`: unmodified downloads, outside this repository.
 - `../data/SPECIAL/derived/immune/`: exact per-sample RNA count and metadata exports.
 - `tables/`: clinical, candidate-pair and provisional eligibility tables.
@@ -76,6 +82,13 @@ MPLCONFIGDIR=/tmp/vtsc-matplotlib .venv/bin/python figures/plot_feasibility.py
 The first workbook extraction used the bundled document Python runtime in
 accordance with the spreadsheet skill; `openpyxl` is also pinned locally for
 standalone reproduction. Workbooks are never edited.
+
+For cohort expansion, first run `scripts/extract_lin_clinical.py` with the
+bundled document Python (`pdfplumber`), then
+`.venv/bin/python scripts/audit_cohort_expansion.py`. This audits clinical
+candidates and total CD8 counts only. It does not certify new patients as
+eligible or enable a new treatment arm. See the review for source versions,
+PDF page/worksheet provenance and remaining checks.
 
 Do not run state analyses while the feasibility decision is unresolved. A future
 resumed pipeline must implement and test the T1.4 access guard before using any

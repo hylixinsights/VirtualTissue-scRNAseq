@@ -26,3 +26,5 @@ data/clinical/*
 *.zip
 *.part
 config/local.yaml
+tmp/
+*.qs2

@@ -1,0 +1,24 @@
+cohort	patient_id	arm	max_pre_cd8	max_on_cd8	interval_verified	count_only_candidate_15	count_only_candidate_30	count_only_candidate_50
+SPECIAL	GC14	anti_pd1_monotherapy	0	5	False	False	False	False
+SPECIAL	GC15	anti_pd1_monotherapy	396	311	False	True	True	True
+SPECIAL	GC16	anti_pd1_monotherapy	1	27	False	False	False	False
+SPECIAL	GC17	anti_pd1_monotherapy	13	134	False	False	False	False
+SPECIAL	GC18	anti_pd1_monotherapy	15	34	False	True	False	False
+SPECIAL	GC19	anti_pd1_monotherapy	8	13	False	False	False	False
+SPECIAL	GC20	anti_pd1_monotherapy	25	67	False	True	False	False
+SPECIAL	GC21	anti_pd1_monotherapy	22	76	False	True	False	False
+SPECIAL	GC22	anti_pd1_monotherapy	50	210	False	True	True	True
+SPECIAL	GC23	anti_pd1_monotherapy	6	0	False	False	False	False
+SPECIAL	GC25	anti_pd1_monotherapy	3		False	False	False	False
+SPECIAL	GC26	anti_pd1_monotherapy	11	907	False	False	False	False
+SPECIAL	GC28	combination	440	150	False	True	True	True
+SPECIAL	GC29	anti_pd1_monotherapy	599		False	False	False	False
+SPECIAL	GC30	anti_pd1_monotherapy	11	0	False	False	False	False
+SPECIAL	GC32	combination	1978	54	False	True	True	True
+SPECIAL	GC33	anti_pd1_monotherapy	22	0	False	False	False	False
+SPECIAL	GC34	combination	3	191	False	False	False	False
+SPECIAL	GC36	anti_pd1_monotherapy	187	252	False	True	True	True
+SPECIAL	GC37	combination	28	122	False	True	False	False
+SPECIAL	GC38	combination	196	423	False	True	True	True
+SPECIAL	GC39	anti_pd1_monotherapy			False	False	False	False
+SPECIAL	GC41	combination	205	257	False	True	True	True

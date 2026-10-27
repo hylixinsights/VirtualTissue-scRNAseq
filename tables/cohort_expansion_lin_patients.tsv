@@ -1,0 +1,18 @@
+cohort	patient_id	arm_as_reported	n_pre	n_on	first_on_day	first_pair_interval_days	first_pair_pre_id	first_pair_on_id	clinical_pair	matched_as_reported	status	pending
+Lin2026_in_house	P1	Combo	1	1	12	12	E19306	E19309	True	No	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P2	Combo	1	2	9	9	E19319	E19321	True	No	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P3	Combo	1	1	7	7	E19323	E19325	True	No	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P4	Combo	1	1	9	9	E19327	E19329	True	No	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P5	Combo	1	1	9	9	E19330	E19331	True	Yes	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P6	Combo	1	1	9	9	E19334	E19335	True	Yes	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P7	Mono	1	1	7	7	E19301	E19302	True	Yes	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P8	Mono	1	1	7	7	E19303	E19304	True	Yes	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P9	Mono	1	1	7	7	E19305	E19307	True	Yes	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P10	Mono	1	1	7	7	E19308	E19311	True	Yes	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P11	Mono	1	1	7	7	E19312	E19314	True	Yes	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P12	Mono	1	1	7	7	E19317	E19318	True	Yes	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P13	Combo	1	1	14	14	E23346	E23350	True	Yes	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P14	Combo	1	1	6	6	E23347	E23348	True	Yes	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P15	Combo	1	1	16	16	E23357	E23360	True	Yes	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P16	Combo	1	0			E23358		False	NA	no_on_biopsy_in_S1	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap
+Lin2026_in_house	P17	Combo	1	1	8	8	E19320	E19324	True	Yes	clinical_candidate_only	specific_drug;scrna_presence;cd8_counts;histology;library_chemistry;source_overlap

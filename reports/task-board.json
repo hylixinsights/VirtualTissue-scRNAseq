@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-27T19:11:16.131028+00:00",
+  "updated_at_utc": "2026-10-27T19:30:40.275803+00:00",
   "tasks": [
     {
       "id": "T0.1",
@@ -232,7 +232,37 @@
       "description": "Claims audit**: claims ledger (§12.4); every claim maps to a result file and an evidence class. Optional: run the comp-bio-slop-check skill on the manuscript draft · S"
     }
   ],
-  "next_action": "Review protocol after count-only feasibility failure",
+  "next_action": "A02.2: resolve treatment scope using completed clinical-source review; original primary definition remains active",
   "lockbox_assigned": false,
-  "state_changes_inspected": false
+  "state_changes_inspected": false,
+  "state_changes_inspected_scope": "SPECIAL individual state compositions not inspected; published Sade-Feldman state summary exposure recorded separately",
+  "published_external_state_summary_exposure": "SadeFeldman2018 during initial workbook inventory",
+  "cohort_amendment_status": "A02 draft; no new eligible cohort or treatment-scope activation",
+  "amendment_tasks": [
+    {
+      "id": "A02.1",
+      "status": "complete",
+      "description": "Clinical source screening and candidate upper bounds"
+    },
+    {
+      "id": "A02.2",
+      "status": "pending_user_decision",
+      "description": "Scientific treatment-scope decision"
+    },
+    {
+      "id": "A02.3",
+      "status": "pending",
+      "description": "In-house source identity, matrix presence, CD8 and overlap audit"
+    },
+    {
+      "id": "A02.4",
+      "status": "pending",
+      "description": "Clinical and licence reconciliation"
+    },
+    {
+      "id": "A02.5",
+      "status": "pending",
+      "description": "Amended design/eligibility freeze and split access guard"
+    }
+  ]
 }

@@ -1,0 +1,33 @@
+cohort	patient_id	therapy_as_reported	pure_pd1_label	pre_day	first_on_day	second_on_day	first_pair_interval_days	clinical_pair	specific_drug_verified	cd8_count_verified	source_sheet	source_row	source_columns
+SadeFeldman2018	P1	CTLA4 (baseline); PD1 (post I and II)	False	0	48	437	48	True	False	False	Patient-scRNA data	3	B;E;G;H;I
+SadeFeldman2018	P2	PD1	True	0	35		35	True	False	False	Patient-scRNA data	4	B;E;G;H;I
+SadeFeldman2018	P3	PD1	True	0	63	161	63	True	False	False	Patient-scRNA data	5	B;E;G;H;I
+SadeFeldman2018	P4	CTLA4+PD1	False	-2	35		37	True	False	False	Patient-scRNA data	6	B;E;G;H;I
+SadeFeldman2018	P5	PD1	True		199			False	False	False	Patient-scRNA data	7	B;E;G;H;I
+SadeFeldman2018	P6	CTLA4 (baseline) ; PD1 (post I)	False	-70	270		340	True	False	False	Patient-scRNA data	8	B;E;G;H;I
+SadeFeldman2018	P7	CTLA4+PD1	False	0	22		22	True	False	False	Patient-scRNA data	9	B;E;G;H;I
+SadeFeldman2018	P8	CTLA4+PD1	False	-12	62		74	True	False	False	Patient-scRNA data	10	B;E;G;H;I
+SadeFeldman2018	P10	PD1	True		760			False	False	False	Patient-scRNA data	11	B;E;G;H;I
+SadeFeldman2018	P11	PD1	True		118			False	False	False	Patient-scRNA data	12	B;E;G;H;I
+SadeFeldman2018	P12	PD1	True	-16	77		93	True	False	False	Patient-scRNA data	13	B;E;G;H;I
+SadeFeldman2018	P13	CTLA4+PD1	False		297			False	False	False	Patient-scRNA data	14	B;E;G;H;I
+SadeFeldman2018	P14	PD1	True		462			False	False	False	Patient-scRNA data	15	B;E;G;H;I
+SadeFeldman2018	P15	PD1	True	0	73		73	True	False	False	Patient-scRNA data	16	B;E;G;H;I
+SadeFeldman2018	P16	PD1	True		67			False	False	False	Patient-scRNA data	17	B;E;G;H;I
+SadeFeldman2018	P17	PD1	True		61			False	False	False	Patient-scRNA data	18	B;E;G;H;I
+SadeFeldman2018	P18	PD1	True		237			False	False	False	Patient-scRNA data	19	B;E;G;H;I
+SadeFeldman2018	P19	PD1	True		21			False	False	False	Patient-scRNA data	20	B;E;G;H;I
+SadeFeldman2018	P20	PD1	True	0	199		199	True	False	False	Patient-scRNA data	21	B;E;G;H;I
+SadeFeldman2018	P21	PD1	True		867			False	False	False	Patient-scRNA data	22	B;E;G;H;I
+SadeFeldman2018	P22	PD1	True		31			False	False	False	Patient-scRNA data	23	B;E;G;H;I
+SadeFeldman2018	P23	PD1	True		403	622		False	False	False	Patient-scRNA data	24	B;E;G;H;I
+SadeFeldman2018	P24	PD1	True	0				False	False	False	Patient-scRNA data	25	B;E;G;H;I
+SadeFeldman2018	P25	PD1	True	0				False	False	False	Patient-scRNA data	26	B;E;G;H;I
+SadeFeldman2018	P26	CTLA4+PD1	False	-56				False	False	False	Patient-scRNA data	27	B;E;G;H;I
+SadeFeldman2018	P27	PD1	True	-35				False	False	False	Patient-scRNA data	28	B;E;G;H;I
+SadeFeldman2018	P28	CTLA4+PD1	False	0	41	89	41	True	False	False	Patient-scRNA data	29	B;E;G;H;I
+SadeFeldman2018	P29	PD1	True	-67				False	False	False	Patient-scRNA data	30	B;E;G;H;I
+SadeFeldman2018	P30	PD1	True		573			False	False	False	Patient-scRNA data	31	B;E;G;H;I
+SadeFeldman2018	P31	PD1	True	-7				False	False	False	Patient-scRNA data	32	B;E;G;H;I
+SadeFeldman2018	P33	PD1	True	-66				False	False	False	Patient-scRNA data	33	B;E;G;H;I
+SadeFeldman2018	P35	PD1	True	-31				False	False	False	Patient-scRNA data	34	B;E;G;H;I

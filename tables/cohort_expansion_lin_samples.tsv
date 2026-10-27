@@ -1,0 +1,35 @@
+cohort	patient_id	sample_id	timepoint	arm_as_reported	day_as_reported	anatomical_site	matched_as_reported	drug_name	cd8_count	scrna_presence_verified	visium_id_as_reported	source_pdf_page	source_table_row
+Lin2026_in_house	P1	E19306	pre	Combo	0	subcutaneous(back)	No	not_reported_in_S1		False		11	2
+Lin2026_in_house	P1	E19309	on	Combo	12	subcutaneous(abdomen)	No	not_reported_in_S1		False		11	3
+Lin2026_in_house	P2	E19319	pre	Combo	0	subcutaneous(lower leg right)	No	not_reported_in_S1		False		11	4
+Lin2026_in_house	P2	E19321	on	Combo	9	subcutaneous(back)	No	not_reported_in_S1		False	D2816	11	5
+Lin2026_in_house	P2	E19326	on	Combo	42	skin(heel right)	No	not_reported_in_S1		False	D2989	11	6
+Lin2026_in_house	P3	E19323	pre	Combo	0	skin(flank)	No	not_reported_in_S1		False		11	7
+Lin2026_in_house	P3	E19325	on	Combo	7	LN(flank)	No	not_reported_in_S1		False		11	8
+Lin2026_in_house	P4	E19327	pre	Combo	0	subcutaneous(thoracic wall submammary left)	No	not_reported_in_S1		False		11	9
+Lin2026_in_house	P4	E19329	on	Combo	9	subcutaneous(lower abdomen right)	No	not_reported_in_S1		False		11	10
+Lin2026_in_house	P5	E19330	pre	Combo	0	Satellite meta on vulva	Yes	not_reported_in_S1		False		11	11
+Lin2026_in_house	P5	E19331	on	Combo	9	Satellite meta on vulva	Yes	not_reported_in_S1		False		11	12
+Lin2026_in_house	P6	E19334	pre	Combo	0	Vagina	Yes	not_reported_in_S1		False	D993	11	13
+Lin2026_in_house	P6	E19335	on	Combo	9	Vagina	Yes	not_reported_in_S1		False		11	14
+Lin2026_in_house	P7	E19301	pre	Mono	0	skin	Yes	not_reported_in_S1		False		11	15
+Lin2026_in_house	P7	E19302	on	Mono	7	skin	Yes	not_reported_in_S1		False		11	16
+Lin2026_in_house	P8	E19303	pre	Mono	0	subcutaneous(axillary)	Yes	not_reported_in_S1		False		11	17
+Lin2026_in_house	P8	E19304	on	Mono	7	subcutaneous(axillary)	Yes	not_reported_in_S1		False		11	18
+Lin2026_in_house	P9	E19305	pre	Mono	0	inguinal conglomerate	Yes	not_reported_in_S1		False		11	19
+Lin2026_in_house	P9	E19307	on	Mono	7	inguinal conglomerate	Yes	not_reported_in_S1		False		11	20
+Lin2026_in_house	P10	E19308	pre	Mono	0	skin(thigh)	Yes	not_reported_in_S1		False		11	21
+Lin2026_in_house	P10	E19311	on	Mono	7	skin(thigh)	Yes	not_reported_in_S1		False		11	22
+Lin2026_in_house	P11	E19312	pre	Mono	0	subcutaneous(flank left)	Yes	not_reported_in_S1		False		11	23
+Lin2026_in_house	P11	E19314	on	Mono	7	subcutaneous(flank left)	Yes	not_reported_in_S1		False		11	24
+Lin2026_in_house	P12	E19317	pre	Mono	0	skin(lower leg)	Yes	not_reported_in_S1		False	D2398	11	25
+Lin2026_in_house	P12	E19318	on	Mono	7	skin(lower leg)	Yes	not_reported_in_S1		False		11	26
+Lin2026_in_house	P13	E23346	pre	Combo	0	skin	Yes	not_reported_in_S1		False		11	27
+Lin2026_in_house	P13	E23350	on	Combo	14	skin	Yes	not_reported_in_S1		False		11	28
+Lin2026_in_house	P14	E23347	pre	Combo	0	subcutaneous(metastatic)	Yes	not_reported_in_S1		False		11	29
+Lin2026_in_house	P14	E23348	on	Combo	6	subcutaneous(metastatic)	Yes	not_reported_in_S1		False		11	30
+Lin2026_in_house	P15	E23357	pre	Combo	0	skin(metastatic)	Yes	not_reported_in_S1		False		11	31
+Lin2026_in_house	P15	E23360	on	Combo	16	skin(metastatic)	Yes	not_reported_in_S1		False		11	32
+Lin2026_in_house	P16	E23358	pre	Combo	0	skin(metastatic)	NA	not_reported_in_S1		False		11	33
+Lin2026_in_house	P17	E19320	pre	Combo	0	Skin (upper abdomen right)	Yes	not_reported_in_S1		False		11	34
+Lin2026_in_house	P17	E19324	on	Combo	8	Skin (upper abdomen right)	Yes	not_reported_in_S1		False		11	35

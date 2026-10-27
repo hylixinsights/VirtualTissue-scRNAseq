@@ -25,3 +25,15 @@ are retained. Original downloads and derived data live outside the Git repositor
 
 This is the project data-use policy. Any release must include the applicable
 source notices and transformation provenance for each asset.
+
+## Cohort-expansion source screening
+
+Lin2026 Zenodo v2 (`doi:10.5281/zenodo.19586163`) declares CC BY 4.0 in its
+downloaded metadata. Its integrated object also incorporates upstream studies,
+including SPECIAL according to Table S2A. Preserve source-specific terms;
+do not treat the deposit-level licence as proof that SPECIAL-derived content
+has lost its CC BY-NC-SA restrictions. Article supplements, GEO files and
+preprints keep their own source terms. Unverified terms remain unresolved in
+`data/COHORT_EXPANSION_MANIFEST.json`; this screening is not a redistribution
+licence audit. No candidate data have been released or assigned the code's MIT
+licence.

@@ -25,6 +25,19 @@ The user approved including both nivolumab and pembrolizumab; no other scientifi
 threshold was relaxed. No patients were assigned to a lockbox, no state changes
 were inspected, and no model/space/Jev work was started.
 
-Next action: decide whether to revise the primary cohort, authorize a limited
-full-TME lineage audit, or reformulate SPECIAL as an exploratory study. Preserve
-the current freeze and log any amendment before outcome analysis.
+## Cohort expansion selected by the user
+
+The clinical-source review is complete; read `cohort_expansion_review.md` and
+the A02 draft in `prereg/`. Lin2026 adds at most six early monotherapy pairs,
+giving an optimistic bound of nine with SPECIAL, still below the minimum.
+These six have unverified paired scRNA presence, total CD8 and exact drug names.
+The proposed Mono/Combo expansion has an optimistic bound of 23 candidates;
+it requires an explicit new treatment-scope decision and further auditing.
+
+Next action: resolve A02.2, then verify actual candidate data and eligibility.
+The current freeze remains valid and the original primary scope remains
+monotherapy. No gate has been passed by the expanded bounds.
+
+No state changes were computed. Published Sade-Feldman state summaries were
+inadvertently printed during workbook inventory; this exposure is recorded in
+the review and rules out an untouched-final-test claim for that cohort.

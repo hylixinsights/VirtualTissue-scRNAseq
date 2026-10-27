@@ -1,0 +1,89 @@
+{
+  "status": "necessary_bound_only_no_G1_pass",
+  "input_hashes": {
+    "reports/evidence/cohort-expansion/lin-s1-extraction.json": "9d93d60e1c6aba61b93a36b0a4e55ff39855013aa3edbb1889ef81c2ea6db3d1",
+    "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SadeFeldman2018/raw/Cell2018_TableS1.xlsx": "2255f3595381391921fe17635eaf001d996fa15c277d9b168e5eebb1fb69c9ed",
+    "tables/samples.tsv": "9ff47564a7f3592bce714d3484cbc358dcbef75675b87f71a7197bafeb7f863e"
+  },
+  "lin": {
+    "clinical_samples": 34,
+    "clinical_patients": 17,
+    "clinical_paired_patients": 16,
+    "mono_pair_ids": [
+      "P7",
+      "P8",
+      "P9",
+      "P10",
+      "P11",
+      "P12"
+    ],
+    "combo_pair_ids": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P13",
+      "P14",
+      "P15",
+      "P17"
+    ],
+    "mono_first_on_days": [
+      7
+    ],
+    "drug_names_verified": false,
+    "cd8_counts_verified": false
+  },
+  "sade_feldman": {
+    "clinical_patients": 32,
+    "clinical_paired_patients": 11,
+    "pure_pd1_clinical_pair_ids": [
+      "P2",
+      "P3",
+      "P12",
+      "P15",
+      "P20"
+    ],
+    "pure_pd1_first_on_days": [
+      35,
+      63,
+      77,
+      73,
+      199
+    ],
+    "pure_pd1_interbiopsy_days": [
+      35,
+      63,
+      93,
+      73,
+      199
+    ],
+    "drug_names_verified": false,
+    "cd8_counts_verified": false,
+    "intact_final_test_claim_allowed": false
+  },
+  "special": {
+    "mono_count_candidate_30_ids": [
+      "GC15",
+      "GC22",
+      "GC36"
+    ],
+    "combo_count_candidate_30_ids": [
+      "GC28",
+      "GC32",
+      "GC38",
+      "GC41"
+    ]
+  },
+  "optimistic_bounds_not_eligibility": {
+    "early_mono_special_plus_lin": 9,
+    "late_and_early_mono_with_sade": 14,
+    "early_mono_and_combo_special_plus_lin": 23,
+    "required_original_development_plus_lockbox": 14,
+    "assumptions": "All clinical candidates have paired scRNA and >=30 CD8, allowed drugs, valid intervals and no cross-study duplicates; NONE of these aggregate bounds confirms eligibility."
+  },
+  "state_changes_computed": false,
+  "lockbox_assigned": false,
+  "published_sade_state_summaries_exposed_during_initial_sheet_inventory": true
+}

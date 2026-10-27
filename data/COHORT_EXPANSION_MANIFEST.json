@@ -1,0 +1,127 @@
+{
+  "created_at_utc": "2026-10-27T19:30:40.274809+00:00",
+  "screening_only": true,
+  "files": [
+    {
+      "path": "../data/Lin2026/raw/mmc1.pdf",
+      "source_url": "https://ars.els-cdn.com/content/image/1-s2.0-S1535610826003843-mmc1.pdf",
+      "licence_note": "Article supplement; reuse terms not independently verified",
+      "status": "hashed_only",
+      "bytes": 5264978,
+      "sha256": "4650b9dc513cce943bca51431b37f32ca3d0c2ca9e22dd4f8302365ebba64241",
+      "md5": "80be575cac3e7f7182984c052eb697e1",
+      "source_checksum": null
+    },
+    {
+      "path": "../data/Lin2026/raw/mmc2.xlsx",
+      "source_url": "https://ars.els-cdn.com/content/image/1-s2.0-S1535610826003843-mmc2.xlsx",
+      "licence_note": "Article supplement; reuse terms not independently verified",
+      "status": "hashed_only",
+      "bytes": 15372,
+      "sha256": "3bd31656d63bb662755e4ffb4ea71992f8db5540c9ff51df8ba02c7c337a7c1e",
+      "md5": "94cccfe9fe77a795f9870804bcb76533",
+      "source_checksum": null
+    },
+    {
+      "path": "../data/SadeFeldman2018/raw/Cell2018_TableS1.xlsx",
+      "source_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0092867418313941-mmc1.xlsx",
+      "licence_note": "Article supplement; reuse terms not independently verified",
+      "status": "hashed_only",
+      "bytes": 1352332,
+      "sha256": "2255f3595381391921fe17635eaf001d996fa15c277d9b168e5eebb1fb69c9ed",
+      "md5": "17b4c7a2e00362aa8cedae4f1991cb93",
+      "source_checksum": null
+    },
+    {
+      "path": "../data/SadeFeldman2018/raw/GSE120575_patient_ID_single_cells.txt.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE120nnn/GSE120575/suppl/GSE120575_patient_ID_single_cells.txt.gz",
+      "licence_note": "GEO source terms; explicit file reuse licence not independently verified",
+      "status": "hashed_only",
+      "bytes": 83035,
+      "sha256": "6a228029df713006fb465f02cc3e1e17540b0ddaf4b69374b116aeb135cdf73f",
+      "md5": "1b2788e594d9ee3ebf24b419a7fec295",
+      "source_checksum": null
+    },
+    {
+      "path": "../data/Liu2026/raw/biorxiv-2026.09.12.751186v1.pdf",
+      "source_url": "https://www.biorxiv.org/content/10.64898/2026.09.12.751186v1.full.pdf",
+      "licence_note": "Source preprint; data-release status distinct from article terms",
+      "status": "hashed_only",
+      "bytes": 17231197,
+      "sha256": "cd28ef3b508e055699e3c05c468b58acefe968d4f847bf1bff073e2f3b3d9e49",
+      "md5": "3735f5fd341d6fc52eca3915c567935d",
+      "source_checksum": null
+    },
+    {
+      "path": "../data/Lin2026/raw/seurat_full.qs2.part",
+      "source_url": "https://zenodo.org/api/records/19586163/files/seurat_full.qs2/content",
+      "expected_bytes": 4021369094,
+      "source_checksum": "md5:a3486788163889f8cc910ea0115d70ac",
+      "bytes": 109383680,
+      "status": "partial_stopped_not_valid_for_analysis",
+      "partial_sha256": "f9f28af6694bd91b209c2d971d5eb7f5840dafe6ce255ba9cd7386f6ccd606dc",
+      "licence_note": "Deposit declares CC-BY-4.0; upstream cohort terms require separate reconciliation",
+      "reason_stopped": "Clinical source upper bound insufficient for current primary estimand; no object loaded"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/GSE120575-series.txt",
+      "status": "saved_source_snapshot",
+      "bytes": 3433,
+      "sha256": "cbfa1e88ff0ff17890043e18d3d0fbb1ca96172cf2e2d9074926f149e058709c"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/GSE123813-series.txt",
+      "status": "saved_source_snapshot",
+      "bytes": 7245,
+      "sha256": "7f940adeeaa85dbe8c8e5501d15aaf3c8dd669278b432f1710ce1b15288b1c0a"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/GSE164237-series.txt",
+      "status": "saved_source_snapshot",
+      "bytes": 3981,
+      "sha256": "34ab8c5825e3119ee6e17ca2742683ef58c8678295c64f6caab0c13a4df8e83c"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/GSE272993-series.txt",
+      "status": "saved_source_snapshot",
+      "bytes": 16462,
+      "sha256": "5fc91a888d2f369e8c055971dddf7edd74244e757efd74db61958cbd6d560ea5"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/Lin2026-EGA.html",
+      "status": "saved_source_snapshot",
+      "bytes": 19545,
+      "sha256": "8622c92bcf6b5349effca09746aa838eaff8c900dc75149c346011d829553a68"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/Lin2026-article.xml",
+      "status": "saved_source_snapshot",
+      "bytes": 1832,
+      "sha256": "bad1ab31eca7d182ec410014450d65ef4fd28f7c1f415903941867165f8be204"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/PMC13130630.xml",
+      "status": "saved_source_snapshot",
+      "bytes": 323250,
+      "sha256": "301312127357b1840abeb62aaf45f7e8c9d784de06b0505dae87c41b4e522024"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/Sun2024.html",
+      "status": "saved_source_snapshot",
+      "bytes": 127379,
+      "sha256": "41c2c2d68131cf96f8cb32fdc2d70f73ede1c6e76cad9424a18f42c378308112"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/zenodo-18825477.json",
+      "status": "saved_source_snapshot",
+      "bytes": 4698,
+      "sha256": "0838781c04eb6232ff53f1bf64c7c737b0879e53a17b155a99db8fb8a002a460"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/zenodo-19586163.json",
+      "status": "saved_source_snapshot",
+      "bytes": 5831,
+      "sha256": "58a3715290bdfbc557ad06a44492cac555aa025c9b64d1cafd3b27b2041304c8"
+    }
+  ]
+}
