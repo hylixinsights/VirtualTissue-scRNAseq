@@ -1,5 +1,5 @@
 {
-  "created_at_utc": "2026-10-27T19:31:20.961970+00:00",
+  "created_at_utc": "2026-10-27T19:32:16.357996+00:00",
   "deterministic_audit_rerun": true,
   "source_manifest_hashes_valid": true,
   "claims_ledger_hashes_valid": true,
@@ -7,11 +7,11 @@
   "clinical_table_totals_checked": true,
   "scope": "metadata-only audit; no CD8 verification for Lin/Sade; no model tests",
   "output_hashes": {
-    "tables/cohort_expansion_candidates.tsv": "1f1c65e29c9299cbcad0d7fa5d755c00187bbb851ccbcf0313c5d9fa3c5924ed",
-    "tables/cohort_expansion_lin_patients.tsv": "6f2a5bb2cca3cbcc358791e84dad1a3679b2d4b144808970061538410a553f42",
-    "tables/cohort_expansion_lin_samples.tsv": "0e8716ce472ff5cf2d14155127e96d7bad5604b4bae0c071f522e286809376d7",
-    "tables/cohort_expansion_sade_patients.tsv": "8d6c81eb388456f3ee15dba73748acb4e776fdfbbcbc051f3e6976130f6c602d",
-    "tables/cohort_expansion_special_by_arm.tsv": "8b3f3061be7023962d9cd6106e96915484f89458929ed92fd75cb04dc2b98e63",
+    "tables/cohort_expansion_candidates.tsv": "154a65b249728429eac7b4edff60e9a3cdbdf96244d1574950c5ace717258eee",
+    "tables/cohort_expansion_lin_patients.tsv": "115f442ad9470471d0d4fd148f5857e7d7c04cc21effa2edff2aff2359d3edbf",
+    "tables/cohort_expansion_lin_samples.tsv": "1933ee8c5a0446478e78688973cfb1f1a8d9077900e4cc663aaa538a46f553cf",
+    "tables/cohort_expansion_sade_patients.tsv": "2d877825eddc90ee3b7310afd51e1031a4416805c66f3fcb181d86e1298ee50f",
+    "tables/cohort_expansion_special_by_arm.tsv": "335d7bf4675fae525e28d1da6770a639bdbc6ac557ba1ad72bdb1b16e1524d00",
     "reports/evidence/cohort-expansion/audit.json": "82803ff03f1742b077b7e78444a96a7c8b1d4dc0b0b0e98e238a3b3cc6cc1928"
   }
 }

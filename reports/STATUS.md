@@ -22,8 +22,8 @@ because individual biopsy intervals are missing.
 
 Read `T1.7_preliminary_feasibility.md` for the finding and revision options.
 The user approved including both nivolumab and pembrolizumab; no other scientific
-threshold was relaxed. No patients were assigned to a lockbox, no state changes
-were inspected, and no model/space/Jev work was started.
+threshold was relaxed. No patients were assigned to a lockbox, no SPECIAL state
+changes were inspected, and no model/space/Jev work was started.
 
 ## Cohort expansion selected by the user
 

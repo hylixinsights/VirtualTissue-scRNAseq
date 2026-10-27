@@ -19,7 +19,7 @@ EVIDENCE = ROOT / "reports/evidence/cohort-expansion"
 
 def save_table(name, rows):
     with (ROOT / "tables" / name).open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]), delimiter="\t")
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]), delimiter="\t", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
