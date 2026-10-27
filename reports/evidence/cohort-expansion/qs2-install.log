@@ -1,0 +1,8 @@
+also installing the dependencies ‘RcppParallel’, ‘stringfish’
+
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/RcppParallel_6.2.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/stringfish_0.19.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/qs2_0.3.1.tgz'
+
+The downloaded binary packages are in
+	/var/folders/b1/43cs4y810sn370h8x131ntd40000gn/T//RtmptOPqoU/downloaded_packages

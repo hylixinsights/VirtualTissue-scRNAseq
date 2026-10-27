@@ -1,0 +1,16 @@
+{
+  "synthetic_only": true,
+  "rows": 400,
+  "checks": {
+    "native": {
+      "all_metadata_values_match_R": true,
+      "unsafe_limit_rejected": true,
+      "discarded_numeric_arrays": 2
+    },
+    "xdr": {
+      "all_metadata_values_match_R": true,
+      "unsafe_limit_rejected": true,
+      "discarded_numeric_arrays": 2
+    }
+  }
+}

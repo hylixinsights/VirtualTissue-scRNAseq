@@ -1,0 +1,11 @@
+[{"accession_id":"EGAN50000456581","title":"Patient 6_combi-day0","description":"Melanoma patient at Day0","biological_sex":"female","subject_id":"Patient 6_combi","phenotype":"Primary Melanoma"},
+{"accession_id":"EGAN50000456582","title":"Patient 12_mono-day0","description":"Melanoma patient at Day0","biological_sex":"female","subject_id":"Patient 12_mono","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000456583","title":"Patient 2_combi-day0","description":"Melanoma patient at Day0","biological_sex":"male","subject_id":"Patient 2_combi","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000456584","title":"Patient 2_combi-day9","description":"Melanoma patient under aPD1+CTLA4 therapy","biological_sex":"male","subject_id":"Patient 2_combi","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000456585","title":"Patient13_combi-day0","description":"Melanoma patient at Day0","biological_sex":"male","subject_id":"Patient13_combi","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000456586","title":"Patient13_combi-day14","description":"Melanoma patient under aPD1+CTLA4 therapy","biological_sex":"male","subject_id":"Patient13_combi","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000456587","title":"Patient14_combi-day0","description":"Melanoma patient at Day0","biological_sex":"male","subject_id":"Patient14_combi","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000456588","title":"Patient14_combi-day6","description":"Melanoma patient under aPD1+CTLA4 therapy","biological_sex":"male","subject_id":"Patient14_combi","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000456589","title":"Patient15_combi-day0","description":"Melanoma patient at Day0","biological_sex":"male","subject_id":"Patient15_combi","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000456590","title":"Patient15_combi-day16","description":"Melanoma patient under aPD1+CTLA4 therapy","biological_sex":"male","subject_id":"Patient15_combi","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000456591","title":"Patient16_combi-day0","description":"Melanoma patient at Day0","biological_sex":"male","subject_id":"Patient16_combi","phenotype":"Metastatic Melanoma"}]

@@ -1,9 +1,13 @@
 # A02 — Cohort expansion after feasibility failure
 
-Status: clinical-source audit completed; **treatment/estimand change proposed,
-not activated**. The user authorized revising/expanding the primary cohort.
-The currently approved primary drugs remain nivolumab and pembrolizumab in
-monotherapy. The frozen files referenced by `FREEZE.json` are unchanged.
+Status: **user approved auditing monotherapy and combination as separate strata**
+on 2026-10-27. Clinical-source screening and source-metadata CD8 counting are
+complete. The necessary count prerequisite fails again: 12 candidates at ≥30,
+comprising 4 Mono and 8 Combo, before unresolved exclusions. Raw-matrix alignment
+and clinical reconciliation remain incomplete. The final analysis estimand,
+eligibility and split remain unfrozen.
+The original monotherapy freeze referenced by `FREEZE.json` is unchanged;
+`config/cohort-expansion-audit.yaml` records the separately approved audit scope.
 
 ## Trigger and completed work
 
@@ -15,13 +19,19 @@ source rows, bounds and unresolved fields are in
 `reports/cohort_expansion_review.md`. No eligible-patient manifest or split has
 been frozen for an amended study.
 
-## Proposed route A: treatment-stratified early melanoma ICI
+## Selected audit route A: treatment-stratified early melanoma ICI
 
 Audit SPECIAL and Lin's in-house patients as independent source cohorts. Keep
 nivolumab/pembrolizumab monotherapy and anti-PD-1 + anti-CTLA-4 combination as
 separate treatment strata, subject to exact drug/histology verification.
 Do not include blood, BCC/SCC, toripalimab or reused atlas patients automatically.
-The clinical/count-only upper bound is 23 patients, not a verified analysis n.
+The initial clinical bound of 23 is superseded by the deposited-object result:
+only 8 Lin patients have both Pre/On labels, and 5 meet ≥30 CD8 in both. Together
+with 7 SPECIAL candidates this gives 12 (4 Mono, 8 Combo), not a verified analysis
+n. Three lineage-label counting rules give the same qualifying patient sets;
+the specific Lin rule includes explicitly labelled cycling CD8 and excludes gdT.
+At ≥15 there are 17 candidates; this sensitivity result does not replace ≥30.
+See `reports/evidence/cohort-expansion/lin-object-count-audit.json`.
 
 Proposed endpoint: early on-treatment tumour CD8 state composition conditional
 on baseline composition/environment, known treatment regimen, and measured
@@ -68,10 +78,10 @@ final validation. Keep it for labelled development/transport uses if appropriate
 | ID | Task / dependency | Deliverable and acceptance | Supplement |
 |---|---|---|---|
 | A02.1 | Clinical source screening; after failed feasibility precheck | Complete: candidate register, clinical rows, hashed bounds | S1–S2; S1 flow update after eligibility |
-| A02.2 | Resolve new treatment scope; after A02.1 | Explicit user decision recorded; otherwise original scope remains | S1 protocol amendment |
-| A02.3 | Lin in-house identity, raw-count availability, CD8 totals and overlap; after A02.2 for route A | Verified source object/subset and checksum; cell/sample alignment; cohort-qualified patient IDs; counts only | S1–S3; sample dictionary |
-| A02.4 | Drug, timing, lesion, chemistry, histology and licence reconciliation; after A02.3 | Required fields verified or exclusion reasons; no guessed intervals | S1–S3; eligibility and licence tables |
-| A02.5 | Freeze amended estimand and eligibility before states; after A02.4 | Feasible per-arm patient allocation, model-size justification, deterministic pair/split policy and access-guard tests | S1, statistical methods and claims ledger |
+| A02.2 | Resolve new treatment scope; after A02.1 | Complete: user selected monotherapy and combination in separate strata | S1 protocol amendment |
+| A02.3 | Lin in-house identity, raw-count availability, CD8 totals and overlap; after A02.2 for route A | Partial: source checksum, metadata counts and explicit SPECIAL reuse audited; raw-count alignment and exact library mapping unresolved | S1–S3; sample dictionary |
+| A02.4 | Drug, timing, lesion, chemistry, histology and licence reconciliation; after A02.3 | Partial: public clinical/EGA sources audited; missing library crosswalk, drug/interval/lesion/histology fields and chemistry conflict documented | S1–S3; eligibility and licence tables |
+| A02.5 | Freeze amended estimand and eligibility before states; after A02.4 | Not started: numerical prerequisite fails; new source evidence required before model-size/split/access-guard work | S1, statistical methods and claims ledger |
 | T1.4 onward | Resume the original ladder; after A02.5 | Original acceptance criteria with explicit amendment mappings | Original S1–S13 plan |
 
 The original FREEZE remains an immutable record. A02 must receive its own

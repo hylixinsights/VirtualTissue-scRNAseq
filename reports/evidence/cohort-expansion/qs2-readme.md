@@ -1,0 +1,264 @@
+qs2
+================
+
+[![R-CMD-check](https://github.com/qsbase/qs2/workflows/R-CMD-check/badge.svg)](https://github.com/qsbase/qs2/actions)
+[![CRAN-Status-Badge](https://www.r-pkg.org/badges/version/qs2)](https://cran.r-project.org/package=qs2)
+[![CRAN-Downloads-Badge](https://cranlogs.r-pkg.org/badges/qs2)](https://cran.r-project.org/package=qs2)
+[![CRAN-Downloads-Total-Badge](https://cranlogs.r-pkg.org/badges/grand-total/qs2)](https://cran.r-project.org/package=qs2)
+
+*qs2: a framework for efficient serialization*
+
+`qs2` is the successor to the `qs` package that introduces two new
+formats: `qs2` and `qdata`. The goal is to have reliable and fast
+performance for saving and loading objects in R.
+
+The `qs2` format directly uses R serialization (via the
+`R_Serialize`/`R_Unserialize` C API) while improving underlying
+compression and disk IO patterns. If you are familiar with the `qs`
+package, the benefits and usage are the same.
+
+``` r
+qs_save(data, "myfile.qs2")
+data <- qs_read("myfile.qs2")
+```
+
+Use the file extension `qs2` to distinguish it from the original `qs`
+package. It is not compatible with the original `qs` format.
+
+## Installation
+
+``` r
+install.packages("qs2")
+```
+
+On x64 Mac or Linux (x86 only), you can gain a little more performance
+with the following configure flag:
+
+``` r
+remotes::install_cran("qs2", type = "source", configure.args = "--with-simd=AVX2")
+```
+
+Multi-threading in `qs2` uses the `Intel Thread Building Blocks`
+framework via the `RcppParallel` package.
+
+## Converting qs2 to RDS
+
+Because the `qs2` format directly uses R serialization, you can convert
+it to RDS and vice versa.
+
+``` r
+file_qs2 <- tempfile(fileext = ".qs2")
+file_rds <- tempfile(fileext = ".RDS")
+x <- runif(1e6)
+
+# save `x` with qs_save
+qs_save(x, file_qs2)
+
+# convert the file to RDS
+qs_to_rds(input_file = file_qs2, output_file = file_rds)
+
+# read `x` back in with `readRDS`
+xrds <- readRDS(file_rds)
+stopifnot(identical(x, xrds))
+```
+
+## Validating file integrity
+
+The `qs2` format saves an internal checksum. This can be used to test
+for file corruption before deserialization via the `validate_checksum`
+parameter, but has a minor performance penalty.
+
+``` r
+qs_save(data, "myfile.qs2")
+data <- qs_read("myfile.qs2", validate_checksum = TRUE)
+```
+
+# Bindings to ZSTD compression library
+
+The package exposes the ZSTD compression library for both in memory data
+and file workflows.
+
+## In memory compression and decompression
+
+Use these functions when you already have raw vectors in memory and want
+direct control of compression.
+
+``` r
+x <- serialize(mtcars, connection = NULL)
+xz <- zstd_compress_raw(x, compress_level = 3)
+x2 <- zstd_decompress_raw(xz)
+stopifnot(identical(x, x2))
+```
+
+## File compression
+
+These functions mirror typical file compression tools and keep the
+workflow simple when you want explicit input and output files.
+
+``` r
+infile <- tempfile()
+writeBin(as.raw(1:5), infile)
+zfile <- tempfile(fileext = ".zst")
+zstd_compress_file(infile, zfile, compress_level = 1)
+outfile <- tempfile()
+zstd_decompress_file(zfile, outfile)
+stopifnot(identical(readBin(infile, "raw", 5), readBin(outfile, "raw", 5)))
+```
+
+## zstd_in and zstd_out
+
+These generic wrappers substitute a zstd compressed file for a normal
+file path, so you can add zstd compression support to existing functions
+for reading and writing data.
+
+``` r
+# library(data.table)
+save_file <- tempfile(fileext = ".csv.zst")
+
+# write out zstd compressed table
+zstd_out(data.table::fwrite, mtcars, file = save_file)
+
+# read in zstd compressed table
+dt <- zstd_in(data.table::fread, file = save_file)
+```
+
+# The qdata format
+
+The package also introduces the `qdata` format which has its own
+serialization layout and works with only data types (vectors, lists,
+data frames, matrices).
+
+It will replace internal types (functions, promises, external pointers,
+environments, objects) with NULL. The `qdata` format differs from the
+`qs2` format in that it is *not* general, but is more performant.
+
+Please use `qdata` or `qd` as the file extension.
+
+``` r
+qd_save(data, "myfile.qdata")
+data <- qd_read("myfile.qdata")
+```
+
+There is a `use_alt_rep` parameter that is intended to improve
+performance.
+
+For the upcoming CRAN release, qdata does not use ALTREP but should be
+restored in the release after.
+
+# Usage in C/C++
+
+Serialization functions can be accessed in compiled code. Below is an
+example using Rcpp.
+
+``` cpp
+// [[Rcpp::depends(qs2)]]
+#include <Rcpp.h>
+#include "qs2_external.h"
+using namespace Rcpp;
+
+// [[Rcpp::export]]
+SEXP test_qs_serialize(SEXP x) {
+  SEXP buffer = qs_serialize(x, 10, true, 4);
+  return qs_deserialize(buffer, false, 4);
+}
+
+// [[Rcpp::export]]
+SEXP test_qd_serialize(SEXP x) {
+  SEXP buffer = qd_serialize(x, 10, true, true, 4);
+  return qd_deserialize(buffer, false, false, 4);
+}
+
+// [[Rcpp::export]]
+SEXP test_qs_save(SEXP x, const std::string& path) {
+  qs_save(x, path, 10, true, 4);
+  return qs_read(path, false, 4);
+}
+
+// [[Rcpp::export]]
+SEXP test_qd_save(SEXP x, const std::string& path) {
+  qd_save(x, path, 10, true, true, 4);
+  return qd_read(path, false, false, 4);
+}
+
+/*** R
+x <- runif(1e7)
+stopifnot(identical(test_qs_serialize(x), x))
+stopifnot(identical(test_qd_serialize(x), x))
+stopifnot(identical(test_qs_save(x, tempfile(fileext = ".qs2")), x))
+stopifnot(identical(test_qd_save(x, tempfile(fileext = ".qd")), x))
+*/
+```
+
+## qdata-cpp external wrappers
+
+You can serialize and de-serialize qdata format outside the R API.
+Functions for doing so are exported in `qdata_cpp_external.h`.
+
+You can also compile these independently in `inst/include/qdata-cpp` and
+include in a standalone C++ project.
+
+``` cpp
+// [[Rcpp::depends(qs2)]]
+#include <Rcpp.h>
+#include "qdata_cpp_external.h"
+
+// [[Rcpp::export]]
+Rcpp::IntegerVector qdata_ext_roundtrip() {
+  std::vector<std::int32_t> x{1, 2, 3, 4};
+  auto bytes = qdata_ext::serialize(x);
+  qdata_ext::object out = qdata_ext::deserialize(bytes);
+  const auto& ints = qdata_ext::get<qdata_ext::integer_vector>(out).values;
+  return Rcpp::IntegerVector(ints.begin(), ints.end());
+}
+
+// [[Rcpp::export]]
+Rcpp::IntegerVector qdata_ext_file_roundtrip(const std::string& path) {
+  std::vector<std::int32_t> x{1, 2, 3, 4};
+  qdata_ext::save(path, x);
+  qdata_ext::object out = qdata_ext::read(path);
+  const auto& ints = qdata_ext::get<qdata_ext::integer_vector>(out).values;
+  return Rcpp::IntegerVector(ints.begin(), ints.end());
+}
+
+/*** R
+stopifnot(identical(qdata_ext_roundtrip(), 1:4))
+stopifnot(identical(qdata_ext_file_roundtrip(tempfile(fileext = ".qdata")), 1:4))
+*/
+```
+
+# Global Options for qs2
+
+The following global options control the behavior of the `qs2`
+functions. These global options can be queried or modified using `qopt`
+function.
+
+- **compress_level**  
+  The default compression level used when compressing data.  
+  **Default:** `3L`
+
+- **shuffle**  
+  A logical flag indicating whether to allow byte shuffling during
+  compression.  
+  **Default:** `TRUE`
+
+- **nthreads**  
+  The number of threads used for compression and decompression.  
+  **Default:** `1L`
+
+- **validate_checksum**  
+  A logical flag indicating whether to validate the stored checksum when
+  reading data.  
+  **Default:** `FALSE`
+
+- **warn_unsupported_types**  
+  For `qd_save`, a logical flag indicating whether to warn when saving
+  an object with unsupported types.  
+  **Default:** `TRUE`
+
+- **use_alt_rep**  
+  For `qd_read` and `qd_deserialize`, a logical flag requesting ALTREP
+  string reads. This option is temporarily disabled; if `TRUE`, qs2
+  warns and falls back to ordinary character vectors.  
+  **Default:** `FALSE`
+
+------------------------------------------------------------------------

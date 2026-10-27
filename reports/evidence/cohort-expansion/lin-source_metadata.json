@@ -1,0 +1,64 @@
+{
+  "rdata_version": "1.1.0",
+  "slot_names": [
+    "assays",
+    "meta.data",
+    "active.assay",
+    "active.ident",
+    "graphs",
+    "neighbors",
+    "reductions",
+    "images",
+    "project.name",
+    "misc",
+    "version",
+    "commands",
+    "tools",
+    "class"
+  ],
+  "discarded_numeric_arrays": [
+    {
+      "uncompressed_offset": 120,
+      "elements": 1510926284,
+      "dtype": "int32"
+    },
+    {
+      "uncompressed_offset": 6047471753,
+      "elements": 1510926284,
+      "dtype": "float64"
+    },
+    {
+      "uncompressed_offset": 18134882175,
+      "elements": 831533700,
+      "dtype": "int32"
+    },
+    {
+      "uncompressed_offset": 21463244639,
+      "elements": 831533700,
+      "dtype": "float64"
+    },
+    {
+      "uncompressed_offset": 28115514420,
+      "elements": 2996974,
+      "dtype": "int32"
+    }
+  ],
+  "metadata_rows": 1498487,
+  "metadata_columns": [
+    "nCount_RNA",
+    "nFeature_RNA",
+    "time_point",
+    "treatment",
+    "patient",
+    "sample",
+    "cohort",
+    "celltype_r2",
+    "celltype_main",
+    "celltype_adj",
+    "response",
+    "res_metric"
+  ],
+  "metadata_numeric_arrays_discarded": false,
+  "matrices_exported": false,
+  "state_changes_computed": false
+}

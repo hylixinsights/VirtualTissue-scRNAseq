@@ -28,3 +28,5 @@ data/clinical/*
 config/local.yaml
 tmp/
 *.qs2
+.pydeps*/
+*.assembled

@@ -1,0 +1,26 @@
+cohort	patient_id	qualified_patient_id	source_patient_id	source_sample_id	timepoint	arm	total_cells	cd8_author_lineage	cd8_coarse_label	cd8_union_diagnostic	clinical_sample_candidates	clinical_day_candidates	clinical_link_status	exact_library_link_verified
+Lin2026_in_house	P10	Lin2026_in_house::P10	SKCM_this study_Patient10	SKCM_this study_Patient10_Pre	pre	anti_pd1_monotherapy	525	15	14	15	E19308	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P11	Lin2026_in_house::P11	SKCM_this study_Patient11	SKCM_this study_Patient11_Pre	pre	anti_pd1_monotherapy	2300	1140	1061	1145	E19312	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P12	Lin2026_in_house::P12	SKCM_this study_Patient12	SKCM_this study_Patient12_On	on	anti_pd1_monotherapy	2957	436	386	438	E19318	7	ordinal_timepoint_provisional	False
+Lin2026_in_house	P12	Lin2026_in_house::P12	SKCM_this study_Patient12	SKCM_this study_Patient12_Pre	pre	anti_pd1_monotherapy	670	18	15	18	E19317	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P13	Lin2026_in_house::P13	SKCM_this study_Patient13	SKCM_this study_Patient13_On	on	anti_pd1_plus_anti_ctla4	1230	332	329	332	E23350	14	ordinal_timepoint_provisional	False
+Lin2026_in_house	P13	Lin2026_in_house::P13	SKCM_this study_Patient13	SKCM_this study_Patient13_Pre	pre	anti_pd1_plus_anti_ctla4	4040	7	6	7	E23346	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P14	Lin2026_in_house::P14	SKCM_this study_Patient14	SKCM_this study_Patient14_On	on	anti_pd1_plus_anti_ctla4	3506	45	43	45	E23348	6	ordinal_timepoint_provisional	False
+Lin2026_in_house	P15	Lin2026_in_house::P15	SKCM_this study_Patient15	SKCM_this study_Patient15_On	on	anti_pd1_plus_anti_ctla4	3857	1113	820	1113	E23360	16	ordinal_timepoint_provisional	False
+Lin2026_in_house	P16	Lin2026_in_house::P16	SKCM_this study_Patient16	SKCM_this study_Patient16_Pre	pre	anti_pd1_plus_anti_ctla4	1399	0	0	0	E23358	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P17	Lin2026_in_house::P17	SKCM_this study_Patient17	SKCM_this study_Patient17_Pre	pre	anti_pd1_plus_anti_ctla4	2225	18	18	18	E19320	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P1	Lin2026_in_house::P1	SKCM_this study_Patient1	SKCM_this study_Patient1_On	on	anti_pd1_plus_anti_ctla4	1584	352	416	460	E19309	12	ordinal_timepoint_provisional	False
+Lin2026_in_house	P1	Lin2026_in_house::P1	SKCM_this study_Patient1	SKCM_this study_Patient1_Pre	pre	anti_pd1_plus_anti_ctla4	1847	625	678	707	E19306	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P2	Lin2026_in_house::P2	SKCM_this study_Patient2	SKCM_this study_Patient2_On	on	anti_pd1_plus_anti_ctla4	2264	381	259	381	E19321;E19326	9;42	ambiguous_multiple_on_biopsies	False
+Lin2026_in_house	P2	Lin2026_in_house::P2	SKCM_this study_Patient2	SKCM_this study_Patient2_Pre	pre	anti_pd1_plus_anti_ctla4	966	91	89	91	E19319	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P3	Lin2026_in_house::P3	SKCM_this study_Patient3	SKCM_this study_Patient3_On	on	anti_pd1_plus_anti_ctla4	2364	307	273	311	E19325	7	ordinal_timepoint_provisional	False
+Lin2026_in_house	P3	Lin2026_in_house::P3	SKCM_this study_Patient3	SKCM_this study_Patient3_Pre	pre	anti_pd1_plus_anti_ctla4	2392	189	186	190	E19323	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P4	Lin2026_in_house::P4	SKCM_this study_Patient4	SKCM_this study_Patient4_Pre	pre	anti_pd1_plus_anti_ctla4	175	26	23	26	E19327	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P5	Lin2026_in_house::P5	SKCM_this study_Patient5	SKCM_this study_Patient5_On	on	anti_pd1_plus_anti_ctla4	2188	805	725	811	E19331	9	ordinal_timepoint_provisional	False
+Lin2026_in_house	P5	Lin2026_in_house::P5	SKCM_this study_Patient5	SKCM_this study_Patient5_Pre	pre	anti_pd1_plus_anti_ctla4	683	50	50	50	E19330	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P6	Lin2026_in_house::P6	SKCM_this study_Patient6	SKCM_this study_Patient6_Pre	pre	anti_pd1_plus_anti_ctla4	1122	77	75	77	E19334	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P7	Lin2026_in_house::P7	SKCM_this study_Patient7	SKCM_this study_Patient7_On	on	anti_pd1_monotherapy	220	47	44	47	E19302	7	ordinal_timepoint_provisional	False
+Lin2026_in_house	P7	Lin2026_in_house::P7	SKCM_this study_Patient7	SKCM_this study_Patient7_Pre	pre	anti_pd1_monotherapy	232	45	42	45	E19301	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P8	Lin2026_in_house::P8	SKCM_this study_Patient8	SKCM_this study_Patient8_Pre	pre	anti_pd1_monotherapy	425	12	12	12	E19303	0	ordinal_timepoint_provisional	False
+Lin2026_in_house	P9	Lin2026_in_house::P9	SKCM_this study_Patient9	SKCM_this study_Patient9_On	on	anti_pd1_monotherapy	3831	46	42	46	E19307	7	ordinal_timepoint_provisional	False
+Lin2026_in_house	P9	Lin2026_in_house::P9	SKCM_this study_Patient9	SKCM_this study_Patient9_Pre	pre	anti_pd1_monotherapy	4363	12	12	12	E19305	0	ordinal_timepoint_provisional	False

@@ -1,140 +1,140 @@
 {
-  "updated_at_utc": "2026-10-27T19:30:40.275803+00:00",
+  "updated_at_utc": "2026-10-27T21:08:07.131298+00:00",
   "tasks": [
     {
       "id": "T0.1",
       "status": "complete",
-      "description": "Repository and environment** · S · Depends:"
+      "description": "Repository and environment** \u00b7 S \u00b7 Depends:"
     },
     {
       "id": "T0.2",
       "status": "complete",
-      "description": "Data acquisition and integrity** · S · Depends: T0.1"
+      "description": "Data acquisition and integrity** \u00b7 S \u00b7 Depends: T0.1"
     },
     {
       "id": "T0.3",
       "status": "complete",
-      "description": "Licence and data-use note** · S · Depends: T0.2"
+      "description": "Licence and data-use note** \u00b7 S \u00b7 Depends: T0.2"
     },
     {
       "id": "T0.4",
       "status": "complete",
-      "description": "Pre-registration freeze** · S · Depends: T0.1"
+      "description": "Pre-registration freeze** \u00b7 S \u00b7 Depends: T0.1"
     },
     {
       "id": "T1.1",
       "status": "complete",
-      "description": "Export Seurat objects to a neutral format** · M · Depends: T0.2"
+      "description": "Export Seurat objects to a neutral format** \u00b7 M \u00b7 Depends: T0.2"
     },
     {
       "id": "T1.2",
       "status": "complete",
-      "description": "Patient and sample table** · M · Depends: T1.1"
+      "description": "Patient and sample table** \u00b7 M \u00b7 Depends: T1.1"
     },
     {
       "id": "T1.3",
       "status": "partial",
-      "description": "Eligibility and flow diagram** · S · Depends: T1.2"
+      "description": "Eligibility and flow diagram** \u00b7 S \u00b7 Depends: T1.2"
     },
     {
       "id": "T1.4",
       "status": "pending",
-      "description": "Lockbox assignment** · S · Depends: T1.3, T0.4"
+      "description": "Lockbox assignment** \u00b7 S \u00b7 Depends: T1.3, T0.4"
     },
     {
       "id": "T1.5",
       "status": "pending",
-      "description": "CD8 state availability (development patients only)** · S · Depends: T1.4"
+      "description": "CD8 state availability (development patients only)** \u00b7 S \u00b7 Depends: T1.4"
     },
     {
       "id": "T1.6",
       "status": "partial",
-      "description": "Technical confounders** · M · Depends: T1.2"
+      "description": "Technical confounders** \u00b7 M \u00b7 Depends: T1.2"
     },
     {
       "id": "T1.7",
       "status": "pending",
-      "description": "Feasibility report · Gate G1** · S · Depends: T1.3–T1.6"
+      "description": "Feasibility report \u00b7 Gate G1** \u00b7 S \u00b7 Depends: T1.3\u2013T1.6"
     },
     {
       "id": "T2.1",
       "status": "pending",
-      "description": "CD8 subset QC and annotation audit** · M · Depends: G1"
+      "description": "CD8 subset QC and annotation audit** \u00b7 M \u00b7 Depends: G1"
     },
     {
       "id": "T2.2",
       "status": "pending",
-      "description": "Program library and coverage** · M · Depends: T2.1"
+      "description": "Program library and coverage** \u00b7 M \u00b7 Depends: T2.1"
     },
     {
       "id": "T2.3",
       "status": "pending",
-      "description": "Scoring and fold-aware calibration** · M · Depends: T2.2"
+      "description": "Scoring and fold-aware calibration** \u00b7 M \u00b7 Depends: T2.2"
     },
     {
       "id": "T2.4",
       "status": "pending",
-      "description": "State graph, pseudotime and robustness** · L · Depends: T2.3"
+      "description": "State graph, pseudotime and robustness** \u00b7 L \u00b7 Depends: T2.3"
     },
     {
       "id": "T2.5",
       "status": "pending",
-      "description": "Functional axes per state** · S · Depends: T2.3"
+      "description": "Functional axes per state** \u00b7 S \u00b7 Depends: T2.3"
     },
     {
       "id": "T2.6",
       "status": "pending",
-      "description": "Environment features** · M · Depends: T1.2; requires `Entire_TME.rds` and `Malignant_cells.rds` exported as in T1.1"
+      "description": "Environment features** \u00b7 M \u00b7 Depends: T1.2; requires `Entire_TME.rds` and `Malignant_cells.rds` exported as in T1.1"
     },
     {
       "id": "G2",
       "status": "pending",
-      "description": "State reference frozen** · Depends: T2.1–T2.6"
+      "description": "State reference frozen** \u00b7 Depends: T2.1\u2013T2.6"
     },
     {
       "id": "T3.1",
       "status": "pending",
-      "description": "Implement the model ladder** · L · Depends: G2"
+      "description": "Implement the model ladder** \u00b7 L \u00b7 Depends: G2"
     },
     {
       "id": "T3.2",
       "status": "pending",
-      "description": "Simulation-based parameter recovery** · M · Depends: T3.1"
+      "description": "Simulation-based parameter recovery** \u00b7 M \u00b7 Depends: T3.1"
     },
     {
       "id": "T3.3",
       "status": "pending",
-      "description": "Identifiability on real data** · M · Depends: T3.2"
+      "description": "Identifiability on real data** \u00b7 M \u00b7 Depends: T3.2"
     },
     {
       "id": "T3.4",
       "status": "pending",
-      "description": "Development LOPO evaluation** · M · Depends: T3.1, T2.6"
+      "description": "Development LOPO evaluation** \u00b7 M \u00b7 Depends: T3.1, T2.6"
     },
     {
       "id": "T3.5",
       "status": "pending",
-      "description": "Sensitivity analyses** · L · Depends: T3.4"
+      "description": "Sensitivity analyses** \u00b7 L \u00b7 Depends: T3.4"
     },
     {
       "id": "T3.6",
       "status": "pending",
-      "description": "Freeze the model · Gate G3** · S · Depends: T3.4, T3.5"
+      "description": "Freeze the model \u00b7 Gate G3** \u00b7 S \u00b7 Depends: T3.4, T3.5"
     },
     {
       "id": "T4.1",
       "status": "pending",
-      "description": "Lockbox evaluation** · S · Depends: G3"
+      "description": "Lockbox evaluation** \u00b7 S \u00b7 Depends: G3"
     },
     {
       "id": "T4.2",
       "status": "pending",
-      "description": "External direction check (GSE120575)** · M · Depends: G3"
+      "description": "External direction check (GSE120575)** \u00b7 M \u00b7 Depends: G3"
     },
     {
       "id": "T4.3",
       "status": "pending",
-      "description": "Complementary temporal and clonal data (optional)** · M · Depends: G3"
+      "description": "Complementary temporal and clonal data (optional)** \u00b7 M \u00b7 Depends: G3"
     },
     {
       "id": "G4",
@@ -144,42 +144,42 @@
     {
       "id": "T5.1",
       "status": "pending",
-      "description": "SPECIAL Xenium audit** · M · Depends: G4"
+      "description": "SPECIAL Xenium audit** \u00b7 M \u00b7 Depends: G4"
     },
     {
       "id": "T5.2",
       "status": "pending",
-      "description": "Runtime design document (ODD) and margins** · M · Depends: T5.1"
+      "description": "Runtime design document (ODD) and margins** \u00b7 M \u00b7 Depends: T5.1"
     },
     {
       "id": "T5.3",
       "status": "pending",
-      "description": "Implement the dynamic-state runtime** · L · Depends: T5.2"
+      "description": "Implement the dynamic-state runtime** \u00b7 L \u00b7 Depends: T5.2"
     },
     {
       "id": "T5.4",
       "status": "pending",
-      "description": "Mean-field consistency test** · M · Depends: T5.3"
+      "description": "Mean-field consistency test** \u00b7 M \u00b7 Depends: T5.3"
     },
     {
       "id": "T5.5",
       "status": "pending",
-      "description": "Geometry experiments** · L · Depends: T5.4"
+      "description": "Geometry experiments** \u00b7 L \u00b7 Depends: T5.4"
     },
     {
       "id": "T5.6",
       "status": "pending",
-      "description": "Spatial evaluation · Gate G5** · M · Depends: T5.5"
+      "description": "Spatial evaluation \u00b7 Gate G5** \u00b7 M \u00b7 Depends: T5.5"
     },
     {
       "id": "T6.1",
       "status": "pending",
-      "description": "Pilot (≤ 100 calls, explicit approval)** · S · Depends: G5 (or G4 if spatial is skipped)"
+      "description": "Pilot (\u2264 100 calls, explicit approval)** \u00b7 S \u00b7 Depends: G5 (or G4 if spatial is skipped)"
     },
     {
       "id": "T6.2",
       "status": "pending",
-      "description": "Policy comparison · Gate G6** · M · Depends: T6.1"
+      "description": "Policy comparison \u00b7 Gate G6** \u00b7 M \u00b7 Depends: T6.1"
     },
     {
       "id": "T7.1",
@@ -204,40 +204,40 @@
     {
       "id": "T7.5",
       "status": "pending",
-      "description": "Coupling to VirtualTissue-LN (priming compartment → influx)."
+      "description": "Coupling to VirtualTissue-LN (priming compartment \u2192 influx)."
     },
     {
       "id": "T8.1",
       "status": "pending",
-      "description": "Compile supplementary notes** (§12) from the task reports · M"
+      "description": "Compile supplementary notes** (\u00a712) from the task reports \u00b7 M"
     },
     {
       "id": "T8.2",
       "status": "pending",
-      "description": "Figures**: main and supplementary, from saved results only, with scripts in `figures/` · M"
+      "description": "Figures**: main and supplementary, from saved results only, with scripts in `figures/` \u00b7 M"
     },
     {
       "id": "T8.3",
       "status": "pending",
-      "description": "Data and code availability**: Zenodo DOI for code; derived data under CC BY-NC-SA · S"
+      "description": "Data and code availability**: Zenodo DOI for code; derived data under CC BY-NC-SA \u00b7 S"
     },
     {
       "id": "T8.4",
       "status": "pending",
-      "description": "Reproducibility run**: from a clean environment, regenerate every table and figure; compare hashes · M"
+      "description": "Reproducibility run**: from a clean environment, regenerate every table and figure; compare hashes \u00b7 M"
     },
     {
       "id": "T8.5",
       "status": "pending",
-      "description": "Claims audit**: claims ledger (§12.4); every claim maps to a result file and an evidence class. Optional: run the comp-bio-slop-check skill on the manuscript draft · S"
+      "description": "Claims audit**: claims ledger (\u00a712.4); every claim maps to a result file and an evidence class. Optional: run the comp-bio-slop-check skill on the manuscript draft \u00b7 S"
     }
   ],
-  "next_action": "A02.2: resolve treatment scope using completed clinical-source review; original primary definition remains active",
+  "next_action": "Resolve missing Lin libraries/crosswalk and clinical fields, or acquire additional qualifying data; see unsent docs/data-request-draft.txt. Primary count prerequisite fails (12 < 14).",
   "lockbox_assigned": false,
   "state_changes_inspected": false,
   "state_changes_inspected_scope": "SPECIAL individual state compositions not inspected; published Sade-Feldman state summary exposure recorded separately",
   "published_external_state_summary_exposure": "SadeFeldman2018 during initial workbook inventory",
-  "cohort_amendment_status": "A02 draft; no new eligible cohort or treatment-scope activation",
+  "cohort_amendment_status": "Separate-stratum audit approved; counts complete, prerequisite fails; no eligibility/model/split freeze",
   "amendment_tasks": [
     {
       "id": "A02.1",
@@ -246,23 +246,29 @@
     },
     {
       "id": "A02.2",
-      "status": "pending_user_decision",
-      "description": "Scientific treatment-scope decision"
+      "status": "complete",
+      "description": "Scientific treatment-scope decision",
+      "decision": "User selected monotherapy and combination in separate strata"
     },
     {
       "id": "A02.3",
-      "status": "pending",
-      "description": "In-house source identity, matrix presence, CD8 and overlap audit"
+      "status": "partial",
+      "description": "In-house source identity, matrix presence, CD8 and overlap audit",
+      "completed": "Verified source checksum, bounded metadata extraction, lineage counts and explicit atlas reuse",
+      "remaining": "Raw-matrix alignment, exact library identity and full cross-study independence"
     },
     {
       "id": "A02.4",
-      "status": "pending",
-      "description": "Clinical and licence reconciliation"
+      "status": "partial",
+      "description": "Clinical and licence reconciliation",
+      "completed": "Clinical/EGA source comparison and source licence notes",
+      "remaining": "Missing library crosswalk, P2 On identity, exact drugs, histology, lesion IDs, chemistry conflict and SPECIAL intervals"
     },
     {
       "id": "A02.5",
       "status": "pending",
-      "description": "Amended design/eligibility freeze and split access guard"
+      "description": "Amended design/eligibility freeze and split access guard",
+      "reason_not_started": "Primary count prerequisite fails: 12 candidates, before further eligibility exclusions, versus existing floor of 14"
     }
   ]
 }

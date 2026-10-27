@@ -1,0 +1,52 @@
+DRAFT — NOT SENT — 2026-10-27
+Purpose: resolve paired tumour scRNA-seq feasibility before state analyses.
+No recipient/contact address has been inferred. No response-selected subset is requested.
+
+For the Lin et al. 2026 data maintainers
+
+We are auditing paired melanoma tumour scRNA-seq under anti-PD-1 monotherapy
+and anti-PD-1 + anti-CTLA-4, keeping the treatment strata separate. We downloaded
+Zenodo v2 record 19586163, seurat_full.qs2, and verified the published MD5
+a3486788163889f8cc910ea0115d70ac. The SKCM_this study metadata contain 25 sample
+labels from 17 patients, with both Pre and On labels for 8 patients. Table S1
+lists 34 clinical rows and 16 clinically paired patients.
+
+Could you provide or point us to:
+
+1. A crosswalk from deposited patient/sample/cell-barcode labels to the clinical
+   E193xx/E233xx library IDs, with assay and QC inclusion/exclusion status?
+2. The disposition and, if available, unintegrated counts and cell metadata for
+   these S1 patient/timepoint keys absent from the deposited metadata:
+   P4 On E19329; P6 On E19335; P8 On E19304; P10 On E19311;
+   P11 On E19314; P14 Pre E23347; P15 Pre E23357; P17 On E19324.
+   We do not assume these samples failed QC or contain zero CD8 cells.
+3. Which clinical biopsy or biopsies contribute to Patient2_On: E19321 (day 9),
+   E19326 (day 42), or a merged label? If merged, can cells be disambiguated?
+4. Exact regimen/drug names, treatment start and biopsy-day definitions,
+   histological melanoma subtype, and lesion IDs or a precise definition of
+   Matched for each pair? Relative days and pseudonymous IDs are sufficient.
+5. Library-specific 10x chemistry: EGA dataset descriptions indicate 5-prime v2,
+   whereas the article key-resource table indicates 5-prime v1.1.
+6. The provenance and upstream reuse terms of the in-house raw-count layers,
+   and whether any in-house patients are also present in SPECIAL or another
+   atlas source cohort?
+
+For the SPECIAL data maintainers
+
+We have the deposited immune object and clinical S1 tables from the 2024/2025
+publications. Could you provide or point us to the following pseudonymous
+sample-level metadata for all available patients, regardless of response?
+
+- Days from treatment start for each baseline and on-treatment biopsy, enabling
+  exact inter-biopsy intervals; no identifiable calendar dates are required.
+- Lesion IDs or same-lesion/different-lesion indicators for each candidate pair.
+- Library-specific chemistry resolving the EGA 3-prime v3/5-prime description
+  against the 3-prime GEX/3-prime v3 GEX/5-prime GEX labels in clinical S1.
+- Whether generic cycling immune cells can be assigned a source-supported CD8
+  lineage, and whether the full-TME object contains additional CD8 cells absent
+  from the deposited immune object, with documented filtering provenance.
+
+Internal attachments available for review: cohort_expansion_lin_library_crosswalk.tsv,
+cohort_expansion_lin_object_samples.tsv, cohort_expansion_review.md.
+This draft requests data clarification; it makes no claim of final eligibility,
+successful prediction, or a causal comparison of treatment regimens.

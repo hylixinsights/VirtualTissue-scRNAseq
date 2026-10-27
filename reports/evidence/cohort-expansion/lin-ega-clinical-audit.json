@@ -1,0 +1,25 @@
+{
+  "ega_records": 24,
+  "unique_accessions": 24,
+  "provisional_unique_patient_day_keys": 21,
+  "clinical_sample_ids_without_ordinal_day_match": [
+    "E19306",
+    "E19309",
+    "E19323",
+    "E19325",
+    "E19327",
+    "E19329",
+    "E19335",
+    "E19303",
+    "E19304",
+    "E19308",
+    "E19311",
+    "E19320",
+    "E19324"
+  ],
+  "specific_drug_names_available": false,
+  "histologic_subtype_available": false,
+  "clinical_pair_cd8_eligibility_inferred": false,
+  "caution": "Provisional patient/day matching only. Neither absence nor presence in these public records establishes paired scRNA availability. The mixed scRNA/Visium deposit must be reconciled at library level.",
+  "chemistry_source_discrepancy": "EGA dataset descriptions name 5-prime v2; the publisher key-resource table names 5-prime v1.1. Preserve both pending sample-level reconciliation."
+}

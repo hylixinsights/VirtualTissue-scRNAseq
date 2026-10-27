@@ -1,0 +1,24 @@
+{
+  "synthetic_only": true,
+  "checks": {
+    "FALSE": {
+      "blocks": 31,
+      "shuffled_blocks": 0,
+      "decoded_bytes": 32160485,
+      "internal_xxh3": "35327767543154040",
+      "internal_checksum_verified": true,
+      "output_sha256": "daa65b5de7ce80500f19bdba67213d7e99e10b79d5eb6a1cde6e469b55392913",
+      "byte_equivalent_to_official_R": true
+    },
+    "TRUE": {
+      "blocks": 31,
+      "shuffled_blocks": 31,
+      "decoded_bytes": 32160485,
+      "internal_xxh3": "6660966091423223744",
+      "internal_checksum_verified": true,
+      "output_sha256": "daa65b5de7ce80500f19bdba67213d7e99e10b79d5eb6a1cde6e469b55392913",
+      "byte_equivalent_to_official_R": true
+    }
+  },
+  "corruption_rejected": true
+}

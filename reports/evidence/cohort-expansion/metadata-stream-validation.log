@@ -1,0 +1,5 @@
+Warning message:
+package ‘sp’ was built under R version 4.6.1 
+Warning message:
+package ‘Matrix’ was built under R version 4.6.1 
+PASS: both R serialization formats preserve every metadata value; unsafe truncation rejected.

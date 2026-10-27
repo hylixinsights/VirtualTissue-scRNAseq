@@ -1,0 +1,18 @@
+cohort	patient_id	qualified_patient_id	arm	paired_in_deposit	missing_timepoint	exact_library_link_verified	final_eligibility	pre_cd8_author_lineage	on_cd8_author_lineage	count_candidate_author_lineage_15	count_candidate_author_lineage_30	count_candidate_author_lineage_50	pre_cd8_coarse_label	on_cd8_coarse_label	count_candidate_coarse_label_15	count_candidate_coarse_label_30	count_candidate_coarse_label_50	pre_cd8_union_diagnostic	on_cd8_union_diagnostic	count_candidate_union_diagnostic_15	count_candidate_union_diagnostic_30	count_candidate_union_diagnostic_50
+Lin2026_in_house	P1	Lin2026_in_house::P1	anti_pd1_plus_anti_ctla4	True		False	unresolved	625	352	True	True	True	678	416	True	True	True	707	460	True	True	True
+Lin2026_in_house	P2	Lin2026_in_house::P2	anti_pd1_plus_anti_ctla4	True		False	unresolved	91	381	True	True	True	89	259	True	True	True	91	381	True	True	True
+Lin2026_in_house	P3	Lin2026_in_house::P3	anti_pd1_plus_anti_ctla4	True		False	unresolved	189	307	True	True	True	186	273	True	True	True	190	311	True	True	True
+Lin2026_in_house	P4	Lin2026_in_house::P4	anti_pd1_plus_anti_ctla4	False	on	False	unresolved	26		False	False	False	23		False	False	False	26		False	False	False
+Lin2026_in_house	P5	Lin2026_in_house::P5	anti_pd1_plus_anti_ctla4	True		False	unresolved	50	805	True	True	True	50	725	True	True	True	50	811	True	True	True
+Lin2026_in_house	P6	Lin2026_in_house::P6	anti_pd1_plus_anti_ctla4	False	on	False	unresolved	77		False	False	False	75		False	False	False	77		False	False	False
+Lin2026_in_house	P7	Lin2026_in_house::P7	anti_pd1_monotherapy	True		False	unresolved	45	47	True	True	False	42	44	True	True	False	45	47	True	True	False
+Lin2026_in_house	P8	Lin2026_in_house::P8	anti_pd1_monotherapy	False	on	False	unresolved	12		False	False	False	12		False	False	False	12		False	False	False
+Lin2026_in_house	P9	Lin2026_in_house::P9	anti_pd1_monotherapy	True		False	unresolved	12	46	False	False	False	12	42	False	False	False	12	46	False	False	False
+Lin2026_in_house	P10	Lin2026_in_house::P10	anti_pd1_monotherapy	False	on	False	unresolved	15		False	False	False	14		False	False	False	15		False	False	False
+Lin2026_in_house	P11	Lin2026_in_house::P11	anti_pd1_monotherapy	False	on	False	unresolved	1140		False	False	False	1061		False	False	False	1145		False	False	False
+Lin2026_in_house	P12	Lin2026_in_house::P12	anti_pd1_monotherapy	True		False	unresolved	18	436	True	False	False	15	386	True	False	False	18	438	True	False	False
+Lin2026_in_house	P13	Lin2026_in_house::P13	anti_pd1_plus_anti_ctla4	True		False	unresolved	7	332	False	False	False	6	329	False	False	False	7	332	False	False	False
+Lin2026_in_house	P14	Lin2026_in_house::P14	anti_pd1_plus_anti_ctla4	False	pre	False	unresolved		45	False	False	False		43	False	False	False		45	False	False	False
+Lin2026_in_house	P15	Lin2026_in_house::P15	anti_pd1_plus_anti_ctla4	False	pre	False	unresolved		1113	False	False	False		820	False	False	False		1113	False	False	False
+Lin2026_in_house	P16	Lin2026_in_house::P16	anti_pd1_plus_anti_ctla4	False	on	False	unresolved	0		False	False	False	0		False	False	False	0		False	False	False
+Lin2026_in_house	P17	Lin2026_in_house::P17	anti_pd1_plus_anti_ctla4	False	on	False	unresolved	18		False	False	False	18		False	False	False	18		False	False	False

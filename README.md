@@ -2,10 +2,12 @@
 
 Patient-level SPECIAL analysis following the execution plan in the parent
 `scRNAseq` folder. Current outcome: the initial CD8 count audit cannot satisfy
-the planned feasibility threshold. The user selected cohort expansion; the
-[clinical-source review](reports/cohort_expansion_review.md) and
+the planned feasibility threshold. The user selected cohort expansion and
+separate Mono/Combo strata. The deposited-object audit finds only 12 count
+candidates at ≥30 CD8 per biopsy (4 Mono, 8 Combo), below the existing 10 + 4
+allocation. The [cohort review](reports/cohort_expansion_review.md) and
 [draft amendment](prereg/amendment-A02-cohort-expansion-draft-2026-10-27.md)
-document the next scope decision. Read
+document the evidence and unresolved data dependencies. Read
 [the original feasibility report](reports/T1.7_preliminary_feasibility.md) and
 [task status](reports/STATUS.md) before resuming.
 
@@ -21,7 +23,7 @@ the review records why that cohort cannot be claimed as an untouched final test.
   inclusion of nivolumab and pembrolizumab monotherapy.
 - `prereg/`: original plan, amended frozen plan and local freeze record.
 - `data/MANIFEST.json`: source URLs, versions, sizes and verification hashes.
-- `data/COHORT_EXPANSION_MANIFEST.json`: candidate-source integrity and incomplete downloads.
+- `data/COHORT_EXPANSION_MANIFEST.json`: candidate sources, verified Lin object and metadata derivatives.
 - `../data/SPECIAL/raw/`: unmodified downloads, outside this repository.
 - `../data/SPECIAL/derived/immune/`: exact per-sample RNA count and metadata exports.
 - `tables/`: clinical, candidate-pair and provisional eligibility tables.
@@ -87,8 +89,12 @@ For cohort expansion, first run `scripts/extract_lin_clinical.py` with the
 bundled document Python (`pdfplumber`), then
 `.venv/bin/python scripts/audit_cohort_expansion.py`. This audits clinical
 candidates and total CD8 counts only. It does not certify new patients as
-eligible or enable a new treatment arm. See the review for source versions,
+eligible or freeze a new model. The separate-stratum audit is user approved.
+For the Lin object, follow [metadata reproduction](docs/lin-metadata-reproduction.md),
+then run `.venv/bin/python scripts/audit_lin_object_counts.py`. See the review for source versions,
 PDF page/worksheet provenance and remaining checks.
+
+The missing-data request in `docs/data-request-draft.txt` is a draft, not sent.
 
 Do not run state analyses while the feasibility decision is unresolved. A future
 resumed pipeline must implement and test the T1.4 access guard before using any

@@ -1,0 +1,4 @@
+rdata==1.1.0
+xarray==2026.9.0
+zstandard==0.25.0
+xxhash==4.0.2

@@ -1,0 +1,9 @@
+Warning message:
+package ‘qs2’ was built under R version 4.6.1 
+Warning message:
+package ‘sp’ was built under R version 4.6.1 
+Warning message:
+package ‘Matrix’ was built under R version 4.6.1 
+Verified source. Reading qs2 with internal checksum verification.
+Error: vector memory limit of 10.0 Gb reached, see mem.maxVSize()
+Execution halted

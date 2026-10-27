@@ -1,0 +1,138 @@
+celltype_main	celltype_adj	celltype_r2	included_by_cd8_prefix
+B	Unchanged	ACB_CCR7	False
+B	Unchanged	ACB_EGR1	False
+B	Unchanged	ACB_NR4A2	False
+B	Unchanged	B-AtM	False
+B	Unchanged	B-HSP	False
+B	Unchanged	B-ISG	False
+B	Unchanged	B-memory	False
+B	Unchanged	B-naive	False
+B	Unchanged	GCB-DZ_SUGCT	False
+B	Unchanged	GCB-LZ_LMO2	False
+B	Unchanged	GCB-pre	False
+CAF	Cycling	CAF-desmo	False
+CAF	Cycling	CAF-prog	False
+CAF	Cycling	Myofibroblasts	False
+CAF	Cycling	iCAF_IL6	False
+CAF	Cycling	iCAF_MMP1	False
+CAF	Unchanged	CAF-ap	False
+CAF	Unchanged	CAF-desmo	False
+CAF	Unchanged	CAF-prog	False
+CAF	Unchanged	CAF_SFRP2	False
+CAF	Unchanged	Myofibroblasts	False
+CAF	Unchanged	iCAF_IL6	False
+CAF	Unchanged	iCAF_MMP1	False
+CD4+T	Unchanged	CD4_T-ISG	False
+CD4+T	Unchanged	CD4_T-naive	False
+CD4+T	Unchanged	CD4_Tcm	False
+CD4+T	Unchanged	CD4_Tctl	False
+CD4+T	Unchanged	CD4_Tfh	False
+CD4+T	Unchanged	CD4_Th17	False
+CD4+T	Unchanged	CD4_Treg	False
+CD4+T	Unchanged	CD4_Tstr	False
+CD8+T	Unchanged	CD8_NK-like	True
+CD8+T	Unchanged	CD8_T-ISG	True
+CD8+T	Unchanged	CD8_T-naive	True
+CD8+T	Unchanged	CD8_Tc17	True
+CD8+T	Unchanged	CD8_Tem	True
+CD8+T	Unchanged	CD8_Tem-early	True
+CD8+T	Unchanged	CD8_Temra	True
+CD8+T	Unchanged	CD8_Tex_CXCL13	True
+CD8+T	Unchanged	CD8_Tex_GZMK	True
+CD8+T	Unchanged	CD8_Tm	True
+CD8+T	Unchanged	CD8_Tpex	True
+CD8+T	Unchanged	CD8_Trm	True
+CD8+T	Unchanged	CD8_Tstr	True
+CD8+T	Unchanged	gdT	False
+Cycling	Cycling	Melanocytes(CNA-)	False
+Cycling	Unchanged	GCB-cycling	False
+Cycling	Unchanged	PC-cycling	False
+Cycling T/NK	Cycling	CD4_T-ISG	False
+Cycling T/NK	Cycling	CD4_T-naive	False
+Cycling T/NK	Cycling	CD4_Tcm	False
+Cycling T/NK	Cycling	CD4_Tctl	False
+Cycling T/NK	Cycling	CD4_Tfh	False
+Cycling T/NK	Cycling	CD4_Th17	False
+Cycling T/NK	Cycling	CD4_Treg	False
+Cycling T/NK	Cycling	CD4_Tstr	False
+Cycling T/NK	Cycling	CD8_NK-like	True
+Cycling T/NK	Cycling	CD8_T-ISG	True
+Cycling T/NK	Cycling	CD8_T-naive	True
+Cycling T/NK	Cycling	CD8_Tem	True
+Cycling T/NK	Cycling	CD8_Tem-early	True
+Cycling T/NK	Cycling	CD8_Temra	True
+Cycling T/NK	Cycling	CD8_Tex_CXCL13	True
+Cycling T/NK	Cycling	CD8_Tex_GZMK	True
+Cycling T/NK	Cycling	CD8_Tpex	True
+Cycling T/NK	Cycling	CD8_Trm	True
+Cycling T/NK	Cycling	CD8_Tstr	True
+Cycling T/NK	Cycling	NK_CD56hiCD16lo	False
+Cycling T/NK	Cycling	NK_CD56loCD16hi	False
+Cycling T/NK	Unchanged	CD4_T-ISG	False
+Cycling T/NK	Unchanged	CD4_Tctl	False
+Cycling T/NK	Unchanged	CD4_Tfh	False
+Cycling T/NK	Unchanged	CD4_Tstr	False
+Cycling T/NK	Unchanged	CD8_Tem	True
+Cycling T/NK	Unchanged	CD8_Tex_CXCL13	True
+Cycling T/NK	Unchanged	CD8_Tex_GZMK	True
+Cycling T/NK	Unchanged	CD8_Tm	True
+Cycling T/NK	Unchanged	CD8_Tpex	True
+Cycling T/NK	Unchanged	CD8_Tstr	True
+Cycling T/NK	Unchanged	NK_CD56hiCD16lo	False
+Cycling T/NK	Unchanged	NK_CD56loCD16hi	False
+Endo	Cycling	Endo-artery	False
+Endo	Cycling	Endo-capillary	False
+Endo	Cycling	Endo-lymphatic	False
+Endo	Cycling	Endo-tip	False
+Endo	Cycling	Endo-vein	False
+Endo	Unchanged	Endo-artery	False
+Endo	Unchanged	Endo-capillary	False
+Endo	Unchanged	Endo-lymphatic	False
+Endo	Unchanged	Endo-tip	False
+Endo	Unchanged	Endo-vein	False
+Melanocytes(CNA+)	Unchanged	Malignant(CNA+)	False
+Melanocytes(CNA-)	Unchanged	Melanocytes(CNA-)	False
+Mural	Cycling	Pericytes	False
+Mural	Cycling	SMC	False
+Mural	Unchanged	Pericytes	False
+Mural	Unchanged	SMC	False
+Myeloids	Cycling	DC_LC-like	False
+Myeloids	Cycling	Macro-ISG	False
+Myeloids	Cycling	Macro_C1QC	False
+Myeloids	Cycling	Macro_SPP1	False
+Myeloids	Cycling	Macro_TREM2	False
+Myeloids	Cycling	Mast	False
+Myeloids	Cycling	cDC1	False
+Myeloids	Cycling	cDC2-ISG	False
+Myeloids	Cycling	cDC2_CXCL9	False
+Myeloids	Cycling	cDC2_IL1B	False
+Myeloids	Cycling	mregDC	False
+Myeloids	Cycling	pDC	False
+Myeloids	Unchanged	DC_LC-like	False
+Myeloids	Unchanged	Macro-ISG	False
+Myeloids	Unchanged	Macro_C1QC	False
+Myeloids	Unchanged	Macro_FN1	False
+Myeloids	Unchanged	Macro_IL1B	False
+Myeloids	Unchanged	Macro_INHBA	False
+Myeloids	Unchanged	Macro_LYVE1	False
+Myeloids	Unchanged	Macro_SPP1	False
+Myeloids	Unchanged	Macro_TNF	False
+Myeloids	Unchanged	Macro_TREM2	False
+Myeloids	Unchanged	Mast	False
+Myeloids	Unchanged	MoDC	False
+Myeloids	Unchanged	Mono_CD14	False
+Myeloids	Unchanged	Mono_CD14CD16	False
+Myeloids	Unchanged	Mono_CD16	False
+Myeloids	Unchanged	cDC1	False
+Myeloids	Unchanged	cDC2-ISG	False
+Myeloids	Unchanged	cDC2_CD1C	False
+Myeloids	Unchanged	cDC2_CXCL9	False
+Myeloids	Unchanged	cDC2_IL1B	False
+Myeloids	Unchanged	mregDC	False
+Myeloids	pDC	pDC	False
+NK	Unchanged	NK_CD56hiCD16lo	False
+NK	Unchanged	NK_CD56loCD16hi	False
+Plasma	PC-trans	PC-trans	False
+Plasma	Unchanged	PC-early_RGS13	False
+Plasma	Unchanged	PC_IGHA	False
+Plasma	Unchanged	PC_IGHG	False

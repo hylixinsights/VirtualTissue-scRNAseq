@@ -1,0 +1,410 @@
+{
+  "status": "count_only_audit_no_G1_pass",
+  "lin_primary_lineage_rule": {
+    "primary": "celltype_r2 starts with CD8_",
+    "reason": "Author labels identify CD8 among Cycling T/NK; coarse CD8+T also includes gdT. Count lineage only, without tabulating state compositions.",
+    "comparison": "celltype_main equals CD8+T",
+    "declared_before_recount": true,
+    "gene_expression_reannotation_performed": false,
+    "special_rule": "Retain original author CD8 labels; generic cycling without CD8 identity remains unresolved."
+  },
+  "metadata_rows_all_cohorts": 1498487,
+  "atlas_cohorts": [
+    "BCC_Yost",
+    "BRCA_Bassez1",
+    "BRCA_Bassez2",
+    "CRC_Chen",
+    "CRC_Li",
+    "HCC_Guo",
+    "HCC_Ma",
+    "HNSC_Franken",
+    "HNSC_Luoma",
+    "HNSC_vanderLeun",
+    "NSCLC_Yan",
+    "PCa_Hawley",
+    "RCC_Bi",
+    "SKCM_Plozniak",
+    "SKCM_this study",
+    "TNBC_Shiao",
+    "TNBC_Zhang"
+  ],
+  "lin_metadata_cells": 47365,
+  "lin_patients_in_deposit": 17,
+  "lin_samples_in_deposit": 25,
+  "lin_paired_patients_in_deposit": 8,
+  "lin_clinical_rows": 34,
+  "clinical_rows_without_patient_timepoint_in_deposit": [
+    "E19329",
+    "E19335",
+    "E19304",
+    "E19311",
+    "E19314",
+    "E23347",
+    "E23357",
+    "E19324"
+  ],
+  "ambiguous_clinical_rows": [
+    "E19321",
+    "E19326"
+  ],
+  "reused_special_patients_excluded_as_new": 19,
+  "reused_special_samples_excluded_as_new": 38,
+  "threshold_summaries": {
+    "15": {
+      "author_lineage": {
+        "anti_pd1_monotherapy": {
+          "SPECIAL_ids": [
+            "GC15",
+            "GC18",
+            "GC20",
+            "GC21",
+            "GC22",
+            "GC36"
+          ],
+          "Lin2026_ids": [
+            "P7",
+            "P12"
+          ],
+          "SPECIAL_n": 6,
+          "Lin2026_n": 2,
+          "combined_count_candidates": 8
+        },
+        "anti_pd1_plus_anti_ctla4": {
+          "SPECIAL_ids": [
+            "GC28",
+            "GC32",
+            "GC37",
+            "GC38",
+            "GC41"
+          ],
+          "Lin2026_ids": [
+            "P1",
+            "P2",
+            "P3",
+            "P5"
+          ],
+          "SPECIAL_n": 5,
+          "Lin2026_n": 4,
+          "combined_count_candidates": 9
+        },
+        "combined_total": 17
+      },
+      "coarse_label": {
+        "anti_pd1_monotherapy": {
+          "SPECIAL_ids": [
+            "GC15",
+            "GC18",
+            "GC20",
+            "GC21",
+            "GC22",
+            "GC36"
+          ],
+          "Lin2026_ids": [
+            "P7",
+            "P12"
+          ],
+          "SPECIAL_n": 6,
+          "Lin2026_n": 2,
+          "combined_count_candidates": 8
+        },
+        "anti_pd1_plus_anti_ctla4": {
+          "SPECIAL_ids": [
+            "GC28",
+            "GC32",
+            "GC37",
+            "GC38",
+            "GC41"
+          ],
+          "Lin2026_ids": [
+            "P1",
+            "P2",
+            "P3",
+            "P5"
+          ],
+          "SPECIAL_n": 5,
+          "Lin2026_n": 4,
+          "combined_count_candidates": 9
+        },
+        "combined_total": 17
+      },
+      "union_diagnostic": {
+        "anti_pd1_monotherapy": {
+          "SPECIAL_ids": [
+            "GC15",
+            "GC18",
+            "GC20",
+            "GC21",
+            "GC22",
+            "GC36"
+          ],
+          "Lin2026_ids": [
+            "P7",
+            "P12"
+          ],
+          "SPECIAL_n": 6,
+          "Lin2026_n": 2,
+          "combined_count_candidates": 8
+        },
+        "anti_pd1_plus_anti_ctla4": {
+          "SPECIAL_ids": [
+            "GC28",
+            "GC32",
+            "GC37",
+            "GC38",
+            "GC41"
+          ],
+          "Lin2026_ids": [
+            "P1",
+            "P2",
+            "P3",
+            "P5"
+          ],
+          "SPECIAL_n": 5,
+          "Lin2026_n": 4,
+          "combined_count_candidates": 9
+        },
+        "combined_total": 17
+      }
+    },
+    "30": {
+      "author_lineage": {
+        "anti_pd1_monotherapy": {
+          "SPECIAL_ids": [
+            "GC15",
+            "GC22",
+            "GC36"
+          ],
+          "Lin2026_ids": [
+            "P7"
+          ],
+          "SPECIAL_n": 3,
+          "Lin2026_n": 1,
+          "combined_count_candidates": 4
+        },
+        "anti_pd1_plus_anti_ctla4": {
+          "SPECIAL_ids": [
+            "GC28",
+            "GC32",
+            "GC38",
+            "GC41"
+          ],
+          "Lin2026_ids": [
+            "P1",
+            "P2",
+            "P3",
+            "P5"
+          ],
+          "SPECIAL_n": 4,
+          "Lin2026_n": 4,
+          "combined_count_candidates": 8
+        },
+        "combined_total": 12
+      },
+      "coarse_label": {
+        "anti_pd1_monotherapy": {
+          "SPECIAL_ids": [
+            "GC15",
+            "GC22",
+            "GC36"
+          ],
+          "Lin2026_ids": [
+            "P7"
+          ],
+          "SPECIAL_n": 3,
+          "Lin2026_n": 1,
+          "combined_count_candidates": 4
+        },
+        "anti_pd1_plus_anti_ctla4": {
+          "SPECIAL_ids": [
+            "GC28",
+            "GC32",
+            "GC38",
+            "GC41"
+          ],
+          "Lin2026_ids": [
+            "P1",
+            "P2",
+            "P3",
+            "P5"
+          ],
+          "SPECIAL_n": 4,
+          "Lin2026_n": 4,
+          "combined_count_candidates": 8
+        },
+        "combined_total": 12
+      },
+      "union_diagnostic": {
+        "anti_pd1_monotherapy": {
+          "SPECIAL_ids": [
+            "GC15",
+            "GC22",
+            "GC36"
+          ],
+          "Lin2026_ids": [
+            "P7"
+          ],
+          "SPECIAL_n": 3,
+          "Lin2026_n": 1,
+          "combined_count_candidates": 4
+        },
+        "anti_pd1_plus_anti_ctla4": {
+          "SPECIAL_ids": [
+            "GC28",
+            "GC32",
+            "GC38",
+            "GC41"
+          ],
+          "Lin2026_ids": [
+            "P1",
+            "P2",
+            "P3",
+            "P5"
+          ],
+          "SPECIAL_n": 4,
+          "Lin2026_n": 4,
+          "combined_count_candidates": 8
+        },
+        "combined_total": 12
+      }
+    },
+    "50": {
+      "author_lineage": {
+        "anti_pd1_monotherapy": {
+          "SPECIAL_ids": [
+            "GC15",
+            "GC22",
+            "GC36"
+          ],
+          "Lin2026_ids": [],
+          "SPECIAL_n": 3,
+          "Lin2026_n": 0,
+          "combined_count_candidates": 3
+        },
+        "anti_pd1_plus_anti_ctla4": {
+          "SPECIAL_ids": [
+            "GC28",
+            "GC32",
+            "GC38",
+            "GC41"
+          ],
+          "Lin2026_ids": [
+            "P1",
+            "P2",
+            "P3",
+            "P5"
+          ],
+          "SPECIAL_n": 4,
+          "Lin2026_n": 4,
+          "combined_count_candidates": 8
+        },
+        "combined_total": 11
+      },
+      "coarse_label": {
+        "anti_pd1_monotherapy": {
+          "SPECIAL_ids": [
+            "GC15",
+            "GC22",
+            "GC36"
+          ],
+          "Lin2026_ids": [],
+          "SPECIAL_n": 3,
+          "Lin2026_n": 0,
+          "combined_count_candidates": 3
+        },
+        "anti_pd1_plus_anti_ctla4": {
+          "SPECIAL_ids": [
+            "GC28",
+            "GC32",
+            "GC38",
+            "GC41"
+          ],
+          "Lin2026_ids": [
+            "P1",
+            "P2",
+            "P3",
+            "P5"
+          ],
+          "SPECIAL_n": 4,
+          "Lin2026_n": 4,
+          "combined_count_candidates": 8
+        },
+        "combined_total": 11
+      },
+      "union_diagnostic": {
+        "anti_pd1_monotherapy": {
+          "SPECIAL_ids": [
+            "GC15",
+            "GC22",
+            "GC36"
+          ],
+          "Lin2026_ids": [],
+          "SPECIAL_n": 3,
+          "Lin2026_n": 0,
+          "combined_count_candidates": 3
+        },
+        "anti_pd1_plus_anti_ctla4": {
+          "SPECIAL_ids": [
+            "GC28",
+            "GC32",
+            "GC38",
+            "GC41"
+          ],
+          "Lin2026_ids": [
+            "P1",
+            "P2",
+            "P3",
+            "P5"
+          ],
+          "SPECIAL_n": 4,
+          "Lin2026_n": 4,
+          "combined_count_candidates": 8
+        },
+        "combined_total": 11
+      }
+    }
+  },
+  "original_development_plus_lockbox_floor": 14,
+  "primary_count_floor_met": false,
+  "input_hashes": {
+    "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/Lin2026/derived/audit-quarantine/source_metadata.parquet": "e1d5b237d8166f7d8d4565bfe248dafe1740fcdce0448cf817bd9e02cb432ff6",
+    "config/cohort-expansion-audit.yaml": "fedf513bb1719c78793e77bdc217e2011d1826308119ae52eb0004e29cc52909",
+    "tables/cohort_expansion_lin_samples.tsv": "1933ee8c5a0446478e78688973cfb1f1a8d9077900e4cc663aaa538a46f553cf",
+    "tables/cohort_expansion_special_by_arm.tsv": "335d7bf4675fae525e28d1da6770a639bdbc6ac557ba1ad72bdb1b16e1524d00"
+  },
+  "output_hashes": {
+    "cohort_expansion_lin_object_samples.tsv": "0916dbd7c103f4f4d650aac6dcf6029919018c09940789ab5cc877c00170411b",
+    "cohort_expansion_lin_object_patients.tsv": "e1649db11fc984f49ef85878933d931d880f902e9f9343dc71702cbc8f85f7ff",
+    "cohort_expansion_lin_library_crosswalk.tsv": "365d74dd90d1781504d4792be74a6d07bd742ea5740c62e2bd9c0a441796b425",
+    "cohort_expansion_reused_special.tsv": "fca95eeea5950750253b9be8796033cb9ec7eb1641ceff005e20cc1cde02c079"
+  },
+  "read_columns": [
+    "cohort",
+    "patient",
+    "sample",
+    "time_point",
+    "treatment",
+    "celltype_main",
+    "celltype_adj",
+    "celltype_r2"
+  ],
+  "state_proportions_or_changes_computed": false,
+  "response_used": false,
+  "raw_matrix_alignment_verified": false,
+  "exact_drugs_verified": false,
+  "exact_library_link_verified": false,
+  "cross_study_patient_independence_fully_verified": false,
+  "remaining_checks": [
+    "exact_library_IDs",
+    "P2_on_day_9_vs_42",
+    "missing_libraries",
+    "exact_drugs",
+    "histology",
+    "lesion_matching",
+    "chemistry",
+    "SPECIAL_interbiopsy_intervals",
+    "raw_matrix_alignment",
+    "cross_study_patient_independence"
+  ],
+  "lockbox_assigned": false,
+  "model_fitted": false
+}

@@ -9,7 +9,7 @@ for folder in ["reports", "tables", "figures", "data", "prereg", "config", "docs
         if not path.is_file() or path.name in {"EVIDENCE_SHA256.json", ".gitkeep"} or "__pycache__" in path.parts:
             continue
         records.append({"path": str(path.relative_to(ROOT)), "bytes": path.stat().st_size, "sha256": file_hashes(path)["sha256"]})
-for filename in ["requirements.lock.txt", "environment.yml", "renv.lock", "sessionInfo.txt", "DATA_LICENSE.md", ".python-version"]:
+for filename in ["requirements.lock.txt", "environment.yml", "renv.lock", "sessionInfo.txt", "DATA_LICENSE.md", ".python-version", "renv-expansion.lock", "requirements-expansion.lock.txt"]:
     path = ROOT / filename
     records.append({"path": filename, "bytes": path.stat().st_size, "sha256": file_hashes(path)["sha256"]})
 write_json(ROOT / "reports/EVIDENCE_SHA256.json", {"created_at_utc": utc_now(), "files": records})

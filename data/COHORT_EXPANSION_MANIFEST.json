@@ -122,6 +122,53 @@
       "status": "saved_source_snapshot",
       "bytes": 5831,
       "sha256": "58a3715290bdfbc557ad06a44492cac555aa025c9b64d1cafd3b27b2041304c8"
+    },
+    {
+      "source_url": "https://zenodo.org/records/19586163/files/seurat_full.qs2?download=1",
+      "bytes": 4021369094,
+      "md5": "a3486788163889f8cc910ea0115d70ac",
+      "sha256": "43c9e52c5a7766fe903be29b8cbcc3aaee92c2e3a3b6801bc80a9f8b01875772",
+      "status": "verified",
+      "http_ranges": 60,
+      "path": "../data/Lin2026/raw/seurat_full.qs2",
+      "licence_note": "Deposit declares CC-BY-4.0; upstream cohort terms require separate reconciliation"
+    },
+    {
+      "path": "../data/Lin2026/derived/audit-quarantine/source_metadata.parquet",
+      "bytes": 23271965,
+      "sha256": "e1d5b237d8166f7d8d4565bfe248dafe1740fcdce0448cf817bd9e02cb432ff6",
+      "status": "derived_metadata_audit_only",
+      "parent_source": "../data/Lin2026/raw/seurat_full.qs2",
+      "provenance": "reports/evidence/cohort-expansion/lin-reader-provenance.json",
+      "licence_note": "Source-derived; no MIT relicensing; upstream cohort terms retained"
+    },
+    {
+      "path": "../data/Lin2026/derived/audit-quarantine/source_metadata.json",
+      "bytes": 1219,
+      "sha256": "0790ded06eb193865d97ae933986e778121266a62c9ce574a5d3d7abeed8dada",
+      "status": "derived_metadata_audit_only",
+      "parent_source": "../data/Lin2026/raw/seurat_full.qs2",
+      "provenance": "reports/evidence/cohort-expansion/lin-reader-provenance.json",
+      "licence_note": "Source-derived; no MIT relicensing; upstream cohort terms retained"
+    },
+    {
+      "path": "../data/Lin2026/derived/audit-quarantine/source_stream.integrity.json",
+      "bytes": 249,
+      "sha256": "fdff251b38e2c250eff4145e6daf3df82ae68582c03c7e6cb1dafc4d0faa27c4",
+      "status": "derived_metadata_audit_only",
+      "parent_source": "../data/Lin2026/raw/seurat_full.qs2",
+      "provenance": "reports/evidence/cohort-expansion/lin-reader-provenance.json",
+      "licence_note": "Source-derived; no MIT relicensing; upstream cohort terms retained"
+    },
+    {
+      "path": "../data/Lin2026/derived/audit-quarantine/source_stream.rds",
+      "bytes": 28600818752,
+      "sha256": "4cac56594263be061f8992ce4eb5c96f7c958f57b07e7ab23d26226a81a16511",
+      "status": "derived_stream_checksum_recorded_during_decode",
+      "parent_source": "../data/Lin2026/raw/seurat_full.qs2",
+      "provenance": "reports/evidence/cohort-expansion/lin-reader-provenance.json",
+      "licence_note": "Contains all atlas source content; upstream cohort terms retained"
     }
-  ]
+  ],
+  "updated_at_utc": "2026-10-27T20:20:50.786069+00:00"
 }

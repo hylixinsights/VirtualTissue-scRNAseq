@@ -1,0 +1,35 @@
+cohort	patient_id	clinical_sample_id	timepoint	clinical_day	arm_as_reported	source_sample_candidate	link_status	exact_library_link_verified
+Lin2026_in_house	P1	E19306	pre	0	Combo	SKCM_this study_Patient1_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P1	E19309	on	12	Combo	SKCM_this study_Patient1_On	ordinal_timepoint_provisional	False
+Lin2026_in_house	P2	E19319	pre	0	Combo	SKCM_this study_Patient2_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P2	E19321	on	9	Combo	SKCM_this study_Patient2_On	ambiguous_multiple_on_biopsies	False
+Lin2026_in_house	P2	E19326	on	42	Combo	SKCM_this study_Patient2_On	ambiguous_multiple_on_biopsies	False
+Lin2026_in_house	P3	E19323	pre	0	Combo	SKCM_this study_Patient3_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P3	E19325	on	7	Combo	SKCM_this study_Patient3_On	ordinal_timepoint_provisional	False
+Lin2026_in_house	P4	E19327	pre	0	Combo	SKCM_this study_Patient4_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P4	E19329	on	9	Combo		patient_timepoint_absent_in_deposit	False
+Lin2026_in_house	P5	E19330	pre	0	Combo	SKCM_this study_Patient5_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P5	E19331	on	9	Combo	SKCM_this study_Patient5_On	ordinal_timepoint_provisional	False
+Lin2026_in_house	P6	E19334	pre	0	Combo	SKCM_this study_Patient6_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P6	E19335	on	9	Combo		patient_timepoint_absent_in_deposit	False
+Lin2026_in_house	P7	E19301	pre	0	Mono	SKCM_this study_Patient7_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P7	E19302	on	7	Mono	SKCM_this study_Patient7_On	ordinal_timepoint_provisional	False
+Lin2026_in_house	P8	E19303	pre	0	Mono	SKCM_this study_Patient8_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P8	E19304	on	7	Mono		patient_timepoint_absent_in_deposit	False
+Lin2026_in_house	P9	E19305	pre	0	Mono	SKCM_this study_Patient9_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P9	E19307	on	7	Mono	SKCM_this study_Patient9_On	ordinal_timepoint_provisional	False
+Lin2026_in_house	P10	E19308	pre	0	Mono	SKCM_this study_Patient10_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P10	E19311	on	7	Mono		patient_timepoint_absent_in_deposit	False
+Lin2026_in_house	P11	E19312	pre	0	Mono	SKCM_this study_Patient11_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P11	E19314	on	7	Mono		patient_timepoint_absent_in_deposit	False
+Lin2026_in_house	P12	E19317	pre	0	Mono	SKCM_this study_Patient12_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P12	E19318	on	7	Mono	SKCM_this study_Patient12_On	ordinal_timepoint_provisional	False
+Lin2026_in_house	P13	E23346	pre	0	Combo	SKCM_this study_Patient13_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P13	E23350	on	14	Combo	SKCM_this study_Patient13_On	ordinal_timepoint_provisional	False
+Lin2026_in_house	P14	E23347	pre	0	Combo		patient_timepoint_absent_in_deposit	False
+Lin2026_in_house	P14	E23348	on	6	Combo	SKCM_this study_Patient14_On	ordinal_timepoint_provisional	False
+Lin2026_in_house	P15	E23357	pre	0	Combo		patient_timepoint_absent_in_deposit	False
+Lin2026_in_house	P15	E23360	on	16	Combo	SKCM_this study_Patient15_On	ordinal_timepoint_provisional	False
+Lin2026_in_house	P16	E23358	pre	0	Combo	SKCM_this study_Patient16_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P17	E19320	pre	0	Combo	SKCM_this study_Patient17_Pre	ordinal_timepoint_provisional	False
+Lin2026_in_house	P17	E19324	on	8	Combo		patient_timepoint_absent_in_deposit	False

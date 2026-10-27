@@ -1,0 +1,22 @@
+status: user_approved_audit_only
+approved_date: 2026-10-27
+parent_freeze: prereg/FREEZE.json
+primary_analysis_change_frozen: false
+cancer: melanoma
+cohorts: [SPECIAL, Lin2026_in_house]
+treatment_strata: [anti_pd1_monotherapy, anti_pd1_plus_anti_ctla4]
+exact_drug_verification_required: true
+min_cd8_per_biopsy: 30
+sensitivity_min_cd8: [15, 50]
+source_overlap_audit_required: true
+allow_expression_state_analysis: false
+allow_integrated_embeddings_for_training: false
+allow_spatial: false
+allow_jev: false
+lin_lineage_count_rule:
+  primary: "celltype_r2 starts with CD8_"
+  reason: "Author labels identify CD8 among Cycling T/NK; coarse CD8+T also includes gdT. Count lineage only, without tabulating state compositions."
+  comparison: "celltype_main equals CD8+T"
+  declared_before_recount: true
+  gene_expression_reannotation_performed: false
+  special_rule: "Retain original author CD8 labels; generic cycling without CD8 identity remains unresolved."

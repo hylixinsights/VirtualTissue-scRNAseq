@@ -1,10 +1,10 @@
 {
-  "created_at_utc": "2026-10-27T19:32:16.394709+00:00",
+  "created_at_utc": "2026-10-27T21:09:42.528615+00:00",
   "files": [
     {
       "path": "reports/STATUS.md",
-      "bytes": 2568,
-      "sha256": "9341226c251e1a165421f6cc7688714e935c4ba17f4b6fb44874f653928a0986"
+      "bytes": 3703,
+      "sha256": "2e8402f67c7646e8fcbcfd71d053daac94461279e5901d03a1b414bf338fb31d"
     },
     {
       "path": "reports/T0.1_environment.md",
@@ -48,8 +48,8 @@
     },
     {
       "path": "reports/cohort_expansion_review.md",
-      "bytes": 10758,
-      "sha256": "edcaee6b9fb57127c26a2e5202eb5dd13541f5f65d459c3d8129d62d954e4e20"
+      "bytes": 15586,
+      "sha256": "fe582d84954f759e649948593de80e8bcdc26b36b4bed639b8fc4e4d3732c2ed"
     },
     {
       "path": "reports/evidence/PMC12409281.xml",
@@ -117,6 +117,16 @@
       "sha256": "301312127357b1840abeb62aaf45f7e8c9d784de06b0505dae87c41b4e522024"
     },
     {
+      "path": "reports/evidence/cohort-expansion/R-extension-sessionInfo.txt",
+      "bytes": 710,
+      "sha256": "61bec9fe21c6752d1bd6f3b740731d91d9c68f4a8cf489670a24baab20953ddd"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/R-extension-versions.tsv",
+      "bytes": 258,
+      "sha256": "5cb2a117588bf1efc42836f26577c6e76c183d1a52a698f33899309f1163e06e"
+    },
+    {
       "path": "reports/evidence/cohort-expansion/Sun2024.html",
       "bytes": 127379,
       "sha256": "41c2c2d68131cf96f8cb32fdc2d70f73ede1c6e76cad9424a18f42c378308112"
@@ -127,14 +137,144 @@
       "sha256": "82803ff03f1742b077b7e78444a96a7c8b1d4dc0b0b0e98e238a3b3cc6cc1928"
     },
     {
+      "path": "reports/evidence/cohort-expansion/block-decoder-install.log",
+      "bytes": 657,
+      "sha256": "8ce1566450ce5267fdd70d805f55810553e71eacaff4b8efc89384ebf8dad2c9"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/block-decoder-validation.json",
+      "bytes": 728,
+      "sha256": "8798695a31ad357d9954b2353326e067943a1d39d6b1fc6df4c86142a294eac3"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/block-decoder-validation.log",
+      "bytes": 80,
+      "sha256": "66bbd8a4c079530515415533cdbc3e2c8da5747ea7453dc4aca51951e2171ba5"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-block-decode.log",
+      "bytes": 1513,
+      "sha256": "4e54ae80954dd90f0daa22305236034de99d5748363510028f2f8f729bfe8d3a"
+    },
+    {
       "path": "reports/evidence/cohort-expansion/lin-download.log",
       "bytes": 8216,
       "sha256": "edfaedf1d2070b0ec3a50ed38786f61222ed499decbb7ae83ff124429b114bf3"
     },
     {
+      "path": "reports/evidence/cohort-expansion/lin-ega-clinical-audit.json",
+      "bytes": 867,
+      "sha256": "bcaeadc775ca40556225f775ae14f19b09f05922f3b1dde98bb51ed88575ec8b"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-ega-sample-example.json",
+      "bytes": 200,
+      "sha256": "7689ab9a0a8a727d0d4933cf55791846191363d08fdebd5368b7dd2586a13253"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-ega-samples-2902.json",
+      "bytes": 2239,
+      "sha256": "ea6bce7335b06728cf6f8f32a0db968b1999e141c7c1bf677823f525fa77849e"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-ega-samples-665.json",
+      "bytes": 2584,
+      "sha256": "fa74301adc6bcdaab36478f48f397c79503bd165cc2624a82221180619e36733"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-inventory.log",
+      "bytes": 355,
+      "sha256": "953a3b373ee6ea9c588fad4b0d5c1fd451267550046fcf0cca44411ce754f50f"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-metadata-stream.log",
+      "bytes": 19023,
+      "sha256": "84e28df46e55ce32ac09f7b18731f2ebd553ed77db5d37882c5a731ba3d5d93b"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-object-count-audit.json",
+      "bytes": 10159,
+      "sha256": "890ab3340643cfe32c0b00e865bdd495f770cb507e8716bb804926412660b043"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-object-integrity.json",
+      "bytes": 284,
+      "sha256": "8691f5830456e9b2bd387753a8eb67f1e35efe01dd384fffa8462b85cc37cdda"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-publisher-key-resources-search.txt",
+      "bytes": 16780,
+      "sha256": "f2f4306df63cd3fbe8b2471006093fc506368dc630e383ce3505d4641ddcae8a"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-range-download.log",
+      "bytes": 5051,
+      "sha256": "afe8aa8059ffb9f0bcb998b57654d1d9fe23957654041d39b2ef71b25991e871"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-reader-provenance.json",
+      "bytes": 2736,
+      "sha256": "73fc85f4377320a04a88714689b9214dc2b2c6598c231992cc7291f6404e6b4a"
+    },
+    {
       "path": "reports/evidence/cohort-expansion/lin-s1-extraction.json",
       "bytes": 5379,
       "sha256": "9d93d60e1c6aba61b93a36b0a4e55ff39855013aa3edbb1889ef81c2ea6db3d1"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-source_metadata.json",
+      "bytes": 1219,
+      "sha256": "0790ded06eb193865d97ae933986e778121266a62c9ce574a5d3d7abeed8dada"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-source_stream.integrity.json",
+      "bytes": 249,
+      "sha256": "fdff251b38e2c250eff4145e6daf3df82ae68582c03c7e6cb1dafc4d0faa27c4"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-stream-conversion.log",
+      "bytes": 82,
+      "sha256": "43f510bff0719427f94a3934c58f2446777f3e0707bf44626a600448d3a014df"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/metadata-stream-validation.json",
+      "bytes": 337,
+      "sha256": "4e08e7cff9d95c770732c5964984f0cc32aae318c2927e5e9d0f06a08919a6e7"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/metadata-stream-validation.log",
+      "bytes": 232,
+      "sha256": "70d78e00cdb9fcaf5e09e646fcbe8433b7a3757daa79c0a65b7632d4bc4d8df1"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/object-count-validation.json",
+      "bytes": 1648,
+      "sha256": "64efe3059dbf60c30e770e04c2dc8713153fcf57a00c496427d84c1e44056aeb"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/pytest.xml",
+      "bytes": 787,
+      "sha256": "4e7088da9ebcfafd373ecb024796cf13f46ae0ad93588a347dc0c2c1c3517f08"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/qs2-install.log",
+      "bytes": 482,
+      "sha256": "a8f7f00d2854cc8d323d6a6c2ca5287056d04a8e4c81795a12b93123db538b1e"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/qs2-readme.md",
+      "bytes": 7675,
+      "sha256": "b891047c0d4406e582ebb7d54d50273ac19b4e3c55dfa4e53743a2e34e94a540"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/qs2-restore.log",
+      "bytes": 129,
+      "sha256": "04cda3f8f9023551f07638d9518c514e7a0c28c719f677a0e9c242ca29e9b8b1"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/rdata-install.log",
+      "bytes": 999,
+      "sha256": "3731e2c116941609763a14439c471389aef05511b1ebd3d9177bc781bad7cf81"
     },
     {
       "path": "reports/evidence/cohort-expansion/validation.json",
@@ -278,8 +418,8 @@
     },
     {
       "path": "reports/task-board.json",
-      "bytes": 8033,
-      "sha256": "8174836d006eaa4feb099aa4575185904a81fc4dd4cb42008bf0fe236b154ccc"
+      "bytes": 9129,
+      "sha256": "6044c063b1dc02d595cd0527921e2b004b4433cfc0fc2a949e2ce8e4f96436e4"
     },
     {
       "path": "tables/S2_metadata_dictionary.tsv",
@@ -298,13 +438,38 @@
     },
     {
       "path": "tables/claims_ledger.tsv",
-      "bytes": 2558,
-      "sha256": "a2f3e484ac4ba4e1fc0166d34ca1df92def3e39adee02eb03345fff82c0fe7c7"
+      "bytes": 4790,
+      "sha256": "72d28cde3fea08827a9045c7aaf1630d560d5e90c7c7843d57aab498fdabcebf"
     },
     {
       "path": "tables/cohort_expansion_candidates.tsv",
-      "bytes": 2596,
-      "sha256": "154a65b249728429eac7b4edff60e9a3cdbdf96244d1574950c5ace717258eee"
+      "bytes": 2768,
+      "sha256": "97113af29e7bfaf8cdb870a164e7c7382f55f29b1fc354716765781b32949688"
+    },
+    {
+      "path": "tables/cohort_expansion_lin_ega_samples.tsv",
+      "bytes": 5102,
+      "sha256": "fe1e0994f535064edc47022454599a1fce8bf5ce689ccbcd92d89e7ecc59bbbb"
+    },
+    {
+      "path": "tables/cohort_expansion_lin_library_crosswalk.tsv",
+      "bytes": 3491,
+      "sha256": "365d74dd90d1781504d4792be74a6d07bd742ea5740c62e2bd9c0a441796b425"
+    },
+    {
+      "path": "tables/cohort_expansion_lin_lineage_vocabulary.tsv",
+      "bytes": 4631,
+      "sha256": "0dd97f7dbee4289bac0042fa7fc50a46724472b744ceb6a851406927a64878ba"
+    },
+    {
+      "path": "tables/cohort_expansion_lin_object_patients.tsv",
+      "bytes": 3254,
+      "sha256": "e1649db11fc984f49ef85878933d931d880f902e9f9343dc71702cbc8f85f7ff"
+    },
+    {
+      "path": "tables/cohort_expansion_lin_object_samples.tsv",
+      "bytes": 4851,
+      "sha256": "0916dbd7c103f4f4d650aac6dcf6029919018c09940789ab5cc877c00170411b"
     },
     {
       "path": "tables/cohort_expansion_lin_patients.tsv",
@@ -315,6 +480,11 @@
       "path": "tables/cohort_expansion_lin_samples.tsv",
       "bytes": 3420,
       "sha256": "1933ee8c5a0446478e78688973cfb1f1a8d9077900e4cc663aaa538a46f553cf"
+    },
+    {
+      "path": "tables/cohort_expansion_reused_special.tsv",
+      "bytes": 3614,
+      "sha256": "fca95eeea5950750253b9be8796033cb9ec7eb1641ceff005e20cc1cde02c079"
     },
     {
       "path": "tables/cohort_expansion_sade_patients.tsv",
@@ -363,8 +533,8 @@
     },
     {
       "path": "data/COHORT_EXPANSION_MANIFEST.json",
-      "bytes": 5469,
-      "sha256": "c59dde3f61777d0dab50c5573c951ca4ff8c9af762f8894a3688fb709bdcf75a"
+      "bytes": 7962,
+      "sha256": "4bd80972cd19b296575346abd0bf6cef0be6f6921108699ba6c92118fa505d00"
     },
     {
       "path": "data/MANIFEST.json",
@@ -378,8 +548,8 @@
     },
     {
       "path": "prereg/amendment-A02-cohort-expansion-draft-2026-10-27.md",
-      "bytes": 5291,
-      "sha256": "aa6601d74c98fea18a427eac53b2563ef6fb3031ac48a86a0f11674d0a2078b8"
+      "bytes": 6167,
+      "sha256": "af9b0a1f5d385bf3226fbdc714bc92c788b4eb474aaeeadd3b9fa8eb30fb6182"
     },
     {
       "path": "prereg/plan-v1-original-2026-10-27.md",
@@ -392,9 +562,29 @@
       "sha256": "71f2735c810113d231f0a04470dbe56e2d59508e55dc684bf6720cf13c89be97"
     },
     {
+      "path": "prereg/working-plan-v1.2-2026-10-27.md",
+      "bytes": 64589,
+      "sha256": "b9733cdd111ba1c4b81276b234be8e1de15bda91a10b45e734b9f358cdef2830"
+    },
+    {
+      "path": "config/cohort-expansion-audit.yaml",
+      "bytes": 954,
+      "sha256": "fedf513bb1719c78793e77bdc217e2011d1826308119ae52eb0004e29cc52909"
+    },
+    {
       "path": "config/study.yaml",
       "bytes": 1657,
       "sha256": "565fddefad5a855cb0f00ed8a8cb7f6f33122fadb691f0780b3d1c5858c2e1a8"
+    },
+    {
+      "path": "docs/data-request-draft.txt",
+      "bytes": 3134,
+      "sha256": "672f67cf0de95fc47525b1be8f8b35163b74680ec3bbd265f700ed8eb9c26e56"
+    },
+    {
+      "path": "docs/lin-metadata-reproduction.md",
+      "bytes": 4369,
+      "sha256": "95115c57b925846d5c7e940dc7e68facb0bc955470e001eae88d5397ade8384a"
     },
     {
       "path": "docs/protocol-review-2026-10-27.md",
@@ -430,6 +620,16 @@
       "path": ".python-version",
       "bytes": 8,
       "sha256": "aa0d6581054e6e4ff3f91839deca7a854ad37221b8784d060b42d0f847ff1a3b"
+    },
+    {
+      "path": "renv-expansion.lock",
+      "bytes": 11428,
+      "sha256": "ebaea4e5720a77d0d81715e9659de67b8e47780eb9f60e02990cdf05443f3e22"
+    },
+    {
+      "path": "requirements-expansion.lock.txt",
+      "bytes": 62,
+      "sha256": "306e503d4419d0c892dd98708ddcb29e899afca12f6e9352294b6b5c199222bb"
     }
   ]
 }

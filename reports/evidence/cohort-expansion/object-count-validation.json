@@ -1,0 +1,21 @@
+{
+  "created_at_utc": "2026-10-27T21:08:42.610860+00:00",
+  "deterministic_count_audit_rerun": true,
+  "input_output_hashes_valid": true,
+  "claims_ledger_hashes_valid": true,
+  "reader_script_lock_and_metadata_hashes_valid": true,
+  "sample_count_partition_valid": true,
+  "lineage_rules_give_identical_candidate_sets_at_all_cutoffs": true,
+  "scope": "metadata count audit; raw-matrix alignment and final clinical eligibility unverified",
+  "output_hashes": {
+    "tables/cohort_expansion_lin_ega_samples.tsv": "fe1e0994f535064edc47022454599a1fce8bf5ce689ccbcd92d89e7ecc59bbbb",
+    "tables/cohort_expansion_lin_library_crosswalk.tsv": "365d74dd90d1781504d4792be74a6d07bd742ea5740c62e2bd9c0a441796b425",
+    "tables/cohort_expansion_lin_lineage_vocabulary.tsv": "0dd97f7dbee4289bac0042fa7fc50a46724472b744ceb6a851406927a64878ba",
+    "tables/cohort_expansion_lin_object_patients.tsv": "e1649db11fc984f49ef85878933d931d880f902e9f9343dc71702cbc8f85f7ff",
+    "tables/cohort_expansion_lin_object_samples.tsv": "0916dbd7c103f4f4d650aac6dcf6029919018c09940789ab5cc877c00170411b",
+    "tables/cohort_expansion_lin_patients.tsv": "115f442ad9470471d0d4fd148f5857e7d7c04cc21effa2edff2aff2359d3edbf",
+    "tables/cohort_expansion_lin_samples.tsv": "1933ee8c5a0446478e78688973cfb1f1a8d9077900e4cc663aaa538a46f553cf",
+    "tables/cohort_expansion_reused_special.tsv": "fca95eeea5950750253b9be8796033cb9ec7eb1641ceff005e20cc1cde02c079",
+    "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/reports/evidence/cohort-expansion/lin-object-count-audit.json": "890ab3340643cfe32c0b00e865bdd495f770cb507e8716bb804926412660b043"
+  }
+}

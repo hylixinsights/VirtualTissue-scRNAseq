@@ -1,0 +1,12 @@
+Collecting zstandard
+  Using cached zstandard-0.25.0-cp312-cp312-macosx_11_0_arm64.whl.metadata (3.3 kB)
+Collecting xxhash
+  Downloading xxhash-4.0.2-cp312-cp312-macosx_11_0_arm64.whl.metadata (17 kB)
+Using cached zstandard-0.25.0-cp312-cp312-macosx_11_0_arm64.whl (640 kB)
+Downloading xxhash-4.0.2-cp312-cp312-macosx_11_0_arm64.whl (36 kB)
+Installing collected packages: zstandard, xxhash
+
+Successfully installed xxhash-4.0.2 zstandard-0.25.0
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.2
+[notice] To update, run: /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv/bin/python -m pip install --upgrade pip

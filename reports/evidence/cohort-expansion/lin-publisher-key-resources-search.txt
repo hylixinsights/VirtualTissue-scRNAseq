@@ -1,0 +1,176 @@
+Tumor immune microenvironment remodeling predicts response to checkpoint inhibitor therapy - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S1535610826003843)
+citeturn26search0 [wordlim: 200] Published: last month; Crawled: 3 weeks ago; 
+
+Cancer Cell
+
+Volume 44, Issue 9, 14 September 2026, Pages 1847-1861.e6
+
+# 
+
+Article
+
+Tumor immune microenvironment remodeling predicts response to checkpoint inhibitor therapy
+
+https://doi.org/10.1016/j.ccell.2026.08.007Get rights and contentView accessibility information
+
+## Highlights
+
+  * •
+
+A longitudinal pan-cancer atlas maps tumor immune microenvironment (TIME) remodeling
+
+  * •
+
+Four conserved TIME states recur across cancer types
+
+  * •
+
+TIME transitions during therapy track response better than the baseline state
+
+  * •
+
+A transition-derived baseline signature predicts response and survival
+
+## Summary
+
+Immune checkpoint inhibitors (ICIs) have transformed cancer therapy, yet the basis of variable patient responses remains unclear. We assemble a longitudinal single-cell RNA sequencing atlas of 441 samples from 241 patients across ten cancer entities to map treatment-associated remodeling of the tumor immune microenvironment (TIME). With a hierarchical reference-guided deep-phenotyping framework, we define 77 immune and stromal subtypes and resolve four conserved TIME subtypes. Approximately 40% of tumors shift between states during therapy, and the transition is more predictive of outcome than the baseline state. Favorable transitions toward inflamed or B cell-enriched subtype track with improved response and survival, while persistence in or shifts toward myeloid dominance indicate resistance. We derive a 59-gene signature that predicted response and survival for 1,383 baseline tumors across 19 independent cohorts. These findings establish immunotype transitions as a central determinant of ICI efficacy, offering new avenues for response prediction and rational immunotherapy design.
+
+## Introduction
+
+Immune checkpoint inhibitors (ICIs) have transformed cancer therapy by reinvigoration of anti-tumor immunity, achieving durable responses in patients with previously intractable malignancies.^{1}^{,}^{2}^{,}^{3}^{,}^{4} Thus, ICIs have become standard-of-care for many cancer types. Despite the successes, however, more than half of patients either fail to respond initially or develop acquired resistance. This notion has driven an intense search for biomarkers to improve response prediction and allow personalized therapeutic strategies to overcome resistance.
+
+The tumor immune microenvironment (TIME) critically impacts the outcome of anti-tumor immune responses.^{5}^{,}^{6} Tumors are often described along a hot-to-cold spectrum that reflects the distribution and functional state of immune cells within and around the tumor. Hot tumors typically show cytotoxic T cells, interferon signaling, and antigen presentation features and tend to respond better.^{7} Cold tumors tend to be T cell deficient or T cell excluded and are often dominated by suppressive myeloid and regulatory programs that resist activation.^{8} These patterns have been observed with bulk expression, spatial assays, and single-cell profiling and have anchored many current predictors,^{9}^{,}^{10}^{,}^{11}^{,}^{12}^{,}^{13} yet this framework implicitly treats the TIME as a fixed, pre-treatment attribute of the tumor. Checkpoint blockade, however, is not a passive test of immune readiness but a potent perturbation that can rewire the cellular composition and function. An overly simplistic assumption could obscure the fact that ICIs act as a profound intervention that actively reshapes TIME by reactivating lymphocytes and altering myeloid populations. Early on-treatment molecular remodeling, including T cell reinvigoration, B cell activation, and clonal expansion, has been shown to correlate with clinical benefit.^{14}^{,}^{15}^{,}^{16}^{,}^{17} Recognizing the TIME as a dynamic system rather than a static trait reframes the question from whether a tumor is hot or cold to how its immune ecosystem evolves once therapy begins and whether those trajectories can predict outcome.^{18}
+
+Testing this hypothesis requires longitudinal sampling of tumors before and during therapy, enabling direct observation of TIME remodeling and its link to treatment efficacy. Analyses on consecutively sampled tumors have provided unprecedented insights into TIME dynamics in easy-to-biopsy cancers^{15}^{,}^{16}^{,}^{19}; this approach has been expanded to include the neoadjuvant therapy setting, which allows for the collection of sequential tumor samples.^{20}^{,}^{21}^{,}^{22}^{,}^{23}^{,}^{24}^{,}^{25}^{,}^{26}^{,}^{27}^{,}^{28}^{,}^{29}^{,}^{30} Nonetheless, investigating TIME dynamics has faced several challenges. For example, studies examining treatment-associated compositional shifts typically include 10–20 patients with paired samples, lacking sufficient statistical power to detect subtle but clinically relevant features. Comparing data across different studies is hampered by batch effects and methodology inconsistencies, such as cell annotation and compositional analysis. Thus, although the TIME cell lineages and classifications have been extensively explored,^{9}^{,}^{10}^{,}^{31}^{,}^{32}^{,}^{33}^{,}^{34}^{,}^{35}^{,}^{36}^{,}^{37}^{,}^{38} the full plot of TIME dynamics and the association with treatment efficacy remain poorly characterized. Overcoming these barriers to data integration will be crucial to unlocking the potential of pan-cancer meta-analyses to address these gaps.
+
+Here, we address this gap by assembling large-scale longitudinal single-cell RNA sequencing (scRNA-seq) compendium of ICI-treated tumors to date, encompassing 441 samples from 241 patients across 10 cancer types. To overcome the challenges of cross-cohort integration, we developed a hierarchical, reference-guided, deep-phenotyping framework that enables consistent cell-type classification and compositional analysis across studies. This approach allowed us to define a compact and reproducible set of TIME states and to track transitions in paired pre- and on-treatment samples. We hypothesized that the direction of TIME remodeling during ICI therapy is associated with clinical outcome and that the baseline molecular programs determine each tumor’s propensity for favorable or unfavorable evolution. By mapping these dynamics across cancer types, we reveal conserved trajectories of immune remodeling that link early cellular plasticity to therapeutic efficacy. This work extends prior studies by providing a unified, longitudinal framework to assess how TIME remodeling, beyond its baseline composition, relates to immunotherapy response.
+
+## Pan-cancer atlas reveals landscape of TIME dynamics
+
+To systematically investigate cellular remodeling under ICI therapy, we first generated scRNA-seq data from paired tumor biopsies of 17 cutaneous melanoma (SKCM) patients collected at treatment initiation (day 0) and 6–16 days after anti-PD-1 ± anti-CTLA-4 therapy initiation, capturing early treatment-associated changes (Table S1). We further assembled a pan-cancer atlas by integrating sequential scRNA-seq datasets from 15 independent studies encompassing 10 cancer types. A key feature of this
+
+## Discussion
+
+Studies following patients with sequential biopsies have been invaluable for revealing the contours of TIME remodeling in cancers such as melanoma, lung, head and neck, breast, liver, and colorectal cancers.^{15}^{,}^{20}^{,}^{21}^{,}^{22}^{,}^{23}^{,}^{25}^{,}^{26}^{,}^{27}^{,}^{28}^{,}^{30}^{,}^{56}^{,}^{57} Yet, these prior analyses have been constrained by sample size. Cohorts of 10–20 paired cases are large for a single-cell study, but they are not powered to resolve modest, clinically relevant effects. The large scale of our pan-cancer atlas, combined with
+
+## Lead contact
+
+Requests for further information and resources should be directed to and will be addressed by the lead contact, Dvir Aran ([email protected]).
+
+## Materials availability
+
+This study did not generate new unique reagents.
+
+## Data and code availability
+
+The raw sequencing data of Essen SKCM cohort have been deposited in the European Genome-phenome Archive under accession number EGAS50000000459. Processed scRNA-seq and spatial evisium data have been deposited in Zenodo (https://doi.org/10.5281/zenodo.19586163). All scRNA-seq and bulk transcriptomic
+
+## Acknowledgments
+
+This work was funded by the Israel Science Foundation (1543/21) and Azrieli Faculty Fellowship (to D.A.), by Deutsches Konsortium für Translationale Krebsforschung (ED03 to J.C.B.), and Else Kröner-Fresenius-Stiftung (EKFS), University Medicine Essen Medical Scientist Academy (UMESciA) (to N.S.). M.C. was supported by the German Research Foundation (DFG) through Clinical Research Unit 337 (project-ID 418179183, subproject BE 1394/12-2). S.U. and J.C.B. thank Lisa Zimmer for identifying the
+
+--------------------------------------------------------------------------------
+Tumor immune microenvironment remodeling predicts response to checkpoint inhibitor therapy - ScienceDirect (https://www.sciencedirect.com/science/article/abs/pii/S1535610826003843)
+citeturn26search1 [wordlim: 200] Published: last month; Crawled: last week; 
+## Author contributions
+
+D.A. and J.C.B. conceived the study and supervised the analyses; Z.L. performed all bioinformatics analyses; M.C. and N.S. performed the scRNA-seq; S.U. collected the samples from the patients; D.A. and Z.L. wrote the manuscript with input from J.C.B.
+
+## Declaration of interests
+
+S.U. declares research support from Bristol Myers Squibb and Merck Serono; speakers and advisory board honoraria from Bristol Myers Squibb, Merck Sharp & Dohme, Merck Serono, Novartis, and Roche; and travel support from Bristol Myers Squibb, Merck Sharp & Dohme, and Pierre Fabre. J.C.B. is receiving speaker’s bureau honoraria from Amgen, Incyte, Merck Serono, Pfizer, and Regeneron and is a paid consultant/advisory board member/DSMB member for Almirall, Boehringer Ingelheim, ICON, Merck Sharp &
+
+## Key resources table
+
+REAGENT or RESOURCE  | SOURCE  | IDENTIFIER
+--- | --- | ---
+Biological samples
+---
+Human skin melanoma samples  | University Hospital Essen  | See Table S1 for details
+Critical commercial assays
+---
+Tumor Dissociation Kit, human  | Miltenyi Biotec  | Cat#130-095-929
+Chromium Next GEM Single Cell 5′ Library & Gel Bead Kit v1.1  | 10× Genomics  | Cat#1000165
+Deposited data
+---
+Raw sequencing data  | This study  | EGAS50000000459
+Processed scRNA-seq and Visium data  | This study  | https://doi.org/10.5281/zenodo.19586163
+Public human cancer scRNA-seq and Visium data  | Othe public
+--------------------------------------------------------------------------------
+Tumor immune microenvironment remodeling predicts response to checkpoint inhibitor therapy - ScienceDirect (https://www.sciencedirect.com/science/article/pii/S1535610826003843/pdf)
+citeturn26search2 [wordlim: 200] Published: last month; Crawled: last month; 
+## Section snippets
+
+## Pan-cancer atlas reveals landscape of TIME dynamics
+
+To systematically investigate cellular remodeling under ICI therapy, we first generated scRNA-seq data from paired tumor biopsies of 17 cutaneous melanoma (SKCM) patients collected at treatment initiation (day 0) and 6–16 days after anti-PD-1 ± anti-CTLA-4 therapy initiation, capturing early treatment-associated changes (Table S1). We further assembled a pan-cancer atlas by integrating sequential scRNA-seq datasets from 15 independent studies encompassing 10 cancer types. A key feature of this
+
+## Discussion
+
+Studies following patients with sequential biopsies have been invaluable for revealing the contours of TIME remodeling in cancers such as melanoma, lung, head and neck, breast, liver, and colorectal cancers.^{15}^{,}^{20}^{,}^{21}^{,}^{22}^{,}^{23}^{,}^{25}^{,}^{26}^{,}^{27}^{,}^{28}^{,}^{30}^{,}^{56}^{,}^{57} Yet, these prior analyses have been constrained by sample size. Cohorts of 10–20 paired cases are large for a single-cell study, but they are not powered to resolve modest, clinically relevant effects. The large scale of our pan-cancer atlas, combined with
+
+## Lead contact
+
+Requests for further information and resources should be directed to and will be addressed by the lead contact, Dvir Aran ([email protected]).
+
+## Materials availability
+
+This study did not generate new unique reagents.
+
+## Data and code availability
+
+The raw sequencing data of Essen SKCM cohort have been deposited in the European Genome-phenome Archive under accession number EGAS50000000459. Processed scRNA-seq and spatial evisium data have been deposited in Zenodo (https://doi.org/10.5281/zenodo.19586163). All scRNA-seq and bulk transcriptomic
+
+## Author contributions
+
+D.A. and J.C.B. conceived the study and supervised the analyses; Z.L. performed all bioinformatics analyses; M.C. and N.S. performed the scRNA-seq; S.U. collected the samples from the patients; D.A. and Z.L. wrote the manuscript with input from J.C.B.
+
+## Declaration of interests
+
+S.U. declares research support from Bristol Myers Squibb and Merck Serono; speakers and advisory board honoraria from Bristol Myers Squibb, Merck Sharp & Dohme, Merck Serono, Novartis, and Roche; and travel support from Bristol Myers Squibb, Merck Sharp & Dohme, and Pierre Fabre. J.C.B. is receiving speaker’s bureau honoraria from Amgen, Incyte, Merck Serono, Pfizer, and Regeneron and is a paid consultant/advisory board member/DSMB member for Almirall, Boehringer Ingelheim, ICON, Merck Sharp &
+
+## Key resources table
+
+REAGENT or RESOURCE  | SOURCE  | IDENTIFIER
+--- | --- | ---
+Biological samples
+---
+Human skin melanoma samples  | University Hospital Essen  | See Table S1 for details
+Critical commercial assays
+---
+Tumor Dissociation Kit, human  | Miltenyi Biotec  | Cat#130-095-929
+Chromium Next GEM Single Cell 5′ Library & Gel Bead Kit v1.1  | 10× Genomics  | Cat#1000165
+Deposited data
+---
+Raw sequencing data  | This study  | EGAS50000000459
+Processed scRNA-seq and Visium data  | This study  | https://doi.org/10.5281/zenodo.19586163
+Public human cancer scRNA-seq and Visium data  | Othe public
+--------------------------------------------------------------------------------
+Coordinated Immune Activation Following KRAS Inhibition in Syngeneic Models Reveals Molecular Pathways that Potentiate and Limit Antitumor Immunity - PMC (https://pmc.ncbi.nlm.nih.gov/articles/PMC13535328/)
+citeturn26search3 [wordlim: 200] Published: last month; Crawled: 5 days ago; 
+
+. 2026 Jul 2;14(9):1433–1453. doi: 10.1158/2326-6066.CIR-25-0794
+
+# Coordinated Immune Activation Following KRAS Inhibition in Syngeneic Models Reveals Molecular Pathways that Potentiate and Limit Antitumor Immunity
+
+Corresponding Author: Chi-Ming Li, Target Discovery & Biology, Amgen, 750 Gateway Blvd, South San Francisco, CA 94080. E-mail: chimingl@amgen.com
+
+Cancer Immunol Res 2026;14:1433–53
+
+Received 2025 Jul 2; Revised 2026 Mar 6; Accepted 2026 Jul 1; Issue date 2026 Sep 2.
+
+©2026 The Authors; Published by the American Association for Cancer Research
+
+This open access article is distributed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) license.
+
+PMC Copyright notice
+
+PMCID: PMC13535328  PMID: 42397029
+
+Using KRAS and MEK inhibition, the authors demonstrate altered neoplastic cell fates and immune functions of cDCs, T cells, and macrophages. Addition of KRAS inhibition to PD-1 blockade enhances T cell– and macrophage-mediated antitumor immunity.
+### scRNA-seq library generation
+
+For CD45^{+} scRNA-seq, sorted cells were encapsulated using the Chromium NextGEM Single Cell 5′ v1.1 chemistry (10x Genomics, cat. #1000165). After reverse transcription and clean-up, cDNA amplification was performed for 14 cycles. Amplification products were aliquoted for gene expression and T-cell receptor (TCR) library generation by following protocols for target enrichment (TCR protocol only), fragmentation, end-repair, and sample index PCR.
+
+For profiling of all cells from tumors and from cultured CT-26 KRAS^{G12C} cells, libraries were prepared using the Chromium NextGEM Single Cell 3′ v3.1 chemistry (10x Genomics, cat. #1000120). Cells were encapsulated, and cDNA amplification was performed for 11 cycles. Fragmentation, end-repair, and sample index PCR steps were followed to generate next-generation sequencing (NGS) libraries. Completed libraries were quantified using a TapeStation 4200 (Agilent; RRID: SCR_018435) and sequenced on a NovaSeq6000 instrument (Illumina; RRID: SCR_016387) to achieve an average read depth of 50,000 reads per cell.
+

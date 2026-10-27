@@ -1,0 +1,13 @@
+[{"accession_id":"EGAN50000085162","title":"MM_pat07_mono-day0","description":"Melanoma patient at Day0","biological_sex":"female","subject_id":"MM_pat07","phenotype":"Primary Melanoma"},
+{"accession_id":"EGAN50000085163","title":"MM_pat07_mono-day7","description":"Melanoma patient under anti-PD1 therapy","biological_sex":"female","subject_id":"MM_pat07","phenotype":"Primary Melanoma"},
+{"accession_id":"EGAN50000085164","title":"MM_pat09_mono-day7","description":"Melanoma patient under anti-PD1 therapy","biological_sex":"female","subject_id":"MM_pat09","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000085165","title":"MM_pat09_mono-day0","description":"Melanoma patient at Day0","biological_sex":"female","subject_id":"MM_pat09","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000085166","title":"MM_pat11_mono-day7","description":"Melanoma patient under anti-PD1 therapy","biological_sex":"male","subject_id":"MM_pat11","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000085167","title":"MM_pat11_mono-day0","description":"Melanoma patient at Day0","biological_sex":"male","subject_id":"MM_pat11","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000085168","title":"MM_pat12_mono-day0","description":"Melanoma patient at Day0","biological_sex":"female","subject_id":"MM_pat12","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000085169","title":"MM_pat12_mono-day7","description":"Melanoma patient under anti-PD1 therapy","biological_sex":"female","subject_id":"MM_pat12","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000085170","title":"MM_pat02_combi-day42","description":"Melanoma patient under anti-PD1+CTLA4 therapy","biological_sex":"male","subject_id":"MM_pat02","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000085171","title":"MM_pat02_combi-day9","description":"Melanoma patient under anti-PD1+CTLA4 therapy","biological_sex":"male","subject_id":"MM_pat02","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000085172","title":"MM_pat02_combi-day0","description":"Melanoma patient at Day0","biological_sex":"male","subject_id":"MM_pat02","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000085173","title":"MM_pat05_combi-day9","description":"Melanoma patient under anti-PD1+CTLA4 therapy","biological_sex":"female","subject_id":"MM_pat05","phenotype":"Metastatic Melanoma"},
+{"accession_id":"EGAN50000085174","title":"MM_pat05_combi-day0","description":"Melanoma patient at Day0","biological_sex":"female","subject_id":"MM_pat05","phenotype":"Metastatic Melanoma"}]

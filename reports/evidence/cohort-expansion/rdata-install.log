@@ -1,0 +1,17 @@
+Collecting rdata==1.1.0
+  Downloading rdata-1.1.0-py3-none-any.whl.metadata (11 kB)
+Downloading rdata-1.1.0-py3-none-any.whl (287 kB)
+Installing collected packages: rdata
+Successfully installed rdata-1.1.0
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.2
+[notice] To update, run: /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv/bin/python -m pip install --upgrade pip
+Collecting xarray
+  Downloading xarray-2026.9.0-py3-none-any.whl.metadata (12 kB)
+Downloading xarray-2026.9.0-py3-none-any.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 14.4 MB/s  0:00:00
+Installing collected packages: xarray
+Successfully installed xarray-2026.9.0
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.2
+[notice] To update, run: /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv/bin/python -m pip install --upgrade pip

@@ -1,0 +1,4 @@
+Package	Version	Built
+qs2	0.3.1	R 4.6.1; aarch64-apple-darwin23; 2026-08-21 14:35:36 UTC; unix
+RcppParallel	6.2.1	R 4.6.1; aarch64-apple-darwin23; 2026-08-27 09:23:27 UTC; unix
+stringfish	0.19.2	R 4.6.1; aarch64-apple-darwin23; 2026-08-04 13:21:48 UTC; unix
