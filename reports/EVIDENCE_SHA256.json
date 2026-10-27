@@ -1,5 +1,5 @@
 {
-  "created_at_utc": "2026-10-27T19:14:38.884266+00:00",
+  "created_at_utc": "2026-10-27T19:15:14.751593+00:00",
   "files": [
     {
       "path": "reports/STATUS.md",
@@ -90,6 +90,11 @@
       "path": "reports/evidence/figshare-S1-2025.json",
       "bytes": 10707,
       "sha256": "0848a35af77b1e8326e978d6a0a9e561396e6618e55f233243f74de1ecf7c0e1"
+    },
+    {
+      "path": "reports/evidence/freeze-verification.json",
+      "bytes": 34,
+      "sha256": "bc07899fb1d3fbdc403b2d53773dbefccfd8ba6dc9ff3e826180a34942cf7d9d"
     },
     {
       "path": "reports/evidence/immune-export-validation.json",
@@ -218,8 +223,8 @@
     },
     {
       "path": "tables/claims_ledger.tsv",
-      "bytes": 61,
-      "sha256": "7e871b1f9a4cd2d0dfdb704bab19eea366696869ec619dff1dffe175cb5f99e7"
+      "bytes": 1280,
+      "sha256": "f41237d5a030223b7cf17c47c8aeb7820a0f078c367ef5eb57b865a0fd418afb"
     },
     {
       "path": "tables/eligibility_pending.parquet",
@@ -260,6 +265,11 @@
       "path": "data/MANIFEST.json",
       "bytes": 5609,
       "sha256": "4485211848e3d9099e902c953efce8ede61185a9ea94f6f21ab3b91e6c0372b2"
+    },
+    {
+      "path": "prereg/FREEZE.json",
+      "bytes": 794,
+      "sha256": "90bdff3ae7b0cae443b0029ace2bc29e635ce158945898e08eed4e59a36f85df"
     },
     {
       "path": "prereg/plan-v1-original-2026-10-27.md",

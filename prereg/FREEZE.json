@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "stage": "T0.4",
+  "created_at_utc": "2026-10-27T19:15:14.695381+00:00",
+  "source_commit": "d03106985a200813ce8452919db9ea1365f43f9a",
+  "public_registration": false,
+  "files": [
+    {
+      "path": "prereg/plan-v1-original-2026-10-27.md",
+      "sha256": "5a87f9762a56526d0e1b960d931f818133e34bda9505705671a949999761d874"
+    },
+    {
+      "path": "prereg/plan-v1.1-frozen-2026-10-27.md",
+      "sha256": "71f2735c810113d231f0a04470dbe56e2d59508e55dc684bf6720cf13c89be97"
+    },
+    {
+      "path": "config/study.yaml",
+      "sha256": "565fddefad5a855cb0f00ed8a8cb7f6f33122fadb691f0780b3d1c5858c2e1a8"
+    },
+    {
+      "path": "docs/protocol-review-2026-10-27.md",
+      "sha256": "037e22a2e5e0b93e8f421b5c713d5b6cc64efe790ede005a0ef77a91f9124016"
+    }
+  ]
+}
