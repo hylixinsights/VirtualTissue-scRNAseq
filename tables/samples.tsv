@@ -1,0 +1,47 @@
+sample_id	patient_id	timepoint	treatment	arm	tissue	anatomical_site	lesion_id	same_lesion_verified	chemistry	preservation	response_for_stratification_only	response_criterion	interval_days	interval_lower_days	interval_upper_days	total_tme_cells	present_in_immune_object	cells_in_immune_object	author_annotated_cd8_cells	object_tissue	clinical_source_row	clinical_source_sheet
+sc5rCMA061	GC19	pre	Pembrolizumab	anti_pd1_monotherapy	Lymph node	Inguinal		False	5' GEX	Fresh	0	BOR PD					True	190	8	Lymph node	2	Sup_table_1
+sc5rCMA066	GC19	on	Pembrolizumab	anti_pd1_monotherapy	Lymph node	Inguinal		False	5' GEX	Fresh	0	BOR PD					True	510	13	Lymph node	3	Sup_table_1
+sc5rCMA070	GC21	pre	Nivolumab	anti_pd1_monotherapy	Subcutis	Medial upper leg		False	5' GEX	Fresh	1	BOR PR					True	81	22	Subcutis	4	Sup_table_1
+sc5rCMA074	GC21	on	Nivolumab	anti_pd1_monotherapy	Skin	Upper leg		False	5' GEX	Fresh	1	BOR PR					True	224	76	Skin	5	Sup_table_1
+sc5rCMA136	GC36	pre	Pembrolizumab	anti_pd1_monotherapy	Lymph node	Cervical		False	5' GEX	Fresh	0	BOR PD					True	449	187	Lymph node	6	Sup_table_1
+sc5rCMA141	GC37	pre	Nivolumab + Ipilimumab	combination	Lymph node	Axillary		False	5' GEX	Fresh	1	pCR					True	298	28	Lymph node	7	Sup_table_1
+sc5rCMA144	GC38	pre	Nivolumab + Ipilimumab	combination	Lymph node	Axillary		False	5' GEX	Fresh	1	pCR					True	546	196	Lymph node	8	Sup_table_1
+sc5rCMA149	GC36	on	Pembrolizumab	anti_pd1_monotherapy	Lymph node	Cervical		False	5' GEX	Fresh	0	BOR PD					True	519	252	Lymph node	9	Sup_table_1
+sc5rCMA152	GC37	on	Nivolumab + Ipilimumab	combination	Lymph node	Axillary		False	5' GEX	Fresh	1	pCR					True	753	122	Lymph node	10	Sup_table_1
+sc5rCMA155	GC38	on	Nivolumab + Ipilimumab	combination	Lymph node	Axillary		False	5' GEX	Fresh	1	pCR					True	798	423	Lymph node	11	Sup_table_1
+sc5rCMA188	GC39	on	Pembrolizumab	anti_pd1_monotherapy	Skin	Dorsum Foot		False	5' GEX	Fresh	1	BOR PR					False	0	0		12	Sup_table_1
+sc5rCMA192	GC41	pre	Nivolumab + Ipilimumab	combination	Lymph node	Inguinal		False	5' GEX	Fresh	1	BOR PR					True	1694	205	Lymph node	13	Sup_table_1
+sc5rCMA196	GC41	on	Nivolumab + Ipilimumab	combination	Lymph node	Inguinal		False	5' GEX	Fresh	1	BOR PR					True	1506	257	Lymph node	14	Sup_table_1
+scrCMA036	GC14	pre	Nivolumab	anti_pd1_monotherapy	Subcutis	Retromandibular		False	3' GEX	Fresh	0	no pCR					True	57	0	Subcutis	15	Sup_table_1
+scrCMA038	GC15	pre	Nivolumab	anti_pd1_monotherapy	Lymph node	Inferior scapular angle		False	3' GEX	Fresh	1	BOR PR					True	782	396	Lymph node	16	Sup_table_1
+scrCMA040	GC16	pre	Nivolumab	anti_pd1_monotherapy	Skin	Lower arm		False	3' GEX	Fresh	0	BOR PD					True	75	1	Skin	17	Sup_table_1
+scrCMA041	GC16	pre	Nivolumab	anti_pd1_monotherapy	Skin	Upper arm		False	3' GEX	Fresh	0	BOR PD					True	26	0	Skin	18	Sup_table_1
+scrCMA044	GC15	on	Nivolumab	anti_pd1_monotherapy	Subcutis	Inferior scapular angle		False	3' GEX	Fresh	1	BOR PR					True	527	311	Subcutis	19	Sup_table_1
+scrCMA046	GC14	on	Nivolumab	anti_pd1_monotherapy	Subcutis	Retromandibular		False	3' GEX	Frozen	0	no pCR					True	185	5	Subcutis	20	Sup_table_1
+scrCMA048	GC16	on	Nivolumab	anti_pd1_monotherapy	Skin	Lower arm		False	3' GEX	Fresh	0	BOR PD					True	86	7	Skin	21	Sup_table_1
+scrCMA049	GC16	on	Nivolumab	anti_pd1_monotherapy	Skin	Upper arm		False	3' GEX	Fresh	0	BOR PD					True	155	27	Skin	22	Sup_table_1
+scrCMA050	GC16	on	Nivolumab	anti_pd1_monotherapy	Skin	Lower arm		False	3' GEX	Fresh	0	BOR PD					True	90	22	Skin	23	Sup_table_1
+scrCMA054	GC17	pre	Nivolumab	anti_pd1_monotherapy	Lymph node	Axillary		False	3' GEX	Fresh	0	BOR PD					True	68	13	Lymph node	24	Sup_table_1
+scrCMA055	GC18	pre	Nivolumab	anti_pd1_monotherapy	Lymph node	Axillary		False	3' GEX	Fresh	0	BOR PD					True	316	15	Lymph node	25	Sup_table_1
+scrCMA063	GC17	on	Nivolumab	anti_pd1_monotherapy	Lymph node	Axillary		False	3' GEX	Fresh	0	BOR PD					True	278	134	Lymph node	26	Sup_table_1
+scrCMA064	GC18	on	Nivolumab	anti_pd1_monotherapy	Lymph node	Axillary		False	3' GEX	Fresh	0	BOR PD					True	193	34	Lymph node	27	Sup_table_1
+scrCMA068	GC20	pre	Nivolumab	anti_pd1_monotherapy	Subcutis	Frons		False	3' GEX	Fresh	1	BOR CR					True	128	25	Subcutis	28	Sup_table_1
+scrCMA072	GC20	on	Nivolumab	anti_pd1_monotherapy	Subcutis	Frons		False	3' v3. GEX	Frozen	1	BOR CR					True	224	67	Subcutis	29	Sup_table_1
+scrCMA076	GC22	pre	Pembrolizumab	anti_pd1_monotherapy	Lymph node	Inguinal		False	3' GEX	Fresh	0	BOR SD					True	242	50	Lymph node	30	Sup_table_1
+scrCMA077	GC23	pre	Pembrolizumab	anti_pd1_monotherapy	Skin	Fifth toe		False	3' GEX	Fresh	0	BOR PD					True	65	6	Skin	31	Sup_table_1
+scrCMA087	GC25	pre	Pembrolizumab	anti_pd1_monotherapy	Lymph node	Cervical		False	3' GEX	Fresh	0	BOR PD					True	67	3	Lymph node	32	Sup_table_1
+scrCMA088	GC22	on	Pembrolizumab	anti_pd1_monotherapy	Lymph node	Inguinal		False	3' GEX	Fresh	0	BOR SD					True	341	210	Lymph node	33	Sup_table_1
+scrCMA089	GC23	on	Pembrolizumab	anti_pd1_monotherapy	Lymph node	Inguinal		False	3' GEX	Fresh	0	BOR PD					True	79	0	Lymph node	34	Sup_table_1
+scrCMA090	GC26	pre	Pembrolizumab	anti_pd1_monotherapy	Subcutis	Thoracic Wall		False	3' GEX	Fresh	0	BOR PD					True	320	11	Subcutis	35	Sup_table_1
+scrCMA091	GC26	on	Pembrolizumab	anti_pd1_monotherapy	Subcutis	Thoracic wall		False	3' GEX	Fresh	0	BOR PD					True	2126	907	Subcutis	36	Sup_table_1
+scrCMA093	GC28	pre	Nivolumab + Ipilimumab	combination	Lymph node	Axillary		False	3' GEX	Fresh	1	pCR					True	720	440	Lymph node	37	Sup_table_1
+scrCMA094	GC29	pre	Nivolumab	anti_pd1_monotherapy	Lymph node	Cervical		False	3' GEX	Fresh	1	BOR PR					True	5681	599	Lymph node	38	Sup_table_1
+scrCMA109	GC30	pre	Pembrolizumab	anti_pd1_monotherapy	Skin	Lower leg		False	3' GEX	Fresh	1	BOR PR					True	182	11	Skin	39	Sup_table_1
+scrCMA112	GC28	on	Nivolumab + Ipilimumab	combination	Lymph node	Axillary		False	3' GEX	Fresh	1	pCR					True	286	150	Lymph node	40	Sup_table_1
+scrCMA118	GC30	on	Pembrolizumab	anti_pd1_monotherapy	Skin	Lower leg		False	3' GEX	Fresh	1	BOR PR					True	195	0	Skin	41	Sup_table_1
+scrCMA119	GC32	pre	Nivolumab + Ipilimumab	combination	Lymph node	Axillary		False	3' GEX	Frozen	1	pCR					True	2810	1978	Lymph node	42	Sup_table_1
+scrCMA120	GC33	pre	Pembrolizumab	anti_pd1_monotherapy	Skin	Lower leg		False	3' GEX	Fresh	0	BOR PD					True	176	22	Skin	43	Sup_table_1
+scrCMA121	GC34	pre	Nivolumab + Ipilimumab	combination	Lymph node	Axillary		False	3' GEX	Fresh	0	BOR PD					True	177	3	Lymph node	44	Sup_table_1
+scrCMA129	GC32	on	Nivolumab + Ipilimumab	combination	Lymph node	Axillary		False	3' GEX	Fresh	1	pCR					True	75	54	Lymph node	45	Sup_table_1
+scrCMA130	GC33	on	Pembrolizumab	anti_pd1_monotherapy	Skin	Lower leg		False	3' GEX	Fresh	0	BOR PD					True	69	0	Skin	46	Sup_table_1
+scrCMA131	GC34	on	Nivolumab + Ipilimumab	combination	Lymph node	Axillary		False	3' GEX	Fresh	0	BOR PD					True	809	191	Lymph node	47	Sup_table_1

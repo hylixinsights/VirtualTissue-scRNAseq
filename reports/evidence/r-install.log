@@ -1,0 +1,230 @@
+also installing the dependencies ‘bitops’, ‘gtools’, ‘caTools’, ‘tensor’, ‘BH’, ‘sitmo’, ‘globals’, ‘listenv’, ‘parallelly’, ‘RcppTOML’, ‘here’, ‘gplots’, ‘reshape2’, ‘commonmark’, ‘sourcetools’, ‘xtable’, ‘spatstat.data’, ‘spatstat.univar’, ‘spatstat.random’, ‘spatstat.utils’, ‘spatstat.sparse’, ‘goftest’, ‘deldir’, ‘polyclip’, ‘FNN’, ‘dqrng’, ‘dotCall64’, ‘fastDummies’, ‘fitdistrplus’, ‘future’, ‘future.apply’, ‘ica’, ‘igraph’, ‘irlba’, ‘miniUI’, ‘pbapply’, ‘plotly’, ‘progressr’, ‘RANN’, ‘RcppAnnoy’, ‘RcppHNSW’, ‘reticulate’, ‘ROCR’, ‘RSpectra’, ‘Rtsne’, ‘scattermore’, ‘sctransform’, ‘shiny’, ‘spatstat.explore’, ‘spatstat.geom’, ‘uwot’, ‘RcppProgress’, ‘spam’
+
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/bitops_1.1-0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/gtools_3.9.5.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/caTools_1.18.4.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/tensor_1.5.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/BH_1.90.0-1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/sitmo_2.0.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/globals_0.20.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/listenv_1.1.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/parallelly_1.48.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/RcppTOML_0.2.3.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/here_1.0.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/gplots_3.3.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/reshape2_1.4.5.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/commonmark_2.0.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/sourcetools_0.1.7-2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/xtable_1.8-8.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/spatstat.data_3.1-9.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/spatstat.univar_3.2-0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/spatstat.random_3.5-2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/spatstat.utils_3.2-5.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/spatstat.sparse_3.2-0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/goftest_1.2-3.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/deldir_2.0-4.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/polyclip_1.10-7.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/FNN_1.1.4.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/dqrng_0.4.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/dotCall64_1.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/fastDummies_1.7.6.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/fitdistrplus_1.2-6.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/future_1.80.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/future.apply_1.21.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/ica_1.0-3.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/igraph_2.3.4.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/irlba_2.4.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/miniUI_0.1.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/pbapply_1.7-5.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/plotly_4.12.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/progressr_1.1.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/RANN_2.6.3.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/RcppAnnoy_0.0.23.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/RcppHNSW_0.7.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/reticulate_1.47.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/ROCR_1.0-12.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/RSpectra_0.16-2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/Rtsne_0.17.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/scattermore_1.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/sctransform_0.4.3.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/shiny_1.14.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/spatstat.explore_3.8-3.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/spatstat.geom_3.8-3.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/uwot_0.2.5.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/RcppProgress_0.4.2.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/spam_2.11-4.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/renv_1.3.1.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/Seurat_5.6.0.tgz'
+trying URL 'https://cloud.r-project.org/bin/macosx/sonoma-arm64/contrib/4.6/SeuratObject_5.4.0.tgz'
+package ‘globals’ successfully unpacked and SHA256 sums checked
+package ‘listenv’ successfully unpacked and SHA256 sums checked
+package ‘spatstat.random’ successfully unpacked and SHA256 sums checked
+package ‘spatstat.utils’ successfully unpacked and SHA256 sums checked
+package ‘future’ successfully unpacked and SHA256 sums checked
+package ‘future.apply’ successfully unpacked and SHA256 sums checked
+package ‘igraph’ successfully unpacked and SHA256 sums checked
+package ‘irlba’ successfully unpacked and SHA256 sums checked
+package ‘progressr’ successfully unpacked and SHA256 sums checked
+package ‘spatstat.explore’ successfully unpacked and SHA256 sums checked
+package ‘spatstat.geom’ successfully unpacked and SHA256 sums checked
+package ‘renv’ successfully unpacked and SHA256 sums checked
+package ‘Seurat’ successfully unpacked and SHA256 sums checked
+
+The downloaded binary packages are in
+	/var/folders/b1/43cs4y810sn370h8x131ntd40000gn/T//RtmprrusnE/downloaded_packages
+The following package(s) will be updated in the lockfile:
+
+# CRAN -----------------------------------------------------------------------
+- abind              [* -> 1.4-8]
+- arrow              [* -> 25.0.0]
+- askpass            [* -> 1.2.1]
+- assertthat         [* -> 0.2.1]
+- base64enc          [* -> 0.1-6]
+- BH                 [* -> 1.90.0-1]
+- bit                [* -> 4.6.0]
+- bit64              [* -> 4.8.4]
+- bitops             [* -> 1.1-0]
+- bslib              [* -> 0.12.0]
+- cachem             [* -> 1.1.0]
+- caTools            [* -> 1.18.4]
+- cli                [* -> 3.6.6]
+- cluster            [* -> 2.1.8.3]
+- codetools          [* -> 0.2-20]
+- commonmark         [* -> 2.0.0]
+- cowplot            [* -> 1.2.0]
+- cpp11              [* -> 0.5.5]
+- crosstalk          [* -> 1.2.2]
+- curl               [* -> 7.1.0]
+- data.table         [* -> 1.18.4]
+- deldir             [* -> 2.0-4]
+- digest             [* -> 0.6.39]
+- dotCall64          [* -> 1.2]
+- dplyr              [* -> 1.2.1]
+- dqrng              [* -> 0.4.1]
+- evaluate           [* -> 1.0.5]
+- farver             [* -> 2.1.2]
+- fastDummies        [* -> 1.7.6]
+- fastmap            [* -> 1.2.0]
+- fitdistrplus       [* -> 1.2-6]
+- FNN                [* -> 1.1.4.1]
+- fontawesome        [* -> 0.5.3]
+- fs                 [* -> 2.1.0]
+- future             [* -> 1.80.0]
+- future.apply       [* -> 1.21.0]
+- generics           [* -> 0.1.4]
+- ggplot2            [* -> 4.0.3]
+- ggrepel            [* -> 0.9.8]
+- ggridges           [* -> 0.5.7]
+- globals            [* -> 0.20.0]
+- glue               [* -> 1.8.1]
+- goftest            [* -> 1.2-3]
+- gplots             [* -> 3.3.0]
+- gridExtra          [* -> 2.3.1]
+- gtable             [* -> 0.3.6]
+- gtools             [* -> 3.9.5]
+- here               [* -> 1.0.2]
+- highr              [* -> 0.12]
+- htmltools          [* -> 0.5.9]
+- htmlwidgets        [* -> 1.6.4]
+- httpuv             [* -> 1.6.17]
+- httr               [* -> 1.4.8]
+- ica                [* -> 1.0-3]
+- igraph             [* -> 2.3.4]
+- irlba              [* -> 2.4.1]
+- isoband            [* -> 0.3.0]
+- jquerylib          [* -> 0.1.4]
+- jsonlite           [* -> 2.0.0]
+- KernSmooth         [* -> 2.23-27]
+- knitr              [* -> 1.51]
+- labeling           [* -> 0.4.3]
+- later              [* -> 1.4.8]
+- lattice            [* -> 0.23-1]
+- lazyeval           [* -> 0.2.3]
+- lifecycle          [* -> 1.0.5]
+- listenv            [* -> 1.1.0]
+- lmtest             [* -> 0.9-40]
+- magrittr           [* -> 2.0.5]
+- MASS               [* -> 7.3-66]
+- Matrix             [* -> 1.7-6]
+- matrixStats        [* -> 1.5.0]
+- memoise            [* -> 2.0.1]
+- mime               [* -> 0.13]
+- miniUI             [* -> 0.1.2]
+- nlme               [* -> 3.1-170]
+- openssl            [* -> 2.4.2]
+- otel               [* -> 0.2.0]
+- parallelly         [* -> 1.48.0]
+- patchwork          [* -> 1.3.2]
+- pbapply            [* -> 1.7-5]
+- pillar             [* -> 1.11.1]
+- pkgconfig          [* -> 2.0.3]
+- plotly             [* -> 4.12.1]
+- plyr               [* -> 1.8.9]
+- png                [* -> 0.1-9]
+- polyclip           [* -> 1.10-7]
+- progressr          [* -> 1.1.0]
+- promises           [* -> 1.5.0]
+- purrr              [* -> 1.2.2]
+- R6                 [* -> 2.6.1]
+- RANN               [* -> 2.6.3]
+- rappdirs           [* -> 0.3.4]
+- RColorBrewer       [* -> 1.1-3]
+- Rcpp               [* -> 1.1.2]
+- RcppAnnoy          [* -> 0.0.23]
+- RcppArmadillo      [* -> 15.4.2-1]
+- RcppEigen          [* -> 0.3.4.0.2]
+- RcppHNSW           [* -> 0.7.0]
+- RcppProgress       [* -> 0.4.2]
+- RcppThread         [* -> 2.4.0]
+- RcppTOML           [* -> 0.2.3]
+- renv               [* -> 1.3.1]
+- reshape2           [* -> 1.4.5]
+- reticulate         [* -> 1.47.0]
+- rlang              [* -> 1.3.0]
+- rmarkdown          [* -> 2.31]
+- ROCR               [* -> 1.0-12]
+- rprojroot          [* -> 2.1.1]
+- RSpectra           [* -> 0.16-2]
+- Rtsne              [* -> 0.17]
+- S7                 [* -> 0.2.2]
+- sass               [* -> 0.4.10]
+- scales             [* -> 1.4.0]
+- scattermore        [* -> 1.2]
+- sctransform        [* -> 0.4.3]
+- Seurat             [* -> 5.6.0]
+- SeuratObject       [* -> 5.4.0]
+- shiny              [* -> 1.14.0]
+- sitmo              [* -> 2.0.2]
+- sourcetools        [* -> 0.1.7-2]
+- sp                 [* -> 2.2-3]
+- spam               [* -> 2.11-4]
+- spatstat.data      [* -> 3.1-9]
+- spatstat.explore   [* -> 3.8-3]
+- spatstat.geom      [* -> 3.8-3]
+- spatstat.random    [* -> 3.5-2]
+- spatstat.sparse    [* -> 3.2-0]
+- spatstat.univar    [* -> 3.2-0]
+- spatstat.utils     [* -> 3.2-5]
+- stringi            [* -> 1.8.9]
+- stringr            [* -> 1.6.0]
+- survival           [* -> 3.8-9]
+- sys                [* -> 3.4.3]
+- tensor             [* -> 1.5.1]
+- tibble             [* -> 3.3.1]
+- tidyr              [* -> 1.3.2]
+- tidyselect         [* -> 1.2.1]
+- tinytex            [* -> 0.60]
+- utf8               [* -> 1.2.6]
+- uwot               [* -> 0.2.5]
+- vctrs              [* -> 0.7.3]
+- viridisLite        [* -> 0.4.3]
+- withr              [* -> 3.0.3]
+- xfun               [* -> 0.60]
+- xtable             [* -> 1.8-8]
+- yaml               [* -> 2.3.12]
+- zoo                [* -> 1.9-0]
+
+The version of R recorded in the lockfile will be updated:
+- R                  [* -> 4.6.0]
+
+- Lockfile written to "renv.lock".

@@ -1,0 +1,51 @@
+{
+  "clinical_biopsies_by_tissue": {
+    "Lymph node": 26,
+    "Skin": 12,
+    "Subcutis": 8
+  },
+  "clinical_biopsies_by_chemistry": {
+    "3' GEX": 32,
+    "5' GEX": 13,
+    "3' v3. GEX": 1
+  },
+  "chemistry_mismatch_patients": [
+    "GC20"
+  ],
+  "tissue_mismatch_patients": [
+    "GC15",
+    "GC21",
+    "GC23"
+  ],
+  "site_text_mismatch_patients": [
+    "GC16",
+    "GC21",
+    "GC23",
+    "GC26"
+  ],
+  "preservation_mismatch_patients": [
+    "GC14",
+    "GC20",
+    "GC32"
+  ],
+  "object_vs_clinical_tissue_pairs": [
+    {
+      "object_tissue": "Lymph node",
+      "tissue": "Lymph node"
+    },
+    {
+      "object_tissue": "Subcutis",
+      "tissue": "Subcutis"
+    },
+    {
+      "object_tissue": "Skin",
+      "tissue": "Skin"
+    },
+    {
+      "object_tissue": null,
+      "tissue": "Skin"
+    }
+  ],
+  "same_lesion_verified": false,
+  "scope": "metadata only; no score, state or outcome-change analysis"
+}

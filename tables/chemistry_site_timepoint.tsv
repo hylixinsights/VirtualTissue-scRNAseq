@@ -1,0 +1,16 @@
+chemistry	timepoint	arm	tissue	biopsies
+3' GEX	on	anti_pd1_monotherapy	Lymph node	4
+3' GEX	on	anti_pd1_monotherapy	Skin	5
+3' GEX	on	anti_pd1_monotherapy	Subcutis	3
+3' GEX	on	combination	Lymph node	3
+3' GEX	pre	anti_pd1_monotherapy	Lymph node	6
+3' GEX	pre	anti_pd1_monotherapy	Skin	5
+3' GEX	pre	anti_pd1_monotherapy	Subcutis	3
+3' GEX	pre	combination	Lymph node	3
+3' v3. GEX	on	anti_pd1_monotherapy	Subcutis	1
+5' GEX	on	anti_pd1_monotherapy	Lymph node	2
+5' GEX	on	anti_pd1_monotherapy	Skin	2
+5' GEX	on	combination	Lymph node	3
+5' GEX	pre	anti_pd1_monotherapy	Lymph node	2
+5' GEX	pre	anti_pd1_monotherapy	Subcutis	1
+5' GEX	pre	combination	Lymph node	3

@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-27T15:29:51.020961+00:00",
+  "data_root": "../data",
+  "dataset_doi": "10.48804/GSAXBN",
+  "listing_source": "reports/evidence/rdr-v8-metadata.json",
+  "files": [
+    {
+      "filename": "Entire_TME.rds",
+      "relative_path": "SPECIAL/raw/Entire_TME.rds",
+      "priority": 2,
+      "dataset_version": "8.0",
+      "source_url": "https://rdr.kuleuven.be/api/access/datafile/210951",
+      "landing_url": "https://doi.org/10.48804/GSAXBN",
+      "licence": "CC-BY-NC-SA-4.0",
+      "expected_bytes": 2718597537,
+      "source_checksum": {
+        "type": "MD5",
+        "value": "fbb62e4c67f02d34c16eaa077e27d846"
+      },
+      "local": {
+        "status": "missing",
+        "bytes": null,
+        "sha256": null
+      }
+    },
+    {
+      "filename": "GC_all_immune_sharing.rds",
+      "relative_path": "SPECIAL/raw/GC_all_immune_sharing.rds",
+      "priority": 1,
+      "dataset_version": "8.0",
+      "source_url": "https://rdr.kuleuven.be/api/access/datafile/266111",
+      "landing_url": "https://doi.org/10.48804/GSAXBN",
+      "licence": "CC-BY-NC-SA-4.0",
+      "expected_bytes": 991078732,
+      "source_checksum": {
+        "type": "MD5",
+        "value": "f22a97a5f70cd5f28113159bde5e37a9"
+      },
+      "local": {
+        "status": "verified",
+        "bytes": 991078732,
+        "sha256": "93dbb75aea1ed3fd7e867c8f0f857023fdd743a316950fcbcf4a140cb35ac951",
+        "md5": "f22a97a5f70cd5f28113159bde5e37a9",
+        "problems": [],
+        "checked_at_utc": "2026-10-27T15:29:52.464036+00:00"
+      },
+      "downloaded_on": "2026-10-27"
+    },
+    {
+      "filename": "Malignant_cells.rds",
+      "relative_path": "SPECIAL/raw/Malignant_cells.rds",
+      "priority": 2,
+      "dataset_version": "8.0",
+      "source_url": "https://rdr.kuleuven.be/api/access/datafile/28868",
+      "landing_url": "https://doi.org/10.48804/GSAXBN",
+      "licence": "CC-BY-NC-SA-4.0",
+      "expected_bytes": 864438613,
+      "source_checksum": {
+        "type": "MD5",
+        "value": "f94e6421eaf685954f8c07719ebcc32a"
+      },
+      "local": {
+        "status": "missing",
+        "bytes": null,
+        "sha256": null
+      }
+    },
+    {
+      "filename": "Pozniak_README_v5.txt",
+      "relative_path": "SPECIAL/raw/Pozniak_README_v5.txt",
+      "priority": 1,
+      "dataset_version": "8.0",
+      "source_url": "https://rdr.kuleuven.be/api/access/datafile/210952",
+      "landing_url": "https://doi.org/10.48804/GSAXBN",
+      "licence": "CC-BY-NC-SA-4.0",
+      "expected_bytes": 2128,
+      "source_checksum": {
+        "type": "MD5",
+        "value": "b842f6bb7b07dafb5ce85d392bebf8fc"
+      },
+      "local": {
+        "status": "verified",
+        "bytes": 2128,
+        "sha256": "4bc28f7609e417f74c9875ab8baa213423e6f08a7ec0735534fd653c90ad4945",
+        "md5": "b842f6bb7b07dafb5ce85d392bebf8fc",
+        "problems": [],
+        "checked_at_utc": "2026-10-27T15:29:52.488642+00:00"
+      },
+      "downloaded_on": "2026-10-27"
+    },
+    {
+      "filename": "Pozniak_README_v6.txt",
+      "relative_path": "SPECIAL/raw/Pozniak_README_v6.txt",
+      "priority": 1,
+      "dataset_version": "8.0",
+      "source_url": "https://rdr.kuleuven.be/api/access/datafile/224838",
+      "landing_url": "https://doi.org/10.48804/GSAXBN",
+      "licence": "CC-BY-NC-SA-4.0",
+      "expected_bytes": 2170,
+      "source_checksum": {
+        "type": "MD5",
+        "value": "0223b9fe806db07797246e6542083c0a"
+      },
+      "local": {
+        "status": "verified",
+        "bytes": 2170,
+        "sha256": "53874d36a5d4587b42337d54261475344386038b6f68c4e430d220e1ba977346",
+        "md5": "0223b9fe806db07797246e6542083c0a",
+        "problems": [],
+        "checked_at_utc": "2026-10-27T15:29:52.509969+00:00"
+      },
+      "downloaded_on": "2026-10-27"
+    },
+    {
+      "filename": "Pozniak_Cell2024_TableS1.xlsx",
+      "relative_path": "SPECIAL/raw/clinical/Pozniak_Cell2024_TableS1.xlsx",
+      "priority": 1,
+      "source_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0092867423013223-mmc1.xlsx",
+      "licence": "verify_article_supplement_terms",
+      "expected_bytes": null,
+      "source_checksum": null,
+      "local": {
+        "status": "hashed_only",
+        "bytes": 13109,
+        "sha256": "ce8597674c02dc2e349e597b36fef69c7ae46a846556b9d69cee0654fd8b44bf",
+        "md5": "abfb8ba97f53da3ba8f41c6b8f51468e",
+        "problems": [],
+        "checked_at_utc": "2026-10-27T19:00:17.668553+00:00"
+      },
+      "source_filename": "1-s2.0-S0092867423013223-mmc1.xlsx",
+      "identity_verified_by": "Sup_table_1 worksheet, sample/patient/treatment/site/library headers",
+      "downloaded_on": "2026-10-27"
+    },
+    {
+      "filename": "cd-24-1208_supplemental_table_s1_suppst1.xlsx",
+      "relative_path": "SPECIAL/raw/clinical/cd-24-1208_supplemental_table_s1_suppst1.xlsx",
+      "priority": 1,
+      "source_url": "https://ndownloader.figshare.com/files/57656505",
+      "licence": "CC-BY-4.0",
+      "expected_bytes": 20976,
+      "source_checksum": {
+        "type": "MD5",
+        "value": "be7dc984c2099e7500e03838894f307e"
+      },
+      "local": {
+        "status": "verified",
+        "bytes": 20976,
+        "sha256": "f468e5d847176cc673c83bde2cc2c33e80ddf1dbf4050639b8ec2e380815afcc",
+        "md5": "be7dc984c2099e7500e03838894f307e",
+        "problems": [],
+        "checked_at_utc": "2026-10-27T19:00:17.690077+00:00"
+      },
+      "landing_url": "https://doi.org/10.1158/2159-8290.30050748",
+      "metadata_source": "reports/evidence/figshare-S1-2025.json",
+      "downloaded_on": "2026-10-27"
+    }
+  ]
+}

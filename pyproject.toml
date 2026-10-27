@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "virtualtissue-sc"
+version = "0.1.0"
+description = "Patient-level, non-spatial SPECIAL analysis with gated spatial extensions"
+requires-python = ">=3.12,<3.13"
+dependencies = ["PyYAML"]
+
+[project.scripts]
+vtsc = "vtsc.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vtsc"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

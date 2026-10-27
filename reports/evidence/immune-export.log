@@ -1,0 +1,11 @@
+Warning message:
+package ‘sp’ was built under R version 4.6.1 
+Warning message:
+package ‘Matrix’ was built under R version 4.6.1 
+/Volumes/Temp/tmp/Rtmpxhx4so/R.INSTALL11bd3501d5a10/arrow/tools/cpp/src/arrow/util/cpu_info.cc:181: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Volumes/Temp/tmp/Rtmpxhx4so/R.INSTALL11bd3501d5a10/arrow/tools/cpp/src/arrow/util/cpu_info.cc:181: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Volumes/Temp/tmp/Rtmpxhx4so/R.INSTALL11bd3501d5a10/arrow/tools/cpp/src/arrow/util/cpu_info.cc:181: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+Warning message:
+package ‘arrow’ was built under R version 4.6.1 
+Loading required namespace: Seurat
+Export complete; exact count and metadata round trips passed.

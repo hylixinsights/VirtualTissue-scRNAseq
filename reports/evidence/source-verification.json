@@ -1,0 +1,38 @@
+{
+  "accessed_on": "2026-10-27",
+  "sources": [
+    {
+      "url": "https://ega-archive.org/datasets/EGAD00001009291",
+      "kind": "public dataset description",
+      "reported_biopsies": 46,
+      "reported_patients": 23,
+      "reported_matched_patients": 20,
+      "reported_3prime_v3_libraries": 16,
+      "other_described_library_kit": "5prime",
+      "note": "Conflicts with the per-sample S1 library labels; unresolved."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12409281/",
+      "local_fulltext": "reports/evidence/PMC12409281.xml",
+      "published_immune_cells": 25401,
+      "published_sampling_description": "early ±2–3 weeks",
+      "primary_drugs": [
+        "nivolumab",
+        "pembrolizumab"
+      ],
+      "xenium_methods_panel": {
+        "human_skin": 282,
+        "custom_addon": 80
+      },
+      "note": "Panel verified from publication only; bundle not downloaded or audited; no spatial gate passed."
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "terms": [
+        "attribution",
+        "noncommercial",
+        "sharealike"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "purpose": "design calculation, not patient analysis",
+  "patients": 4,
+  "one_sided_exact_min_p": 0.0625,
+  "sign_configurations": 16,
+  "alpha": 0.05,
+  "can_reject_at_alpha": false
+}

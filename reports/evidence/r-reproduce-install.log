@@ -1,0 +1,179 @@
+The following package(s) will be updated:
+
+# CRAN -----------------------------------------------------------------------
+- BH                 [* -> 1.90.0-1]
+- bitops             [* -> 1.1-0]
+- caTools            [* -> 1.18.4]
+- commonmark         [* -> 2.0.0]
+- deldir             [* -> 2.0-4]
+- dotCall64          [* -> 1.2]
+- dqrng              [* -> 0.4.1]
+- fastDummies        [* -> 1.7.6]
+- fitdistrplus       [* -> 1.2-6]
+- FNN                [* -> 1.1.4.1]
+- future             [* -> 1.80.0]
+- future.apply       [* -> 1.21.0]
+- globals            [* -> 0.20.0]
+- goftest            [* -> 1.2-3]
+- gplots             [* -> 3.3.0]
+- gtools             [* -> 3.9.5]
+- here               [* -> 1.0.2]
+- ica                [* -> 1.0-3]
+- igraph             [* -> 2.3.4]
+- irlba              [* -> 2.4.1]
+- listenv            [* -> 1.1.0]
+- miniUI             [* -> 0.1.2]
+- parallelly         [* -> 1.48.0]
+- pbapply            [* -> 1.7-5]
+- plotly             [* -> 4.12.1]
+- polyclip           [* -> 1.10-7]
+- progressr          [* -> 1.1.0]
+- RANN               [* -> 2.6.3]
+- RcppAnnoy          [* -> 0.0.23]
+- RcppHNSW           [* -> 0.7.0]
+- RcppProgress       [* -> 0.4.2]
+- RcppTOML           [* -> 0.2.3]
+- renv               [* -> 1.3.1]
+- reshape2           [* -> 1.4.5]
+- reticulate         [* -> 1.47.0]
+- ROCR               [* -> 1.0-12]
+- RSpectra           [* -> 0.16-2]
+- Rtsne              [* -> 0.17]
+- scattermore        [* -> 1.2]
+- sctransform        [* -> 0.4.3]
+- Seurat             [* -> 5.6.0]
+- SeuratObject       [* -> 5.4.0]
+- shiny              [* -> 1.14.0]
+- sitmo              [* -> 2.0.2]
+- sourcetools        [* -> 0.1.7-2]
+- spam               [* -> 2.11-4]
+- spatstat.data      [* -> 3.1-9]
+- spatstat.explore   [* -> 3.8-3]
+- spatstat.geom      [* -> 3.8-3]
+- spatstat.random    [* -> 3.5-2]
+- spatstat.sparse    [* -> 3.2-0]
+- spatstat.univar    [* -> 3.2-0]
+- spatstat.utils     [* -> 3.2-5]
+- tensor             [* -> 1.5.1]
+- uwot               [* -> 0.2.5]
+- xtable             [* -> 1.8-8]
+
+- Querying repositories for available source packages ... Done!
+# Downloading packages -------------------------------------------------------
+[?25l  (0/56) Downloading: spatstat.utils, ROCR, spatstat.explore, sctransform, ...                                                                                  [32m✔[0m dqrng 0.4.1                              [686 kB in 0.22s]
+  (1/56) Downloading: spatstat.utils, ROCR, spatstat.explore, sctransform, ...                                                                                  [32m✔[0m tensor 1.5.1                             [14 kB in 0.3s]
+  (2/56) Downloading: spatstat.utils, ROCR, spatstat.explore, sctransform, ...                                                                                  [32m✔[0m ica 1.0-3                                [86 kB in 0.39s]
+  (3/56) Downloading: spatstat.utils, ROCR, spatstat.explore, sctransform, ...                                                                                  [32m✔[0m commonmark 2.0.0                         [141 kB in 0.4s]
+  (4/56) Downloading: spatstat.utils, ROCR, spatstat.explore, sctransform, ...                                                                                  [32m✔[0m spatstat.utils 3.2-5                     [447 kB in 0.52s]
+  (5/56) Downloading: ROCR, spatstat.explore, sctransform, parallelly, ...                                                                                      [32m✔[0m ROCR 1.0-12                              [473 kB in 0.62s]
+  (6/56) Downloading: spatstat.explore, sctransform, parallelly, plotly, ...                                                                                    [32m✔[0m irlba 2.4.1                              [446 kB in 0.53s]
+  (7/56) Downloading: spatstat.explore, sctransform, parallelly, plotly, ...                                                                                    [32m✔[0m parallelly 1.48.0                        [646 kB in 0.76s]
+  (8/56) Downloading: spatstat.explore, sctransform, plotly, igraph, ...                                                                                        [32m✔[0m future 1.80.0                            [971 kB in 0.99s]
+  (9/56) Downloading: spatstat.explore, sctransform, plotly, igraph, ...                                                                                        [32m✔[0m progressr 1.1.0                          [516 kB in 0.69s]
+  (10/56) Downloading: spatstat.explore, sctransform, plotly, igraph, ...                                                                                       [32m✔[0m here 1.0.2                               [53 kB in 0.47s]
+  (11/56) Downloading: spatstat.explore, sctransform, plotly, igraph, ...                                                                                       [32m✔[0m fastDummies 1.7.6                        [46 kB in 0.39s]
+  (12/56) Downloading: spatstat.explore, sctransform, plotly, igraph, ...                                                                                       [32m✔[0m sctransform 0.4.3                        [1.3 MB in 1.2s]
+  (13/56) Downloading: spatstat.explore, plotly, igraph, fitdistrplus, ...                                                                                      [32m✔[0m spatstat.sparse 3.2-0                    [255 kB in 1.3s]
+  (14/56) Downloading: spatstat.explore, plotly, igraph, fitdistrplus, ...                                                                                      [32m✔[0m fitdistrplus 1.2-6                       [3.0 MB in 2.0s]
+  (15/56) Downloading: spatstat.explore, plotly, igraph, shiny, ...                                                                                             [32m✔[0m gtools 3.9.5                             [366 kB in 1.6s]
+  (16/56) Downloading: spatstat.explore, plotly, igraph, shiny, ...                                                                                             [32m✔[0m caTools 1.18.4                           [244 kB in 1.3s]
+  (17/56) Downloading: spatstat.explore, plotly, igraph, shiny, ...                                                                                             [32m✔[0m future.apply 1.21.0                      [195 kB in 1.3s]
+  (18/56) Downloading: spatstat.explore, plotly, igraph, shiny, ...                                                                                             [32m✔[0m goftest 1.2-3                            [67 kB in 1.2s]
+  (19/56) Downloading: spatstat.explore, plotly, igraph, shiny, ...                                                                                             [32m✔[0m polyclip 1.10-7                          [484 kB in 2.1s]
+  (20/56) Downloading: spatstat.explore, plotly, igraph, shiny, ...                                                                                             [32m✔[0m spatstat.explore 3.8-3                   [3.7 MB in 2.5s]
+  (21/56) Downloading: plotly, igraph, shiny, Seurat, ...                                                                                                       [32m✔[0m shiny 1.14.0                             [4.6 MB in 2.7s]
+  (22/56) Downloading: plotly, igraph, Seurat, RSpectra, ...                                                                                                    [32m✔[0m plotly 4.12.1                            [4.0 MB in 2.8s]
+  (23/56) Downloading: igraph, Seurat, RSpectra, gplots, ...                                                                                                    [32m✔[0m Seurat 5.6.0                             [6.6 MB in 2.8s]
+  (24/56) Downloading: igraph, RSpectra, gplots, BH, ...                                                                                                        [32m✔[0m RcppTOML 0.2.3                           [790 kB in 2.1s]
+  (25/56) Downloading: igraph, RSpectra, gplots, BH, ...                                                                                                        [32m✔[0m igraph 2.3.4                             [9.0 MB in 3.2s]
+  (26/56) Downloading: RSpectra, gplots, BH, Rtsne, ...                                                                                                         [32m✔[0m Rtsne 0.17                               [597 kB in 1.6s]
+  (27/56) Downloading: RSpectra, gplots, BH, reshape2, ...                                                                                                      [32m✔[0m reshape2 1.4.5                           [371 kB in 1.3s]
+  (28/56) Downloading: RSpectra, gplots, BH, spatstat.data, ...                                                                                                 [32m✔[0m RcppProgress 0.4.2                       [21 kB in 1.1s]
+  (29/56) Downloading: RSpectra, gplots, BH, spatstat.data, ...                                                                                                 [32m✔[0m RSpectra 0.16-2                          [7.4 MB in 3.4s]
+  (30/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m RANN 2.6.3                               [149 kB in 0.99s]
+  (31/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m miniUI 0.1.2                             [37 kB in 0.77s]
+  (32/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m sitmo 2.0.2                              [457 kB in 1.3s]
+  (33/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m pbapply 1.7-5                            [101 kB in 0.76s]
+  (34/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m FNN 1.1.4.1                              [133 kB in 1.0s]
+  (35/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m deldir 2.0-4                             [307 kB in 0.95s]
+  (36/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m scattermore 1.2                          [397 kB in 0.9s]
+  (37/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m xtable 1.8-8                             [753 kB in 1.0s]
+  (38/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m globals 0.20.0                           [169 kB in 0.85s]
+  (39/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m sourcetools 0.1.7-2                      [152 kB in 0.85s]
+  (40/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m RcppHNSW 0.7.0                           [1.8 MB in 2.2s]
+  (41/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m RcppAnnoy 0.0.23                         [1.8 MB in 2.6s]
+  (42/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m dotCall64 1.2                            [47 kB in 0.83s]
+  (43/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m spatstat.univar 3.2-0                    [400 kB in 1.0s]
+  (44/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m bitops 1.1-0                             [34 kB in 0.74s]
+  (45/56) Downloading: gplots, BH, spatstat.data, spatstat.geom, ...                                                                                            [32m✔[0m gplots 3.3.0                             [4.9 MB in 4.8s]
+  (46/56) Downloading: BH, spatstat.data, spatstat.geom, spam, ...                                                                                              [32m✔[0m renv 1.3.1                               [2.7 MB in 2.8s]
+  (47/56) Downloading: BH, spatstat.data, spatstat.geom, spam, ...                                                                                              [32m✔[0m spatstat.random 3.5-2                    [1.3 MB in 1.5s]
+  (48/56) Downloading: BH, spatstat.data, spatstat.geom, spam, ...                                                                                              [32m✔[0m spatstat.data 3.1-9                      [4.2 MB in 3.6s]
+  (49/56) Downloading: BH, spatstat.geom, spam, uwot, ...                                                                                                       [32m✔[0m reticulate 1.47.0                        [2.9 MB in 2.1s]
+  (50/56) Downloading: BH, spatstat.geom, spam, uwot, ...                                                                                                       [32m✔[0m listenv 1.1.0                            [129 kB in 1.2s]
+  (51/56) Downloading: BH, spatstat.geom, spam, uwot, ...                                                                                                       [32m✔[0m spam 2.11-4                              [4.5 MB in 3.6s]
+  (52/56) Downloading: BH, spatstat.geom, uwot, SeuratObject                                                                                                    [32m✔[0m spatstat.geom 3.8-3                      [4.5 MB in 3.8s]
+  (53/56) Downloading: BH, uwot, SeuratObject                                                                                                                   [32m✔[0m SeuratObject 5.4.0                       [2.6 MB in 1.3s]
+  (54/56) Downloading: BH, uwot                                                                                                                                 [32m✔[0m uwot 0.2.5                               [4.3 MB in 2.8s]
+  (55/56) Downloading: BH                                                                                                                                       [32m✔[0m BH 1.90.0-1                              [13.9 MB in 5.7s]
+                                                                                Successfully downloaded 56 packages in 6.8 seconds.
+
+# Installing packages --------------------------------------------------------
+                                                                                [32m✔[0m BH 1.90.0-1                              [installed binary in 1.0s]
+                                                                                [32m✔[0m bitops 1.1-0                             [installed binary]
+                                                                                [32m✔[0m commonmark 2.0.0                         [installed binary]
+                                                                                [32m✔[0m deldir 2.0-4                             [installed binary]
+                                                                                [32m✔[0m dotCall64 1.2                            [installed binary]
+                                                                                [32m✔[0m fastDummies 1.7.6                        [installed binary]
+                                                                                [32m✔[0m fitdistrplus 1.2-6                       [installed binary]
+                                                                                [32m✔[0m FNN 1.1.4.1                              [installed binary]
+                                                                                [32m✔[0m globals 0.20.0                           [installed binary]
+                                                                                [32m✔[0m goftest 1.2-3                            [installed binary]
+                                                                                [32m✔[0m gtools 3.9.5                             [installed binary]
+                                                                                [32m✔[0m here 1.0.2                               [installed binary]
+                                                                                [32m✔[0m ica 1.0-3                                [installed binary]
+                                                                                [32m✔[0m igraph 2.3.4                             [installed binary]
+                                                                                [32m✔[0m irlba 2.4.1                              [installed binary]
+                                                                                [32m✔[0m listenv 1.1.0                            [installed binary]
+                                                                                [32m✔[0m parallelly 1.48.0                        [installed binary]
+                                                                                [32m✔[0m pbapply 1.7-5                            [installed binary]
+                                                                                [32m✔[0m plotly 4.12.1                            [installed binary]
+                                                                                [32m✔[0m polyclip 1.10-7                          [installed binary]
+                                                                                [32m✔[0m progressr 1.1.0                          [installed binary]
+                                                                                [32m✔[0m RANN 2.6.3                               [installed binary]
+                                                                                [32m✔[0m RcppAnnoy 0.0.23                         [installed binary]
+                                                                                [32m✔[0m RcppHNSW 0.7.0                           [installed binary]
+                                                                                [32m✔[0m RcppProgress 0.4.2                       [installed binary]
+                                                                                [32m✔[0m RcppTOML 0.2.3                           [installed binary]
+                                                                                [32m✔[0m renv 1.3.1                               [installed binary]
+                                                                                [32m✔[0m reshape2 1.4.5                           [installed binary]
+                                                                                [32m✔[0m RSpectra 0.16-2                          [installed binary]
+                                                                                [32m✔[0m Rtsne 0.17                               [installed binary]
+                                                                                [32m✔[0m scattermore 1.2                          [installed binary]
+                                                                                [32m✔[0m sitmo 2.0.2                              [installed binary]
+                                                                                [32m✔[0m sourcetools 0.1.7-2                      [installed binary]
+                                                                                [32m✔[0m spatstat.utils 3.2-5                     [installed binary]
+                                                                                [32m✔[0m tensor 1.5.1                             [installed binary]
+                                                                                [32m✔[0m xtable 1.8-8                             [installed binary]
+                                                                                [32m✔[0m caTools 1.18.4                           [installed binary]
+                                                                                [32m✔[0m spam 2.11-4                              [installed binary]
+                                                                                [32m✔[0m future 1.80.0                            [installed binary]
+                                                                                [32m✔[0m reticulate 1.47.0                        [installed binary]
+                                                                                [32m✔[0m dqrng 0.4.1                              [installed binary]
+                                                                                [32m✔[0m spatstat.data 3.1-9                      [installed binary]
+                                                                                [32m✔[0m spatstat.univar 3.2-0                    [installed binary]
+                                                                                [32m✔[0m spatstat.sparse 3.2-0                    [installed binary]
+                                                                                [32m✔[0m shiny 1.14.0                             [installed binary]
+                                                                                [32m✔[0m gplots 3.3.0                             [installed binary]
+                                                                                [32m✔[0m future.apply 1.21.0                      [installed binary]
+                                                                                [32m✔[0m uwot 0.2.5                               [installed binary]
+                                                                                [32m✔[0m spatstat.geom 3.8-3                      [installed binary]
+                                                                                [32m✔[0m miniUI 0.1.2                             [installed binary]
+                                                                                [32m✔[0m ROCR 1.0-12                              [installed binary]
+                                                                                [32m✔[0m sctransform 0.4.3                        [installed binary]
+                                                                                [32m✔[0m SeuratObject 5.4.0                       [installed binary]
+                                                                                [32m✔[0m spatstat.random 3.5-2                    [installed binary]
+                                                                                [32m✔[0m spatstat.explore 3.8-3                   [installed binary]
+                                                                                [32m✔[0m Seurat 5.6.0                             [installed binary]
+Successfully installed 56 packages in 7 seconds.
+[?25hRestored R library from renv.lock

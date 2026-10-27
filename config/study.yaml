@@ -1,0 +1,55 @@
+master_seed: 20261027
+dataset:
+  doi: 10.48804/GSAXBN
+  version: 8
+  licence: CC-BY-NC-SA-4.0
+paths:
+  # Relative to the repository root. Data are outside this Git repository.
+  data_root: ../data
+  raw: ../data/SPECIAL/raw
+  derived: ../data/SPECIAL/derived
+cohort:
+  arm_primary: anti_pd1_monotherapy
+  allowed_primary_drugs: [nivolumab, pembrolizumab]
+  drug_definition_status: user_confirmed_2026_10_27
+  min_cd8_per_biopsy: 30
+  sensitivity_min_cd8: [15, 50]
+  lockbox_n: 4
+  lockbox_strata: [response, site_pairing]
+  min_development_pairs: 10
+  min_state_biopsy_prevalence: 0.7
+states:
+  primary: [Memory, Activated, Cytotoxic, Dysfunctional]
+  cycling_as_axis: true
+scoring:
+  method: aucell
+  n_up: auto_from_depth
+  calibration: within_lineage_by_depth_decile
+  fold_aware: true
+graph:
+  bootstrap: 200
+  edge_min_frequency: 0.8
+  direction_rule: {min_spearman: 0.8, bootstrap_stable: true}
+features:
+  primary: [tumour_content, myeloid_ifng, site_lymph_node]
+  exploratory: [nk_cytotoxic_fraction, malignant_state_mix, malignant_mhc1, cd8_fraction_immune, treg_fraction]
+model:
+  ladder: [M0, M1, M1b, M2, M3]
+  variants: [V-T, V-P, V-I, V-TP, V-TPI]
+  likelihood: dirichlet_multinomial
+  pseudocount: 0.5
+  inference_backend: undecided_until_T3.1
+evaluation:
+  primary_metric: aitchison
+  key_secondary: log_predictive_density
+  tests: fixed_sequence_wilcoxon_one_sided
+  alpha: 0.05
+  bootstrap: 2000
+  interval: 0.8
+  effect_size_ci: 0.95
+  # A four-patient exact test cannot reach alpha=0.05; see protocol review.
+  lockbox_inference: estimation_with_uncertainty
+  full_lopo_label: development_informed
+jev:
+  enabled: false
+  pilot_cap: 100

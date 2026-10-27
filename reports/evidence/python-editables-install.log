@@ -1,0 +1,8 @@
+Collecting editables
+  Downloading editables-0.6-py3-none-any.whl.metadata (3.1 kB)
+Downloading editables-0.6-py3-none-any.whl (5.4 kB)
+Installing collected packages: editables
+Successfully installed editables-0.6
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.2
+[notice] To update, run: /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv/bin/python -m pip install --upgrade pip

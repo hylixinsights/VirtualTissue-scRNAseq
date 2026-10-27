@@ -1,0 +1,5 @@
+{
+  "same_package_versions": true,
+  "package_count": 80,
+  "clean_install_from": "requirements.lock.txt"
+}

@@ -1,0 +1,235 @@
+{
+  "status": "passed",
+  "source": "original RDS metadata",
+  "method": "suffix-based CD8 lineage total",
+  "biopsies_compared": 45,
+  "all_totals_identical": true,
+  "per_biopsy": [
+    {
+      "sample_id": "sc5rCMA061",
+      "r_cd8_total": 8,
+      "author_annotated_cd8_cells": 8
+    },
+    {
+      "sample_id": "sc5rCMA066",
+      "r_cd8_total": 13,
+      "author_annotated_cd8_cells": 13
+    },
+    {
+      "sample_id": "sc5rCMA070",
+      "r_cd8_total": 22,
+      "author_annotated_cd8_cells": 22
+    },
+    {
+      "sample_id": "sc5rCMA074",
+      "r_cd8_total": 76,
+      "author_annotated_cd8_cells": 76
+    },
+    {
+      "sample_id": "sc5rCMA136",
+      "r_cd8_total": 187,
+      "author_annotated_cd8_cells": 187
+    },
+    {
+      "sample_id": "sc5rCMA141",
+      "r_cd8_total": 28,
+      "author_annotated_cd8_cells": 28
+    },
+    {
+      "sample_id": "sc5rCMA144",
+      "r_cd8_total": 196,
+      "author_annotated_cd8_cells": 196
+    },
+    {
+      "sample_id": "sc5rCMA149",
+      "r_cd8_total": 252,
+      "author_annotated_cd8_cells": 252
+    },
+    {
+      "sample_id": "sc5rCMA152",
+      "r_cd8_total": 122,
+      "author_annotated_cd8_cells": 122
+    },
+    {
+      "sample_id": "sc5rCMA155",
+      "r_cd8_total": 423,
+      "author_annotated_cd8_cells": 423
+    },
+    {
+      "sample_id": "sc5rCMA192",
+      "r_cd8_total": 205,
+      "author_annotated_cd8_cells": 205
+    },
+    {
+      "sample_id": "sc5rCMA196",
+      "r_cd8_total": 257,
+      "author_annotated_cd8_cells": 257
+    },
+    {
+      "sample_id": "scrCMA036",
+      "r_cd8_total": 0,
+      "author_annotated_cd8_cells": 0
+    },
+    {
+      "sample_id": "scrCMA038",
+      "r_cd8_total": 396,
+      "author_annotated_cd8_cells": 396
+    },
+    {
+      "sample_id": "scrCMA040",
+      "r_cd8_total": 1,
+      "author_annotated_cd8_cells": 1
+    },
+    {
+      "sample_id": "scrCMA041",
+      "r_cd8_total": 0,
+      "author_annotated_cd8_cells": 0
+    },
+    {
+      "sample_id": "scrCMA044",
+      "r_cd8_total": 311,
+      "author_annotated_cd8_cells": 311
+    },
+    {
+      "sample_id": "scrCMA046",
+      "r_cd8_total": 5,
+      "author_annotated_cd8_cells": 5
+    },
+    {
+      "sample_id": "scrCMA048",
+      "r_cd8_total": 7,
+      "author_annotated_cd8_cells": 7
+    },
+    {
+      "sample_id": "scrCMA049",
+      "r_cd8_total": 27,
+      "author_annotated_cd8_cells": 27
+    },
+    {
+      "sample_id": "scrCMA050",
+      "r_cd8_total": 22,
+      "author_annotated_cd8_cells": 22
+    },
+    {
+      "sample_id": "scrCMA054",
+      "r_cd8_total": 13,
+      "author_annotated_cd8_cells": 13
+    },
+    {
+      "sample_id": "scrCMA055",
+      "r_cd8_total": 15,
+      "author_annotated_cd8_cells": 15
+    },
+    {
+      "sample_id": "scrCMA063",
+      "r_cd8_total": 134,
+      "author_annotated_cd8_cells": 134
+    },
+    {
+      "sample_id": "scrCMA064",
+      "r_cd8_total": 34,
+      "author_annotated_cd8_cells": 34
+    },
+    {
+      "sample_id": "scrCMA068",
+      "r_cd8_total": 25,
+      "author_annotated_cd8_cells": 25
+    },
+    {
+      "sample_id": "scrCMA072",
+      "r_cd8_total": 67,
+      "author_annotated_cd8_cells": 67
+    },
+    {
+      "sample_id": "scrCMA076",
+      "r_cd8_total": 50,
+      "author_annotated_cd8_cells": 50
+    },
+    {
+      "sample_id": "scrCMA077",
+      "r_cd8_total": 6,
+      "author_annotated_cd8_cells": 6
+    },
+    {
+      "sample_id": "scrCMA087",
+      "r_cd8_total": 3,
+      "author_annotated_cd8_cells": 3
+    },
+    {
+      "sample_id": "scrCMA088",
+      "r_cd8_total": 210,
+      "author_annotated_cd8_cells": 210
+    },
+    {
+      "sample_id": "scrCMA089",
+      "r_cd8_total": 0,
+      "author_annotated_cd8_cells": 0
+    },
+    {
+      "sample_id": "scrCMA090",
+      "r_cd8_total": 11,
+      "author_annotated_cd8_cells": 11
+    },
+    {
+      "sample_id": "scrCMA091",
+      "r_cd8_total": 907,
+      "author_annotated_cd8_cells": 907
+    },
+    {
+      "sample_id": "scrCMA093",
+      "r_cd8_total": 440,
+      "author_annotated_cd8_cells": 440
+    },
+    {
+      "sample_id": "scrCMA094",
+      "r_cd8_total": 599,
+      "author_annotated_cd8_cells": 599
+    },
+    {
+      "sample_id": "scrCMA109",
+      "r_cd8_total": 11,
+      "author_annotated_cd8_cells": 11
+    },
+    {
+      "sample_id": "scrCMA112",
+      "r_cd8_total": 150,
+      "author_annotated_cd8_cells": 150
+    },
+    {
+      "sample_id": "scrCMA118",
+      "r_cd8_total": 0,
+      "author_annotated_cd8_cells": 0
+    },
+    {
+      "sample_id": "scrCMA119",
+      "r_cd8_total": 1978,
+      "author_annotated_cd8_cells": 1978
+    },
+    {
+      "sample_id": "scrCMA120",
+      "r_cd8_total": 22,
+      "author_annotated_cd8_cells": 22
+    },
+    {
+      "sample_id": "scrCMA121",
+      "r_cd8_total": 3,
+      "author_annotated_cd8_cells": 3
+    },
+    {
+      "sample_id": "scrCMA129",
+      "r_cd8_total": 54,
+      "author_annotated_cd8_cells": 54
+    },
+    {
+      "sample_id": "scrCMA130",
+      "r_cd8_total": 0,
+      "author_annotated_cd8_cells": 0
+    },
+    {
+      "sample_id": "scrCMA131",
+      "r_cd8_total": 191,
+      "author_annotated_cd8_cells": 191
+    }
+  ],
+  "state_compositions_computed": false
+}

@@ -1,0 +1,83 @@
+{
+  "clinical_biopsies": 46,
+  "clinical_patients": 23,
+  "object_biopsies": 45,
+  "object_patients": 22,
+  "object_cells": 25178,
+  "missing_immune_samples": [
+    {
+      "sample_id": "sc5rCMA188",
+      "patient_id": "GC39",
+      "timepoint": "on"
+    }
+  ],
+  "patients_by_treatment": {
+    "Pembrolizumab": 9,
+    "Nivolumab": 8,
+    "Nivolumab + Ipilimumab": 6
+  },
+  "clinical_patients_with_pre_and_on": 20,
+  "multiple_biopsy_patients": [
+    {
+      "patient_id": "GC16",
+      "timepoint": "on",
+      "biopsies": 3
+    },
+    {
+      "patient_id": "GC16",
+      "timepoint": "pre",
+      "biopsies": 2
+    }
+  ],
+  "count_eligible_upper_bounds": {
+    "15": 6,
+    "30": 3,
+    "50": 3
+  },
+  "development_upper_bounds_after_four_lockbox": {
+    "15": 2,
+    "30": null,
+    "50": null
+  },
+  "lockbox_four_allocatable_by_counts_only": {
+    "15": true,
+    "30": false,
+    "50": false
+  },
+  "intervals_available": 0,
+  "formal_eligibility_finalized": false,
+  "source_note": "Upper bounds ignore unavailable intervals and unresolved multiple-biopsy pairing; author CD8 labels await T2.1 audit.",
+  "cd8_label_definition": [
+    "Activated_CD8_Tcells",
+    "Cytotoxic_CD8_Tcells",
+    "Dysfunctional_CD8_Tcells",
+    "Memory_CD8_Tcells"
+  ],
+  "global_annotation_vocabulary": [
+    "Activated_CD8_Tcells",
+    "B_cells",
+    "CD4_Tcells",
+    "Cycling_cells",
+    "Cytotoxic_CD8_Tcells",
+    "Doublets",
+    "Dysfunctional_CD8_Tcells",
+    "Macrophages_CCL3",
+    "Macrophages_CXCL9",
+    "Macrophages_LYVE1",
+    "Macrophages_PLA2G2D",
+    "Macrophages_SPP1",
+    "Mast_cells",
+    "Melanophages",
+    "Memory_CD8_Tcells",
+    "Monocytes_CD14",
+    "Monocytes_CD16",
+    "Monocytes_TNFSF13",
+    "NK",
+    "Plasma_cells",
+    "Tregs",
+    "cDC1",
+    "cDC2",
+    "pDC"
+  ],
+  "state_compositions_or_changes_computed": false
+}

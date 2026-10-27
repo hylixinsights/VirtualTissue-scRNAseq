@@ -1,0 +1,74 @@
+{
+  "source": "../data/SPECIAL/raw/GC_all_immune_sharing.rds",
+  "object_class": "Seurat",
+  "stored_seurat_version": "3.1.5",
+  "cells": 25178,
+  "assays": [
+    {
+      "name": "RNA",
+      "class": "Assay",
+      "dimensions": [22897, 25178],
+      "layers": ["counts", "data", "scale.data"]
+    },
+    {
+      "name": "SCT",
+      "class": "Assay",
+      "dimensions": [19220, 25178],
+      "layers": ["counts", "data", "scale.data"]
+    }
+  ],
+  "reductions": ["pca", "harmony", "umap"],
+  "metadata_columns": [
+    {
+      "name": "Response",
+      "class": "character",
+      "missing": 0,
+      "unique_values": 2
+    },
+    {
+      "name": "Timepoint",
+      "class": "character",
+      "missing": 0,
+      "unique_values": 2
+    },
+    {
+      "name": "sample_ID",
+      "class": "character",
+      "missing": 0,
+      "unique_values": 45
+    },
+    {
+      "name": "patient_ID",
+      "class": "numeric",
+      "missing": 0,
+      "unique_values": 22
+    },
+    {
+      "name": "low_resolution_clusters",
+      "class": "character",
+      "missing": 0,
+      "unique_values": 10
+    },
+    {
+      "name": "high_resolution_clusters",
+      "class": "factor",
+      "missing": 0,
+      "unique_values": 24
+    },
+    {
+      "name": "Tissue",
+      "class": "character",
+      "missing": 0,
+      "unique_values": 3
+    },
+    {
+      "name": "Timepoint_Response",
+      "class": "character",
+      "missing": 0,
+      "unique_values": 4
+    }
+  ],
+  "time_field_candidates": ["Timepoint", "Timepoint_Response"],
+  "sample_field_candidates": ["sample_ID", "patient_ID"],
+  "inspected_state_compositions": false
+}

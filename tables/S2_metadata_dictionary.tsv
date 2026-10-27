@@ -1,0 +1,13 @@
+column	origin	stored_class	missing	description	evidence_class
+Response	deposited	character	0	Clinical response R/NR in deposited object. Stratification only; forbidden predictor.	clinical; not model input
+Timepoint	deposited	character	0	Categorical BT/OT. Does not encode days or an interval.	clinical timing category
+sample_ID	deposited	character	0	Study biopsy/library pseudonym; joins clinical Sample ID.	identifier
+patient_ID	deposited	numeric	0	Study patient pseudonym; all splitting is at this level.	identifier
+low_resolution_clusters	deposited	character	0	Deposited coarse immune-cell annotation.	inferred author annotation
+high_resolution_clusters	deposited	factor	0	Deposited fine annotation including the four primary CD8 labels, cycling and doublets. No state counts inspected.	inferred author annotation
+Tissue	deposited	character	0	Deposited tissue category; retained separately from clinical tissue for audit.	clinical annotation
+Timepoint_Response	deposited	character	0	Composite timepoint and future-response field; forbidden predictor.	clinical; not model input
+cell_id	export-generated			Original cell barcode; row identity and count-matrix column order.	identifier
+qc_total_counts	export-generated			RNA raw-count sum for the cell.	derived technical measurement
+qc_detected_genes	export-generated			Number of RNA features with positive counts.	derived technical measurement
+qc_mito_fraction	export-generated			RNA counts in features starting MT- divided by total RNA counts; missing for zero-count cells.	derived technical measurement

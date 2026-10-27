@@ -1,0 +1,1769 @@
+{
+  "input_sha256": "93dbb75aea1ed3fd7e867c8f0f857023fdd743a316950fcbcf4a140cb35ac951",
+  "total_cells": 25178,
+  "exported_cells": 25178,
+  "genes": 22897,
+  "samples": 45,
+  "all_cells_exported": true,
+  "exact_count_roundtrip": true,
+  "matrix_orientation": "genes_by_cells",
+  "per_sample": {
+    "sc5rCMA061": {
+      "sample_id": "sc5rCMA061",
+      "cells": 190,
+      "genes": 22897,
+      "count_total": 807731,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 107490,
+          "sha256": "5b7fd1deb8a5c9333c8805bb70ac8f3ba04727492bbb730eba4e5b74e0b3bab9"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 106047,
+          "sha256": "6a06fbf17230254cde4c4607caf792077ba148521f4e30c1f8a27ba0f393e8be"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 6697,
+          "sha256": "8f30f52ab57330abbec1f29aa1491786da581d504c05d65d0f55c5a7c5aa7a05"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 2714419,
+          "sha256": "fde2be2e017f3a777f586d2b145ec6d892816fa91d94e73bf8f96a076b2012d7"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 11213,
+          "sha256": "b0d19b7b1c4a2f1b523269a8f4b588a3b3518703146f24c9b1e8f42d7b621e1e"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "sc5rCMA066": {
+      "sample_id": "sc5rCMA066",
+      "cells": 510,
+      "genes": 22897,
+      "count_total": 1884522,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 257987,
+          "sha256": "c1222688445a77cb67d98572c5ee06a5b9b7680b0d59ae282cf2a05ec737a3c2"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 256544,
+          "sha256": "ea29fc639a8fda613930dffc133ebc02963ac84e372cdec6d4eaacc1478f231e"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 14773,
+          "sha256": "0f94ebb0c5ad962d280bc328c5ee1f287e79a52b5480d46ff5f25d7bde85756d"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 8139167,
+          "sha256": "777fa77218c9645c09d95d7835af89f5a0473740c5b4b9671883f7a32d269d1c"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 20494,
+          "sha256": "3d232fcdf5b3cdae5341cf2019540068c9cf9a36173fee0a8dc87caccee6c9aa"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "sc5rCMA070": {
+      "sample_id": "sc5rCMA070",
+      "cells": 81,
+      "genes": 22897,
+      "count_total": 715105,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 56977,
+          "sha256": "648ae62380651545c43f7c430aa506a44cea217aa8cecdd195b70424a9aedc48"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 55534,
+          "sha256": "3396c3c71bb9453c517a45f9e0f6384ed711eb7e04f316a6b30d76906c4bb8c0"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 3934,
+          "sha256": "24ac6fa033e2f26101678290d4173e6359fe5d06a8261e3e67cb09b0d253828c"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 2035595,
+          "sha256": "596eb2cd134d082396c366db5ea0cd37b5cf8a81a988dfb36319e0cfe29a17a3"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 8114,
+          "sha256": "a68666d717bb75a7f9f4df42317bee4f2ca252a22b25c547483730401972813c"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "sc5rCMA074": {
+      "sample_id": "sc5rCMA074",
+      "cells": 224,
+      "genes": 22897,
+      "count_total": 939825,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 123041,
+          "sha256": "2ee2e09cafe1436c5356cfbeb22dec70ad9a5679a91c19ca87a351ac83c5c1fc"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 121598,
+          "sha256": "e3c90db060254e0b6058b7d76ae6549e936db8afbb66c05c04ee8a0ef1562b81"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 7632,
+          "sha256": "ff17be807b00f738cb3a54b1cfea97dd7107bb68346267b5747cf95e5abac401"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 3949575,
+          "sha256": "91cf988d856b5c5b4f63cbae46440f1df4324826728a60ca5b5f1641e479c4f6"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 12326,
+          "sha256": "aea3fde6e584792ec0fd7d41b685627d24e918b235fcf1703c6ef5d2ae647ebd"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "sc5rCMA136": {
+      "sample_id": "sc5rCMA136",
+      "cells": 449,
+      "genes": 22897,
+      "count_total": 1801072,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 229795,
+          "sha256": "e541c88609f29ab0aafbd39e9623e32c40f340930267548fa2bc5e30ff6cba92"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 228352,
+          "sha256": "b052a08dd9ad4f7ada46637908dbc3a38fde800b24d7bb40e43b8abc52e3592b"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 13464,
+          "sha256": "e224c288151fd55c0d61d08b0b2676dd073f8158b9ebb30e9a6fe8419df94428"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 8082462,
+          "sha256": "c6437d6585cc36a6712ddc610299841fb033f0c575d749030dcb6de05628bf4a"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 19078,
+          "sha256": "db5e3d05017a4ed98d138540ca6198ece960d4be29c576a01947499627df3090"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "sc5rCMA141": {
+      "sample_id": "sc5rCMA141",
+      "cells": 298,
+      "genes": 22897,
+      "count_total": 1323267,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 159351,
+          "sha256": "8729b1beb72ccde5a5353161b6572763493391877227f3e9feea2fa6f0548bab"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 157908,
+          "sha256": "463d355fe5d1a9694ad3ea6b92a1ad23f580fd1c8688445b4f909886f3475b05"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 9564,
+          "sha256": "cac5b01059aae9bce4b6de7e2f7d4ffcffe68cc50eaa96582cd83bb9fce41e1a"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 5116077,
+          "sha256": "233d1ccab8eb78cb3758f756d6803481d058580da0cca8db8fcc9e85f78edf1a"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 14648,
+          "sha256": "98ca476bb68422db061096c8b123f0066d71ca2fc1f6cd7fbb3d3a926ab1c87a"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "sc5rCMA144": {
+      "sample_id": "sc5rCMA144",
+      "cells": 546,
+      "genes": 22897,
+      "count_total": 3051839,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 278473,
+          "sha256": "01580a8b68099039c5affad137ab9bcca82e19144f191ba68c16c93e2c3e5b5a"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 277030,
+          "sha256": "030a9a07ee7618599c60df209182ebfb8efe4f095d33b8cabe43f1cb83b301ec"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 16063,
+          "sha256": "2351d00860f84a898429ccc1d346fa963387caf48ba997473f3475df1b7e2568"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 11178881,
+          "sha256": "6bc3a7a53f0ff5bd061ebfa4e18cb489a6ec489681a4eeac57d911cc8afb4d63"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 22294,
+          "sha256": "ac8017251afdafd9b76d8b6969b97a588bf66e205151a3bbe0ceff730f0cc0c8"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "sc5rCMA149": {
+      "sample_id": "sc5rCMA149",
+      "cells": 519,
+      "genes": 22897,
+      "count_total": 2090320,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 265426,
+          "sha256": "984291f0cfc85311bb52c6648b2f75b8a304d60eac90e3f11729a4ea469a5949"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 263983,
+          "sha256": "a370bcb08840465c7b47167a750a882ebd1d8c087582d4e9cea2ff465dc716e7"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 15417,
+          "sha256": "9dab9d65bc321da63085791ea2c6f3a047c0c5f78021c1c8a84105d4e46e6a71"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 9524617,
+          "sha256": "194fafcb842c70c30fbd11b49e1ef5efbf5a8da9d548f2f740a7d60372148d2d"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 21300,
+          "sha256": "17ae1fafcd65501dffab5941a23373add47d1a142ee6104c5fde487730c9f2f9"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "sc5rCMA152": {
+      "sample_id": "sc5rCMA152",
+      "cells": 753,
+      "genes": 22897,
+      "count_total": 3507828,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 376281,
+          "sha256": "3c2b3874b4d205310c7ee37b35a66cd1718daa5deac04207783194d949c7b372"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 374838,
+          "sha256": "7e2d6650458d8cce3c6a5f84c410eb676328e061c895c1b22cff0cc456c7fb75"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 21234,
+          "sha256": "70dc7f798f35328a1f67f187e73a0c2b5aae8a3de896cae3f1fb96fa4c03c9f7"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 13716218,
+          "sha256": "bb81ab50be75b729920a69330bde3ab5c6eba5242768a23ead710abe32293df0"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 28088,
+          "sha256": "8f510c2328419d2dca8803748b691441925ac9d0b2e664676f26c01736504c09"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "sc5rCMA155": {
+      "sample_id": "sc5rCMA155",
+      "cells": 798,
+      "genes": 22897,
+      "count_total": 2665394,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 397216,
+          "sha256": "303f943490e91c3837b02e8fae0de5921e71650f9ba5b15f4981a5965007ad6a"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 395773,
+          "sha256": "18b51090125dab36afe4efb09f928dceef387450d3956e56a9a7e27b154c138b"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 22275,
+          "sha256": "7177499412046b43c051b879495829f3ac024bf69a19298df8e69165d6edccb5"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 11744765,
+          "sha256": "499b88e19a2ec9e9613c27e35eaee48ee5ce84cf417bb4714573ef33bf1545fe"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 28488,
+          "sha256": "6a1019a649e588834b6967ec08b30bf4614b74c9d5e70453ebe6453e58807012"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "sc5rCMA192": {
+      "sample_id": "sc5rCMA192",
+      "cells": 1694,
+      "genes": 22897,
+      "count_total": 9948996,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 831100,
+          "sha256": "64fe0f57c3cffe500bbb3ddf4066e9aa4ff2a872d54a0343673196ea28ef4030"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 829657,
+          "sha256": "729cdc86d01eb7d2f135056cda8ff48eceae88a9623e5a25f1d5cf3474c8b8d1"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 44932,
+          "sha256": "d659485a4a08e27f0a4dcacae904dfad146a89b3f9d9f6c7bb92ad8f2c40df84"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 36279243,
+          "sha256": "2f17a2b5521de9072cbc6704c7ce25ea65fd12e130e98a49aa15b2adf58a566e"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 54309,
+          "sha256": "6ec30235e190683961222f07f032ee5b30cc997139f9f7a1720cf143fd3b3c39"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "sc5rCMA196": {
+      "sample_id": "sc5rCMA196",
+      "cells": 1506,
+      "genes": 22897,
+      "count_total": 5465425,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 741445,
+          "sha256": "bba7091b264f96ff46789792a6704dbca28cfbc11dcb99e5efb38fad19b384d4"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 740002,
+          "sha256": "3688774e5843521d6eeecb494e226a68ece94840ab265b57c21d5c737c9e4cb0"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 40567,
+          "sha256": "d5296792062ae74045eebfb508b832cc4a96c49041ad301d0513f69712bb3191"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 24084840,
+          "sha256": "b3ba69b6dcf3b6ea10711d46c4f3992aff99d2df868e73e5bed0abb02db5ab55"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 48103,
+          "sha256": "355c78ee9fcf53f55933c067405edeeece0ee2b125084fbef5506cc2e4012917"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA036": {
+      "sample_id": "scrCMA036",
+      "cells": 57,
+      "genes": 22897,
+      "count_total": 189312,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 45162,
+          "sha256": "7dde5ded8f25a928f632bf9f76ff33d0654cc844c70a923aa9916e50a84f1aed"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 43719,
+          "sha256": "e87c2c1daaccf47bcd69b23ca29b0c6916fa6865211c2a8cbb9214ff6f01fcd3"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 3152,
+          "sha256": "ae46cd3d18d62ad7977babdb69e55ddebc95d7cf80b83a87d2ac9516af87dab0"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 938389,
+          "sha256": "0d66a5f65095730150f79b41d66fff822370be7ca5ac68d9cddc0541c718fa7b"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 7037,
+          "sha256": "c2a4b54e8249aed4fb95ed086b19e24dfb8e712720422b4ab15324435b3a2474"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA038": {
+      "sample_id": "scrCMA038",
+      "cells": 782,
+      "genes": 22897,
+      "count_total": 4057243,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 389563,
+          "sha256": "2826bc416ecddb59d5e3b4eda68b60973339c086767e18de5cb28563cbfc5450"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 388120,
+          "sha256": "a60c14a620b1ffbf09148b042c357b4b45554a9381833363209cbd27f933fd32"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 21948,
+          "sha256": "49fbf755f0ccbddba62e793a41cf44750960c5df377e264229c0c23444d7bac9"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 15726278,
+          "sha256": "f6b7a15de9ce008dc7e8581ae03d22e32f918d5f006e17559ffebd19b19bf63d"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 28978,
+          "sha256": "65a252e605332d932b6fa53108b8326de906263a5956289aeb42d537e4768b01"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA040": {
+      "sample_id": "scrCMA040",
+      "cells": 75,
+      "genes": 22897,
+      "count_total": 656198,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 54162,
+          "sha256": "1812ff7168a7d2985ea2e178f66d35e1f3752e47ca02a55407be83b261207d57"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 52719,
+          "sha256": "8bba7368dc18bee3ef6e0ee628676c6bc466a331551f9aa7c66805cf49e15d37"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 3685,
+          "sha256": "0da9190387c7176709739741f9dc4573b58ecfd15d6d4dff25a0379afe211620"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 1980194,
+          "sha256": "3b85069f0102cf0e6c668c89a5439163f1be0520540115fa6df40e4161ff5ede"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 7752,
+          "sha256": "cdd5b889e1e1105285d92996d6a21f57ba00f907b8a438ec82f11c4efbc5526f"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA041": {
+      "sample_id": "scrCMA041",
+      "cells": 26,
+      "genes": 22897,
+      "count_total": 261839,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 30892,
+          "sha256": "886b30f0a7ab194f78e8f89b1d5d76d8195b314956d8ad1e2c3caf8c43ed4dbd"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 29449,
+          "sha256": "122f0ab1abba10eda86296743c04641eeeb79aabeb4564bd91245edf6b016daf"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 2371,
+          "sha256": "b60356cc2ec98131c76e341e721a0b38aa00e7945b1fd6ed280ac0389ec8e271"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 650534,
+          "sha256": "75db2c17f5bf4a02e2345fde354c952b31291e2e819829d4a3ec82ef610e2c4c"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 6031,
+          "sha256": "a483f2b968e7399ce22fdb678389869b689f8b972de2b2c4ee9233667dbdeafd"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA044": {
+      "sample_id": "scrCMA044",
+      "cells": 527,
+      "genes": 22897,
+      "count_total": 5031370,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 269136,
+          "sha256": "d78e66e19b37a051b6bba0472375cea674d5d015e0bc8bba3675277356a153c2"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 267693,
+          "sha256": "6269c3110ad7e11838f15979721b1282f5d396b695281a7201aacb9cf91e6c44"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 15485,
+          "sha256": "e0d064d43f5a27f10417e436b3a5d6048064fd6f112985c0b6dbe8efbd91f7a7"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 14767139,
+          "sha256": "b83a724fc1cbb85ac15ab1c9162dd21cf2519023f3794916f4993a0d904206ec"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 21833,
+          "sha256": "9162e60f066c7e47fea61bc38714bdb8ca7ee4857997b9cb29d6da3e2ddbab3e"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA046": {
+      "sample_id": "scrCMA046",
+      "cells": 185,
+      "genes": 22897,
+      "count_total": 714084,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 105373,
+          "sha256": "a3e1610d67794f6cbbc07fce9bc5a23c297f4824516430519c6e514781eba0c4"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 103930,
+          "sha256": "3ab93d7646fd9e734c7fca262973742a210721e1de132eb01b71a7cc4e92b13e"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 6405,
+          "sha256": "2dc43232cc28e76671a9962825df28df6de236e23388a44e63acab89a866972a"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 2868861,
+          "sha256": "ce4f6a7da0be60611d3e854d95cbded78e24fd1614515a57761afd089c9e5612"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 11077,
+          "sha256": "d5d99d69dd9051d1757d4ddae3db53ebcf1c6294dd06aea927dba4bf5c9d36d0"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA048": {
+      "sample_id": "scrCMA048",
+      "cells": 86,
+      "genes": 22897,
+      "count_total": 614903,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 58983,
+          "sha256": "d87ae3994266a9752b4dc9a0d6299708508dbc06a6e72eeebd718b83d676f605"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 57540,
+          "sha256": "ced3a858d426a2d49d9fe9c6eaaadb61cc53efa7423709d5bb1acf952c17348e"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 3976,
+          "sha256": "961b8b6aef6a35d509762a5fe1ea6e0f585163f5ec95dec788cccac076c1ab1a"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 1943047,
+          "sha256": "df16c22db3d7f3093c2f56c24b4248cc4a7c40b09e225272be41dc5c87557bf6"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 8074,
+          "sha256": "23f2d1b4457ef08beb90b1dca41f54c2e54248facf1b887559dfeba443524e3b"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA049": {
+      "sample_id": "scrCMA049",
+      "cells": 155,
+      "genes": 22897,
+      "count_total": 1047387,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 91488,
+          "sha256": "f1f816da9b00925abde7d9455c850d91ac680bf42b147b6fed37b2b7fc8fac4a"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 90045,
+          "sha256": "1531bc9bb7da831612e4704fe9229af60821e2e9c11d157ca71494ed0d832d6c"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 5770,
+          "sha256": "1751d286ad8e9ebfe1b034b04c436f931ab16189d33cf6f0fc95fe907dd8fd4c"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 3259654,
+          "sha256": "dcecb2b47571f6cd9d446be1206a9ad0e14d03553e96628bfaf91b48570df401"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 10199,
+          "sha256": "cd19e5b9130ed2dc968710542aae975aaa4413126aabc10ef2ddc4562c252cd5"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA050": {
+      "sample_id": "scrCMA050",
+      "cells": 90,
+      "genes": 22897,
+      "count_total": 397047,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 60991,
+          "sha256": "59e484fc08e81c2105eb06fc57fe906dcb397867c784d99a2e59424ee01c9867"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 59548,
+          "sha256": "3729641052e9d8ef1b6f65cc342cf807b996528c6da743a0b4de83042b354865"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 4099,
+          "sha256": "ef31b43e8d5680cd4e314bc54d7f4bf42ba67e7e11dd59987af4c73ce4910562"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 1379001,
+          "sha256": "a63e2717bb12d07f5e75797b616e6b9883a0f81316fba9ffab2ad2a6fcf89751"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 8116,
+          "sha256": "3a3d11efaa9763e57ba872556141b8ae3d1fe0611f4b3b01b0356da09e6c38e9"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA054": {
+      "sample_id": "scrCMA054",
+      "cells": 68,
+      "genes": 22897,
+      "count_total": 464295,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 50946,
+          "sha256": "480890948a9592092fe8f037d4dfa6eb6b3e4e31e79cb30c1c75aa965466a94f"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 49503,
+          "sha256": "7e563032295d4ae4b0cd7c382806528191282e37c8e3a67c5a6320cd28d2ba94"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 3569,
+          "sha256": "0e3dee6a3c5fcec8c0ef0826e885b3dd3f2e75e985c66373f976b4e4ed928f61"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 1510215,
+          "sha256": "0b314a453a170fb5bf533d7998317a1ba8f3fbfb74c5a03ad2ade83ae93fb25d"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 7687,
+          "sha256": "d83d94ef59106e581be8b86413599f07ebfb7178daf66ef0e3625ea3ca2ec4e3"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA055": {
+      "sample_id": "scrCMA055",
+      "cells": 316,
+      "genes": 22897,
+      "count_total": 1372359,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 167637,
+          "sha256": "c4865194617d63f803fe21b7a42f8fd32a95ef2efd60cab6d2234f6c0e39a068"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 166194,
+          "sha256": "2be4fd66b16e7e455ceae51c9b1b6dcfa837d20b9ebdb4d81b35c27e53434ebe"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 10016,
+          "sha256": "2a13defc7386275d05a351606a0bbae70d18d4c814b139ca9fbaa62358549c2a"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 5273506,
+          "sha256": "0c1168dbe820390d55aa95486d39b37b161235b0db247abf1a8983cdc6ae4c7b"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 15131,
+          "sha256": "f821c765277b64608513ee40e302465187555ebbb3da210af261353f542eeaa8"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA063": {
+      "sample_id": "scrCMA063",
+      "cells": 278,
+      "genes": 22897,
+      "count_total": 2130540,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 149820,
+          "sha256": "4930ea9cc3d7eacbbf114fe929cf523d0bc68cc443b5c1964a971a0c3c74f3ec"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 148377,
+          "sha256": "ebd5da4dc3d26338741054b19f4281a4ffc32d24ee1861dc30c893b2314371f1"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 9158,
+          "sha256": "07204e0ca885eac932e48397b8060af213ce6aa51578207cd2a647770e37f5df"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 6576302,
+          "sha256": "8c4d40a4434c5db74002726221818d09f26aa6c9355cd76d766dbfbe3015fd03"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 14296,
+          "sha256": "c35a72623fd3fd4a6cb5eee2b2c7527db204abe5e0862428a13c04c8f31ecd85"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA064": {
+      "sample_id": "scrCMA064",
+      "cells": 193,
+      "genes": 22897,
+      "count_total": 1547292,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 109150,
+          "sha256": "5fd8725584f952166e6d28aa165e633678bf23c1e867a35ccdf11764b8712646"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 107707,
+          "sha256": "b88bb1fb00dd1f8fff51431c55c2d8d36c3ade8280b104e74c0c4c45d979c4ee"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 6834,
+          "sha256": "17f47ddd28fcc639a34d61b24a300eff08861fdda581acefb3deeb6d39c62811"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 4639972,
+          "sha256": "36ce0c4e4a6b12a45aaca3ce3c91ead67827a024cf5817101e3d7495fda6148d"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 11572,
+          "sha256": "81ed9c40f8c84927ed4cfdaa747312146c40a3b8dbdf3a56d002e184becd783b"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA068": {
+      "sample_id": "scrCMA068",
+      "cells": 128,
+      "genes": 22897,
+      "count_total": 569020,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 77975,
+          "sha256": "f12f76581d001b9876f90f94ee67b825fe5f7786427a0342cf13a3c18a5fc0ba"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 76532,
+          "sha256": "1c193d8e9b14e5a314b741f5a7d8975bcc56b03b33339061fa8fc825ccf0b6ae"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 5055,
+          "sha256": "b00fc91c42ddc3e303f1a89a42e587b901853af2eeda4afe97e56ca8af97a71f"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 2244759,
+          "sha256": "118ca1d214264236fd1d24db66b8b6a224bb1ab8f07ad7ad0c46cd6e8927b145"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 9347,
+          "sha256": "2ecc050038d67a0d17bc70f71a38f3bed470a9c185e90ce21103c7711104a7f1"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA072": {
+      "sample_id": "scrCMA072",
+      "cells": 224,
+      "genes": 22897,
+      "count_total": 1500146,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 123044,
+          "sha256": "d8a9d0b932d61fd20d3118c8dee57f4f7ed18ed89ddb3c1aee491b15ceea00b7"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 121601,
+          "sha256": "51a514f44d0ad6f531dbb9a425ddf124a80dbd2a74f4a9a4ab6ea0508a8e01a3"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 7617,
+          "sha256": "9dafd96267ed989ce90842e5cbacc6a1c49dff535521c099b35d81fc168830a2"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 5387048,
+          "sha256": "42399bea1a38027f73844362db686b3f62c06464466292e1e861bf2b9bf19349"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 12449,
+          "sha256": "3dfd63224d2e55a38471e5175e7fa7531279c7b93e4cc981fbe19d917c78aa78"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA076": {
+      "sample_id": "scrCMA076",
+      "cells": 242,
+      "genes": 22897,
+      "count_total": 3338370,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 131701,
+          "sha256": "93e6109a0870d2f59008b51f8342008ded88a76a5cd71d431731cdf74f00b8f8"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 130258,
+          "sha256": "4f3b186e5ae3b5ea4701fc67c7c455ef19fa5e52ded6e4531c5b3b080e647b2a"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 8069,
+          "sha256": "4fca7c6e0ef9b31c5bcc91b4f052cbb22b8acc765bde13d383f825e26a43d238"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 9129408,
+          "sha256": "c9e32d9dc59e22c940976c854aa3583c769e216a90ad7259837126efad7e790b"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 13205,
+          "sha256": "16a590c9054a961de285660ff09bd612c9ccdebbbf09107bf432439df16fbb66"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA077": {
+      "sample_id": "scrCMA077",
+      "cells": 65,
+      "genes": 22897,
+      "count_total": 580460,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 49704,
+          "sha256": "d828980ed90adf7062c2edd93b3273714cb964e6968e3508d5f6c59d9032b83f"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 48261,
+          "sha256": "7383b1e6918be9a64dc8ef1e9fb3ee2e9723c37b321e1e571e7d949bc84b98fb"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 3517,
+          "sha256": "ad1845ae6f8930f9a3b2818675fa75821e992cab2bef221830ae9b0b77577d3f"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 1684409,
+          "sha256": "91fbe8176e05fb4d9401105f6a14319357b36e18f142aecf64f12ac069d3047e"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 7616,
+          "sha256": "f3f0f91a63726779b7f6da4aa4163e97f2a9f08a0c1280f842a11678a9799085"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA087": {
+      "sample_id": "scrCMA087",
+      "cells": 67,
+      "genes": 22897,
+      "count_total": 696080,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 50532,
+          "sha256": "dda7037cbee319ef7850acd99ebf02de7aeafabd724d2af7d91bc1380ab6463e"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 49089,
+          "sha256": "ad23a4e57ff1bb885f73b2d2daec01c2ca6ba44d37fa8dff5aee729e1a02add2"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 3592,
+          "sha256": "a1ede8514af6807072d7cbed47686e7b7647439c576466a8030dc5bac1e5ef07"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 1786565,
+          "sha256": "244615a490076dfdf3994f4af21c0821bfdf84bd044dfadfe33ef21ff6f9602d"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 7568,
+          "sha256": "4e05b1c994acc000e83f32c0634b345de74a2437129d75b39a0fb8b2001f8577"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA088": {
+      "sample_id": "scrCMA088",
+      "cells": 341,
+      "genes": 22897,
+      "count_total": 1699579,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 179275,
+          "sha256": "6de7fe08d36dae8d7745d2923eee8ca58fb0068e21a720a3b7f2aa63fa502f1c"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 177832,
+          "sha256": "08fd0aa3cadb285ebc6d37e303fce7d705d78c1890175b4f60bf5928700466cb"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 10686,
+          "sha256": "a5c6291416bdc76d4ec8181a9099a8623ba66fe596c0a31c6f9975891528151b"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 6233598,
+          "sha256": "43e3506922574bf782332bb3e27888482ebe6aebfb43a68636bb7da050616a31"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 16033,
+          "sha256": "aa89a9695a54a4fcc719a0968f23845d40da39aa1f7a29c45dcf615f2cf3ee8b"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA089": {
+      "sample_id": "scrCMA089",
+      "cells": 79,
+      "genes": 22897,
+      "count_total": 423634,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 55799,
+          "sha256": "edc0994c429c6dec1ea66762f9314365c91be5d71d86684edff4d303c029cee6"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 54356,
+          "sha256": "7521dc09ae31bb65a7731eaac87e1cacfc660aa084d10f23a43e3363cf6de9d0"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 3784,
+          "sha256": "c070996e5f3ba819c7601cd128234196d30f5a115dd372ea4e057dcdf41b2e1f"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 1509514,
+          "sha256": "0653c41ead75cea153d64fcb83f113bca8883a6342843f5eb974b402b8d2fa4b"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 7866,
+          "sha256": "5edfd81ce4e9a3bda10f52242986d4fc58a86a4a668e880633bfab736770b8f4"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA090": {
+      "sample_id": "scrCMA090",
+      "cells": 320,
+      "genes": 22897,
+      "count_total": 3250006,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 169322,
+          "sha256": "2752df90ee40dd6b2be2b5b33a4e9254f72cc7a60239fc6472db1a4b5592023d"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 167879,
+          "sha256": "97a6ca293ec0cbaa966a44ede24b92d5dc86e030377d7f92ac1b1c5165662926"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 9988,
+          "sha256": "61d111796c8977ef9c1b3ede10076a75297281c29d77d9a361412c05865ed0aa"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 10363610,
+          "sha256": "860f7a5f22c2d557cccd84111e6a07b3c48c836d0fdcfd277bae1ada61ffb35a"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 15622,
+          "sha256": "cfd197e0423b9cd37b9c3dfecfea231011ac93b58fb4ef84a243ff42343c3a47"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA091": {
+      "sample_id": "scrCMA091",
+      "cells": 2126,
+      "genes": 22897,
+      "count_total": 10522505,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 1051859,
+          "sha256": "9cd847061e3e722940ce5f2bdbff9769581504a3a7461836c805701f05c8c7d6"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 1050416,
+          "sha256": "6313b115336eba654ef147b89394b743766cbfea600cf11b91cc3822a4dd7c0d"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 57858,
+          "sha256": "7ad299ac28e288857970f4a0c11610efdda16c3e4343a909606c0db6cb4df060"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 45793528,
+          "sha256": "249eb35bc776633cced815d07b4ad1fdf7f74241e9370097e595139ab66ac3ac"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 67631,
+          "sha256": "f928f95991d87914d9aedb8b5deb2533de116dfbf93d84d26710aac5d6730776"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA093": {
+      "sample_id": "scrCMA093",
+      "cells": 720,
+      "genes": 22897,
+      "count_total": 4328160,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 360449,
+          "sha256": "3807be9a35a2778b2e571db4d864843b4b6b1be0c4ca4351f84764202d7b2557"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 359006,
+          "sha256": "5c986115b7b1a7b949e455aa70e9ed988de5e13b65a31f3a8b5690691c8fd17f"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 20505,
+          "sha256": "0e3beec20b67bb18de704c2da2abf933cd0610ed9a1561bac7c0f4f5cb44ee6a"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 15740563,
+          "sha256": "3737464c6571d628c939a73de33cb8dbc423b8588569c974bbb64b9e03b3719e"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 27467,
+          "sha256": "a408b56c27b8ee0ac08a0036d44957fa6318546698e61213af8235432a4ca37e"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA094": {
+      "sample_id": "scrCMA094",
+      "cells": 5681,
+      "genes": 22897,
+      "count_total": 21308129,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 2811349,
+          "sha256": "5723b11509f2ecd09ebc89c5880712c475df6b5d804b92c8fc4745d968534246"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 2809906,
+          "sha256": "3f832e051a65c8c47a76816abbb893f952b2a8a1bf1a66f90cac8800f7cc8fe6"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 148946,
+          "sha256": "0da645bde367caf83555e804d52d4dc8487768b52c6c109afd343e0023d2286b"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 95860588,
+          "sha256": "87411a0a35545396bd4504ed720fffc950ea43e56c74b6099ae6d8f397ab870b"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 153794,
+          "sha256": "f7ccabbe04cf429c4a8d3e045ab31a95a8340bf59ca31d573433b60f6968f2fb"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA109": {
+      "sample_id": "scrCMA109",
+      "cells": 182,
+      "genes": 22897,
+      "count_total": 2102562,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 103816,
+          "sha256": "539bc4da2e383e11fb4422ba65ed3254aecc6d798b47c7b8a4cb9febb2219f39"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 102373,
+          "sha256": "2eff039eec767d70b022131e69594548a72aa799c5d36b01b23ace506e2d6d4a"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 6468,
+          "sha256": "407a821ba088f326da7a1a9e56df5fa916553b043651201d21cf58c96c326852"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 5932997,
+          "sha256": "9d1cfde0acee887abeaa3fb88533041da7941908bdb0fbb67a668e6ebec29cae"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 11229,
+          "sha256": "acef30c8cc75b9afc39a12877441ed3edae02c5c0d99ca3cadbc62f91c17ffbf"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA112": {
+      "sample_id": "scrCMA112",
+      "cells": 286,
+      "genes": 22897,
+      "count_total": 2205933,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 153559,
+          "sha256": "bba27fc62536baa7f705e116d2294227f88902ac3a54f5d57bfe434815cf4f0c"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 152116,
+          "sha256": "16a1d2a2674b96cb4aedf16b3eff354c0df54e0a42ceec3d9bb6a2829be8f3ec"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 9287,
+          "sha256": "97e2d446085a280a19fb98deabc8c86bdddabaf6d2ab6831eba3f58233b90382"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 6883076,
+          "sha256": "cc776e716959acd9cad1a0afc717d9dda021c3f9e4c2f15113f6665615a8e999"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 14498,
+          "sha256": "9267288aeaaa2390dc01a00f481278583bc42936302eee69350fde5bdb74143a"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA118": {
+      "sample_id": "scrCMA118",
+      "cells": 195,
+      "genes": 22897,
+      "count_total": 1101572,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 109976,
+          "sha256": "002a659ca3489638c5d0fcf7202443d95659737ec8970f06f8270ea46a939aed"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 108533,
+          "sha256": "e9394776a0504aa3ecf4188d9e7040fca3a08790edeca8de9af3ea24f29936df"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 6695,
+          "sha256": "e8c1864d5124b90265ad6dcdc314c3314e8e8ff2a395d5a79923e96a4088dd89"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 3455483,
+          "sha256": "0849a08c8c91a803b1b03e372ba300dcd16746aad1b432f5d6781b9c3abb07f9"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 11306,
+          "sha256": "f9e17e4c3039b02c32e45bfa56773188aa50133b70d41e5da90bd24ddb82f8a3"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA119": {
+      "sample_id": "scrCMA119",
+      "cells": 2810,
+      "genes": 22897,
+      "count_total": 24414747,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 1384113,
+          "sha256": "8516b6d04279412e0599cc699ccf7b5127db0fbf94bb30e7dae0f861ab6493e5"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 1382670,
+          "sha256": "4ab78e31eddde051f6f64638ea5743ea816d83f4e49370525845f10f8ff21bd7"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 75471,
+          "sha256": "77c9bf9eeb02ac709ae53e83d5700afe48ea8cedbe23b9e0ad50b6513d5089df"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 86665325,
+          "sha256": "a387d1b2bc53796725acf85294cf0d0917f5d492a023e91c8f7c81f81f74b2d0"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 89070,
+          "sha256": "bffdc75c938df3d8715587f78a58ff08735c8934688f76c5584f82857fe9e2f1"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA120": {
+      "sample_id": "scrCMA120",
+      "cells": 176,
+      "genes": 22897,
+      "count_total": 1250767,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 100969,
+          "sha256": "c5557253bbf6c3144c4c8fcccd9e70f9d4f6cb3ac6b10ff6eeb57c010f3293e5"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 99526,
+          "sha256": "7799afa7d620838e3047ba520021ac1b9895cd5be90a5efc6bf6bd7781d934e2"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 6348,
+          "sha256": "7c897fce43bdddb045c128db0b04259ce8813ff4ed4320727ec18b274d2b6e3a"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 4376802,
+          "sha256": "176494c99855a70d0bcd6dd39f0bd70bf02b92499d3aa278c3e653eadb4c51f3"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 10925,
+          "sha256": "9a13f9a0030e08de0054201b2a0802f85facf21cd0bf943a42645c67d908095d"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA121": {
+      "sample_id": "scrCMA121",
+      "cells": 177,
+      "genes": 22897,
+      "count_total": 2373387,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 101793,
+          "sha256": "bc128dcfc298e70e032b94fe1c7e7ed0e0430ff45a6880aea5c7e3ca3f8a752d"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 100350,
+          "sha256": "b74e41a989a21c16a853d3adfc8eee96ed1a51b8ef2ec8ce774e39e596092a71"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 6362,
+          "sha256": "09ee9e9ec9508ab7c99259bdc704c53e9721b5aa78ccb90fe31b13f013ef6e18"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 6102756,
+          "sha256": "0d592d5ddf4df2a07b67fb82afdccbaf128f88590635651e5f16bb2c9b9ccd5c"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 11063,
+          "sha256": "e1ca5bf76a563d00c8c90347563fd90c2e2d825fa3ddd9fe1f1dbd1d799fc6de"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA129": {
+      "sample_id": "scrCMA129",
+      "cells": 75,
+      "genes": 22897,
+      "count_total": 301371,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 54173,
+          "sha256": "dce02cfbb627d2215fcc75ad143c84fdcc8af6fc8fb6b17a5d717c8f6bdddcb7"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 52730,
+          "sha256": "472cd6225c9e7819c477e3ed7ac46a501a5c9a0a96b6d47c7c53d61ca4678819"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 3763,
+          "sha256": "a00e591cc90a790e24e21b305d2a4b562930345dc0892fd35e410c94b2b71419"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 1043715,
+          "sha256": "46b7246dd36538c45125fc3760fa01cf1bfcfd387693c543e3097564757f1cd5"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 7781,
+          "sha256": "612b0ddd863392ff9ed03cabeadc58bb50322c1e44bf3293977767ab368a949d"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA130": {
+      "sample_id": "scrCMA130",
+      "cells": 69,
+      "genes": 22897,
+      "count_total": 543637,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 51343,
+          "sha256": "a61eb84f6948a9d5dc894c05616e1f1f32874e22064dfaa6f66b208bee533117"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 49900,
+          "sha256": "348ab57acea6ca25d2b1fa0cbb3ecda08aea06ba659e77688662c2eeac31431d"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 3551,
+          "sha256": "5360ba84bf2af2807198f1ca6e132ff25a1d5840b86c089eb2d797426a51430d"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 1731472,
+          "sha256": "9c73ed5c6bfaeeb13cc1b999ea7dd85ee6aa805be909883da1aa132412103883"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 7533,
+          "sha256": "a2151d0bd1c0bedf3879fbcf85b8f5fecc58f4f54fe4f9be8ed06195d909edb3"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    "scrCMA131": {
+      "sample_id": "scrCMA131",
+      "cells": 809,
+      "genes": 22897,
+      "count_total": 8516626,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "path": "author_harmony.parquet",
+          "bytes": 402857,
+          "sha256": "fdd0c795b3c6f286a0659b49022ad1319c13387dd666ff7923d8db2849dbe72d"
+        },
+        {
+          "path": "author_pca.parquet",
+          "bytes": 401414,
+          "sha256": "f05527d7e618270ca614f35e3afcb18879beb4bd5210d938390b0ecb08ac427c"
+        },
+        {
+          "path": "author_umap.parquet",
+          "bytes": 22684,
+          "sha256": "42cb0dfde9bc96d63638619dcd71845642d0cb53bfb14d959f3bcb303e57c569"
+        },
+        {
+          "path": "counts.mtx",
+          "bytes": 23879574,
+          "sha256": "28bd1762e74c521d90fce3160a21b04783698aea8ff7e45b9f42d10b0a63f113"
+        },
+        {
+          "path": "obs.parquet",
+          "bytes": 30792,
+          "sha256": "a7f886767947162282d7a2b17fef04ff0a6d114bb2a8c0938cda39f428cde604"
+        },
+        {
+          "path": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    }
+  },
+  "state_compositions_computed": false,
+  "embeddings_policy": "Archival author embeddings only; refit every learned representation on training patients"
+}

@@ -1,0 +1,238 @@
+{
+  "updated_at_utc": "2026-10-27T19:11:16.131028+00:00",
+  "tasks": [
+    {
+      "id": "T0.1",
+      "status": "complete",
+      "description": "Repository and environment** · S · Depends:"
+    },
+    {
+      "id": "T0.2",
+      "status": "complete",
+      "description": "Data acquisition and integrity** · S · Depends: T0.1"
+    },
+    {
+      "id": "T0.3",
+      "status": "complete",
+      "description": "Licence and data-use note** · S · Depends: T0.2"
+    },
+    {
+      "id": "T0.4",
+      "status": "complete",
+      "description": "Pre-registration freeze** · S · Depends: T0.1"
+    },
+    {
+      "id": "T1.1",
+      "status": "complete",
+      "description": "Export Seurat objects to a neutral format** · M · Depends: T0.2"
+    },
+    {
+      "id": "T1.2",
+      "status": "complete",
+      "description": "Patient and sample table** · M · Depends: T1.1"
+    },
+    {
+      "id": "T1.3",
+      "status": "partial",
+      "description": "Eligibility and flow diagram** · S · Depends: T1.2"
+    },
+    {
+      "id": "T1.4",
+      "status": "pending",
+      "description": "Lockbox assignment** · S · Depends: T1.3, T0.4"
+    },
+    {
+      "id": "T1.5",
+      "status": "pending",
+      "description": "CD8 state availability (development patients only)** · S · Depends: T1.4"
+    },
+    {
+      "id": "T1.6",
+      "status": "partial",
+      "description": "Technical confounders** · M · Depends: T1.2"
+    },
+    {
+      "id": "T1.7",
+      "status": "pending",
+      "description": "Feasibility report · Gate G1** · S · Depends: T1.3–T1.6"
+    },
+    {
+      "id": "T2.1",
+      "status": "pending",
+      "description": "CD8 subset QC and annotation audit** · M · Depends: G1"
+    },
+    {
+      "id": "T2.2",
+      "status": "pending",
+      "description": "Program library and coverage** · M · Depends: T2.1"
+    },
+    {
+      "id": "T2.3",
+      "status": "pending",
+      "description": "Scoring and fold-aware calibration** · M · Depends: T2.2"
+    },
+    {
+      "id": "T2.4",
+      "status": "pending",
+      "description": "State graph, pseudotime and robustness** · L · Depends: T2.3"
+    },
+    {
+      "id": "T2.5",
+      "status": "pending",
+      "description": "Functional axes per state** · S · Depends: T2.3"
+    },
+    {
+      "id": "T2.6",
+      "status": "pending",
+      "description": "Environment features** · M · Depends: T1.2; requires `Entire_TME.rds` and `Malignant_cells.rds` exported as in T1.1"
+    },
+    {
+      "id": "G2",
+      "status": "pending",
+      "description": "State reference frozen** · Depends: T2.1–T2.6"
+    },
+    {
+      "id": "T3.1",
+      "status": "pending",
+      "description": "Implement the model ladder** · L · Depends: G2"
+    },
+    {
+      "id": "T3.2",
+      "status": "pending",
+      "description": "Simulation-based parameter recovery** · M · Depends: T3.1"
+    },
+    {
+      "id": "T3.3",
+      "status": "pending",
+      "description": "Identifiability on real data** · M · Depends: T3.2"
+    },
+    {
+      "id": "T3.4",
+      "status": "pending",
+      "description": "Development LOPO evaluation** · M · Depends: T3.1, T2.6"
+    },
+    {
+      "id": "T3.5",
+      "status": "pending",
+      "description": "Sensitivity analyses** · L · Depends: T3.4"
+    },
+    {
+      "id": "T3.6",
+      "status": "pending",
+      "description": "Freeze the model · Gate G3** · S · Depends: T3.4, T3.5"
+    },
+    {
+      "id": "T4.1",
+      "status": "pending",
+      "description": "Lockbox evaluation** · S · Depends: G3"
+    },
+    {
+      "id": "T4.2",
+      "status": "pending",
+      "description": "External direction check (GSE120575)** · M · Depends: G3"
+    },
+    {
+      "id": "T4.3",
+      "status": "pending",
+      "description": "Complementary temporal and clonal data (optional)** · M · Depends: G3"
+    },
+    {
+      "id": "G4",
+      "status": "pending",
+      "description": "Go/no-go for spatial work"
+    },
+    {
+      "id": "T5.1",
+      "status": "pending",
+      "description": "SPECIAL Xenium audit** · M · Depends: G4"
+    },
+    {
+      "id": "T5.2",
+      "status": "pending",
+      "description": "Runtime design document (ODD) and margins** · M · Depends: T5.1"
+    },
+    {
+      "id": "T5.3",
+      "status": "pending",
+      "description": "Implement the dynamic-state runtime** · L · Depends: T5.2"
+    },
+    {
+      "id": "T5.4",
+      "status": "pending",
+      "description": "Mean-field consistency test** · M · Depends: T5.3"
+    },
+    {
+      "id": "T5.5",
+      "status": "pending",
+      "description": "Geometry experiments** · L · Depends: T5.4"
+    },
+    {
+      "id": "T5.6",
+      "status": "pending",
+      "description": "Spatial evaluation · Gate G5** · M · Depends: T5.5"
+    },
+    {
+      "id": "T6.1",
+      "status": "pending",
+      "description": "Pilot (≤ 100 calls, explicit approval)** · S · Depends: G5 (or G4 if spatial is skipped)"
+    },
+    {
+      "id": "T6.2",
+      "status": "pending",
+      "description": "Policy comparison · Gate G6** · M · Depends: T6.1"
+    },
+    {
+      "id": "T7.1",
+      "status": "pending",
+      "description": "Combination-therapy pairs (separate model or test of transfer)."
+    },
+    {
+      "id": "T7.2",
+      "status": "pending",
+      "description": "Site-specific templates (lymph node vs skin) beyond the covariate."
+    },
+    {
+      "id": "T7.3",
+      "status": "pending",
+      "description": "Healthy-skin context (needs a tissue profile, new data, new menus)."
+    },
+    {
+      "id": "T7.4",
+      "status": "pending",
+      "description": "Explicit untreated counterfactual arm (labelled hypothetical)."
+    },
+    {
+      "id": "T7.5",
+      "status": "pending",
+      "description": "Coupling to VirtualTissue-LN (priming compartment → influx)."
+    },
+    {
+      "id": "T8.1",
+      "status": "pending",
+      "description": "Compile supplementary notes** (§12) from the task reports · M"
+    },
+    {
+      "id": "T8.2",
+      "status": "pending",
+      "description": "Figures**: main and supplementary, from saved results only, with scripts in `figures/` · M"
+    },
+    {
+      "id": "T8.3",
+      "status": "pending",
+      "description": "Data and code availability**: Zenodo DOI for code; derived data under CC BY-NC-SA · S"
+    },
+    {
+      "id": "T8.4",
+      "status": "pending",
+      "description": "Reproducibility run**: from a clean environment, regenerate every table and figure; compare hashes · M"
+    },
+    {
+      "id": "T8.5",
+      "status": "pending",
+      "description": "Claims audit**: claims ledger (§12.4); every claim maps to a result file and an evidence class. Optional: run the comp-bio-slop-check skill on the manuscript draft · S"
+    }
+  ],
+  "next_action": "Review protocol after count-only feasibility failure",
+  "lockbox_assigned": false,
+  "state_changes_inspected": false
+}

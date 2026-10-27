@@ -1,0 +1,14 @@
+WARNING: The directory '/Users/heldernakaya/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Obtaining file:///Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: virtualtissue-sc
+  Building editable for virtualtissue-sc (pyproject.toml): started
+  Building editable for virtualtissue-sc (pyproject.toml): finished with status 'done'
+  Created wheel for virtualtissue-sc: filename=virtualtissue_sc-0.1.0-py3-none-any.whl size=1420 sha256=2d037f0c76e8120bad3c82b4a5d5d7f599d1f6ea679f634e9df26868e824a5cc
+  Stored in directory: /private/var/folders/b1/43cs4y810sn370h8x131ntd40000gn/T/pip-ephem-wheel-cache-48q4xa_y/wheels/31/60/4f/6e7275981661efdd5ce51e745d5a34205e3f00c93f99a32a52
+Successfully built virtualtissue-sc
+Installing collected packages: virtualtissue-sc
+Successfully installed virtualtissue-sc-0.1.0
