@@ -9,6 +9,7 @@
   and provide local/mock/live settings in the notebooks.
 - Preserve v0.4 local physical trajectories and all clinical freezes. Live Jev is
   untested; mocked contract verification is explicitly labelled.
+- Preserve frozen-resource byte hashes on Windows with explicit Git line-ending attributes.
 
 # v0.4.0 — 2026-10-28
 

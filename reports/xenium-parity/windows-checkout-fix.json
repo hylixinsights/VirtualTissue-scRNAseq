@@ -1,0 +1,9 @@
+{
+  "first_ci_run": "https://github.com/hylixinsights/VirtualTissue-scRNAseq/actions/runs/40669745088",
+  "finding": "Windows Git checkout converted frozen JSON resource LF to CRLF, changing its byte hash. The test correctly rejected the changed resource.",
+  "expected_lf_sha256": "d69846af3ad5246bf7abc53f940362533585cbe3608177290ff02391aa6014d5",
+  "observed_crlf_sha256": "8f508d8df327e1dac622e8482dc3bcd3364a320118a05a55c0a5c07071f22bba",
+  "fix": ".gitattributes enforces LF source checkout while preserving original report/table bytes without normalization.",
+  "frozen_model_or_expected_hash_changed": false,
+  "runtime_source_changed": false
+}

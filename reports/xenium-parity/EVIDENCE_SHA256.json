@@ -1,7 +1,7 @@
 {
   "scope": "v0.5 software verification; no live Jev or clinical evidence",
   "files": {
-    "reports/xenium-parity/VALIDATION.md": "434fc3364cebcbc18a425f78c14ed398426d857624ee304e9c0fcb81a707e8ad",
+    "reports/xenium-parity/VALIDATION.md": "1ecb2f3fc8aebfb71a0bf6da1974478911510fcf1bb4aff5655c0e9ccc570603",
     "reports/xenium-parity/browser-validation.json": "b6e705ffa2b3fe86290762a18b822da876fc8ca36a5207ec28385c372c47f277",
     "reports/xenium-parity/freeze-verification.json": "bc07899fb1d3fbdc403b2d53773dbefccfd8ba6dc9ff3e826180a34942cf7d9d",
     "reports/xenium-parity/integration.json": "650b1dc31ad3bff774121f4cf37757c9a5bb80757a6a40d0b71f3ed2850d91f6",
@@ -20,6 +20,7 @@
     "reports/xenium-parity/wheel-validation.json": "0ff1f5fbb8156e2cc0ea060f3e8e3151699cb9885edbe59b9d3fbd1889af10d1",
     "reports/xenium-parity/wheel-validation.log": "268b5fd740472b8ab4c30ad9f2d3c7a5759a9a9421800735d5fbe9cc54aff29f",
     "docs/images/melanoma_jev_v05.png": "f6fa5f7bf30de99bd35b34b4e0ed295bf093000974f75fd55c1276abe912ef81",
-    "docs/images/melanoma_jev_decisions_v05.png": "6fbc8d602b84ec70017d570db59ea3b842b727cb9feda80fffcf8e1a27f3566b"
+    "docs/images/melanoma_jev_decisions_v05.png": "6fbc8d602b84ec70017d570db59ea3b842b727cb9feda80fffcf8e1a27f3566b",
+    "reports/xenium-parity/windows-checkout-fix.json": "1dd0aacc396c4edbc70cd5e4e907804e449b57253ac9a1f43310f6d34f2883b8"
   }
 }

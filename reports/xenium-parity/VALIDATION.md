@@ -59,6 +59,12 @@ Generated run ZIPs and raw matrices are intentionally outside Git.
 
 ## Limits retained
 
+The first remote run passed Linux checks but found a Windows checkout converting
+frozen JSON resources to CRLF. Git attributes now preserve the required LF bytes
+without changing the model or its expected hashes; archived reports/tables keep
+their original bytes. See [the diagnosis](windows-checkout-fix.json) and the
+subsequent Actions run for remote confirmation.
+
 Live Jev behavior/latency/cost has not been tested. Hosted Colab and direct
 file-protocol browser use have not been verified here. Remote OS checks are
 reported by GitHub Actions, not inferred from macOS results. No clinical model

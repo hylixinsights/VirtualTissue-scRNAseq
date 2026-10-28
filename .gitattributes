@@ -1,0 +1,9 @@
+# Source and frozen model resources must have identical bytes on every OS.
+* text=auto eol=lf
+
+# Preserve archived evidence and table bytes, including original CRLF/mixed files.
+reports/** -text
+tables/** -text
+
+*.png binary
+*.pdf binary
