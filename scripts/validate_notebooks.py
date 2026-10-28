@@ -34,7 +34,7 @@ with tempfile.TemporaryDirectory(prefix='vtsc-notebooks-') as temporary:
                             'code_cells': sum(c.cell_type == 'code' for c in nb.cells),
                             'executed_without_errors': True})
             print(path.name, 'PASS', flush=True)
-(ROOT / 'reports/product-v04/notebook-validation.json').write_text(json.dumps({
+(ROOT / 'reports/xenium-parity/notebook-validation.json').write_text(json.dumps({
     'python': sys.version.split()[0], 'kernel': 'isolated software environment',
     'scope': 'Real local kernels; synthetic melanoma agent path; installation tested separately; hosted Colab not tested',
     'notebooks': results}, indent=2) + '\n')

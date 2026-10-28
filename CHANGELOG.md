@@ -1,3 +1,15 @@
+# v0.5.0 — 2026-10-28
+
+- Compare against the published Xenium v0.1.3 tag, including its provider and context changes.
+- Add bounded Jev Choice behavior integration, grouped requests, legal-menu validation,
+  durable request journaling, explicit paid opt-in and request ceilings.
+- Add target-approach movement, preflight, cached behavior programs, atomic failed
+  rounds and replay-only recovery. Keep CD8 fate hazards kernel-owned.
+- Expose behavior probabilities separately from fate probabilities in the viewer
+  and provide local/mock/live settings in the notebooks.
+- Preserve v0.4 local physical trajectories and all clinical freezes. Live Jev is
+  untested; mocked contract verification is explicitly labelled.
+
 # v0.4.0 — 2026-10-28
 
 - Add four-state CD8 dynamics, shared compartment/spatial hazards, explicit

@@ -4,6 +4,7 @@ import hashlib
 import gzip
 import base64
 import json
+import os
 from pathlib import Path
 import platform
 import shutil
@@ -17,6 +18,9 @@ from . import __version__
 from .dynamics import STATES, verify_journal
 from .inputs import json_bytes, table_bytes
 from .melanoma import ARMS, simulate_melanoma, validate_config
+from .jev_provider import JevProvider
+from .jev_payload import PARAMETERS, PROMPT_VERSION, mock_transport
+from .behavior import BehaviorController
 from .provenance import file_hashes
 from .results import read_run
 from .tissue_inputs import prepare_tissue, read_tissue_bundle, synthetic_melanoma
@@ -27,7 +31,7 @@ def compact(value):return json.dumps(value,separators=(',',':'),allow_nan=False)
 
 def implementation_hashes():
     return {name:file_hashes(Path(__file__).parent/name)['sha256'] for name in
-            ['dynamics.py','melanoma.py','contract.py','programs.py','tissue.py']}
+            ['dynamics.py','melanoma.py','contract.py','programs.py','tissue.py','behavior.py','jev_provider.py','jev_payload.py']}
 
 
 def write_melanoma_html(result,path):
@@ -45,6 +49,15 @@ def verify_dynamic(result):
         if r.get('kind')!='vtsc_melanoma_run' or r.get('schema_version')!=2:raise ValueError('Not a dynamic melanoma v2 recording.')
         if not verify_journal(r['decisions']):raise ValueError('Decision journal hash chain failed verification.')
         if r['decisions'] and r['decisions'][-1]['record_hash']!=r['summary']['journal_root']:raise ValueError('Journal root mismatch.')
+        if r.get('provider_journal'):
+            from .jev_payload import fingerprint
+            previous='0'*64
+            for index,entry in enumerate(r['provider_journal']):
+                value={k:v for k,v in entry.items() if k!='digest'}
+                if entry['sequence']!=index or entry['previous']!=previous or fingerprint(value)!=entry['digest']:
+                    raise ValueError('Provider journal hash chain failed verification.')
+                previous=entry['digest']
+            if previous!=r['behavior_policy']['journal_root']:raise ValueError('Provider journal root mismatch.')
     return result
 
 
@@ -58,6 +71,8 @@ def save_result(result,path):
     (path/'assumptions.yaml').write_text(yaml.safe_dump(result['config'],sort_keys=False))
     (path/'decisions.jsonl').write_bytes(b''.join(compact(d)+b'\n' for d in result['decisions']))
     (path/'events.jsonl').write_bytes(b''.join(compact(e)+b'\n' for e in result['events']))
+    if 'provider_journal' in result:
+        (path/'provider_journal.jsonl').write_bytes(b''.join(compact(e)+b'\n' for e in result['provider_journal']))
     rows=[]
     for f in result['frames']:
         rows.append({'time_hours':f['time_hours'],**f['counts'],**{f'CD8_{k}':v for k,v in f['cd8_counts'].items()},'exposure':f['exposure']})
@@ -68,11 +83,34 @@ def save_result(result,path):
     return {'output':str(path),'explorer':str(path/'explorer.html'),'results_zip':str(path)+'.zip',**result['summary']}
 
 
-def run_melanoma(bundle,output,*,config_path=None,**options):
+def run_melanoma(bundle,output,*,config_path=None,decision_mode='local',max_http_attempts=None,
+                 allow_paid=False,jev_model='jev-1.14.0',replay_journal=None,**options):
     path=Path(output)
     if path.exists() or Path(str(path)+'.zip').exists():raise FileExistsError('Use a new run name.')
-    payload=read_tissue_bundle(bundle);cfg=yaml.safe_load(Path(config_path).read_text()) if config_path else None
-    start=time.monotonic();result=simulate_melanoma(payload,config=cfg,**options)
+    payload=read_tissue_bundle(bundle);cfg=validate_config(yaml.safe_load(Path(config_path).read_text()) if config_path else None)
+    if decision_mode not in ['local','mock-jev','jev']:raise ValueError('Unknown behavior decision mode.')
+    if decision_mode=='local' and replay_journal:raise ValueError('A provider journal requires mock-jev or jev mode.')
+    behavior=None;binding=None
+    if decision_mode!='local':
+        if cfg['mean_context'] is not None or cfg['policy']!='hazards':raise ValueError('Use spatial mode and kernel stochastic state hazards with Jev behaviors.')
+        if decision_mode=='jev' and (not allow_paid or max_http_attempts is None):
+            raise ValueError('Live Jev requires --allow-paid and an explicit --max-http-attempts ceiling. Preflight/mock uses no paid calls.')
+        key=(os.environ.get('TYPESAFE_API_KEY') or os.environ.get('JEV_API_KEY')) if decision_mode=='jev' else ''
+        if decision_mode=='jev' and not key:raise ValueError('Set TYPESAFE_API_KEY or JEV_API_KEY in the environment; never put credentials in config.')
+        binding={'bundle_sha256':file_hashes(bundle)['sha256'],'config':cfg,'seed':options.get('seed',21),
+                 'arm':options.get('arm','anti-pd1'),'layout':options.get('layout','tumor-nests'),
+                 'max_cells':options.get('max_cells',1500),'implementation_hashes':implementation_hashes(),'prompt_version':PROMPT_VERSION,'mode':decision_mode}
+        journal=Path(str(path)+'.provider.jsonl')
+        if journal.exists():raise FileExistsError('Provider journal already exists. Preserve it; explicitly replay it into a new run name.')
+        journal.parent.mkdir(parents=True,exist_ok=True)
+        if replay_journal:shutil.copyfile(replay_journal,journal)
+        api=JevProvider(key,jev_model,PARAMETERS,max_http_attempts if max_http_attempts is not None else 500,journal,binding,
+                        transport=mock_transport if decision_mode=='mock-jev' else None,pause_s=0 if decision_mode=='mock-jev' else .25)
+        behavior=BehaviorController(api,decision_mode)
+    start=time.monotonic();result=simulate_melanoma(payload,config=cfg,behavior=behavior,**options)
+    if behavior is not None:
+        result.update(provider_journal=[json.loads(line) for line in behavior.provider.journal.read_text().splitlines()] if behavior.provider.journal.exists() else [],behavior_context=binding)
+        result['summary'].update(behavior_mode=decision_mode,behavior_provider=behavior.provider.name,http_attempts=behavior.provider.requests)
     result.update(implementation_hashes=implementation_hashes(),initial_input=payload,software_version=__version__,bundle_sha256=file_hashes(bundle)['sha256'],
                   environment={'python':sys.version.split()[0],'numpy':np.__version__,'scipy':scipy.__version__,'platform':platform.system()},
                   execution={'seconds':time.monotonic()-start,'options':options})
@@ -83,6 +121,8 @@ def compare_melanoma(first,second,output):
     a,b=verify_dynamic(read_run(first)),verify_dynamic(read_run(second))
     if a['bundle_sha256']!=b['bundle_sha256'] or a['summary']['seed']!=b['summary']['seed'] or a['layout']!=b['layout'] or a['config']!=b['config']:
         raise ValueError('Matched comparison requires the same input, seed, layout and base contract.')
+    for key in ['mode','model','prompt_version','schedule']:
+        if a.get('behavior_policy',{}).get(key)!=b.get('behavior_policy',{}).get(key):raise ValueError('Matched comparison requires the same behavior policy/model/schedule.')
     if a['scenario']!='spatial-shuffle' and b['scenario']!='spatial-shuffle' and a['initial_signature']!=b['initial_signature']:
         raise ValueError('Initial positions/states/reactivity differ.')
     end=min(a['summary']['observed_hours'],b['summary']['observed_hours'])
@@ -111,7 +151,19 @@ def recover_melanoma(source,output,*,hours=None):
     requested=old['summary']['requested_hours'] if hours is None else hours
     if requested<old['summary']['observed_hours']:raise ValueError('Recovery cannot shorten an accepted recording.')
     opts=old['execution']['options'].copy();opts.update(hours=requested,seed=old['summary']['seed'],arm=old['scenario'],layout=old['layout'])
-    result=simulate_melanoma(old['initial_input'],config=old['config'],**opts)
+    behavior=None
+    if old.get('behavior_policy',{}).get('mode','local')!='local':
+        mode=old['behavior_policy']['mode'];journal=Path(str(output)+'.provider.jsonl')
+        if journal.exists() or Path(output).exists():raise FileExistsError('Use a new output and provider journal name.')
+        journal.parent.mkdir(parents=True,exist_ok=True)
+        journal.write_bytes(b''.join(compact(e)+b'\n' for e in old['provider_journal']))
+        api=JevProvider('',old['behavior_policy']['model'],PARAMETERS,max(1,old['behavior_policy']['usage']['http_attempts']),journal,
+                        old['behavior_context'],transport=mock_transport if mode=='mock-jev' else None,pause_s=0,replay_only=True)
+        behavior=BehaviorController(api,mode)
+    result=simulate_melanoma(old['initial_input'],config=old['config'],behavior=behavior,**opts)
+    if behavior is not None:
+        result.update(provider_journal=old['provider_journal'],behavior_context=old['behavior_context'])
+        result['summary'].update(behavior_mode=mode,behavior_provider=behavior.provider.name,http_attempts=behavior.provider.requests)
     prefix=[f for f in result['frames'] if f['time_hours']<=old['summary']['observed_hours']]
     if prefix!=old['frames']:raise ValueError('Recovery prefix differs. Match runtime, environment and full-step horizon; no old outputs were modified.')
     decisions=[d for d in result['decisions'] if d['time_hours']<=old['summary']['observed_hours']]
@@ -155,11 +207,35 @@ def ensemble_melanoma(bundle,output,*,seeds=(21,22,23,24,25),hours=24,config_pat
     (path/'ensemble.json').write_bytes(json_bytes(result));return {'output':str(path),'runs':len(rows),'all_completed':result['all_completed']}
 
 
-def melanoma_demo(output,*,cells=120,hours=24,seed=21):
+def melanoma_demo(output,*,cells=120,hours=24,seed=21,decision_mode='local'):
     path=Path(output)
     if path.exists():raise FileExistsError(path)
     synthetic_melanoma(path/'synthetic_melanoma.h5ad',cells,seed);bundle=path/'input.zip'
     prepare_tissue(path/'synthetic_melanoma.h5ad',bundle,max_cells=cells,seed=seed,source_license='MIT; generated synthetic fixture')
-    runs={arm:run_melanoma(bundle,path/arm,arm=arm,hours=hours,seed=seed) for arm in ['anti-pd1','exposure-zero']}
+    runs={arm:run_melanoma(bundle,path/arm,arm=arm,hours=hours,seed=seed,decision_mode=decision_mode) for arm in ['anti-pd1','exposure-zero']}
     runs['comparison']=compare_melanoma(path/'anti-pd1',path/'exposure-zero',path/'comparison')
     return runs
+
+
+def preflight_melanoma(bundle,output,*,config_path=None,seed=21,arm='anti-pd1',layout='tumor-nests',jev_model='jev-1.14.0'):
+    """Exact first-round payload preview through the real scheduler; zero HTTP calls."""
+    import tempfile
+    out=Path(output)
+    if out.exists():raise FileExistsError('Use a new preflight name.')
+    p=read_tissue_bundle(bundle);cfg=validate_config(yaml.safe_load(Path(config_path).read_text()) if config_path else None)
+    bodies=[]
+    def capture(body):bodies.append(deepcopy(body));return mock_transport(body)
+    with tempfile.TemporaryDirectory(prefix='vtsc-preflight-') as temporary:
+        api=JevProvider('',jev_model,PARAMETERS,100000,Path(temporary)/'preview.jsonl',{'preflight':True},transport=capture,pause_s=0)
+        controller=BehaviorController(api,'mock-jev')
+        run=simulate_melanoma(p,hours=cfg['mechanics']['dt_hours'],seed=seed,arm=arm,layout=layout,config=cfg,
+                              max_cells=max(1500,len(p['cells'])),behavior=controller)
+    report={'kind':'zero-cost behavior preflight','actual_http_requests':0,'model':jev_model,'prompt_version':PROMPT_VERSION,
+            'first_round_questions':sum(len(b['questions']) for b in bodies),'first_round_batches':len(bodies),
+            'first_round_payloads':bodies,'initial_cells':len(p['cells']),'assumed_geometry':layout,
+            'schedule':controller.metadata()['schedule'],'limits':PARAMETERS,
+            'note':'Future rounds depend on state/contact/growth. A request cap is not a currency budget or a guarantee of reaching the horizon.',
+            'observed_programs_are_not_aucell':'vtsc rank/log-count summaries; no equivalence to Xenium depth-conditioned GO AUCell claimed'}
+    out.mkdir(parents=True);(out/'preflight.json').write_bytes(json_bytes(report))
+    return {'output':str(out),'preflight':str(out/'preflight.json'),'first_round_questions':report['first_round_questions'],
+            'first_round_batches':report['first_round_batches'],'actual_http_requests':0}

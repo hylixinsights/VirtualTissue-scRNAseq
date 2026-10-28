@@ -1,35 +1,43 @@
-# Local v0.4 handoff
+# Install and test v0.5
 
-The package is prepared locally. No push, remote release, PR or external message
-was performed. The intended owner-controlled destination is
-https://github.com/hylixinsights/VirtualTissue-scRNAseq.git .
+The destination is [VirtualTissue-scRNAseq](https://github.com/hylixinsights/VirtualTissue-scRNAseq).
+The owner explicitly authorized pushing this implementation after comparison
+with the latest published Xenium release. This supersedes the local-only
+publication restriction in the historical handoff prompt; it does not authorize
+paid Jev calls or change the scientific study gates.
 
-## Install from source or wheel
-
-Use Python 3.12/3.13. Source: `python -m pip install -e ".[test,notebooks]"`.
-Wheel: `python -m pip install dist/virtualtissue_sc-0.4.0-py3-none-any.whl`.
-`requirements-product-v04.lock.txt` records the tested macOS environment;
-pyproject.toml pins the portable direct dependencies. R exports use the existing
-renv environment. No SPECIAL/Lin data are included in the wheel or source archive.
-
-Run `vtsc demo outputs/group-test --cells 120 --hours 24`, then
-`vtsc explore outputs/group-test/comparison --open`. Own-data instructions are
-in docs/02_your_own_data.md. A local HTTP server is an alternative if your viewer
-host prohibits file URLs; serve only the generated output directory.
-
-## Owner publication steps (not executed by the agent)
-
-Review `git status`, `git log` and DATA_LICENSE.md. Confirm the destination
-repository exists and the remote is correct before using these commands:
+Use Python 3.12/3.13. From the cloned repository:
 
 ```bash
-git remote add origin https://github.com/hylixinsights/VirtualTissue-scRNAseq.git
-git push -u origin HEAD
+python -m pip install -e ".[test,notebooks]"
+vtsc demo outputs/group-test --cells 120 --hours 12 --decision-mode mock-jev
+vtsc explore outputs/group-test/comparison --open
 ```
 
-If origin already exists, inspect it rather than adding/replacing it blindly.
-Do not force-push. CI is configured for Linux/Windows Python 3.12/3.13, plus
-notebook and clean-wheel smoke tests. Remote CI has not run in this local task.
-After publication, users can clone that URL and follow README installation.
-The local source archive and wheel can also be shared for group software tests,
-retaining the code licence and source attributions.
+The demo uses synthetic cells and programmed mock answers. For real data, use
+the pinned public melanoma downloader or [your own biopsy](02_your_own_data.md).
+The [Jev guide](10_xenium_parity_and_jev.md) describes preflight, paid opt-in,
+request limits, recovery and differences from Xenium v0.1.3.
+
+To build and install a wheel:
+
+```bash
+python -m pip wheel --no-deps . --wheel-dir dist
+python -m pip install dist/virtualtissue_sc-0.5.0-py3-none-any.whl
+```
+
+`requirements-product-v05.lock.txt` records the tested macOS dependency set;
+portable direct dependencies are pinned in pyproject.toml. R exports keep the
+existing renv environment. No SPECIAL/Lin expression matrices are in the wheel
+or source archive. Preserve the code licence and source/data attributions.
+
+Use a new output name for each execution. If your viewer host prohibits file
+URLs, serve only the generated output directory on localhost. The browser reads
+recorded events and does not call Jev. File-protocol browser execution and hosted
+Colab remain separate from the tested localhost/local-kernel workflows.
+
+CI covers Linux/Windows Python 3.12/3.13, notebooks and a wheel installed outside
+the checkout. Inspect the [Actions runs](https://github.com/hylixinsights/VirtualTissue-scRNAseq/actions)
+for remote results. Local evidence and its limits are in
+[v0.5 verification](../reports/xenium-parity/VALIDATION.md); v0.4 evidence remains
+unchanged in `reports/product-v04/`.

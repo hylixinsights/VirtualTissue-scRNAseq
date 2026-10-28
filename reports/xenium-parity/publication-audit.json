@@ -1,0 +1,21 @@
+{
+  "protected_hashes_unchanged": {
+    "prereg/FREEZE.json": "90bdff3ae7b0cae443b0029ace2bc29e635ce158945898e08eed4e59a36f85df",
+    "config/study.yaml": "565fddefad5a855cb0f00ed8a8cb7f6f33122fadb691f0780b3d1c5858c2e1a8",
+    "reports/task-board.json": "31a2c70434b56012e42f9ab5402461ab87c85f1f46edd9b4d5fecb6900f20457",
+    "tables/claims_ledger.tsv": "72d28cde3fea08827a9045c7aaf1630d560d5e90c7c7843d57aab498fdabcebf"
+  },
+  "historical_product_evidence_files_unchanged": 50,
+  "secret_pattern_hits": 0,
+  "scan_scope": "All reachable Git blobs and tracked/nonignored working files; bounded known credential/private-key patterns, not a universal secret detector",
+  "history_blobs_scanned": 379,
+  "largest_history_blob_bytes": 359505,
+  "blobs_above_100MB": [],
+  "raw_expression_files_to_publish": false,
+  "wheel_license_files": [
+    "virtualtissue_sc-0.5.0.dist-info/licenses/LICENSE",
+    "virtualtissue_sc-0.5.0.dist-info/licenses/NOTICE.md"
+  ],
+  "target": "https://github.com/hylixinsights/VirtualTissue-scRNAseq",
+  "paid_jev_calls": 0
+}

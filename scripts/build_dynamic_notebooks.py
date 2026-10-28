@@ -1,4 +1,4 @@
-"""Build the three reviewable v0.4 notebooks (English)."""
+"""Build the three reviewable v0.5 notebooks (English)."""
 from pathlib import Path
 import nbformat as n
 root=Path(__file__).resolve().parents[1]
@@ -14,7 +14,7 @@ INSTALL_PACKAGE = True
 # No untested hosted clone URL is executed by this notebook.
 if INSTALL_PACKAGE:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "-e", ".[notebooks]"])
-WORK = Path(os.environ.get("VTSC_NOTEBOOK_WORK", "outputs/notebook-v04"))
+WORK = Path(os.environ.get("VTSC_NOTEBOOK_WORK", "outputs/notebook-v05"))
 WORK.mkdir(parents=True, exist_ok=True)
 '''
 save('Part1_Prepare_scRNAseq.ipynb',[
@@ -55,10 +55,14 @@ save('Part2-3_Run_Simulation.ipynb',[
 from copy import deepcopy
 import os, json, yaml
 from vtsc.melanoma import DEFAULT_CONFIG
-from vtsc.melanoma_results import run_melanoma, compare_melanoma
-WORK = Path(os.environ.get("VTSC_NOTEBOOK_WORK", "outputs/notebook-v04"))
+from vtsc.melanoma_results import run_melanoma, compare_melanoma, preflight_melanoma
+WORK = Path(os.environ.get("VTSC_NOTEBOOK_WORK", "outputs/notebook-v05"))
 SEED = 21
 HOURS = 12
+DECISION_MODE = "mock-jev"  # free contract test; "local" or "jev" for an explicitly authorized live run
+ALLOW_PAID = False         # live Jev requires True, an API key in environment, and a request ceiling
+MAX_HTTP_ATTEMPTS = 500    # cumulative HTTP-attempt cap, not a currency budget
+JEV_MODEL = "jev-1.14.0"
 config = deepcopy(DEFAULT_CONFIG)
 config["model"]["schedule"] = [{"start_hour":2, "end_hour":96, "exposure":0.8}]
 config_path = WORK / "assumptions.yaml"
@@ -67,9 +71,11 @@ if config_path.exists():
 config_path.write_text(yaml.safe_dump(config, sort_keys=False))
 print(config["model"]["parameter_provenance"])
 '''),
- code('''summaries = {}
+ code('''preflight = preflight_melanoma(WORK / "input.zip", WORK / "preflight", config_path=config_path, seed=SEED)
+print(preflight)
+summaries = {}
 for arm in ["anti-pd1", "exposure-zero", "recognition-off", "transitions-off"]:
-    summaries[arm] = run_melanoma(WORK / "input.zip", WORK / arm, config_path=config_path, arm=arm, hours=HOURS, seed=SEED)
+    summaries[arm] = run_melanoma(WORK / "input.zip", WORK / arm, config_path=config_path, arm=arm, hours=HOURS, seed=SEED, decision_mode=DECISION_MODE, allow_paid=ALLOW_PAID, max_http_attempts=MAX_HTTP_ATTEMPTS, jev_model=JEV_MODEL)
 print(json.dumps(summaries, indent=2))
 comparison = compare_melanoma(WORK / "anti-pd1", WORK / "exposure-zero", WORK / "comparison")
 '''),
@@ -84,13 +90,13 @@ print(dict(zip(STATES, expected[-1])))
 '''),
  md('Compare multiple seeds with `vtsc ensemble-melanoma`. Recognition-off disables recognition, while exposure-zero preserves recognition and checkpoint inhibition. Checkpoint-off decouples the drug. No seed is selected by apparent benefit. Group-level variation is simulation uncertainty, not a patient confidence interval.')])
 save('Part4_Explore_Results.ipynb',[
- md('# Part 4 · Verify, inspect and recover\n\nThe viewer replays recorded frames and decisions. It does not modify the engine or synthesize new expression. Open the comparison HTML in a current browser; it is self-contained and requires no network.'),
+ md('# Part 4 · Verify, inspect and recover\n\nThe viewer replays recorded frames, behavioral choices and separate stochastic CD8 fate decisions. It does not modify the engine or synthesize new expression. Open the comparison HTML in a current browser; it is self-contained and requires no network.'),
  code('''from pathlib import Path
 import os, json
 from IPython.display import FileLink, display
 from vtsc.results import read_run
 from vtsc.melanoma_results import verify_dynamic, write_melanoma_html, recover_melanoma
-WORK = Path(os.environ.get("VTSC_NOTEBOOK_WORK", "outputs/notebook-v04"))
+WORK = Path(os.environ.get("VTSC_NOTEBOOK_WORK", "outputs/notebook-v05"))
 result = verify_dynamic(read_run(WORK / "anti-pd1.zip"))
 comparison = verify_dynamic(read_run(WORK / "comparison.zip"))
 reopened = WORK / "comparison-reopened.html"

@@ -1,0 +1,46 @@
+........                                                                 [100%]
+=============================== warnings summary ===============================
+tests/test_jev_behavior.py::test_mock_run_recovery_preflight_and_live_opt_in
+tests/test_jev_behavior.py::test_mock_run_recovery_preflight_and_live_opt_in
+tests/test_jev_behavior.py::test_provider_budget_returns_complete_prefix_and_failed_round_is_atomic
+tests/test_jev_behavior.py::test_provider_budget_returns_complete_prefix_and_failed_round_is_atomic
+tests/test_jev_behavior.py::test_dead_or_changed_target_cancels_cached_action_and_daily_ceiling
+tests/test_jev_behavior.py::test_dead_or_changed_target_cancels_cached_action_and_daily_ceiling
+  /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv-software/lib/python3.12/site-packages/anndata/compat/__init__.py:249: Pandas4Warning: The 'future.infer_string' option is deprecated and will be removed in pandas 4.0. Inferring str dtype for string data has been the default since pandas 3.0, and it will no longer be possible to disable it.
+    return a if pd.options.future.infer_string else a.astype(object)
+
+tests/test_jev_behavior.py::test_mock_run_recovery_preflight_and_live_opt_in
+tests/test_jev_behavior.py::test_mock_run_recovery_preflight_and_live_opt_in
+tests/test_jev_behavior.py::test_provider_budget_returns_complete_prefix_and_failed_round_is_atomic
+tests/test_jev_behavior.py::test_provider_budget_returns_complete_prefix_and_failed_round_is_atomic
+tests/test_jev_behavior.py::test_dead_or_changed_target_cancels_cached_action_and_daily_ceiling
+tests/test_jev_behavior.py::test_dead_or_changed_target_cancels_cached_action_and_daily_ceiling
+  /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv-software/lib/python3.12/site-packages/anndata/_io/specs/methods.py:1269: Pandas4Warning: The 'future.infer_string' option is deprecated and will be removed in pandas 4.0. Inferring str dtype for string data has been the default since pandas 3.0, and it will no longer be possible to disable it.
+    and not pd.options.future.infer_string
+
+tests/test_jev_behavior.py::test_mock_run_recovery_preflight_and_live_opt_in
+tests/test_jev_behavior.py::test_mock_run_recovery_preflight_and_live_opt_in
+tests/test_jev_behavior.py::test_mock_run_recovery_preflight_and_live_opt_in
+tests/test_jev_behavior.py::test_provider_budget_returns_complete_prefix_and_failed_round_is_atomic
+tests/test_jev_behavior.py::test_provider_budget_returns_complete_prefix_and_failed_round_is_atomic
+tests/test_jev_behavior.py::test_provider_budget_returns_complete_prefix_and_failed_round_is_atomic
+tests/test_jev_behavior.py::test_dead_or_changed_target_cancels_cached_action_and_daily_ceiling
+tests/test_jev_behavior.py::test_dead_or_changed_target_cancels_cached_action_and_daily_ceiling
+tests/test_jev_behavior.py::test_dead_or_changed_target_cancels_cached_action_and_daily_ceiling
+  /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv-software/lib/python3.12/site-packages/anndata/_core/anndata.py:1101: Pandas4Warning: The 'mode.chained_assignment' option is deprecated. It has had no effect since pandas 3.0, which removed the SettingWithCopyWarning it controlled. Chained assignment now emits a ChainedAssignmentError warning instead; use warnings.filterwarnings with category=ChainedAssignmentError to silence or escalate it. This option will be removed in pandas 4.0.
+    with pd.option_context("mode.chained_assignment", None):
+
+tests/test_jev_behavior.py::test_mock_run_recovery_preflight_and_live_opt_in
+tests/test_jev_behavior.py::test_mock_run_recovery_preflight_and_live_opt_in
+tests/test_jev_behavior.py::test_mock_run_recovery_preflight_and_live_opt_in
+tests/test_jev_behavior.py::test_provider_budget_returns_complete_prefix_and_failed_round_is_atomic
+tests/test_jev_behavior.py::test_provider_budget_returns_complete_prefix_and_failed_round_is_atomic
+tests/test_jev_behavior.py::test_provider_budget_returns_complete_prefix_and_failed_round_is_atomic
+tests/test_jev_behavior.py::test_dead_or_changed_target_cancels_cached_action_and_daily_ceiling
+tests/test_jev_behavior.py::test_dead_or_changed_target_cancels_cached_action_and_daily_ceiling
+tests/test_jev_behavior.py::test_dead_or_changed_target_cancels_cached_action_and_daily_ceiling
+  /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv-software/lib/python3.12/site-packages/anndata/_core/views.py:327: Pandas4Warning: The 'mode.chained_assignment' option is deprecated. It has had no effect since pandas 3.0, which removed the SettingWithCopyWarning it controlled. Chained assignment now emits a ChainedAssignmentError warning instead; use warnings.filterwarnings with category=ChainedAssignmentError to silence or escalate it. This option will be removed in pandas 4.0.
+    with pd.option_context("mode.chained_assignment", None):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+8 passed, 30 warnings in 2.06s

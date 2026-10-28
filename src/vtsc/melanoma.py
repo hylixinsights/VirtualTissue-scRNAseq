@@ -14,6 +14,8 @@ from .dynamics import (STATES, DEFAULT_MODEL, checked_model, exposure_at, signal
 from .tissue import DEFAULT, RADII, MOBILE, initialize, free_disc, checked_config
 from .tissue_inputs import TYPES
 from .contract import parameter_ledger
+from .behavior import options_for
+from .jev_provider import BudgetExhausted, ProviderError
 
 ARMS=['anti-pd1','exposure-zero','recognition-off','checkpoint-off','transitions-off','spatial-shuffle','frozen']
 FRAME_COLUMNS=['index','x','y','radius','alive','action','target','damage','fatigue','cycle',
@@ -43,7 +45,7 @@ def arm_model(model,arm):
     return m
 
 
-def simulate_melanoma(payload, *, hours=24., seed=21, layout='tumor-nests', arm='anti-pd1', config=None,max_cells=1500,provider=None):
+def simulate_melanoma(payload, *, hours=24., seed=21, layout='tumor-nests', arm='anti-pd1', config=None,max_cells=1500,provider=None,behavior=None):
     cfg=validate_config(config);p=cfg['mechanics'];m=arm_model(cfg['model'],arm)
     if arm not in ARMS:raise ValueError('Unknown melanoma arm.')
     if payload.get('schema_version')!=2:raise ValueError('Dynamic runtime requires input schema v2. Reprepare raw counts with CD8 states; legacy inputs are not silently migrated.')
@@ -62,6 +64,8 @@ def simulate_melanoma(payload, *, hours=24., seed=21, layout='tumor-nests', arm=
             order=keyed_rng(seed,'spatial-shuffle',radius).permutation(len(indices))
             for k,i in enumerate(indices):cells[i]['x'],cells[i]['y']=positions[order[k]]
     mean_mode=cfg['mean_context'] is not None
+    if behavior is not None and (mean_mode or cfg['policy']!='hazards' or provider is not None):
+        raise ValueError('Behavior providers require spatial mode and kernel-owned stochastic CD8 hazards.')
     policy=provider or {'hazards':None,'local':LocalPolicy(),'mock':MockProvider()}[cfg['policy']]
     for c in cells:
         c['reactive']=bool(keyed_rng(seed,c['cell_id'],'reactivity').random()<m['reactive_fraction'])
@@ -114,6 +118,10 @@ def simulate_melanoma(payload, *, hours=24., seed=21, layout='tumor-nests', arm=
         dt=min(p['dt_hours'],hours-t)
         boundaries=[w[k] for w in m['schedule'] for k in ['start_hour','end_hour'] if w[k]>t+1e-10]
         if boundaries:dt=min(dt,min(boundaries)-t)
+        if behavior is not None and arm!='frozen':
+            try:behavior.prepare(cells,p,m,exposure_at(t,m),t)
+            except BudgetExhausted:stopped='provider_budget_or_replay_exhausted';break
+            except ProviderError:stopped='provider_failed';break
         start=t;exposure=exposure_at(start,m);t+=dt;step+=1
         if arm=='frozen':snapshot();continue
         if not mean_mode:
@@ -149,6 +157,7 @@ def simulate_melanoma(payload, *, hours=24., seed=21, layout='tumor-nests', arm=
                 elif choice=='division':fate_outcome=make_child(c,i)
                 fate['outcome']=fate_outcome;fate['time_in_state_after']=c['time_in_state'];fate['axes_after']=deepcopy(c['axes'])
             sig=signals(c['cd8_state'],context,exposure,m)
+            behavior_decision=None
             action='rest';outcome='completed';target=-1;distance=None;options=['rest'];reason='stationary lineage or fatigue recovery'
             if not c['alive']:action='dead';options=[];reason='irreversible death'
             elif mean_mode:action='observe';options=['observe'];reason='mean-context consistency mode: extra mechanics disabled'
@@ -164,6 +173,10 @@ def simulate_melanoma(payload, *, hours=24., seed=21, layout='tumor-nests', arm=
                 elif 'divide' in options:action='divide';reason='tumor cycle complete; placement checked'
                 elif 'grow' in options:action='grow';reason='assumed tumor cycle rate modulated by initial proliferation program'
                 elif 'migrate' in options:action='migrate';reason='cue gradient and exploration, modulated by current CD8 capacities'
+                if behavior is not None and action!='divide':
+                    options=options_for(c,cells,neighbors,contacts,targets,sig)
+                    action,behavior_decision=behavior.choose(i,options)
+                    reason='Recorded behavior choice; kernel revalidates current menu, contact and space'
                 if action=='attack':
                     j=min(targets,key=lambda j:(math.hypot(c['x']-cells[j]['x'],c['y']-cells[j]['y']),j));target=j
                     distance=math.hypot(c['x']-cells[j]['x'],c['y']-cells[j]['y'])
@@ -173,11 +186,15 @@ def simulate_melanoma(payload, *, hours=24., seed=21, layout='tumor-nests', arm=
                     if cells[j]['damage']>=1:kill(cells[j],'contact_attack',j)
                 elif action=='clear':
                     target=min(corpses);cells[target]['present']=False;event('phagocytosis',i,target)
-                elif action=='migrate':
+                elif action in ['migrate','approach']:
                     y,x=np.clip(np.array([c['y'],c['x']])/dx,1,ngrid-2).astype(int)
                     grad=np.array([cue[y,x+1]-cue[y,x-1],cue[y+1,x]-cue[y-1,x]])
                     if np.linalg.norm(grad)>1e-9:grad/=np.linalg.norm(grad)
                     direction=grad+keyed_rng(seed,c['cell_id'],step,'move').normal(0,.65,2);direction/=max(np.linalg.norm(direction),1e-9)
+                    if action=='approach':
+                        target=min((j for j in neighbors if cells[j]['alive'] and cells[j]['lineage']=='Melanoma'),
+                                   key=lambda j:math.hypot(c['x']-cells[j]['x'],c['y']-cells[j]['y']))
+                        direction=np.array([cells[target]['x']-c['x'],cells[target]['y']-c['y']]);direction/=max(np.linalg.norm(direction),1e-9)
                     speed=p['immune_speed_um_h']*(1-.4*c['axes']['dysfunction'] if c['lineage']=='CD8_T' else 1)
                     outcome='blocked_by_space'
                     for angle in [0,.8,-.8,1.6,-1.6]:
@@ -196,7 +213,7 @@ def simulate_melanoma(payload, *, hours=24., seed=21, layout='tumor-nests', arm=
             decisions.append({'time_hours':round(t,8),'step':step,'cell':i,'cell_id':c['cell_id'],'options':options,'choice':action,'reason':reason,
                 'outcome':outcome,'target':target,'state_decision':fate,'context':{'contacts':len(contacts),'contact_ids':contacts,'target_ids':targets,
                 'cue':round(float(cue[y,x]),6),'contact_distance_um':distance,**context,**sig},'seed':seed,
-                'rule':'melanoma-runtime-v2','axes':deepcopy(c['axes'])})
+                'rule':'melanoma-runtime-v2','axes':deepcopy(c['axes']),'behavior_decision':behavior_decision})
         if m['demography_enabled'] and stopped=='completed':
             for state,rate in m['influx_cells_per_hour'].items():
                 count=int(keyed_rng(seed,step,state,'influx').poisson(rate*dt))
@@ -223,6 +240,7 @@ def simulate_melanoma(payload, *, hours=24., seed=21, layout='tumor-nests', arm=
     catalog=[{k:c.get(k) for k in catalog_keys} for c in cells]
     for i,c in enumerate(catalog):c['initial_cd8_state']=payload['cells'][i]['cd8_state'] if i<len(payload['cells']) else next((e.get('state') for e in events if e['target']==i and e['event']=='division' or e['cell']==i and e['event']=='influx'),None)
     return {'schema_version':2,'kind':'vtsc_melanoma_run','runtime':'dynamic-cd8-v2','config':cfg,'effective_model':m,'scenario':arm,
+       'behavior_policy':behavior.metadata() if behavior else {'mode':'local','name':'local-priority-v1'},
        'parameter_ledger':parameter_ledger(cfg),'layout':layout,'initial_signature':init_signature,'geometry':{'width_um':side,'height_um':side,'measured':False,'field_grid':ngrid,'mean_context_mode':mean_mode},
        'frame_columns':FRAME_COLUMNS,'frames':frames,'decisions':decisions,'events':events,'catalog':catalog,'provenance':deepcopy(payload['provenance']),
        'summary':{'seed':seed,'initial_cells':len(initial),'final_alive':sum(c['alive'] for c in cells),'created_cells':len(cells),

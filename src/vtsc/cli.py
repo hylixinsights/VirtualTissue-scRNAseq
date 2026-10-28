@@ -25,6 +25,7 @@ def _main():
     freeze.add_argument("--commit", required=True)
     demo = sub.add_parser('demo', help='Offline dynamic CD8 melanoma with paired anti-PD-1/exposure-zero arms')
     demo.add_argument('output', type=Path)
+    demo.add_argument('--decision-mode', choices=['local','mock-jev'], default='local')
     demo.add_argument('--cells', type=int, default=120)
     demo.add_argument('--seed', type=int, default=21)
     demo.add_argument('--hours', type=float, default=24)
@@ -68,6 +69,19 @@ def _main():
     dynamic.add_argument('output', type=Path)
     dynamic.add_argument('--arm', choices=['anti-pd1','exposure-zero','recognition-off','checkpoint-off','transitions-off','spatial-shuffle','frozen'], default='anti-pd1')
     dynamic.add_argument('--config', type=Path)
+    dynamic.add_argument('--decision-mode', choices=['local','mock-jev','jev'], default='local')
+    dynamic.add_argument('--max-http-attempts', type=int)
+    dynamic.add_argument('--allow-paid', action='store_true')
+    dynamic.add_argument('--jev-model', default='jev-1.14.0')
+    dynamic.add_argument('--replay-journal', type=Path)
+    check_dynamic=sub.add_parser('check-melanoma', help='Zero-cost first-round Jev payload and activity preview')
+    check_dynamic.add_argument('bundle', type=Path)
+    check_dynamic.add_argument('output', type=Path)
+    check_dynamic.add_argument('--config', type=Path)
+    check_dynamic.add_argument('--seed', type=int, default=21)
+    check_dynamic.add_argument('--arm', choices=['anti-pd1','exposure-zero','recognition-off'], default='anti-pd1')
+    check_dynamic.add_argument('--layout', choices=['mixed','tumor-nests'], default='tumor-nests')
+    check_dynamic.add_argument('--jev-model', default='jev-1.14.0')
     dynamic.add_argument('--hours', type=float, default=24)
     dynamic.add_argument('--seed', type=int, default=21)
     dynamic.add_argument('--max-cells', type=int, default=1500)
@@ -125,7 +139,7 @@ def _main():
     compare.add_argument('output', type=Path)
     args = parser.parse_args()
     root = args.root.resolve()
-    if args.command in ['run-melanoma','melanoma-template','compare-melanoma','recover-melanoma','ensemble-melanoma','prepare-tissue', 'run-tissue', 'tissue-template', 'demo', 'synthetic', 'download-example', 'model-template', 'validate', 'prepare', 'check', 'run', 'explore', 'compare']:
+    if args.command in ['check-melanoma','run-melanoma','melanoma-template','compare-melanoma','recover-melanoma','ensemble-melanoma','prepare-tissue', 'run-tissue', 'tissue-template', 'demo', 'synthetic', 'download-example', 'model-template', 'validate', 'prepare', 'check', 'run', 'explore', 'compare']:
         result = software_command(args)
         print(json.dumps(result, indent=2, allow_nan=False))
         return
@@ -195,16 +209,19 @@ def software_command(args):
         return {'config': str(args.output), 'rates_fitted': False}
     if args.command == 'demo':
         from .melanoma_results import melanoma_demo
-        return melanoma_demo(args.output, cells=args.cells, hours=args.hours, seed=args.seed)
+        return melanoma_demo(args.output, cells=args.cells, hours=args.hours, seed=args.seed,decision_mode=args.decision_mode)
     if args.command == 'melanoma-template':
         from .melanoma import DEFAULT_CONFIG
         if args.output.exists(): raise FileExistsError(args.output)
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(yaml.safe_dump(DEFAULT_CONFIG, sort_keys=False))
         return {'config':str(args.output),'evidence_class':'assumed','clinical_validation':False}
+    if args.command == 'check-melanoma':
+        from .melanoma_results import preflight_melanoma
+        return preflight_melanoma(args.bundle,args.output,config_path=args.config,seed=args.seed,arm=args.arm,layout=args.layout,jev_model=args.jev_model)
     if args.command == 'run-melanoma':
         from .melanoma_results import run_melanoma
-        return run_melanoma(args.bundle,args.output,config_path=args.config,arm=args.arm,layout=args.layout,hours=args.hours,seed=args.seed,max_cells=args.max_cells)
+        return run_melanoma(args.bundle,args.output,config_path=args.config,arm=args.arm,layout=args.layout,hours=args.hours,seed=args.seed,max_cells=args.max_cells,decision_mode=args.decision_mode,max_http_attempts=args.max_http_attempts,allow_paid=args.allow_paid,jev_model=args.jev_model,replay_journal=args.replay_journal)
     if args.command == 'compare-melanoma':
         from .melanoma_results import compare_melanoma
         return compare_melanoma(args.first,args.second,args.output)

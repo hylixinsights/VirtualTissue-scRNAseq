@@ -1,0 +1,26 @@
+{
+  "reference_release": "v0.1.3",
+  "reference_commit": "16d0a307d118a42143a7034c81b5dc366ca2d62c",
+  "published_at": "2026-10-28T10:02:59Z",
+  "url": "https://github.com/hylixinsights/VirtualTissue-Xenium/releases/tag/v0.1.3",
+  "reference_files": {
+    "engine/jev_provider.py": "215d1fb5eaa53905095b8b65b63995ee5f6626546ee5d652883d1fdec50c1986",
+    "engine/jev_payload.py": "e9063162740769e3fc73cbb8182311473dc6919e56ea5520f9f02beb65b04995",
+    "engine/xenium_runtime/v2/scheduler.py": "f9684d16ce160d1f2b0e086f705270e0ab10a77b8f1ea9b57e0120c18b38e4ee",
+    "engine/xenium_runtime/v2/mechanics.py": "fb68126712f57920d30900f28fd3d002092da4d00a0c13894d07c7836e2bf1df"
+  },
+  "runtime_diff_from_v012": [],
+  "initial_reference": {
+    "reference_release": "v0.1.2",
+    "reference_commit": "5482cbd65442e034f3ce964865a0cef36acd9c90",
+    "published_at": "2026-10-26T19:02:03Z",
+    "url": "https://github.com/hylixinsights/VirtualTissue-Xenium/releases/tag/v0.1.2",
+    "local_xenium_head": "c07d883181c20d02e40ae610c51d6786a7a7911c",
+    "local_candidate_is_not_latest_release": "0.1.3.dev0",
+    "reference_files": {
+      "jev_provider.py": "98fc204e0c964638aff28f2bd9db93eea61a99165c9d6d9692aeee69451edb12",
+      "jev_payload.py": "168c03c953361c908f99459ba253bd8afc04324d999df5f33895a14ebedbd17f"
+    }
+  },
+  "xenium_edits_in_this_task": false
+}

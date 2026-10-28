@@ -1,11 +1,16 @@
 # Execution status — 2026-10-28
 
-The independent **v0.4 melanoma/anti-PD-1 product** implements dynamic CD8
+The independent **v0.5 melanoma/anti-PD-1 product** implements dynamic CD8
 states, shared hazards, own-data input, explicit assumptions, matched controls
 and an inspectable viewer under A05. See [product verification](product-v04/VALIDATION.md)
 and the separate [P-task board](product-v04/task-board.json). Synthetic estimator
 checks and software tests do not pass the clinical research gates below.
 The T/G board and claims ledger are unchanged; no SPECIAL response model was fitted.
+Version 0.5 adds optional Jev Choice behavior decisions, explicit mock execution,
+target approach, bounded requests and durable recovery. See the
+[Xenium v0.1.3 comparison and verification](xenium-parity/VALIDATION.md).
+No live Jev calls or clinical policy evaluation were performed. The original
+v0.4 evidence is retained; the owner subsequently authorized repository publication.
 
 The planned prediction study remains stopped at a necessary feasibility
 condition after the user-approved separate-stratum expansion audit.

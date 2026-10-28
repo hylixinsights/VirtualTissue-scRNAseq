@@ -33,3 +33,9 @@ tmp/
 outputs/
 example_data/
 .ipynb_checkpoints/
+
+.env
+.env.*
+*.key
+secrets*.json
+*.provider.jsonl

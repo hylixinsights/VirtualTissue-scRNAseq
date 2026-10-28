@@ -1,0 +1,10 @@
+Processing ./dist/virtualtissue_sc-0.5.0-py3-none-any.whl
+Installing collected packages: virtualtissue-sc
+  Attempting uninstall: virtualtissue-sc
+    Found existing installation: virtualtissue-sc 0.5.0
+    Uninstalling virtualtissue-sc-0.5.0:
+      Successfully uninstalled virtualtissue-sc-0.5.0
+Successfully installed virtualtissue-sc-0.5.0
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.2
+[notice] To update, run: /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv-wheel-v05/bin/python -m pip install --upgrade pip

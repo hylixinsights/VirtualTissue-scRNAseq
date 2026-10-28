@@ -2,7 +2,7 @@
 
 **A testable melanoma simulator with dynamic CD8 states, explicit anti-PD-1 exposure and inspectable decisions.**
 
-Version **0.4.0** initializes one dissociated biopsy and simulates cells moving,
+Version **0.5.0** initializes one dissociated biopsy and simulates cells moving,
 encountering targets, changing CD8 state, proliferating, killing, dying and being
 cleared. An offline viewer compares matched arms and shows the actual causal
 journal: permitted moves, hazards, probabilities, random draw, state age,
@@ -12,25 +12,24 @@ This is an **exploratory implementation**, with assumed rates and geometry.
 It is **not a clinically validated treatment-response or patient-prediction
 model**. SPECIAL validation has its own unchanged task board and gates.
 
-![Recorded anti-PD-1 and exposure-zero comparison](docs/images/melanoma_v04.png)
+![Recorded anti-PD-1 and exposure-zero comparison with mock Jev behavior](docs/images/melanoma_jev_v05.png)
 
 ## Install and run an offline example
 
-Use Python **3.12 or 3.13** in this checkout. After the owner publishes it, the
-intended repository is `https://github.com/hylixinsights/VirtualTissue-scRNAseq`.
-No remote publication is performed by this release.
+Use Python **3.12 or 3.13**. Clone [VirtualTissue-scRNAseq](https://github.com/hylixinsights/VirtualTissue-scRNAseq) and enter its directory before installation.
 
 ```bash
+git clone https://github.com/hylixinsights/VirtualTissue-scRNAseq.git
+cd VirtualTissue-scRNAseq
 python -m venv .venv
 source .venv/bin/activate
 # Windows PowerShell: .venv\Scripts\Activate.ps1
 python -m pip install -e ".[test,notebooks]"
-vtsc demo outputs/my-first-melanoma --cells 120 --hours 24 --seed 21
+vtsc demo outputs/my-first-melanoma --cells 120 --hours 24 --seed 21 --decision-mode mock-jev
 vtsc explore outputs/my-first-melanoma/comparison --open
 ```
 
-Choose a **new output name** for each run. The demo is generated synthetic data,
-not a patient. All workflows are offline after installation/source download.
+Choose a **new output name** for each run. The demo uses generated synthetic data and **mock Jev answers**, not a patient or live AI. Local/mock workflows are offline after installation/source download.
 The viewer is self-contained; use a current Chrome/Edge/Safari/Firefox supporting
 `DecompressionStream` to open `explorer.html`, including directly from disk.
 
@@ -53,6 +52,27 @@ Malignancy and the marker state recipe remain provisional. The recipe's real-dat
 coverage, Unknown assignments and poor four-state separability are reported in
 [the validation report](reports/product-v04/VALIDATION.md). No state was added to
 force a desired demonstration. Source anatomical metadata conflict is retained.
+
+## Jev decisions and Xenium comparison
+
+The reference is the latest published [Xenium v0.1.3](https://github.com/hylixinsights/VirtualTissue-Xenium/releases/tag/v0.1.3).
+Version 0.5 adds a bounded Jev Choice adapter, batched behavior menus, target
+approach, durable request journals and zero-cost preflight. The kernel retains
+state hazards, movement limits, contact damage, death and division. The viewer
+separates behavior probabilities from stochastic fate probabilities.
+
+```bash
+vtsc check-melanoma outputs/melanoma-input.zip outputs/preflight
+# Live calls only after the operator provides a key and explicitly authorizes a ceiling:
+vtsc run-melanoma outputs/melanoma-input.zip outputs/live-jev --decision-mode jev --allow-paid --max-http-attempts 100 --hours 12
+```
+
+Use TYPESAFE_API_KEY in the environment; never commit it. `mock-jev` needs no key.
+[Comparison, exact differences, paid opt-in and recovery](docs/10_xenium_parity_and_jev.md)
+· [v0.5 verification](reports/xenium-parity/VALIDATION.md).
+Unlike Xenium, scRNAseq starts from assumed geometry and has one generic cue,
+not measured polygons and ten fields. RNA score representations also differ.
+No live Jev or biological equivalence is claimed.
 
 ## Bring your own biopsy
 
@@ -85,7 +105,7 @@ biopsies are rejected. [Complete input guide and Seurat export](docs/02_your_own
 | Fate | Competing state-transition, division and death hazards; Poisson influx | Same kernel as the nonspatial solver |
 | Space | Exclusion, migration, contact damage, tumor division and clearance | Assumed geometry/mechanics |
 | Inference | M0/M1/M1b/M2/M3, Dirichlet-multinomial likelihood, baseline uncertainty, regularized estimation | Synthetic recovery only |
-| Policy | Stochastic hazards; optional local or mock transition provider | Offline; no Jev calls |
+| Policy | Optional Jev behavior choices, mock contract test or local rules; CD8 fates stay with the kernel | Live integration available; validation used mock answers only |
 
 Dysfunction is separate from fatigue, proliferation, cytotoxicity and persistence.
 Dysfunctional cells can proliferate. Transitions update capabilities used in the
@@ -131,7 +151,7 @@ python scripts/validate_notebooks.py
 python scripts/validate_dynamics_v04.py
 ```
 
-The [release evidence](reports/product-v04/VALIDATION.md) distinguishes executed
+The [v0.4 engineering evidence](reports/product-v04/VALIDATION.md) and [v0.5 comparison evidence](reports/xenium-parity/VALIDATION.md) distinguish executed
 local checks from configured CI. The [product board](reports/product-v04/task-board.json)
 tracks P0–P6; [research status](reports/STATUS.md) preserves the original T/G board.
 Synthetic recovery and mean-field consistency do not establish clinical validity.

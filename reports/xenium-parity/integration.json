@@ -1,0 +1,301 @@
+{
+  "actual_jev_http_requests": 0,
+  "software_version": "0.5.0",
+  "implementation_hashes": {
+    "dynamics.py": "60f6af8d5e65a1e3b111946c1b97271cc87e425979b836181cdc4dba23a6e3b4",
+    "melanoma.py": "787123fe3e85fbc6fd5b5ec0e66074ffa1fe18be0ad50fc89d9db850b4c14fd7",
+    "contract.py": "9dfb88e79132956ac1e77a78218542be943030018524cfec65f5ba0a8e23d729",
+    "programs.py": "b609f5d9dfcb3f2b27fdd747a430ed3656a0d4664e74c41366cb79eed01c2d4f",
+    "tissue.py": "bd7c28459b90466e81c0fe4f18b76eeffc443baa6322cac8440cc325a6037d1f",
+    "behavior.py": "5542dcae28832bee50ce24ed1fd96aba1305b7692bb71bceafa384018ba12751",
+    "jev_provider.py": "977bb6548dbaf0d8f9ed4ded49672c3fc9bf3a8017ed8f5eb68977a22797e62a",
+    "jev_payload.py": "cfde1c0f0f8c6cef3f89b5baed1959dd7480a7b2d0ccb6236307273678b332c8"
+  },
+  "synthetic": {
+    "anti-pd1": {
+      "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/synthetic/anti-pd1",
+      "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/synthetic/anti-pd1/explorer.html",
+      "results_zip": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/synthetic/anti-pd1.zip",
+      "seed": 21,
+      "initial_cells": 120,
+      "final_alive": 100,
+      "created_cells": 120,
+      "observed_hours": 12.0,
+      "requested_hours": 12,
+      "stop_reason": "completed",
+      "complete": true,
+      "events": {
+        "attack": 315,
+        "death": 20,
+        "phagocytosis": 8,
+        "transition": 1,
+        "clearance_timeout": 7
+      },
+      "decisions": 5260,
+      "final_cd8_counts": {
+        "Memory": 7,
+        "Activated": 5,
+        "Cytotoxic": 5,
+        "Dysfunctional": 3,
+        "Unknown": 0
+      },
+      "policy": "stochastic-hazards-v1",
+      "journal_root": "3e37a26859d0ef6172dfbea933104589ba77cb8dfb49327e2476140442c677f6",
+      "rates_fitted": false,
+      "evidence_class": "exploratory software experiment",
+      "clinical_validation": false,
+      "counterfactual": false,
+      "geometry_measured": false,
+      "drug_units": "normalized assumed exposure, not clinical dose",
+      "behavior_mode": "mock-jev",
+      "behavior_provider": "mock_jev_choice_software_test",
+      "http_attempts": 145
+    },
+    "exposure-zero": {
+      "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/synthetic/exposure-zero",
+      "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/synthetic/exposure-zero/explorer.html",
+      "results_zip": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/synthetic/exposure-zero.zip",
+      "seed": 21,
+      "initial_cells": 120,
+      "final_alive": 101,
+      "created_cells": 120,
+      "observed_hours": 12.0,
+      "requested_hours": 12,
+      "stop_reason": "completed",
+      "complete": true,
+      "events": {
+        "attack": 326,
+        "death": 19,
+        "phagocytosis": 7,
+        "transition": 1,
+        "clearance_timeout": 7
+      },
+      "decisions": 5293,
+      "final_cd8_counts": {
+        "Memory": 7,
+        "Activated": 5,
+        "Cytotoxic": 5,
+        "Dysfunctional": 3,
+        "Unknown": 0
+      },
+      "policy": "stochastic-hazards-v1",
+      "journal_root": "30c0f9887fddc59ec07b5990c99d70afb2f5233385b5011abd3db9b852c871af",
+      "rates_fitted": false,
+      "evidence_class": "exploratory software experiment",
+      "clinical_validation": false,
+      "counterfactual": true,
+      "geometry_measured": false,
+      "drug_units": "normalized assumed exposure, not clinical dose",
+      "behavior_mode": "mock-jev",
+      "behavior_provider": "mock_jev_choice_software_test",
+      "http_attempts": 145
+    },
+    "comparison": {
+      "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/synthetic/comparison",
+      "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/synthetic/comparison/explorer.html",
+      "same_input": true,
+      "same_seed": true,
+      "same_initial_positions": true,
+      "shared_hours": 12.0,
+      "configuration_differences": {
+        "schedule": [
+          [
+            {
+              "start_hour": 2.0,
+              "end_hour": 96.0,
+              "exposure": 0.8
+            }
+          ],
+          [
+            {
+              "start_hour": 2.0,
+              "end_hour": 96.0,
+              "exposure": 0.0
+            }
+          ]
+        ]
+      },
+      "arm_a": "anti-pd1",
+      "arm_b": "exposure-zero",
+      "interpretation": "Paired simulated scenarios. Exposure-zero is a hypothesis-dependent counterfactual, not an observed untreated biopsy."
+    }
+  },
+  "preflight": {
+    "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/real-preflight",
+    "preflight": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/real-preflight/preflight.json",
+    "first_round_questions": 363,
+    "first_round_batches": 20,
+    "actual_http_requests": 0
+  },
+  "real": {
+    "anti-pd1": {
+      "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/anti-pd1",
+      "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/anti-pd1/explorer.html",
+      "results_zip": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/anti-pd1.zip",
+      "seed": 21,
+      "initial_cells": 400,
+      "final_alive": 400,
+      "created_cells": 400,
+      "observed_hours": 12.0,
+      "requested_hours": 12,
+      "stop_reason": "completed",
+      "complete": true,
+      "events": {
+        "attack": 75
+      },
+      "decisions": 19200,
+      "final_cd8_counts": {
+        "Memory": 18,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "policy": "stochastic-hazards-v1",
+      "journal_root": "5af21864cf71da05a512e2152dcf4d8155212a84d1012b14d7e470e39b1c0046",
+      "rates_fitted": false,
+      "evidence_class": "exploratory software experiment",
+      "clinical_validation": false,
+      "counterfactual": false,
+      "geometry_measured": false,
+      "drug_units": "normalized assumed exposure, not clinical dose",
+      "behavior_mode": "mock-jev",
+      "behavior_provider": "mock_jev_choice_software_test",
+      "http_attempts": 286
+    },
+    "exposure-zero": {
+      "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/exposure-zero",
+      "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/exposure-zero/explorer.html",
+      "results_zip": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/exposure-zero.zip",
+      "seed": 21,
+      "initial_cells": 400,
+      "final_alive": 400,
+      "created_cells": 400,
+      "observed_hours": 12.0,
+      "requested_hours": 12,
+      "stop_reason": "completed",
+      "complete": true,
+      "events": {
+        "attack": 75
+      },
+      "decisions": 19200,
+      "final_cd8_counts": {
+        "Memory": 18,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "policy": "stochastic-hazards-v1",
+      "journal_root": "e94da2d0b5ed72328424ce84fcb673c58b8684305c37b4382caeb7328290f403",
+      "rates_fitted": false,
+      "evidence_class": "exploratory software experiment",
+      "clinical_validation": false,
+      "counterfactual": true,
+      "geometry_measured": false,
+      "drug_units": "normalized assumed exposure, not clinical dose",
+      "behavior_mode": "mock-jev",
+      "behavior_provider": "mock_jev_choice_software_test",
+      "http_attempts": 286
+    },
+    "recognition-off": {
+      "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/recognition-off",
+      "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/recognition-off/explorer.html",
+      "results_zip": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/recognition-off.zip",
+      "seed": 21,
+      "initial_cells": 400,
+      "final_alive": 400,
+      "created_cells": 400,
+      "observed_hours": 12.0,
+      "requested_hours": 12,
+      "stop_reason": "completed",
+      "complete": true,
+      "events": {},
+      "decisions": 19200,
+      "final_cd8_counts": {
+        "Memory": 18,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "policy": "stochastic-hazards-v1",
+      "journal_root": "c1a39519f8b590d71bd8f0e1bfb63cee9a5b5337e623a5f4708b49c2458b711c",
+      "rates_fitted": false,
+      "evidence_class": "exploratory software experiment",
+      "clinical_validation": false,
+      "counterfactual": false,
+      "geometry_measured": false,
+      "drug_units": "normalized assumed exposure, not clinical dose",
+      "behavior_mode": "mock-jev",
+      "behavior_provider": "mock_jev_choice_software_test",
+      "http_attempts": 286
+    }
+  },
+  "comparison": {
+    "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/comparison",
+    "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/comparison/explorer.html",
+    "same_input": true,
+    "same_seed": true,
+    "same_initial_positions": true,
+    "shared_hours": 12.0,
+    "configuration_differences": {
+      "schedule": [
+        [
+          {
+            "start_hour": 2.0,
+            "end_hour": 96.0,
+            "exposure": 0.8
+          }
+        ],
+        [
+          {
+            "start_hour": 2.0,
+            "end_hour": 96.0,
+            "exposure": 0.0
+          }
+        ]
+      ]
+    },
+    "arm_a": "anti-pd1",
+    "arm_b": "exposure-zero",
+    "interpretation": "Paired simulated scenarios. Exposure-zero is a hypothesis-dependent counterfactual, not an observed untreated biopsy."
+  },
+  "recovery": {
+    "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/recovered",
+    "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/recovered/explorer.html",
+    "results_zip": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v05-final/recovered.zip",
+    "seed": 21,
+    "initial_cells": 400,
+    "final_alive": 400,
+    "created_cells": 400,
+    "observed_hours": 12.0,
+    "requested_hours": 12,
+    "stop_reason": "completed",
+    "complete": true,
+    "events": {
+      "attack": 75
+    },
+    "decisions": 19200,
+    "final_cd8_counts": {
+      "Memory": 18,
+      "Activated": 4,
+      "Cytotoxic": 0,
+      "Dysfunctional": 2,
+      "Unknown": 3
+    },
+    "policy": "stochastic-hazards-v1",
+    "journal_root": "5af21864cf71da05a512e2152dcf4d8155212a84d1012b14d7e470e39b1c0046",
+    "rates_fitted": false,
+    "evidence_class": "exploratory software experiment",
+    "clinical_validation": false,
+    "counterfactual": false,
+    "geometry_measured": false,
+    "drug_units": "normalized assumed exposure, not clinical dose",
+    "behavior_mode": "mock-jev",
+    "behavior_provider": "mock_jev_choice_software_test",
+    "http_attempts": 286
+  },
+  "v04_local_frames_preserved_exactly": true,
+  "seconds": 35.40283583395649
+}
