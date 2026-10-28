@@ -1,0 +1,162 @@
+{
+  "created_at_utc": "2026-10-28T02:00:36.961161+00:00",
+  "software_version": "0.2.0",
+  "purpose": "User-authorized software testing, not clinical model validation",
+  "synthetic": {
+    "schema_version": 1,
+    "mode": "uncalibrated_software_experiment",
+    "seed": 21,
+    "requested_hours": 48.0,
+    "observed_hours": 48.0,
+    "stop_reason": "horizon_reached",
+    "complete": true,
+    "initial_cells": 300,
+    "final_cells": 302,
+    "events": 394,
+    "max_cells": 5000,
+    "max_events": 50000,
+    "rates_fitted": false,
+    "spatial_coordinates_used": false,
+    "expectation_scope": "Uncapped linear model; not a confidence interval or fitted prediction."
+  },
+  "control": {
+    "schema_version": 1,
+    "mode": "uncalibrated_software_experiment",
+    "seed": 21,
+    "requested_hours": 48.0,
+    "observed_hours": 48.0,
+    "stop_reason": "horizon_reached",
+    "complete": true,
+    "initial_cells": 300,
+    "final_cells": 300,
+    "events": 0,
+    "max_cells": 5000,
+    "max_events": 50000,
+    "rates_fitted": false,
+    "spatial_coordinates_used": false,
+    "expectation_scope": "Uncapped linear model; not a confidence interval or fitted prediction."
+  },
+  "pbmc": {
+    "schema_version": 1,
+    "mode": "uncalibrated_software_experiment",
+    "seed": 21,
+    "requested_hours": 48.0,
+    "observed_hours": 48.0,
+    "stop_reason": "horizon_reached",
+    "complete": true,
+    "initial_cells": 427,
+    "final_cells": 417,
+    "events": 490,
+    "max_cells": 5000,
+    "max_events": 50000,
+    "rates_fitted": false,
+    "spatial_coordinates_used": false,
+    "expectation_scope": "Uncapped linear model; not a confidence interval or fitted prediction."
+  },
+  "pbmc_source": {
+    "id": "10x_pbmc3k",
+    "title": "3k PBMCs from a Healthy Donor",
+    "source_url": "https://www.10xgenomics.com/datasets/3-k-pbm-cs-from-a-healthy-donor-1-standard-1-1-0",
+    "download_url": "https://cf.10xgenomics.com/samples/cell-exp/1.1.0/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "10x Genomics, 3k PBMCs from a Healthy Donor, Cell Ranger 1.1.0, 2016.",
+    "sha256": "847d6ebd9a1ec9a768f2be7e40ca42cbfe75ebeb6d76a4c24167041699dc28b5",
+    "bytes": 7621991,
+    "license_verified_date": "2026-10-27",
+    "use": "Input/annotation/software demonstration; not tumour or treatment validation."
+  },
+  "pbmc_preparation": {
+    "schema_version": 1,
+    "software_version": "0.2.0",
+    "sources": [
+      {
+        "name": "matrix.mtx",
+        "bytes": 28179564,
+        "sha256": "7d92358b9d29128a225c50f2a662d6ccca9c71bc665e0af82692ed1361eb94e4"
+      },
+      {
+        "name": "genes.tsv",
+        "bytes": 816952,
+        "sha256": "8778dd78085086be6dcafa8334f95f7cf76b25526e8ef2b63186db5127a1492c"
+      },
+      {
+        "name": "barcodes.tsv",
+        "bytes": 45900,
+        "sha256": "58c2a224a2b4258f7e8799a18890bda6d23824b247b80db2b08a0dcc36a4c660"
+      }
+    ],
+    "input_cells": 2700,
+    "selected_before_subsampling": 427,
+    "exported_cells": 427,
+    "features": 32738,
+    "sample_id": "user_declared_single_sample",
+    "count_layer": "X / Matrix Market raw counts",
+    "annotation": "illustrative_marker_recipe_not_validated; CD3D/E>0 and CD8A/B>0; mean-count argmax with fixed tie order",
+    "subsample_seed": null,
+    "source_license": "CC-BY-4.0; 10x Genomics PBMC3k, 2016",
+    "expression_exported": false,
+    "rates_inferred_from_expression": false,
+    "coordinates_inferred": false,
+    "purpose": "Uncalibrated software experiment; no clinical prediction claim."
+  },
+  "notebooks": {
+    "python": "3.12.13",
+    "kernel": "isolated software environment",
+    "scope": "Real local kernels; synthetic path; installation tested separately; hosted Colab not tested",
+    "notebooks": [
+      {
+        "notebook": "notebooks/Part1_Prepare_scRNAseq.ipynb",
+        "code_cells": 4,
+        "executed_without_errors": true
+      },
+      {
+        "notebook": "notebooks/Part2-3_Run_Simulation.ipynb",
+        "code_cells": 5,
+        "executed_without_errors": true
+      },
+      {
+        "notebook": "notebooks/Part4_Explore_Results.ipynb",
+        "code_cells": 5,
+        "executed_without_errors": true
+      }
+    ]
+  },
+  "browser": {
+    "initial_cells": 300,
+    "final_time_hours": 48,
+    "final_cells": 302,
+    "selected_cell": "synthetic_cell_00000",
+    "transition_time_hours_displayed": 5.865,
+    "timeline_and_cell_selection_verified": true,
+    "screenshot": "docs/images/explorer_demo.png"
+  },
+  "fresh_environment_install": true,
+  "pip_check_passed": true,
+  "source_code_sha256": {
+    "src/vtsc/__init__.py": "b4005f26a9cf19b53cad7ff1be60e421e003f228bd01242f3fbda83034df88d1",
+    "src/vtsc/cli.py": "203ae196fd216db62bd33eeea2e956e993de8b4ab58b9e6ae3a8b690de316bdb",
+    "src/vtsc/inputs.py": "204b2fa1d11dad61290e5b0665b3bb464c4f5f42ac632c7a44aa9fdf1042a796",
+    "src/vtsc/model.py": "946d7fb46505e147f4f47a834fc10e90d85ab1564df3f25d6945b05e4267940f",
+    "src/vtsc/provenance.py": "42d525e83aea7df7a62d7411ee908cf387059c00d5547b7444333fd1ae7fd7e1",
+    "src/vtsc/results.py": "b01f06380cbe7f3ea18b35aff8d4a05d2cbfdfcb7bd42cd295d1c4e79dad6e0c"
+  },
+  "limitations": [
+    "No hosted Colab test",
+    "No GitHub Actions execution yet",
+    "No Linux/Windows/Python 3.13 runtime test",
+    "No calibrated biological or clinical prediction"
+  ],
+  "artifacts": {
+    "outputs/synthetic_demo/baseline/run.json": "8809a1672f8499bf23d4fff7e46b8e5da4a364428e050bc9ca7db70ba780dd1b",
+    "outputs/pbmc_baseline/run.json": "bbc95065c40411f9f0c12702e774441e391bd3aac5743b6d2bc2f80e548b81a3",
+    "docs/images/explorer_demo.png": "a9d3e6a79b9aaec848d9e00c21e4f0d8d9fa04be89913cb36f30775c12d6d740",
+    "docs/images/synthetic_demo.png": "4348326a7b541b22906594114b75af0aab14025f267e4f44881e5651a758c586"
+  },
+  "tests": {
+    "passed": 25,
+    "failures": 0,
+    "errors": 0
+  },
+  "package_downloader_network_test_passed": true
+}

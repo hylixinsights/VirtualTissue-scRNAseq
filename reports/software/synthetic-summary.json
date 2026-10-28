@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "mode": "uncalibrated_software_experiment",
+  "seed": 21,
+  "requested_hours": 48.0,
+  "observed_hours": 48.0,
+  "stop_reason": "horizon_reached",
+  "complete": true,
+  "initial_cells": 300,
+  "final_cells": 302,
+  "events": 394,
+  "max_cells": 5000,
+  "max_events": 50000,
+  "rates_fitted": false,
+  "spatial_coordinates_used": false,
+  "expectation_scope": "Uncapped linear model; not a confidence interval or fitted prediction."
+}

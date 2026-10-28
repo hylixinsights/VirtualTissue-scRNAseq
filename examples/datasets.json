@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "default": {
+    "id": "synthetic",
+    "license": "MIT",
+    "contains_patient_data": false,
+    "command": "vtsc synthetic example_data/synthetic.h5ad"
+  },
+  "downloadable": [
+    {
+      "id": "10x_pbmc3k",
+      "title": "3k PBMCs from a Healthy Donor",
+      "source_url": "https://www.10xgenomics.com/datasets/3-k-pbm-cs-from-a-healthy-donor-1-standard-1-1-0",
+      "download_url": "https://cf.10xgenomics.com/samples/cell-exp/1.1.0/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "10x Genomics, 3k PBMCs from a Healthy Donor, Cell Ranger 1.1.0, 2016.",
+      "sha256": "847d6ebd9a1ec9a768f2be7e40ca42cbfe75ebeb6d76a4c24167041699dc28b5",
+      "bytes": 7621991,
+      "license_verified_date": "2026-10-27",
+      "use": "Input/annotation/software demonstration; not tumour or treatment validation."
+    }
+  ],
+  "verified_alternative": {
+    "id": "10x_pbmc1k_v3",
+    "source_url": "https://www.10xgenomics.com/datasets/1-k-pbm-cs-from-a-healthy-donor-v-3-chemistry-3-standard-3-0-0",
+    "license": "CC-BY-4.0",
+    "license_verified_date": "2026-10-27",
+    "cells_reported_by_source": 1222,
+    "tested_in_this_pipeline": false
+  }
+}

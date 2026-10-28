@@ -270,5 +270,11 @@
       "description": "Amended design/eligibility freeze and split access guard",
       "reason_not_started": "Primary count prerequisite fails: 12 candidates, before further eligibility exclusions, versus existing floor of 14"
     }
-  ]
+  ],
+  "software_prototype": {
+    "amendment": "A03",
+    "status": "implemented_and_locally_tested",
+    "scope": "Own-data input, synthetic/PBMC demos, declared-rate non-spatial simulation; separate from clinical gates",
+    "validation": "reports/software/validation.md"
+  }
 }

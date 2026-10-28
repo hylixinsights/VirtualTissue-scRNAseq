@@ -30,3 +30,6 @@ tmp/
 *.qs2
 .pydeps*/
 *.assembled
+outputs/
+example_data/
+.ipynb_checkpoints/

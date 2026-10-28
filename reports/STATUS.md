@@ -1,5 +1,11 @@
 # Execution status — 2026-10-27
 
+The independent **v0.2 software-test workflow** is now implemented under the
+user-approved A03 scope: synthetic/PBMC examples, own-data preparation,
+declared-rate simulation and offline results. See `README.md` and
+`reports/software/validation.md`. This does not pass or alter the clinical
+research gates described below; no clinical model was fitted.
+
 The planned prediction study remains stopped at a necessary feasibility
 condition after the user-approved separate-stratum expansion audit.
 SPECIAL + new Lin patients supply at most **12 count candidates at ≥30 CD8 per

@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this software and the original source of any example data you use."
+title: "VirtualTissue-scRNAseq"
+type: software
+version: 0.2.0
+date-released: '2026-10-27'
+authors:
+  - family-names: Nakaya
+    given-names: Helder
+repository-code: 'https://github.com/hylixinsights/VirtualTissue-scRNAseq'
+license: MIT
+abstract: "Original simulation software under MIT; third-party data and research derivatives retain their source-specific licences. Non-spatial cell-state software experiments with declared rates, not clinically validated predictions."

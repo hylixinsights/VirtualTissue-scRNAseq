@@ -889,6 +889,7 @@ Draft main-text figures:
 | D15 | Preserve original freeze while developing A02 | Original analysis files remain immutable; the amended model, eligibility and split require their own freeze |
 | D16 | Audit monotherapy and anti-PD-1 + anti-CTLA-4 in separate strata | Explicit user selection on 2026-10-27; A02.2 complete, A02.3 metadata counts complete but matrix/library alignment unresolved |
 | D17 | Stop before the amended freeze because the expanded count prerequisite fails | SPECIAL + new Lin candidates total 12 at ≥30; preserve ≥15 as sensitivity, preserve the original freeze, request missing source evidence before proceeding |
+| D18 | Build an independent software-testing prototype with synthetic/public examples and own-data inputs | Explicit user request; A03 permits implementation tests with declared rates while all clinical prediction/spatial/Jev gates remain unchanged |
 
 ### 13.2 Deviation log (template)
 

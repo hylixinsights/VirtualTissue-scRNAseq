@@ -1,5 +1,23 @@
 # Data licence and permitted project use
 
+## Software-testing examples (v0.2)
+
+Original simulator code and programmatically generated synthetic fixtures are
+MIT-licensed. Synthetic fixtures contain no patient measurements. The optional
+10x PBMC3k example is CC BY 4.0, explicitly declared on its original dataset
+page; the source and attribution are recorded in `examples/datasets.json` and
+the locally downloaded `SOURCE.json`. PBMC-derived bundles and results retain
+the source terms and should identify the subset/annotation/simulation changes.
+PBMC1k v3 is also explicitly CC BY 4.0 but has not yet been tested here.
+See `docs/05_example_datasets.md` for URLs and attribution text.
+
+Own-data inputs retain the user's applicable permissions/terms. Neither a
+public software repository nor a `--source-license` field grants rights to
+redistribute somebody else's data. The example pipeline does not read SPECIAL
+or the Lin atlas, and does not depend on their licences or clinical eligibility.
+
+## Historical SPECIAL research assets
+
 The SPECIAL processed-data deposit (Joanna Poźniak, KU Leuven RDR,
 [doi:10.48804/GSAXBN](https://doi.org/10.48804/GSAXBN), version 8) declares
 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).

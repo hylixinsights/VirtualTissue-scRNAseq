@@ -1,3 +1,3 @@
-"""SPECIAL analysis tools. No patient outcomes are loaded at import time."""
+"""Single-cell software experiments and separate SPECIAL research audits."""
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"

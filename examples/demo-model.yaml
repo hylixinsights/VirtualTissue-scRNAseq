@@ -1,0 +1,34 @@
+schema_version: 1
+name: illustrative_cd8_states
+rate_provenance: User-declared illustrative assumptions; not fitted to expression
+  or patients.
+time_unit: hours
+states:
+- Resting-like
+- GZMK-like
+- Cytotoxic-like
+transitions:
+- source: Resting-like
+  target: GZMK-like
+  rate: 0.025
+- source: GZMK-like
+  target: Resting-like
+  rate: 0.01
+- source: GZMK-like
+  target: Cytotoxic-like
+  rate: 0.02
+- source: Cytotoxic-like
+  target: GZMK-like
+  rate: 0.008
+division_rates:
+  Resting-like: 0.001
+  GZMK-like: 0.004
+  Cytotoxic-like: 0.002
+death_rates:
+  Resting-like: 0.001
+  GZMK-like: 0.002
+  Cytotoxic-like: 0.003
+influx_rates:
+  Resting-like: 0.3
+  GZMK-like: 0.0
+  Cytotoxic-like: 0.0
