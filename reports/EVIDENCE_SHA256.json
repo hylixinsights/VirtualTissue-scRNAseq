@@ -1,5 +1,5 @@
 {
-  "created_at_utc": "2026-10-28T03:04:54.344652+00:00",
+  "created_at_utc": "2026-10-28T03:24:51.623961+00:00",
   "files": [
     {
       "path": "reports/STATUS.md",
@@ -417,6 +417,11 @@
       "sha256": "49cec277f506e01ea7671ebe6cd7a013884672d4359510af408190cbc783acd0"
     },
     {
+      "path": "reports/handoff-inventory-2026-10-28.json",
+      "bytes": 176991,
+      "sha256": "4e4c58c32237f85c98ba4b7e609f7a85ec203121668f1832ea14d518367d62e3"
+    },
+    {
       "path": "reports/plan-alignment-audit-2026-10-28.json",
       "bytes": 12521,
       "sha256": "9680eac3ff9cacae2966c8295a82364b6f023797fce1ed51d29ff9127bb031f2"
@@ -687,6 +692,11 @@
       "sha256": "447acceccf8b2aa299a7bb9ab19518b3fec494900050f4421b6091bfa3cd3d9b"
     },
     {
+      "path": "docs/NEW_CONVERSATION_MELANOMA_ANTI_PD1.md",
+      "bytes": 46034,
+      "sha256": "c064814d55e0cd1d72f2e952ef5ecf306e822bc632598b0739fcecef0052a2b7"
+    },
+    {
       "path": "docs/data-request-draft.txt",
       "bytes": 3324,
       "sha256": "9e300d54dc75c5eb3418578d296e3edb3f782cf00ec37a80ab2cccb452f8c8ef"
@@ -708,8 +718,8 @@
     },
     {
       "path": "docs/lin-metadata-reproduction.md",
-      "bytes": 4369,
-      "sha256": "95115c57b925846d5c7e940dc7e68facb0bc955470e001eae88d5397ade8384a"
+      "bytes": 4529,
+      "sha256": "c76a8e06ba3fa8efda6dcd6acf405bfb47dabaee822c1943f4cf9e249acd49d7"
     },
     {
       "path": "docs/protocol-review-2026-10-27.md",

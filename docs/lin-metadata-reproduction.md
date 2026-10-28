@@ -76,4 +76,6 @@ saved in `lin-object-count-audit.json` and the corresponding tables.
 The primary count prerequisite fails. No lockbox assignment, state-change
 analysis, model fitting or spatial/Jev step is enabled. The next dependency is
 new source evidence or independently acquired qualifying data, followed by a
-new eligibility/design assessment. See the review and unsent data-request draft.
+new eligibility/design assessment. Use only public sources, as directed by the user on 2026-10-28; no author
+contact or reply is a dependency. See the review and the new-conversation
+prompt for the independent software implementation track.
