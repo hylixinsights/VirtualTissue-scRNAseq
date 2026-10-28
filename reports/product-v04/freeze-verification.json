@@ -1,0 +1,12 @@
+{
+  "valid": true,
+  "protected_files_unchanged": {
+    "prereg/FREEZE.json": true,
+    "config/study.yaml": true,
+    "reports/task-board.json": true,
+    "tables/claims_ledger.tsv": true
+  },
+  "Xenium_engine_modified": false,
+  "original_research_tasks_updated": false,
+  "clinical_outcomes_used_for_product": false
+}

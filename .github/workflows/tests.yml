@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
-      - run: python -m pip install -e ".[test]"
+      - run: python -m pip install -e ".[test,neutral]"
       - run: python -m pytest -q
       - run: vtsc verify-freeze
       - run: vtsc demo outputs/ci-demo --cells 60 --hours 6
@@ -21,3 +21,29 @@ jobs:
         with:
           name: demo-${{ matrix.os }}-${{ matrix.python }}
           path: outputs/ci-demo/
+
+  package-and-notebooks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e ".[test,notebooks,neutral]"
+      - run: python scripts/validate_notebooks.py
+      - run: python -m pip wheel --no-deps . --wheel-dir dist
+      - name: Test installed wheel outside checkout
+        shell: bash
+        run: |
+          python -m venv /tmp/vtsc-wheel
+          /tmp/vtsc-wheel/bin/pip install dist/*.whl
+          cd /tmp
+          /tmp/vtsc-wheel/bin/vtsc demo wheel-demo --cells 30 --hours 3
+          /tmp/vtsc-wheel/bin/vtsc explore wheel-demo/anti-pd1.zip --html wheel-reopened.html
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: wheel-and-notebook-evidence
+          path: |
+            dist/
+            reports/product-v04/notebook-validation.json

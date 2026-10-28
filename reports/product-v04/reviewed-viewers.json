@@ -1,0 +1,11 @@
+{
+  "real": {
+    "explorer": "outputs/v04-final/comparison-final/explorer.html",
+    "results_zip": "outputs/v04-final/comparison-final.zip"
+  },
+  "synthetic": {
+    "explorer": "outputs/v04-final/synthetic/comparison-final/explorer.html",
+    "results_zip": "outputs/v04-final/synthetic/comparison-final.zip"
+  },
+  "review": "Final template after legend and resize fixes; original run journals unchanged"
+}

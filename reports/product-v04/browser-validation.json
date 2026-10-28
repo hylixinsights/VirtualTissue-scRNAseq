@@ -1,0 +1,32 @@
+{
+  "url": "http://127.0.0.1:8769/comparison-final/explorer.html",
+  "runtime": "Codex IAB Chromium; local HTTP; direct file protocol not exercised because browser policy disallows it",
+  "checks": [
+    "gzip HTML loads",
+    "paired timeline scrub reaches 24 h",
+    "recorded transitions show actual hazards, draw and changed capacities",
+    "lineage/state colors match legend",
+    "drug overlay and zoom/fit",
+    "arm and cell selection",
+    "observed t0 RNA disclosure",
+    "keyboard navigation",
+    "play/pause and automatic end stop",
+    "contact attack lookup"
+  ],
+  "finalCounts": {
+    "armA": "397Live5Tumor3Transitions0Divisions3Deaths",
+    "armB": "400Live8Tumor4Transitions0Divisions0Deaths",
+    "clock": "24.00 / 24 h",
+    "legend": "MelanomaCD8_TT_cellNKMyeloidFibroblastEndothelialB_cellUnknown"
+  },
+  "playback": {
+    "button": "Play",
+    "clock": "0.50 / 24 h"
+  },
+  "attack": {
+    "cell": "ATGCAGGAGAACGAAC-1",
+    "clock": "0.25 / 24 h",
+    "decision": "attack · reactive agent + assumed antigen + contact + current effector capacity + checkpoint modulation"
+  },
+  "logs": []
+}

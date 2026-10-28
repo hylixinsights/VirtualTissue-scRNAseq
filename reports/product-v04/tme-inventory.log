@@ -1,0 +1,4 @@
+Warning message:
+package ‘sp’ was built under R version 4.6.1 
+Loading required namespace: Seurat
+Saved structural inventory; no state compositions computed.

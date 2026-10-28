@@ -1,6 +1,6 @@
 # Data licence and permitted project use
 
-## Melanoma software examples (v0.3)
+## Melanoma software examples (v0.4; v0.3 retained)
 
 Original code and generated synthetic melanoma fixtures are MIT-licensed. The
 primary real example is the official 10x Genomics dissociated melanoma matrix,
@@ -54,3 +54,13 @@ preprints keep their own source terms. Unverified terms remain unresolved in
 `data/COHORT_EXPANSION_MANIFEST.json`; this screening is not a redistribution
 licence audit. No candidate data have been released or assigned the code's MIT
 licence.
+
+## A05 outcome-blind exports (2026-10-28)
+
+Entire_TME.rds and Malignant_cells.rds were verified against published size/MD5
+and locally hashed. New exports are in `../data/SPECIAL/derived/tme-A05-v1` and
+`malignant-A05-v1`. They retain CC BY-NC-SA 4.0 and source attribution and are
+not included in the MIT software wheel. Metadata export is restricted to IDs,
+recomputed technical QC and a fixed coarse CD8 marker screen. No author state,
+embedding or clinical outcome was used to tune the product. See the two
+`reports/product-v04/*-export.json` files for per-file checksums and round trips.

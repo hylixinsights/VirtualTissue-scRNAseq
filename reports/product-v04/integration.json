@@ -1,0 +1,1511 @@
+{
+  "scope": "Implementation integration; no clinical validation",
+  "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final",
+  "synthetic": {
+    "anti-pd1": {
+      "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/synthetic/anti-pd1",
+      "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/synthetic/anti-pd1/explorer.html",
+      "results_zip": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/synthetic/anti-pd1.zip",
+      "seed": 21,
+      "initial_cells": 120,
+      "final_alive": 79,
+      "created_cells": 120,
+      "observed_hours": 24.0,
+      "requested_hours": 24,
+      "stop_reason": "completed",
+      "complete": true,
+      "events": {
+        "attack": 548,
+        "death": 41,
+        "phagocytosis": 13,
+        "transition": 4,
+        "clearance_timeout": 16
+      },
+      "decisions": 9676,
+      "final_cd8_counts": {
+        "Memory": 5,
+        "Activated": 6,
+        "Cytotoxic": 3,
+        "Dysfunctional": 4,
+        "Unknown": 0
+      },
+      "policy": "stochastic-hazards-v1",
+      "journal_root": "9e314a370c3a791cf9cced8b3a958c1f1910b9774d71e175bd070ecea0f344d1",
+      "rates_fitted": false,
+      "evidence_class": "exploratory software experiment",
+      "clinical_validation": false,
+      "counterfactual": false,
+      "geometry_measured": false,
+      "drug_units": "normalized assumed exposure, not clinical dose"
+    },
+    "exposure-zero": {
+      "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/synthetic/exposure-zero",
+      "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/synthetic/exposure-zero/explorer.html",
+      "results_zip": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/synthetic/exposure-zero.zip",
+      "seed": 21,
+      "initial_cells": 120,
+      "final_alive": 87,
+      "created_cells": 120,
+      "observed_hours": 24.0,
+      "requested_hours": 24,
+      "stop_reason": "completed",
+      "complete": true,
+      "events": {
+        "attack": 568,
+        "death": 33,
+        "phagocytosis": 12,
+        "transition": 6,
+        "clearance_timeout": 14
+      },
+      "decisions": 9908,
+      "final_cd8_counts": {
+        "Memory": 5,
+        "Activated": 5,
+        "Cytotoxic": 3,
+        "Dysfunctional": 5,
+        "Unknown": 0
+      },
+      "policy": "stochastic-hazards-v1",
+      "journal_root": "5de6860b8bdfed039f2ed157b63e3367aec5df5be9341251c8e36461a7684267",
+      "rates_fitted": false,
+      "evidence_class": "exploratory software experiment",
+      "clinical_validation": false,
+      "counterfactual": true,
+      "geometry_measured": false,
+      "drug_units": "normalized assumed exposure, not clinical dose"
+    },
+    "comparison": {
+      "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/synthetic/comparison",
+      "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/synthetic/comparison/explorer.html",
+      "same_input": true,
+      "same_seed": true,
+      "same_initial_positions": true,
+      "shared_hours": 24.0,
+      "configuration_differences": {
+        "schedule": [
+          [
+            {
+              "start_hour": 2.0,
+              "end_hour": 96.0,
+              "exposure": 0.8
+            }
+          ],
+          [
+            {
+              "start_hour": 2.0,
+              "end_hour": 96.0,
+              "exposure": 0.0
+            }
+          ]
+        ]
+      },
+      "arm_a": "anti-pd1",
+      "arm_b": "exposure-zero",
+      "interpretation": "Paired simulated scenarios. Exposure-zero is a hypothesis-dependent counterfactual, not an observed untreated biopsy."
+    }
+  },
+  "real_input": {
+    "sources": [
+      {
+        "name": "filtered_feature_bc_matrix.h5",
+        "bytes": 56774638,
+        "sha256": "a2472fd15fbc708c50b95aff7f762872929a0365b9d06454cc558d29d4400091"
+      }
+    ],
+    "dataset": {
+      "id": "10x_melanoma_gemx_3p",
+      "title": "10k Human DTC Melanoma, Chromium GEM-X Single Cell 3′",
+      "source_url": "https://www.10xgenomics.com/datasets/10k-human-dtc-melanoma-GEM-X",
+      "download_url": "https://cf.10xgenomics.com/samples/cell-exp/8.0.0/10k_Human_DTC_Melanoma_3p_gemx_10k_Human_DTC_Melanoma_3p_gemx/10k_Human_DTC_Melanoma_3p_gemx_10k_Human_DTC_Melanoma_3p_gemx_count_sample_filtered_feature_bc_matrix.h5",
+      "sha256": "a2472fd15fbc708c50b95aff7f762872929a0365b9d06454cc558d29d4400091",
+      "bytes": 56774638,
+      "cells": 10645,
+      "features": 38606,
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "10x Genomics (2024), 10k Human DTC Melanoma, Chromium GEM-X Single Cell 3′, Cell Ranger 8.0.0. Subsampling, marker annotation and simulated geometry by VirtualTissue-scRNAseq.",
+      "verified_date": "2026-10-27",
+      "source_discrepancy": "The descriptive text says dissociated melanoma tissue; the structured Anatomical Entity field says Blood. This discrepancy is retained, not silently corrected.",
+      "use": "Single donor software example; no paired treatment outcomes or measured positions."
+    },
+    "input_kind": "public_melanoma",
+    "input_cells": 10645,
+    "biopsy_cells": 10645,
+    "exported_cells": 400,
+    "sample_id": "declared_single_biopsy",
+    "annotation": "provisional fixed marker recipe; Unknown retained; no CNV/malignancy validation",
+    "annotation_recipe": "melanoma-markers",
+    "full_composition": {
+      "B_cell": 5402,
+      "T_cell": 3109,
+      "CD8_T": 723,
+      "Melanoma": 219,
+      "Unknown": 940,
+      "Myeloid": 167,
+      "Endothelial": 14,
+      "NK": 59,
+      "Fibroblast": 12
+    },
+    "sampled_composition": {
+      "B_cell": 203,
+      "Melanoma": 8,
+      "Unknown": 35,
+      "T_cell": 117,
+      "Myeloid": 6,
+      "CD8_T": 27,
+      "NK": 2,
+      "Endothelial": 1,
+      "Fibroblast": 1
+    },
+    "sampling": "stratified without replacement; proportional largest-remainder quotas by lineage when stratified; no enrichment",
+    "subsample_seed": 21,
+    "count_layer": "raw counts",
+    "gene_coverage": {
+      "Melanoma": [
+        "MLANA",
+        "PMEL",
+        "TYRP1",
+        "DCT",
+        "SOX10",
+        "MITF"
+      ],
+      "T_cell": [
+        "CD3D",
+        "CD3E",
+        "TRAC",
+        "CD247"
+      ],
+      "NK": [
+        "NKG7",
+        "GNLY",
+        "KLRD1",
+        "NCR1"
+      ],
+      "Myeloid": [
+        "LST1",
+        "LYZ",
+        "FCER1G",
+        "CTSS",
+        "AIF1"
+      ],
+      "Fibroblast": [
+        "COL1A1",
+        "COL1A2",
+        "DCN",
+        "LUM"
+      ],
+      "Endothelial": [
+        "PECAM1",
+        "VWF",
+        "EMCN",
+        "KDR"
+      ],
+      "B_cell": [
+        "MS4A1",
+        "CD79A",
+        "CD79B",
+        "CD19"
+      ],
+      "cytotoxicity": [
+        "PRF1",
+        "GZMB",
+        "GZMH",
+        "GNLY"
+      ],
+      "proliferation": [
+        "MKI67",
+        "TOP2A",
+        "PCNA",
+        "MCM2"
+      ],
+      "interferon": [
+        "ISG15",
+        "IFIT1",
+        "IFIT3",
+        "STAT1"
+      ],
+      "CD8": [
+        "CD8A",
+        "CD8B"
+      ]
+    },
+    "program_transform": "mean log1p(CP10K) over available panel genes; coverage explicit; 1-exp(-score/2); dynamic CD8 axes use separately documented capped ranks",
+    "coordinates": "absent; simulated geometry is a declared hypothesis",
+    "program_audit": {
+      "library": {
+        "version": "cd8-rank-v1",
+        "evidence_class": "inferred, provisional marker recipe",
+        "source": "A05; Li Cell 2019 doi:10.1016/j.cell.2018.11.043; Sade-Feldman Cell 2018 doi:10.1016/j.cell.2018.10.038",
+        "method": "Capped positive-gene within-cell rank enrichment, U-statistic normalization; not calibrated state probabilities",
+        "state": {
+          "Memory": [
+            "TCF7",
+            "CCR7",
+            "SELL",
+            "LEF1"
+          ],
+          "Activated": [
+            "GZMK",
+            "CD69",
+            "IL2RA",
+            "TNFRSF9"
+          ],
+          "Cytotoxic": [
+            "GZMB",
+            "PRF1",
+            "CTSW",
+            "FGFBP2"
+          ],
+          "Dysfunctional": [
+            "PDCD1",
+            "HAVCR2",
+            "LAG3",
+            "TOX",
+            "ENTPD1"
+          ]
+        },
+        "held_out": {
+          "Memory": [
+            "IL7R",
+            "BCL2"
+          ],
+          "Activated": [
+            "NR4A2",
+            "EGR2"
+          ],
+          "Cytotoxic": [
+            "GZMH",
+            "CCL5"
+          ],
+          "Dysfunctional": [
+            "CXCL13",
+            "LAYN",
+            "TIGIT"
+          ]
+        },
+        "axes": {
+          "dysfunction": [
+            "PDCD1",
+            "HAVCR2",
+            "LAG3",
+            "TOX",
+            "ENTPD1"
+          ],
+          "proliferation": [
+            "MKI67",
+            "TOP2A",
+            "PCNA",
+            "MCM2",
+            "TYMS"
+          ],
+          "cytotoxicity": [
+            "GZMB",
+            "PRF1",
+            "CTSW",
+            "FGFBP2"
+          ],
+          "persistence": [
+            "IL7R",
+            "BCL2",
+            "TCF7"
+          ]
+        },
+        "controls": {
+          "dissociation": [
+            "FOS",
+            "JUN",
+            "JUNB",
+            "HSPA1A",
+            "EGR1"
+          ],
+          "tcr_signal": [
+            "NR4A1",
+            "NR4A2",
+            "NR4A3",
+            "EGR2"
+          ],
+          "myeloid_inflammation": [
+            "CXCL9",
+            "CXCL10",
+            "STAT1",
+            "IRF1"
+          ],
+          "antigen_presentation": [
+            "HLA-A",
+            "HLA-B",
+            "B2M",
+            "TAP1"
+          ]
+        },
+        "max_rank": 1500,
+        "min_detected_state_markers": 2,
+        "min_margin": 0.08,
+        "min_state_score": 0.15,
+        "limits": "Not Tpex diagnosis, CNV validation, exhaustion protein measurement, or a training-fold reference."
+      },
+      "coverage": {
+        "state:Memory": [
+          "TCF7",
+          "CCR7",
+          "SELL",
+          "LEF1"
+        ],
+        "state:Activated": [
+          "GZMK",
+          "CD69",
+          "IL2RA",
+          "TNFRSF9"
+        ],
+        "state:Cytotoxic": [
+          "GZMB",
+          "PRF1",
+          "CTSW",
+          "FGFBP2"
+        ],
+        "state:Dysfunctional": [
+          "PDCD1",
+          "HAVCR2",
+          "LAG3",
+          "TOX",
+          "ENTPD1"
+        ],
+        "held_out:Memory": [
+          "IL7R",
+          "BCL2"
+        ],
+        "held_out:Activated": [
+          "NR4A2",
+          "EGR2"
+        ],
+        "held_out:Cytotoxic": [
+          "GZMH",
+          "CCL5"
+        ],
+        "held_out:Dysfunctional": [
+          "CXCL13",
+          "LAYN",
+          "TIGIT"
+        ],
+        "axes:dysfunction": [
+          "PDCD1",
+          "HAVCR2",
+          "LAG3",
+          "TOX",
+          "ENTPD1"
+        ],
+        "axes:proliferation": [
+          "MKI67",
+          "TOP2A",
+          "PCNA",
+          "MCM2",
+          "TYMS"
+        ],
+        "axes:cytotoxicity": [
+          "GZMB",
+          "PRF1",
+          "CTSW",
+          "FGFBP2"
+        ],
+        "axes:persistence": [
+          "IL7R",
+          "BCL2",
+          "TCF7"
+        ],
+        "controls:dissociation": [
+          "FOS",
+          "JUN",
+          "JUNB",
+          "HSPA1A",
+          "EGR1"
+        ],
+        "controls:tcr_signal": [
+          "NR4A1",
+          "NR4A2",
+          "NR4A3",
+          "EGR2"
+        ],
+        "controls:myeloid_inflammation": [
+          "CXCL9",
+          "CXCL10",
+          "STAT1",
+          "IRF1"
+        ],
+        "controls:antigen_presentation": [
+          "HLA-A",
+          "HLA-B",
+          "B2M",
+          "TAP1"
+        ]
+      },
+      "overlap_jaccard": {
+        "state:Memory": {
+          "state:Memory": 1.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.16666666666666666,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "state:Activated": {
+          "state:Memory": 0.0,
+          "state:Activated": 1.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "state:Cytotoxic": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 1.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 1.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "state:Dysfunctional": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 1.0,
+          "axes:dysfunction": 1.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "axes:dysfunction": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 1.0,
+          "axes:dysfunction": 1.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "axes:proliferation": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 1.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "axes:cytotoxicity": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 1.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 1.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "axes:persistence": {
+          "state:Memory": 0.16666666666666666,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 1.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "controls:dissociation": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 1.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "controls:tcr_signal": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 1.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "controls:myeloid_inflammation": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 1.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "controls:antigen_presentation": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 1.0
+        }
+      },
+      "cd8_cells": 723,
+      "cd8_state_counts": {
+        "Memory": 503,
+        "Activated": 103,
+        "Cytotoxic": 0,
+        "Dysfunctional": 12,
+        "Unknown": 105
+      },
+      "heldout_markers": {
+        "assessable_cells": 472,
+        "concordance": 0.8516949152542372,
+        "kappa": 0.10236905020647642,
+        "scope": "Independent markers, not independent biological labels; no thresholds tuned to concordance"
+      },
+      "confounder_spearman": {
+        "state:Memory": {
+          "detected_genes": 0.13275300699754478,
+          "dissociation": 0.027373741164573015
+        },
+        "state:Activated": {
+          "detected_genes": -0.07127920826958811,
+          "dissociation": 0.3262009038720909
+        },
+        "state:Cytotoxic": {
+          "detected_genes": 0.06059428485053872,
+          "dissociation": -0.03855234205648583
+        },
+        "state:Dysfunctional": {
+          "detected_genes": 0.09016900682195128,
+          "dissociation": -0.045939161272311124
+        },
+        "held_out:Memory": {
+          "detected_genes": 0.08824703108234885,
+          "dissociation": -0.07119650669391855
+        },
+        "held_out:Activated": {
+          "detected_genes": -0.076938479005367,
+          "dissociation": 0.14778065695950487
+        },
+        "held_out:Cytotoxic": {
+          "detected_genes": -0.061441414245819025,
+          "dissociation": 0.13277032014409096
+        },
+        "held_out:Dysfunctional": {
+          "detected_genes": 0.08052770178986679,
+          "dissociation": -0.0798433943416241
+        },
+        "axes:dysfunction": {
+          "detected_genes": 0.09016900682195128,
+          "dissociation": -0.045939161272311124
+        },
+        "axes:proliferation": {
+          "detected_genes": -0.06111453101012177,
+          "dissociation": -0.0035376305612611434
+        },
+        "axes:cytotoxicity": {
+          "detected_genes": 0.06059428485053872,
+          "dissociation": -0.03855234205648583
+        },
+        "axes:persistence": {
+          "detected_genes": 0.10318878463277685,
+          "dissociation": 0.02840204652808297
+        },
+        "controls:dissociation": {
+          "detected_genes": -0.12115092880693118,
+          "dissociation": 1.0
+        },
+        "controls:tcr_signal": {
+          "detected_genes": -0.1259965403885546,
+          "dissociation": 0.46715223515231036
+        },
+        "controls:myeloid_inflammation": {
+          "detected_genes": -0.014064574957550043,
+          "dissociation": 0.17564602899375023
+        },
+        "controls:antigen_presentation": {
+          "detected_genes": 0.18531517957776383,
+          "dissociation": -0.0043704387626117
+        }
+      },
+      "depth_quantiles": [
+        53.0,
+        2535.0,
+        3446.0,
+        4680.6,
+        14432.0
+      ],
+      "library_sha256": "b23157b4faa921f5ae14316e7c028f95d602d3c33cebdb02b39340e643335d95"
+    },
+    "state_source": "cd8-rank-v1 provisional inference",
+    "baseline_environment": {
+      "tumor_fraction": 0.020573038985439173,
+      "myeloid_fraction": 0.015688116486613432,
+      "denominator": "all input cells of selected biopsy; provisional lineage labels",
+      "site": null,
+      "chemistry": null
+    },
+    "rates_fitted": false,
+    "source_license": "CC-BY-4.0",
+    "expression_exported": false
+  },
+  "real_runs": {
+    "anti-pd1": {
+      "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/real-anti-pd1",
+      "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/real-anti-pd1/explorer.html",
+      "results_zip": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/real-anti-pd1.zip",
+      "seed": 21,
+      "initial_cells": 400,
+      "final_alive": 397,
+      "created_cells": 400,
+      "observed_hours": 24.0,
+      "requested_hours": 24,
+      "stop_reason": "completed",
+      "complete": true,
+      "events": {
+        "attack": 109,
+        "death": 3,
+        "transition": 3,
+        "clearance_timeout": 1
+      },
+      "decisions": 38335,
+      "final_cd8_counts": {
+        "Memory": 16,
+        "Activated": 5,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "policy": "stochastic-hazards-v1",
+      "journal_root": "e7d4edeb33a710590445f7d07b45464939efbb9e29d7c0a0e11c2fa8b51931bc",
+      "rates_fitted": false,
+      "evidence_class": "exploratory software experiment",
+      "clinical_validation": false,
+      "counterfactual": false,
+      "geometry_measured": false,
+      "drug_units": "normalized assumed exposure, not clinical dose"
+    },
+    "exposure-zero": {
+      "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/real-exposure-zero",
+      "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/real-exposure-zero/explorer.html",
+      "results_zip": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/real-exposure-zero.zip",
+      "seed": 21,
+      "initial_cells": 400,
+      "final_alive": 400,
+      "created_cells": 400,
+      "observed_hours": 24.0,
+      "requested_hours": 24,
+      "stop_reason": "completed",
+      "complete": true,
+      "events": {
+        "attack": 135,
+        "transition": 4
+      },
+      "decisions": 38400,
+      "final_cd8_counts": {
+        "Memory": 16,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 4,
+        "Unknown": 3
+      },
+      "policy": "stochastic-hazards-v1",
+      "journal_root": "752f38951a2168ba5bcfd019e638ecb1170561e897e7bc7a5b57ac1bbaf04fe9",
+      "rates_fitted": false,
+      "evidence_class": "exploratory software experiment",
+      "clinical_validation": false,
+      "counterfactual": true,
+      "geometry_measured": false,
+      "drug_units": "normalized assumed exposure, not clinical dose"
+    },
+    "recognition-off": {
+      "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/real-recognition-off",
+      "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/real-recognition-off/explorer.html",
+      "results_zip": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/real-recognition-off.zip",
+      "seed": 21,
+      "initial_cells": 400,
+      "final_alive": 400,
+      "created_cells": 400,
+      "observed_hours": 24.0,
+      "requested_hours": 24,
+      "stop_reason": "completed",
+      "complete": true,
+      "events": {
+        "transition": 1
+      },
+      "decisions": 38400,
+      "final_cd8_counts": {
+        "Memory": 18,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "policy": "stochastic-hazards-v1",
+      "journal_root": "377890dd567e2cba816d461ce2b4a1a22a50ede16d29014c96846a5999ea1024",
+      "rates_fitted": false,
+      "evidence_class": "exploratory software experiment",
+      "clinical_validation": false,
+      "counterfactual": false,
+      "geometry_measured": false,
+      "drug_units": "normalized assumed exposure, not clinical dose"
+    }
+  },
+  "real_comparison": {
+    "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/real-comparison",
+    "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/real-comparison/explorer.html",
+    "same_input": true,
+    "same_seed": true,
+    "same_initial_positions": true,
+    "shared_hours": 24.0,
+    "configuration_differences": {
+      "schedule": [
+        [
+          {
+            "start_hour": 2.0,
+            "end_hour": 96.0,
+            "exposure": 0.8
+          }
+        ],
+        [
+          {
+            "start_hour": 2.0,
+            "end_hour": 96.0,
+            "exposure": 0.0
+          }
+        ]
+      ]
+    },
+    "arm_a": "anti-pd1",
+    "arm_b": "exposure-zero",
+    "interpretation": "Paired simulated scenarios. Exposure-zero is a hypothesis-dependent counterfactual, not an observed untreated biopsy."
+  },
+  "reopened_zip_verified": true,
+  "own_input": {
+    "sources": [
+      {
+        "name": "own.h5ad",
+        "bytes": 81032,
+        "sha256": "b8388adde6d7e1c62c964334719949d8f2794762c188a7c4772757b817de3325"
+      },
+      {
+        "name": "own-metadata.tsv",
+        "bytes": 2766,
+        "sha256": "0bb3d4087ecb4daf7f8d933e48d0c2b8ed9340fcbb4de4f54ad5e8315fafadd1"
+      }
+    ],
+    "dataset": null,
+    "input_kind": "synthetic",
+    "input_cells": 60,
+    "biopsy_cells": 30,
+    "exported_cells": 30,
+    "sample_id": "own_b",
+    "annotation": "user supplied cell types; not validated by this software",
+    "annotation_recipe": null,
+    "full_composition": {
+      "Melanoma": 15,
+      "Myeloid": 5,
+      "CD8_T": 6,
+      "Fibroblast": 2,
+      "T_cell": 2
+    },
+    "sampled_composition": {
+      "Melanoma": 15,
+      "Myeloid": 5,
+      "CD8_T": 6,
+      "Fibroblast": 2,
+      "T_cell": 2
+    },
+    "sampling": "stratified without replacement; proportional largest-remainder quotas by lineage when stratified; no enrichment",
+    "subsample_seed": 21,
+    "count_layer": "counts",
+    "gene_coverage": {
+      "Melanoma": [
+        "MLANA",
+        "PMEL",
+        "TYRP1",
+        "DCT",
+        "SOX10",
+        "MITF"
+      ],
+      "T_cell": [
+        "CD3D",
+        "CD3E",
+        "TRAC",
+        "CD247"
+      ],
+      "NK": [
+        "NKG7",
+        "GNLY",
+        "KLRD1",
+        "NCR1"
+      ],
+      "Myeloid": [
+        "LST1",
+        "LYZ",
+        "FCER1G",
+        "CTSS",
+        "AIF1"
+      ],
+      "Fibroblast": [
+        "COL1A1",
+        "COL1A2",
+        "DCN",
+        "LUM"
+      ],
+      "Endothelial": [
+        "PECAM1",
+        "VWF",
+        "EMCN",
+        "KDR"
+      ],
+      "B_cell": [
+        "MS4A1",
+        "CD79A",
+        "CD79B",
+        "CD19"
+      ],
+      "cytotoxicity": [
+        "PRF1",
+        "GZMB",
+        "GZMH",
+        "GNLY"
+      ],
+      "proliferation": [
+        "MKI67",
+        "TOP2A",
+        "PCNA",
+        "MCM2"
+      ],
+      "interferon": [
+        "ISG15",
+        "IFIT1",
+        "IFIT3",
+        "STAT1"
+      ],
+      "CD8": [
+        "CD8A",
+        "CD8B"
+      ]
+    },
+    "program_transform": "mean log1p(CP10K) over available panel genes; coverage explicit; 1-exp(-score/2); dynamic CD8 axes use separately documented capped ranks",
+    "coordinates": "absent; simulated geometry is a declared hypothesis",
+    "program_audit": {
+      "library": {
+        "version": "cd8-rank-v1",
+        "evidence_class": "inferred, provisional marker recipe",
+        "source": "A05; Li Cell 2019 doi:10.1016/j.cell.2018.11.043; Sade-Feldman Cell 2018 doi:10.1016/j.cell.2018.10.038",
+        "method": "Capped positive-gene within-cell rank enrichment, U-statistic normalization; not calibrated state probabilities",
+        "state": {
+          "Memory": [
+            "TCF7",
+            "CCR7",
+            "SELL",
+            "LEF1"
+          ],
+          "Activated": [
+            "GZMK",
+            "CD69",
+            "IL2RA",
+            "TNFRSF9"
+          ],
+          "Cytotoxic": [
+            "GZMB",
+            "PRF1",
+            "CTSW",
+            "FGFBP2"
+          ],
+          "Dysfunctional": [
+            "PDCD1",
+            "HAVCR2",
+            "LAG3",
+            "TOX",
+            "ENTPD1"
+          ]
+        },
+        "held_out": {
+          "Memory": [
+            "IL7R",
+            "BCL2"
+          ],
+          "Activated": [
+            "NR4A2",
+            "EGR2"
+          ],
+          "Cytotoxic": [
+            "GZMH",
+            "CCL5"
+          ],
+          "Dysfunctional": [
+            "CXCL13",
+            "LAYN",
+            "TIGIT"
+          ]
+        },
+        "axes": {
+          "dysfunction": [
+            "PDCD1",
+            "HAVCR2",
+            "LAG3",
+            "TOX",
+            "ENTPD1"
+          ],
+          "proliferation": [
+            "MKI67",
+            "TOP2A",
+            "PCNA",
+            "MCM2",
+            "TYMS"
+          ],
+          "cytotoxicity": [
+            "GZMB",
+            "PRF1",
+            "CTSW",
+            "FGFBP2"
+          ],
+          "persistence": [
+            "IL7R",
+            "BCL2",
+            "TCF7"
+          ]
+        },
+        "controls": {
+          "dissociation": [
+            "FOS",
+            "JUN",
+            "JUNB",
+            "HSPA1A",
+            "EGR1"
+          ],
+          "tcr_signal": [
+            "NR4A1",
+            "NR4A2",
+            "NR4A3",
+            "EGR2"
+          ],
+          "myeloid_inflammation": [
+            "CXCL9",
+            "CXCL10",
+            "STAT1",
+            "IRF1"
+          ],
+          "antigen_presentation": [
+            "HLA-A",
+            "HLA-B",
+            "B2M",
+            "TAP1"
+          ]
+        },
+        "max_rank": 1500,
+        "min_detected_state_markers": 2,
+        "min_margin": 0.08,
+        "min_state_score": 0.15,
+        "limits": "Not Tpex diagnosis, CNV validation, exhaustion protein measurement, or a training-fold reference."
+      },
+      "coverage": {
+        "state:Memory": [
+          "TCF7",
+          "CCR7",
+          "SELL",
+          "LEF1"
+        ],
+        "state:Activated": [
+          "GZMK",
+          "CD69",
+          "IL2RA",
+          "TNFRSF9"
+        ],
+        "state:Cytotoxic": [
+          "GZMB",
+          "PRF1",
+          "CTSW",
+          "FGFBP2"
+        ],
+        "state:Dysfunctional": [
+          "PDCD1",
+          "HAVCR2",
+          "LAG3",
+          "TOX",
+          "ENTPD1"
+        ],
+        "held_out:Memory": [
+          "IL7R",
+          "BCL2"
+        ],
+        "held_out:Activated": [
+          "NR4A2",
+          "EGR2"
+        ],
+        "held_out:Cytotoxic": [
+          "GZMH",
+          "CCL5"
+        ],
+        "held_out:Dysfunctional": [
+          "CXCL13",
+          "LAYN",
+          "TIGIT"
+        ],
+        "axes:dysfunction": [
+          "PDCD1",
+          "HAVCR2",
+          "LAG3",
+          "TOX",
+          "ENTPD1"
+        ],
+        "axes:proliferation": [
+          "MKI67",
+          "TOP2A",
+          "PCNA",
+          "MCM2",
+          "TYMS"
+        ],
+        "axes:cytotoxicity": [
+          "GZMB",
+          "PRF1",
+          "CTSW",
+          "FGFBP2"
+        ],
+        "axes:persistence": [
+          "IL7R",
+          "BCL2",
+          "TCF7"
+        ],
+        "controls:dissociation": [
+          "FOS",
+          "JUN",
+          "JUNB",
+          "HSPA1A",
+          "EGR1"
+        ],
+        "controls:tcr_signal": [
+          "NR4A1",
+          "NR4A2",
+          "NR4A3",
+          "EGR2"
+        ],
+        "controls:myeloid_inflammation": [
+          "CXCL9",
+          "CXCL10",
+          "STAT1",
+          "IRF1"
+        ],
+        "controls:antigen_presentation": [
+          "HLA-A",
+          "HLA-B",
+          "B2M",
+          "TAP1"
+        ]
+      },
+      "overlap_jaccard": {
+        "state:Memory": {
+          "state:Memory": 1.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.16666666666666666,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "state:Activated": {
+          "state:Memory": 0.0,
+          "state:Activated": 1.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "state:Cytotoxic": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 1.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 1.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "state:Dysfunctional": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 1.0,
+          "axes:dysfunction": 1.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "axes:dysfunction": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 1.0,
+          "axes:dysfunction": 1.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "axes:proliferation": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 1.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "axes:cytotoxicity": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 1.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 1.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "axes:persistence": {
+          "state:Memory": 0.16666666666666666,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 1.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "controls:dissociation": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 1.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "controls:tcr_signal": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 1.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "controls:myeloid_inflammation": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 1.0,
+          "controls:antigen_presentation": 0.0
+        },
+        "controls:antigen_presentation": {
+          "state:Memory": 0.0,
+          "state:Activated": 0.0,
+          "state:Cytotoxic": 0.0,
+          "state:Dysfunctional": 0.0,
+          "axes:dysfunction": 0.0,
+          "axes:proliferation": 0.0,
+          "axes:cytotoxicity": 0.0,
+          "axes:persistence": 0.0,
+          "controls:dissociation": 0.0,
+          "controls:tcr_signal": 0.0,
+          "controls:myeloid_inflammation": 0.0,
+          "controls:antigen_presentation": 1.0
+        }
+      },
+      "cd8_cells": 6,
+      "cd8_state_counts": {
+        "Memory": 2,
+        "Activated": 0,
+        "Cytotoxic": 4,
+        "Dysfunctional": 0,
+        "Unknown": 0
+      },
+      "heldout_markers": {
+        "assessable_cells": 6,
+        "concordance": 1.0,
+        "kappa": 1.0,
+        "scope": "Independent markers, not independent biological labels; no thresholds tuned to concordance"
+      },
+      "confounder_spearman": {
+        "state:Memory": {
+          "detected_genes": 0.2571428571428572,
+          "dissociation": -0.13093073414159545
+        },
+        "state:Activated": {
+          "detected_genes": -0.3946648814672956,
+          "dissociation": 0.6956083436402525
+        },
+        "state:Cytotoxic": {
+          "detected_genes": -0.6,
+          "dissociation": 0.13093073414159545
+        },
+        "state:Dysfunctional": {
+          "detected_genes": 0.5408987230262506,
+          "dissociation": -0.3098386676965934
+        },
+        "held_out:Memory": {
+          "detected_genes": 0.23190841426097936,
+          "dissociation": -0.5313689313240573
+        },
+        "held_out:Activated": {
+          "detected_genes": 0.5408987230262506,
+          "dissociation": -0.3098386676965934
+        },
+        "held_out:Cytotoxic": {
+          "detected_genes": -0.7714285714285715,
+          "dissociation": 0.6546536707079772
+        },
+        "held_out:Dysfunctional": {
+          "detected_genes": 0.030358837035945815,
+          "dissociation": -0.4173650061841515
+        },
+        "axes:dysfunction": {
+          "detected_genes": 0.5408987230262506,
+          "dissociation": -0.3098386676965934
+        },
+        "axes:proliferation": {
+          "detected_genes": 0.15179418517972906,
+          "dissociation": -0.4173650061841515
+        },
+        "axes:cytotoxicity": {
+          "detected_genes": -0.6,
+          "dissociation": 0.13093073414159545
+        },
+        "axes:persistence": {
+          "detected_genes": 0.23190841426097936,
+          "dissociation": -0.5313689313240573
+        },
+        "controls:dissociation": {
+          "detected_genes": -0.6546536707079772,
+          "dissociation": 1.0
+        },
+        "controls:tcr_signal": {
+          "detected_genes": 0.3946648814672956,
+          "dissociation": -0.4173650061841515
+        },
+        "controls:myeloid_inflammation": {
+          "detected_genes": 0.304255531702266,
+          "dissociation": -0.3098386676965934
+        },
+        "controls:antigen_presentation": {
+          "detected_genes": -0.7142857142857143,
+          "dissociation": 0.13093073414159545
+        }
+      },
+      "depth_quantiles": [
+        12.0,
+        14.0,
+        18.0,
+        24.200000000000003,
+        29.0
+      ],
+      "library_sha256": "b23157b4faa921f5ae14316e7c028f95d602d3c33cebdb02b39340e643335d95"
+    },
+    "state_source": "user supplied; not validated",
+    "baseline_environment": {
+      "tumor_fraction": 0.5,
+      "myeloid_fraction": 0.16666666666666666,
+      "denominator": "all input cells of selected biopsy; provisional lineage labels",
+      "site": null,
+      "chemistry": null
+    },
+    "rates_fitted": false,
+    "source_license": "MIT; synthetic own-data interface fixture",
+    "expression_exported": false
+  },
+  "own_run": {
+    "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/own-run",
+    "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/own-run/explorer.html",
+    "results_zip": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/own-run.zip",
+    "seed": 21,
+    "initial_cells": 30,
+    "final_alive": 29,
+    "created_cells": 30,
+    "observed_hours": 4.0,
+    "requested_hours": 4,
+    "stop_reason": "completed",
+    "complete": true,
+    "events": {
+      "attack": 26,
+      "death": 1,
+      "phagocytosis": 1
+    },
+    "decisions": 474,
+    "final_cd8_counts": {
+      "Memory": 2,
+      "Activated": 0,
+      "Cytotoxic": 4,
+      "Dysfunctional": 0,
+      "Unknown": 0
+    },
+    "policy": "stochastic-hazards-v1",
+    "journal_root": "9a83d433b2b96ed23fb3595978f836bdb845d74516d9dfd6941e565e62b02716",
+    "rates_fitted": false,
+    "evidence_class": "exploratory software experiment",
+    "clinical_validation": false,
+    "counterfactual": false,
+    "geometry_measured": false,
+    "drug_units": "normalized assumed exposure, not clinical dose"
+  },
+  "recovery": {
+    "output": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/own-recovered",
+    "explorer": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/own-recovered/explorer.html",
+    "results_zip": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/v04-final/own-recovered.zip",
+    "seed": 21,
+    "initial_cells": 30,
+    "final_alive": 29,
+    "created_cells": 30,
+    "observed_hours": 6.0,
+    "requested_hours": 6,
+    "stop_reason": "completed",
+    "complete": true,
+    "events": {
+      "attack": 44,
+      "death": 1,
+      "phagocytosis": 1
+    },
+    "decisions": 706,
+    "final_cd8_counts": {
+      "Memory": 2,
+      "Activated": 0,
+      "Cytotoxic": 4,
+      "Dysfunctional": 0,
+      "Unknown": 0
+    },
+    "policy": "stochastic-hazards-v1",
+    "journal_root": "be1cae25940b5101c94f93aa5cceefe67e9ce3130dfa1165a951733fcddc2f13",
+    "rates_fitted": false,
+    "evidence_class": "exploratory software experiment",
+    "clinical_validation": false,
+    "counterfactual": false,
+    "geometry_measured": false,
+    "drug_units": "normalized assumed exposure, not clinical dose"
+  },
+  "invalid_input_errors": {
+    "normalized": "Provide raw nonnegative integer counts; choose --layer counts for normalized H5AD objects.",
+    "mixed_samples": "Multiple samples: choose --sample-id; never pool biopsies."
+  },
+  "seconds": 45.402286916039884,
+  "artifact_hashes": {
+    "own-recovered/summary.json": "5dc5b2adfcfff30c53cc8b6d94e1d81a5c0cfc5a6702b3bcf58fa4baa3291b87",
+    "own-run/summary.json": "8705967a2d43e4ad0e29e353566ec9052b9bc509607af1ac14559cecf7ec80fe",
+    "real-exposure-zero/summary.json": "4977aaf74548060aa288489aa0ccd2bf3a90a2ede3757b0c2cb68aa99a2550dc",
+    "real-anti-pd1/summary.json": "84f10e229922f49f0bd586b4e832bb8cff7bbb2ce2a8dd886ae4fd90691e4e77",
+    "real-recognition-off/summary.json": "1d86efa96f5211e33168f652d96f01846a748be4c1ee549aff784b1fb191e64c",
+    "synthetic/exposure-zero/summary.json": "c54cdf416ad8dd6ea5319a708504762e43474d240903d615588bb7c7f65fad5c",
+    "synthetic/anti-pd1/summary.json": "f16c91f57d223f8a2fe4f8deeb219ab4c067e7a8f55b8c2cca9a1d26f418c725"
+  }
+}

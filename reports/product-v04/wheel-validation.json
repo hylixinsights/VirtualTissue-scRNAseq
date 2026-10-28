@@ -1,0 +1,13 @@
+{
+  "version": "0.4.0",
+  "python": "3.12.13",
+  "installed_module": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv-wheel-v04/lib/python3.12/site-packages/vtsc",
+  "isolated_import": true,
+  "working_directory": "/var/folders/b1/43cs4y810sn370h8x131ntd40000gn/T/vtsc-wheel-ipml8kim",
+  "all_assets_present": true,
+  "paired_demo_completed": true,
+  "zip_reopened_verified": true,
+  "wheel_bytes": 86807,
+  "wheel_sha256": "bf4e1be47c194c0023f09358c5d205562f72c88ab363e593932a3a20bb0c5e8d",
+  "scope": "Clean venv without system site packages; wheel installed with dependencies; imports isolated from checkout"
+}

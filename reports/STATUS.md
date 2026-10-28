@@ -1,12 +1,11 @@
 # Execution status — 2026-10-28
 
-The independent **v0.3 melanoma software workflow** follows the user's A04
-correction: real dissociated 10x melanoma, own-data inputs, assumed 2D geometry,
-interacting agents and an offline tissue viewer. PBMC/nonspatial v0.2 is legacy.
-See `README.md`, `reports/software/melanoma-validation.md` and the explicit
-comparison in `reports/plan-alignment-audit-2026-10-28.md`. The prototype does not
-implement the original CD8 state-prediction model. This does not
-pass or alter the clinical research gates below; no clinical model was fitted.
+The independent **v0.4 melanoma/anti-PD-1 product** implements dynamic CD8
+states, shared hazards, own-data input, explicit assumptions, matched controls
+and an inspectable viewer under A05. See [product verification](product-v04/VALIDATION.md)
+and the separate [P-task board](product-v04/task-board.json). Synthetic estimator
+checks and software tests do not pass the clinical research gates below.
+The T/G board and claims ledger are unchanged; no SPECIAL response model was fitted.
 
 The planned prediction study remains stopped at a necessary feasibility
 condition after the user-approved separate-stratum expansion audit.

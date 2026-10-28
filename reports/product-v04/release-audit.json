@@ -1,0 +1,16 @@
+{
+  "implementation_commit": "a6e2d0e7d0818dba58932dd6de249639086dc8cf",
+  "diff_check": "passed",
+  "untracked_large_inputs": false,
+  "largest_new_file_bytes": 330243,
+  "remote_configured": false,
+  "source_data_excluded_from_package": true,
+  "local_publication_only": true,
+  "pending_scientific_work": [
+    "Lin actual expression alignment",
+    "Independent validated CD8 state reference",
+    "Original SPECIAL T/G tasks unchanged"
+  ],
+  "test_count": 51,
+  "notebooks_executed": 3
+}

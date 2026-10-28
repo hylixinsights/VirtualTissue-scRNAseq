@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="45" time="4.581" timestamp="2026-10-28T00:47:07.686079-03:00" hostname="MacBook-Pro-de-Helder.local"><testcase classname="tests.test_dynamic_melanoma" name="test_generator_conserves_mass_and_matches_oneway_analytic" time="0.003" /><testcase classname="tests.test_dynamic_melanoma" name="test_competing_probabilities_extremes_and_input_rejection" time="0.000" /><testcase classname="tests.test_dynamic_melanoma" name="test_drug_is_decoupled_without_checkpoint_and_recognition_is_separate" time="0.000" /><testcase classname="tests.test_dynamic_melanoma" name="test_runtime_transitions_really_change_axes_preserve_rna_and_journal" time="0.056" /><testcase classname="tests.test_dynamic_melanoma" name="test_provider_only_chooses_legal_state_transitions" time="0.000" /><testcase classname="tests.test_dynamic_melanoma" name="test_control_identity_zero_drug_frozen_transition_off_and_dead_irreversible" time="0.105" /><testcase classname="tests.test_dynamic_melanoma" name="test_division_influx_accounting_and_unknown_not_invented" time="0.012" /><testcase classname="tests.test_dynamic_melanoma" name="test_spatial_limits_recognition_off_and_paired_initial_positions" time="0.042" /><testcase classname="tests.test_dynamic_melanoma" name="test_common_kernel_mean_ensemble_not_a_single_seed" time="1.221" /><testcase classname="tests.test_dynamic_melanoma" name="test_dm_m0_shift_estimation_and_leakage_guard" time="0.016" /><testcase classname="tests.test_dynamic_melanoma" name="test_input_v2_raw_layer_and_bad_states" time="0.074"><failure message="TypeError: Cannot setitem on a Categorical with a new category (Myeloid), set the categories first">tmp_path = PosixPath('/private/var/folders/b1/43cs4y810sn370h8x131ntd40000gn/T/pytest-of-heldernakaya/pytest-22/test_input_v2_raw_layer_and_ba0')
+
+    def test_input_v2_raw_layer_and_bad_states(tmp_path):
+        import anndata as ad
+        f=tmp_path/'cells.h5ad';synthetic_melanoma(f,40)
+        a=ad.read_h5ad(f);a.raw=a.copy();a.X=a.X.astype(float);a.X.data=np.log1p(a.X.data);a.write_h5ad(f)
+        prepare_tissue(f,tmp_path/'good.zip',layer='raw');p=read_tissue_bundle(tmp_path/'good.zip');assert p['schema_version']==2
+&gt;       a=ad.read_h5ad(f);a.obs.loc[a.obs.cell_type=='CD8_T','cd8_state']='Myeloid';a.write_h5ad(f)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_dynamic_melanoma.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv-software/lib/python3.12/site-packages/pandas/core/indexing.py:1010: in __setitem__
+    iloc._setitem_with_indexer(indexer, value, self.name)
+.venv-software/lib/python3.12/site-packages/pandas/core/indexing.py:2651: in _setitem_with_indexer
+    self._setitem_with_indexer_split_path(indexer, value, name)
+.venv-software/lib/python3.12/site-packages/pandas/core/indexing.py:2741: in _setitem_with_indexer_split_path
+    self._setitem_single_column(loc, value, pi)
+.venv-software/lib/python3.12/site-packages/pandas/core/indexing.py:2898: in _setitem_single_column
+    self.obj._mgr.column_setitem(loc, plane_indexer, value)
+.venv-software/lib/python3.12/site-packages/pandas/core/internals/managers.py:1568: in column_setitem
+    new_mgr = col_mgr.setitem((idx,), value)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-software/lib/python3.12/site-packages/pandas/core/internals/managers.py:625: in setitem
+    return self.apply("setitem", indexer=indexer, value=value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-software/lib/python3.12/site-packages/pandas/core/internals/managers.py:456: in apply
+    applied = getattr(b, f)(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+.venv-software/lib/python3.12/site-packages/pandas/core/internals/blocks.py:1793: in setitem
+    target[indexer] = value
+    ^^^^^^^^^^^^^^^
+.venv-software/lib/python3.12/site-packages/pandas/core/arrays/_mixins.py:361: in __setitem__
+    value = self._validate_setitem_value(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-software/lib/python3.12/site-packages/pandas/core/arrays/categorical.py:1842: in _validate_setitem_value
+    return self._validate_scalar(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ['', 'Activated', '', '', 'Memory', ..., '', '', '', 'Cytotoxic', '']
+Length: 40
+Categories (5, str): ['', 'Activated', 'Cytotoxic', 'Dysfunctional', 'Memory']
+fill_value = 'Myeloid'
+
+    def _validate_scalar(self, fill_value):
+        """
+        Convert a user-facing fill_value to a representation to use with our
+        underlying ndarray, raising TypeError if this is not possible.
+    
+        Parameters
+        ----------
+        fill_value : object
+    
+        Returns
+        -------
+        fill_value : int
+    
+        Raises
+        ------
+        TypeError
+        """
+    
+        if is_valid_na_for_dtype(fill_value, self.categories.dtype):
+            fill_value = -1
+        elif fill_value in self.categories:
+            fill_value = self._unbox_scalar(fill_value)
+        else:
+&gt;           raise TypeError(
+                "Cannot setitem on a Categorical with a new "
+                f"category ({fill_value}), set the categories first"
+            ) from None
+E           TypeError: Cannot setitem on a Categorical with a new category (Myeloid), set the categories first
+
+.venv-software/lib/python3.12/site-packages/pandas/core/arrays/categorical.py:1867: TypeError</failure></testcase><testcase classname="tests.test_inputs_and_workflow" name="test_input_schema_rejects_normalized_counts_duplicate_ids_and_metadata_mismatch" time="0.020" /><testcase classname="tests.test_inputs_and_workflow" name="test_metadata_join_is_by_barcode_not_position_and_mtx_transposes" time="0.012" /><testcase classname="tests.test_inputs_and_workflow" name="test_own_h5ad_counts_layer_and_custom_state_model" time="0.351" /><testcase classname="tests.test_inputs_and_workflow" name="test_multisample_selection_is_required" time="0.018" /><testcase classname="tests.test_inputs_and_workflow" name="test_bundle_is_repeatable_and_rejects_tampering_and_extra_members" time="0.015" /><testcase classname="tests.test_inputs_and_workflow" name="test_end_to_end_outputs_reopen_control_and_comparison" time="0.198" /><testcase classname="tests.test_inputs_and_workflow" name="test_explorer_escapes_source_strings" time="0.001" /><testcase classname="tests.test_inputs_and_workflow" name="test_cli_reports_invalid_input_without_traceback" time="0.574" /><testcase classname="tests.test_provenance" name="test_truncated_download_is_rejected" time="0.001" /><testcase classname="tests.test_provenance" name="test_same_size_corruption_is_rejected" time="0.000" /><testcase classname="tests.test_provenance" name="test_verified_requires_source_checksum" time="0.000" /><testcase classname="tests.test_provenance" name="test_missing_and_in_progress_are_not_verified" time="0.000" /><testcase classname="tests.test_provenance" name="test_freeze_detects_config_changes" time="0.001" /><testcase classname="tests.test_simulation" name="test_no_events_control_is_identical_at_every_time" time="0.000" /><testcase classname="tests.test_simulation" name="test_seed_conservation_event_replay_and_input_immutability" time="0.001" /><testcase classname="tests.test_simulation" name="test_analytic_transition_and_monte_carlo_agree" time="0.062" /><testcase classname="tests.test_simulation" name="test_linear_birth_death_influx_expectation" time="0.000" /><testcase classname="tests.test_simulation" name="test_caps_are_reported_as_incomplete_and_do_not_invent_followup" time="0.001" /><testcase classname="tests.test_simulation" name="test_extinction_remains_zero_without_influx" time="0.000" /><testcase classname="tests.test_simulation" name="test_bad_rates_rejected[-1]" time="0.000" /><testcase classname="tests.test_simulation" name="test_bad_rates_rejected[nan]" time="0.000" /><testcase classname="tests.test_simulation" name="test_bad_rates_rejected[inf]" time="0.000" /><testcase classname="tests.test_simulation" name="test_bad_rates_rejected[True]" time="0.000" /><testcase classname="tests.test_simulation" name="test_bad_rates_rejected[0.1]" time="0.000" /><testcase classname="tests.test_simulation" name="test_bad_states_duplicate_edges_and_initial_cap_rejected" time="0.000" /><testcase classname="tests.test_tissue" name="test_recognition_contact_and_fatigue_gate_attack" time="0.000" /><testcase classname="tests.test_tissue" name="test_interactions_decisions_accounting_replay_and_negative_control" time="0.158" /><testcase classname="tests.test_tissue" name="test_geometry_excludes_overlap_and_migration_is_speed_bounded" time="0.032" /><testcase classname="tests.test_tissue" name="test_frozen_control_and_seed_layout" time="0.020" /><testcase classname="tests.test_tissue" name="test_own_data_tissue_bundle_and_saved_viewer" time="0.075" /><testcase classname="tests.test_tissue" name="test_annotation_does_not_hide_non_tumor_cells_and_multisample_rejected" time="0.133" /><testcase classname="tests.test_tissue" name="test_recording_cap_reports_observed_duration" time="0.010" /><testcase classname="tests.test_tissue" name="test_cellranger_h5_preserves_raw_counts_and_excludes_antibody" time="0.003" /><testcase classname="tests.test_tissue" name="test_births_cannot_overflow_recording_budget" time="0.038" /></testsuite></testsuites>

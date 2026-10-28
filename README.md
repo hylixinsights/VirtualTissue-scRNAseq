@@ -1,189 +1,152 @@
 # VirtualTissue-scRNAseq
 
-**Build an inspectable melanoma agent simulation from dissociated 10x single-cell RNA-seq.**
+**A testable melanoma simulator with dynamic CD8 states, explicit anti-PD-1 exposure and inspectable decisions.**
 
-Load one biopsy, retain its tumor and microenvironment cells, initialize RNA programs,
-and run cells that move, encounter neighbors, choose permitted actions, grow,
-divide, attack or clear dead cells. Open the portable offline viewer to follow a
-cell's identity, local context, allowed actions, chosen action and outcome.
+Version **0.4.0** initializes one dissociated biopsy and simulates cells moving,
+encountering targets, changing CD8 state, proliferating, killing, dying and being
+cleared. An offline viewer compares matched arms and shows the actual causal
+journal: permitted moves, hazards, probabilities, random draw, state age,
+contacts, checkpoint inhibition and drug exposure.
 
-![Melanoma agents and their recorded decisions](docs/images/melanoma_demo.png)
+This is an **exploratory implementation**, with assumed rates and geometry.
+It is **not a clinically validated treatment-response or patient-prediction
+model**. SPECIAL validation has its own unchanged task board and gates.
 
-This is a **v0.3 research software prototype for group testing**. RNA supplies
-initial labels and program scores. Spatial arrangement and kinetic rules are
-explicit hypotheses. Dissociated cells do not supply measured tissue positions.
-The model does not predict a patient's response or infer antigen recognition.
-It also does not yet implement the original SPECIAL plan for predicting CD8
-state changes in unseen patients. See the [requirement-by-requirement alignment
-audit](reports/plan-alignment-audit-2026-10-28.md); no scientific task or gate is
-completed by the demonstration alone.
+![Recorded anti-PD-1 and exposure-zero comparison](docs/images/melanoma_v04.png)
 
-The example is **dissociated human melanoma**, not PBMC or Xenium. The original
-v0.2 PBMC/CD8 state model addressed the wrong demonstration scope; it remains
-available only as a legacy regression fixture. The main workflow below uses
-the new interacting tissue engine.
+## Install and run an offline example
 
-## Start with real melanoma
-
-Python **3.12 or 3.13**, macOS/Linux/Windows. The download needs `curl` (included
-on current macOS, most Linux distributions and Windows 10+). After this version
-has been uploaded to GitHub:
+Use Python **3.12 or 3.13** in this checkout. After the owner publishes it, the
+intended repository is `https://github.com/hylixinsights/VirtualTissue-scRNAseq`.
+No remote publication is performed by this release.
 
 ```bash
-git clone https://github.com/hylixinsights/VirtualTissue-scRNAseq.git
-cd VirtualTissue-scRNAseq
 python -m venv .venv
-# macOS/Linux
 source .venv/bin/activate
 # Windows PowerShell: .venv\Scripts\Activate.ps1
-pip install -e ".[test]"
+python -m pip install -e ".[test,notebooks]"
+vtsc demo outputs/my-first-melanoma --cells 120 --hours 24 --seed 21
+vtsc explore outputs/my-first-melanoma/comparison --open
+```
 
+Choose a **new output name** for each run. The demo is generated synthetic data,
+not a patient. All workflows are offline after installation/source download.
+The viewer is self-contained; use a current Chrome/Edge/Safari/Firefox supporting
+`DecompressionStream` to open `explorer.html`, including directly from disk.
+
+## Run the public melanoma example
+
+```bash
 vtsc download-example example_data/melanoma10x
-vtsc prepare-tissue example_data/melanoma10x/filtered_feature_bc_matrix.h5 outputs/melanoma-input.zip --recipe melanoma-markers --max-cells 400
-vtsc run-tissue outputs/melanoma-input.zip outputs/melanoma-recognition --scenario declared-recognition --hours 24 --seed 21
-vtsc run-tissue outputs/melanoma-input.zip outputs/melanoma-control --scenario recognition-off --hours 24 --seed 21
-vtsc explore outputs/melanoma-recognition --open
+vtsc prepare-tissue example_data/melanoma10x/filtered_feature_bc_matrix.h5 outputs/melanoma-input.zip --recipe melanoma-markers --max-cells 400 --seed 21
+vtsc run-melanoma outputs/melanoma-input.zip outputs/anti-pd1 --arm anti-pd1 --hours 24 --seed 21
+vtsc run-melanoma outputs/melanoma-input.zip outputs/exposure-zero --arm exposure-zero --hours 24 --seed 21
+vtsc compare-melanoma outputs/anti-pd1.zip outputs/exposure-zero.zip outputs/comparison
+vtsc explore outputs/comparison --open
 ```
 
-The official matrix is about **57 MB**, pinned by SHA-256. Generated files stay
-under ignored `example_data/` and `outputs/`. Nothing is uploaded by these commands.
-For an existing checkout, start at environment creation rather than cloning.
+The pinned [10x DTC melanoma matrix](https://www.10xgenomics.com/datasets/10k-human-dtc-melanoma-GEM-X)
+is approximately 57 MB, CC BY 4.0, with 10,645 cells and 38,606 features. The source
+is lymphocyte rich. Proportional sampling preserves the measured composition
+within integer quotas; it does not enrich tumor or manufacture missing cells.
+Malignancy and the marker state recipe remain provisional. The recipe's real-data
+coverage, Unknown assignments and poor four-state separability are reported in
+[the validation report](reports/product-v04/VALIDATION.md). No state was added to
+force a desired demonstration. Source anatomical metadata conflict is retained.
 
-The source is [10x Genomics: 10k Human DTC Melanoma, Chromium GEM-X Single Cell 3′](https://www.10xgenomics.com/datasets/10k-human-dtc-melanoma-GEM-X),
-licensed **CC BY 4.0**. The downloaded matrix contains 10,645 cells. The example's
-fixed marker recipe is provisional: review `provenance.json`, especially
-`full_composition` and `sampled_composition`. The observed marker composition is
-lymphocyte-rich. Uniform subsampling does **not** enrich tumor cells, invent immune
-cells or preserve original neighborhood structure. Dataset details and a source
-metadata discrepancy are retained in [the dataset guide](docs/05_example_datasets.md).
+## Bring your own biopsy
 
-`declared-recognition` explicitly assumes that eligible cytotoxic cells can
-recognize melanoma-labelled targets. This is a software scenario, not evidence
-that those targets express cognate antigen. The default `recognition-off`
-scenario disables attacks while retaining movement and growth.
-
-## No-download test
+Inputs: H5AD (`X`, `layers['counts']` or `.raw.X`), Cell Ranger v3+ H5, or 10x
+MTX. Use raw counts, unique barcodes and human gene symbols. Reviewed `cell_type`
+and `cd8_state` can be supplied in `obs` or a TSV joined exactly by `cell_id`.
 
 ```bash
-vtsc demo outputs/synthetic-melanoma --cells 300 --hours 24 --seed 21
-vtsc explore outputs/synthetic-melanoma/declared-recognition --open
-```
-
-This generates a labelled **synthetic melanoma microenvironment** for repeatable
-software tests. It does not substitute for the real melanoma example. Both
-recognition scenarios use the same initial cells, geometry and random seed.
-Their paths subsequently diverge as actions differ.
-
-## Use your own biopsy
-
-Supported inputs: Cell Ranger v3+ `filtered_feature_bc_matrix.h5`, a 10x Matrix
-Market directory, or AnnData `.h5ad`. Supply raw counts and reviewed `cell_type`
-annotations in `obs` or a TSV joined by `cell_id`. Prepare **one sample/timepoint**.
-
-```bash
-vtsc validate my_biopsy.h5ad --layer counts
-vtsc prepare-tissue my_biopsy.h5ad outputs/my-input.zip --layer counts --cell-type-column cell_type --sample-id patient01_pre --max-cells 400
-vtsc tissue-template examples/my-assumptions.yaml
-vtsc run-tissue outputs/my-input.zip outputs/my-run --config examples/my-assumptions.yaml --scenario recognition-off
+vtsc prepare-tissue my_biopsy.h5ad outputs/my-input.zip --layer counts --metadata my_cells.tsv --sample-id patient01_pre --max-cells 400
+vtsc melanoma-template outputs/my-contract.yaml
+vtsc run-melanoma outputs/my-input.zip outputs/my-run --config outputs/my-contract.yaml
 vtsc explore outputs/my-run --open
 ```
 
-Map annotations to `Melanoma`, `CD8_T`, `T_cell`, `NK`, `Myeloid`, `Fibroblast`,
-`Endothelial`, `B_cell`, or `Unknown`. Unknown cells remain visible and take
-space; unsupported identities are not silently converted. At least one
-melanoma-labelled cell is required. Human gene symbols must be in `var_names`
-or `var['gene_symbols']`. No cell type is added to compensate for missing cells.
-See [the own-data guide](docs/02_your_own_data.md) for input contracts, metadata
-and Seurat export guidance.
+CD8 states: **Memory, Activated, Cytotoxic, Dysfunctional, Unknown**. Other
+lineages have no CD8 state. If reviewed states are unavailable, explicitly choose
+`--state-recipe rank-markers-v1`. `--recipe melanoma-markers` requests provisional
+lineage **and** state annotation. Ensembl-only inputs require `--gene-map` or
+`var.gene_symbols`. Normalized counts, duplicate IDs, invalid states and pooled
+biopsies are rejected. [Complete input guide and Seurat export](docs/02_your_own_data.md).
 
-## What the agents do
+## What changes in the engine
 
-| Component | Implemented behavior | Source |
+| Layer | Implemented behavior | Evidence |
 |---|---|---|
-| Initial identity | Reviewed labels or explicit provisional marker recipe | Input RNA / user annotation |
-| Initial programs | Cytotoxicity, proliferation, interferon | Fixed marker panels, log-normalized counts |
-| Geometry | Non-overlapping discs; two assumed tumor nests or mixed placement | User-selected spatial hypothesis |
-| Movement | Local generic cue gradient + seeded exploration, excluded volume | Declared rule |
-| Decision menu | Contact, lineage, fatigue and cycle gates | Local state at each step |
-| Cytotoxicity | Contact damage only with declared recognition; fatigue and recovery | Declared rule modulated by initial cytotoxic score |
-| Growth/division | RNA-modulated cycle; growth and daughter placement require space | Declared rule |
-| Clearance | Myeloid contact clearance or corpse timeout | Declared rule |
-| Viewer | Membranes, nuclei, contacts, cue field, playback, zoom/pan, agent history | Recorded state and events; schematic cell shapes |
+| RNA t0 | Immutable marker counts, initial axes and source hashes | Observed counts / inferred scores |
+| Identity | Lineage, sample, patient, clone, parent and molecular source stay separate | Supplied/unknown; daughter links simulated |
+| CD8 state | Branching/reversible four-state graph, age and independent capacities | Assumed graph and profiles |
+| Anti-PD-1 | Scheduled normalized exposure reduces a PD-1/PD-L1 inhibition term | Assumed protein activities; no clinical dose/PK |
+| Fate | Competing state-transition, division and death hazards; Poisson influx | Same kernel as the nonspatial solver |
+| Space | Exclusion, migration, contact damage, tumor division and clearance | Assumed geometry/mechanics |
+| Inference | M0/M1/M1b/M2/M3, Dirichlet-multinomial likelihood, baseline uncertainty, regularized estimation | Synthetic recovery only |
+| Policy | Stochastic hazards; optional local or mock transition provider | Offline; no Jev calls |
 
-The local policy chooses from the kernel's allowed actions. Every choice and its
-outcome is saved. These are explicit programmed decisions, **not Jev/LLM calls**.
-No paid service or external API is used. There is no anti-PD-1 drug mechanism,
-learned ligand–receptor network, measured diffusion, vascular supply, calibrated
-TCR specificity or validated treatment-response model in this version.
+Dysfunction is separate from fatigue, proliferation, cytotoxicity and persistence.
+Dysfunctional cells can proliferate. Transitions update capabilities used in the
+next actions. Unknown cells stay Unknown. No future measured RNA is fabricated.
+See [equations and ODD](docs/07_dynamic_contract.md) and [schemas](docs/08_schemas.md).
 
-For equations, units, action priority, limitations and controls, read
-[model and assumptions](docs/03_model_and_assumptions.md).
+## Controls, uncertainty and recovery
 
-## Inspect and share a run with the group
-
-Open `explorer.html` directly in a browser; it works offline with no CDN. Click
-**Find interaction** to jump to a recorded attack and zoom onto the agent. Click
-any cell to inspect its input scores and recent decisions. Drag to pan, use Fit
-to reset, toggle Signal field, and scrub or play the timeline. Appearance is a
-schematic rendering, not a microscopy reconstruction.
-
-Every run saves:
-
-- `explorer.html`: self-contained viewer;
-- `run.json`: frame coordinates, lineage catalog, programs, decisions and events;
-- `decisions.jsonl` and `events.jsonl`: machine-readable audit trail;
-- `trajectory.tsv`, `summary.json`, `assumptions.yaml`, `provenance.json`;
-- `manifest.json`: checksums, plus a sibling results ZIP.
-
-Reopen and verify a saved archive without rerunning:
+Arms: `anti-pd1`, `exposure-zero`, `recognition-off`, `checkpoint-off`,
+`transitions-off`, `spatial-shuffle`, `frozen`. **Exposure zero is not recognition
+off.** The first is a hypothetical no-drug counterfactual; the second disables
+recognition. Same seeds and contract give paired initial conditions. The drug
+need not improve outcomes under every context or assumed parameter setting.
 
 ```bash
-vtsc explore outputs/melanoma-recognition.zip --html outputs/reopened-melanoma.html --open
+vtsc ensemble-melanoma outputs/melanoma-input.zip outputs/ensemble --seeds 21 22 23 24 25 --hours 24
+vtsc explore outputs/anti-pd1.zip --html outputs/reopened.html
+vtsc recover-melanoma outputs/anti-pd1.zip outputs/recovered --hours 48
 ```
 
-The original `compare` command belongs to the legacy nonspatial engine. For
-new tissue runs, compare `trajectory.tsv`, `summary.json` and decisions from
-matched input bundles; use several seeds and both layouts before interpreting
-spatial sensitivity. [Results guide](docs/04_results.md).
+Recovery deterministically recomputes the original history, checks the recorded
+prefix and optionally extends it; it is not a hidden checkpoint service. Keep
+the same runtime/environment and use full-step horizons. Ensembles save paired
+variation and predeclared sensitivity to recognition, checkpoint strength and
+transition timescale. Simulation variation is not a patient confidence interval.
 
-## Notebook workflow
+Outputs: `run.json`, `decisions.jsonl` (hash chained), `events.jsonl`,
+`trajectory.tsv`, `summary.json`, `assumptions.yaml`, `provenance.json`, offline
+`explorer.html`, checksummed manifest and a sibling ZIP. The comparison viewer
+synchronizes playback, offers lineage/state colors, cue/drug overlays and
+keyboard-accessible cell selection. [Results guide](docs/04_results.md).
 
-Install `pip install -e ".[notebooks]"`, then run:
+## Notebooks and verification
 
-1. [Part 1 — prepare melanoma](notebooks/Part1_Prepare_scRNAseq.ipynb): real example, synthetic fixture or own biopsy.
-2. [Parts 2–3 — run agents and control](notebooks/Part2-3_Run_Simulation.ipynb).
-3. [Part 4 — inspect saved results](notebooks/Part4_Explore_Results.ipynb).
-
-The public melanoma is the notebook default. Local validation also executes the
-synthetic path without network access. Hosted Colab has not been tested; the
-repository must contain this release before its clone links work.
-
-## Validation and bug reports
+1. [Prepare a biopsy](notebooks/Part1_Prepare_scRNAseq.ipynb)
+2. [Run dynamic states and paired controls](notebooks/Part2-3_Run_Simulation.ipynb)
+3. [Inspect, verify and recover](notebooks/Part4_Explore_Results.ipynb)
 
 ```bash
 python -m pytest -q
 vtsc verify-freeze
+python scripts/validate_notebooks.py
+python scripts/validate_dynamics_v04.py
 ```
 
-Tests cover raw-count formats and sample separation, checksums, repeatability,
-contact and recognition gates, fatigue, no resurrection, population accounting,
-non-overlap, movement bounds, division, negative controls, own-data preparation
-and portable output. [Current validation](reports/software/melanoma-validation.md)
-records the real-data run and browser checks. These are software checks,
-not biological validation. [Group testing protocol](docs/06_group_testing.md).
+The [release evidence](reports/product-v04/VALIDATION.md) distinguishes executed
+local checks from configured CI. The [product board](reports/product-v04/task-board.json)
+tracks P0–P6; [research status](reports/STATUS.md) preserves the original T/G board.
+Synthetic recovery and mean-field consistency do not establish clinical validity.
+No remote CI, Windows/Linux runtime or hosted Colab execution is claimed from
+local macOS checks alone. [Group test checklist](docs/06_group_testing.md).
 
-## Research history and licences
+## Compatibility and licences
 
-Original code and generated synthetic fixtures: **MIT**. The public melanoma
-example and its derivatives retain **CC BY 4.0** attribution. Own data retain
-their source terms. See [DATA_LICENSE.md](DATA_LICENSE.md) and [CITATION.cff](CITATION.cff).
+Dynamic inputs/runs use schema v2. Reprepare raw data to obtain CD8-state inputs;
+v1 inputs are not silently assigned states. `run-tissue` retains the old v0.3
+static-lineage engine for regression. Legacy PBMC commands are not the primary
+melanoma workflow. The validated VirtualTissue-Xenium engine is unchanged.
 
-The separate SPECIAL/Lin prediction study remains at its feasibility gate.
-Its frozen plan and CC BY-NC-SA assets have not been repurposed as this demo.
-[Research audit](docs/research-audit.md) · [Status](reports/STATUS.md) ·
-[A04 scope correction](prereg/amendment-A04-melanoma-prototype-2026-10-27.md).
-
-The [VirtualTissue-Xenium](https://github.com/hylixinsights/VirtualTissue-Xenium)
-project supplies the interaction/inspection reference. Its spatial input is
-measured; this project's spatial layout is assumed because its input is
-**dissociated scRNA-seq**.
+Original code and generated fixtures: **MIT**. 10x example/derivatives: **CC BY 4.0**.
+SPECIAL technical exports: **CC BY-NC-SA 4.0**, kept outside Git, not commercial
+assets. Lin remains metadata-only pending matrix alignment. [Data terms](DATA_LICENSE.md)
+· [Citation](CITATION.cff) · [Prospective A05 amendment](prereg/amendment-A05-exploratory-product-2026-10-28.md)
+· [Changelog](CHANGELOG.md).

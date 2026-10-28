@@ -1,0 +1,339 @@
+{
+  "scope": "Exploratory product implementation only; original research T/G board unchanged",
+  "tasks": [
+    {
+      "id": "P0.1",
+      "title": "Invent\u00e1rio e baseline.",
+      "acceptance_contract": "Ler arquivos da se\u00e7\u00e3o 3, confirmar caminhos,\n  conferir freeze e testes. Sa\u00edda: relat\u00f3rio de baseline, comandos e invent\u00e1rio\n  atualizado. Aceite: distinguir cada arquivo ausente, parcial, bruto, derivado\n  ou quarentenado; preservar altera\u00e7\u00f5es preexistentes.",
+      "status": "complete",
+      "evidence": [
+        "reports/product-v04/baseline.json",
+        "reports/product-v04/baseline.md"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P0.2",
+      "title": "Emenda de escopo.",
+      "acceptance_contract": "Depende P0.1. Registrar produto explorat\u00f3rio\n  autorizado, limites do estudo, dados/sa\u00eddas permitidos e proibi\u00e7\u00e3o de contato\n  externo. Aceite: n\u00e3o alterar freeze; sem alegar que gates cient\u00edficos passaram.",
+      "status": "complete",
+      "evidence": [
+        "prereg/amendment-A05-exploratory-product-2026-10-28.md"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P0.3",
+      "title": "Especifica\u00e7\u00e3o e crit\u00e9rios.",
+      "acceptance_contract": "Depende P0.2. Escrever contrato da se\u00e7\u00e3o 8,\n  schema de input/run, backend, estado/eixos, regras de tratamento, controles,\n  or\u00e7amento de mem\u00f3ria/runtime e mapa de rastreabilidade. Aceite: cada efeito\n  implement\u00e1vel e test\u00e1vel; cada par\u00e2metro com unidade/proveni\u00eancia.",
+      "status": "complete",
+      "evidence": [
+        "docs/07_dynamic_contract.md",
+        "docs/08_schemas.md",
+        "src/vtsc/contract.py"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P1.1",
+      "title": "Exemplo melanoma e anota\u00e7\u00e3o.",
+      "acceptance_contract": "Depende P0.3. Reusar matriz 10x verificada,\n  auditar QC/cobertura e classificador de linhagem/estados. Aceite: relat\u00f3rio com\n  incerteza, Unknown e composi\u00e7\u00e3o; sem adi\u00e7\u00e3o silenciosa de c\u00e9lulas.",
+      "status": "complete",
+      "evidence": [
+        "reports/product-v04/melanoma-input-audit.json"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P1.2",
+      "title": "Adapter SPECIAL/TME.",
+      "acceptance_contract": "Depende P0.2. Fixar auditoria de linhagem/QC\n  sem desfecho; adquirir os dois RDS p\u00fablicos faltantes, verificar, inspecionar,\n  exportar e validar round-trip em diret\u00f3rios novos. Aceite: matrizes alinhadas\n  por barcode, manifest e restri\u00e7\u00f5es de acesso. N\u00e3o ajustar regras para passar G1.",
+      "status": "complete",
+      "evidence": [
+        "data/PRODUCT_A05_EXPORT_MANIFEST.json",
+        "reports/product-v04/tme-export.json",
+        "reports/product-v04/malignant-export.json"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P1.3",
+      "title": "Lin e fontes complementares.",
+      "acceptance_contract": "Depende P0.2. Manter status metadata-only\n  at\u00e9 validar express\u00e3o/alinhamento; resolver o que for poss\u00edvel publicamente,\n  excluir reutiliza\u00e7\u00e3o de SPECIAL dos novos pacientes. Aceite: nenhuma matr\u00edcula\n  cl\u00ednica vira par celular por suposi\u00e7\u00e3o. Se a mem\u00f3ria impedir a leitura, registrar\n  a pend\u00eancia e continuar produto/10x; n\u00e3o repetir convers\u00e3o de 29 GB inutilmente.",
+      "status": "partial",
+      "evidence": [
+        "reports/product-v04/DATA_AUDIT.md",
+        "reports/cohort_expansion_review.md"
+      ],
+      "acceptance_note": "Prior metadata/public audit retained; expression alignment still unverified; no repeat 29 GB conversion or invented pairs."
+    },
+    {
+      "id": "P1.4",
+      "title": "Own-data completo.",
+      "acceptance_contract": "Depende P1.1 e schema P0.3. H5AD/raw layers,\n  Cell Ranger H5 e MTX, metadados por barcode, uma bi\u00f3psia por execu\u00e7\u00e3o,\n  exporta\u00e7\u00e3o Seurat documentada, annotations revisadas ou receita expl\u00edcita.\n  Aceite: contagens/orienta\u00e7\u00e3o corretas, IDs \u00fanicos, erros claros para camada\n  normalizada, amostras misturadas, gene IDs sem mapping e linhagens/estados inv\u00e1lidos.",
+      "status": "complete",
+      "evidence": [
+        "docs/02_your_own_data.md",
+        "reports/product-v04/integration.json",
+        "tests/test_dynamic_workflow.py"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P2.1",
+      "title": "Biblioteca de programas.",
+      "acceptance_contract": "Depende P1.1. Fontes/vers\u00f5es/cobertura,\n  eixos independentes, sobreposi\u00e7\u00e3o e controles de dissocia\u00e7\u00e3o/profundidade.\n  Aceite: biblioteca congelada; AUCell/UCell/alternativa justificada; n\u00e3o\n  reutilizar os tr\u00eas escores ilustrativos como substituto sem avalia\u00e7\u00e3o.",
+      "status": "complete",
+      "evidence": [
+        "src/vtsc/resources/FREEZE.json",
+        "src/vtsc/programs.py",
+        "reports/product-v04/melanoma-input-audit.json"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P2.2",
+      "title": "Estados e incerteza.",
+      "acceptance_contract": "Depende P2.1. Mapear quatro estados CD8 com\n  confian\u00e7a/Unknown; separar cycling e contexto. Aceite: valida\u00e7\u00e3o com marcadores\n  reservados e proced\u00eancia do reference; nada ajustado nos pacientes de teste.",
+      "status": "partial",
+      "evidence": [
+        "reports/product-v04/VALIDATION.md",
+        "reports/product-v04/melanoma-input-audit.json"
+      ],
+      "acceptance_note": "State mapping, Unknown and reserved-marker evaluation implemented; poor kappa and no independent validated reference. No threshold tuning or test-patient fitting."
+    },
+    {
+      "id": "P2.3",
+      "title": "Grafo e perfis de estado.",
+      "acceptance_contract": "Depende P2.2. Arestas, dire\u00e7\u00e3o quando\n  defens\u00e1vel, tabela de capacidades e perfis simulados. Aceite: grafo assumido\n  e grafo inferido identificados; nenhum pseudotempo apresentado como tempo real.",
+      "status": "complete",
+      "evidence": [
+        "src/vtsc/resources/assumed_state_graph_v1.json"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P2.4",
+      "title": "Ambiente e covari\u00e1veis.",
+      "acceptance_contract": "Depende P1.4/P2.1. Features tumorais/mieloides,\n  local, qu\u00edmica e denominadores corretos. Aceite: dados imunes isolados n\u00e3o\n  produzem \u201cfra\u00e7\u00e3o de tumor no TME\u201d; features ausentes n\u00e3o s\u00e3o zeros inventados.",
+      "status": "complete",
+      "evidence": [
+        "src/vtsc/tissue_inputs.py",
+        "src/vtsc/melanoma.py",
+        "docs/07_dynamic_contract.md"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P3.1",
+      "title": "Solver comum de estados.",
+      "acceptance_contract": "Depende P2.3/P2.4. Generator/hazards,\n  crescimento/influxo e observa\u00e7\u00e3o de composi\u00e7\u00e3o. Aceite: conserva\u00e7\u00e3o quando\n  aplic\u00e1vel, probabilidades v\u00e1lidas, casos anal\u00edticos e testes de extremos.",
+      "status": "complete",
+      "evidence": [
+        "src/vtsc/dynamics.py",
+        "tests/test_dynamic_melanoma.py"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P3.2",
+      "title": "Ladder e estimador.",
+      "acceptance_contract": "Depende P3.1. M0/M1/M1b/M2/M3, modelo de\n  observa\u00e7\u00e3o Dirichlet-multinomial, incerteza de baseline, regulariza\u00e7\u00e3o/priors.\n  Aceite: recupera\u00e7\u00e3o em verdade sint\u00e9tica e relat\u00f3rios de identificabilidade;\n  backend pinado. Ajuste real depende de elegibilidade, n\u00e3o de vontade de mostrar ganho.",
+      "status": "complete",
+      "evidence": [
+        "src/vtsc/inference.py",
+        "reports/product-v04/dynamics-validation.json"
+      ],
+      "acceptance_note": "Exploratory M0\u2013M3 ladder and selected-rate estimator verified on synthetic truth; full hierarchical covariate/regimen patient model and predictive validation not claimed."
+    },
+    {
+      "id": "P3.3",
+      "title": "Mecanismo anti-PD-1.",
+      "acceptance_contract": "Depende P3.1 e contrato P0.3. Implementar\n  schedule/exposi\u00e7\u00e3o/checkpoint e como afetam cada hazard/a\u00e7\u00e3o. Aceite: exposi\u00e7\u00e3o\n  zero reproduz o baseline correspondente; desativar mecanismo desacopla a droga;\n  aus\u00eancia de alvo/reatividade obedece \u00e0s regras declaradas; sem benef\u00edcio garantido.",
+      "status": "complete",
+      "evidence": [
+        "tests/test_dynamic_melanoma.py",
+        "tests/test_dynamic_workflow.py"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P3.4",
+      "title": "Estados funcionais e hist\u00f3rias.",
+      "acceptance_contract": "Depende P3.3. Tempo-no-estado,\n  diferencia\u00e7\u00e3o, disfun\u00e7\u00e3o/exaust\u00e3o e efeitos nas capacidades/a\u00e7\u00f5es. Aceite:\n  transi\u00e7\u00f5es alteram o motor, n\u00e3o s\u00f3 cor/legenda; fadiga, disfun\u00e7\u00e3o e prolifera\u00e7\u00e3o\n  continuam distintas; morte irrevers\u00edvel e heran\u00e7a na divis\u00e3o s\u00e3o especificadas.",
+      "status": "complete",
+      "evidence": [
+        "src/vtsc/melanoma.py",
+        "tests/test_dynamic_melanoma.py"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P3.5",
+      "title": "Cen\u00e1rios e ensembles.",
+      "acceptance_contract": "Depende P3.2\u2013P3.4. Gerar arms emparelhados,\n  controles e sensibilidade com seeds. Aceite: incerteza/variabilidade vis\u00edvel,\n  n\u00e3o escolher o seed com efeito mais bonito; contrafactual rotulado.",
+      "status": "complete",
+      "evidence": [
+        "reports/product-v04/ensemble.json",
+        "reports/product-v04/verification.png"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P4.1",
+      "title": "Runtime de estado din\u00e2mico versionado.",
+      "acceptance_contract": "Depende P3.4. Evoluir schema\n  e agentes sem quebrar silenciosamente bundles antigos. Aceite: linhagem,\n  estado, clone, parent, avatar e fonte molecular separados; refer\u00eancias preservadas.",
+      "status": "complete",
+      "evidence": [
+        "docs/08_schemas.md",
+        "src/vtsc/melanoma.py"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P4.2",
+      "title": "Mec\u00e2nica e exposi\u00e7\u00e3o local.",
+      "acceptance_contract": "Depende P4.1. Reusar/refinar movimento,\n  contato, crescimento/divis\u00e3o e campo m\u00ednimo. Aceite: limites espaciais/velocidade,\n  resolu\u00e7\u00e3o temporal, localiza\u00e7\u00e3o do tratamento/campo e contabilidade corretos.",
+      "status": "complete",
+      "evidence": [
+        "src/vtsc/melanoma.py",
+        "tests/test_dynamic_melanoma.py"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P4.3",
+      "title": "Consist\u00eancia com n\u00e3o espacial.",
+      "acceptance_contract": "Depende P4.2. Fixar inputs locais\n  nas m\u00e9dias de amostra e comparar ensembles ao solver comum. Aceite: toler\u00e2ncia\n  justificada, nenhuma equival\u00eancia baseada numa \u00fanica seed, diferen\u00e7as espaciais\n  quantificadas; incluir mecanismos extras ou desativ\u00e1-los coerentemente na compara\u00e7\u00e3o.",
+      "status": "complete",
+      "evidence": [
+        "reports/product-v04/dynamics-validation.json"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P4.4",
+      "title": "Geometrias e controles.",
+      "acceptance_contract": "Depende P4.3. Layouts relevantes/assumidos,\n  inicializa\u00e7\u00e3o proporcional estratificada expl\u00edcita e embaralhamento. Aceite:\n  distinguir n\u00famero de c\u00e9lulas, composi\u00e7\u00e3o, geometria e seed; n\u00e3o chamar posi\u00e7\u00e3o\n  assumida de reconstru\u00e7\u00e3o histol\u00f3gica.",
+      "status": "complete",
+      "evidence": [
+        "src/vtsc/tissue_inputs.py",
+        "reports/product-v04/ensemble.json"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P4.5",
+      "title": "Interface de pol\u00edtica.",
+      "acceptance_contract": "Depende P4.1. Estoc\u00e1stica/hazard, pol\u00edtica\n  local e mock de provedor; menus legais e logs. Aceite: nenhum provedor executa\n  a\u00e7\u00f5es fora do contrato; offline \u00e9 completo; chamadas Jev reais n\u00e3o s\u00e3o requisito\n  para terminar a entrega atual.",
+      "status": "complete",
+      "evidence": [
+        "src/vtsc/dynamics.py",
+        "tests/test_dynamic_melanoma.py"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P5.1",
+      "title": "Viewer de c\u00e9lulas/estados.",
+      "acceptance_contract": "Depende P4.2. C\u00e9lulas distingu\u00edveis,\n  movimentos/contactos verdadeiros do registro, fronteiras/n\u00facleos esquem\u00e1ticos,\n  cores por linhagem OU estado, hist\u00f3rico de divis\u00e3o/morte/transi\u00e7\u00e3o. Aceite:\n  renderer n\u00e3o inventa eventos e n\u00e3o modifica o motor; geometrias assumidas vis\u00edveis.",
+      "status": "complete",
+      "evidence": [
+        "src/vtsc/web/melanoma.html",
+        "docs/images/melanoma_v04.png"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P5.2",
+      "title": "Inspetor de decis\u00f5es.",
+      "acceptance_contract": "Depende P5.1/P3.4. Clique/sele\u00e7\u00e3o acess\u00edvel,\n  estado anterior/novo, tempo-no-estado, quatro eixos, op\u00e7\u00f5es, probabilidades,\n  sorteio, contexto, drug exposure, checkpoints e provenance. Aceite: cada item\n  corresponde ao journal; distinguir RNA t0 observado e perfil de estado simulado.",
+      "status": "complete",
+      "evidence": [
+        "docs/images/melanoma_decision_v04.png",
+        "reports/product-v04/browser-validation.json"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P5.3",
+      "title": "Compara\u00e7\u00e3o anti-PD-1/controle.",
+      "acceptance_contract": "Depende P3.5/P5.2. Reprodu\u00e7\u00e3o/scrub\n  sincronizados, composi\u00e7\u00e3o CD8, transi\u00e7\u00f5es, prolifera\u00e7\u00e3o, morte, tumor e exposi\u00e7\u00e3o.\n  Aceite: bra\u00e7os mesmo input/contrato/condi\u00e7\u00f5es iniciais; diferen\u00e7as de config\n  expl\u00edcitas; curvas e contagens consistentes com os arquivos.",
+      "status": "complete",
+      "evidence": [
+        "reports/product-v04/browser-validation.json",
+        "src/vtsc/melanoma_results.py"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P5.4",
+      "title": "Entrada \u2192 execu\u00e7\u00e3o \u2192 resultados.",
+      "acceptance_contract": "Depende P1.4/P5.3. CLI e tr\u00eas\n  notebooks, config de cen\u00e1rio, retomada/export ZIP e viewer offline. Aceite:\n  usu\u00e1rio executa dados pr\u00f3prios sem editar c\u00f3digo do motor; exemplos pequenos\n  r\u00e1pidos; reruns n\u00e3o sobrescrevem silenciosamente resultados aceitos.",
+      "status": "complete",
+      "evidence": [
+        "src/vtsc/cli.py",
+        "reports/product-v04/notebook-validation.json",
+        "reports/product-v04/integration.json"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P6.1",
+      "title": "Testes cient\u00edficos de implementa\u00e7\u00e3o.",
+      "acceptance_contract": "Depende P3/P4. Testar limites,\n  transi\u00e7\u00f5es/hazards, tratamento, controles negativos, recupera\u00e7\u00e3o/identificabilidade,\n  equival\u00eancia m\u00e9dia, morte/divis\u00e3o/influxo, leakage guards, integridade e sementes.\n  Aceite: testes verificam consequ\u00eancias, n\u00e3o s\u00f3 repetem f\u00f3rmulas de implementa\u00e7\u00e3o.",
+      "status": "complete",
+      "evidence": [
+        "reports/product-v04/pytest.xml",
+        "reports/product-v04/dynamics-validation.json"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P6.2",
+      "title": "Integra\u00e7\u00e3o e inspe\u00e7\u00e3o visual.",
+      "acceptance_contract": "Depende P5/P6.1. Rodar do zero o\n  fixture sint\u00e9tico, exemplo real melanoma e fixture own-data; executar notebooks,\n  reabrir ZIP e testar UI no navegador. Aceite: evid\u00eancias/screenshots/logs,\n  erro \u00fatil para entrada inv\u00e1lida e teste real de wheel com HTML inclu\u00eddo.",
+      "status": "complete",
+      "evidence": [
+        "reports/product-v04/integration.json",
+        "reports/product-v04/wheel-validation.json",
+        "reports/product-v04/browser-validation.json"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P6.3",
+      "title": "Documenta\u00e7\u00e3o final.",
+      "acceptance_contract": "Depende P6.2. README com instala\u00e7\u00e3o/quickstart,\n  own-data, mecanismo anti-PD-1, estados, limites, troubleshooting, outputs,\n  licen\u00e7as/attribution/cita\u00e7\u00e3o; ODD; mapas tarefa\u2192evid\u00eancia e afirma\u00e7\u00e3o\u2192arquivo.\n  Aceite: nada promete cl\u00ednica validada ou links de execu\u00e7\u00e3o ainda n\u00e3o testados.",
+      "status": "complete",
+      "evidence": [
+        "README.md",
+        "reports/product-v04/VALIDATION.md",
+        "reports/product-v04/claims-ledger.tsv"
+      ],
+      "acceptance_note": "Implementation acceptance; not a scientific gate pass."
+    },
+    {
+      "id": "P6.4",
+      "title": "Release local test\u00e1vel.",
+      "acceptance_contract": "Depende P6.3. Vers\u00e3o nova coerente, locks,\n  changelog, CI \u00fatil, pacote pequeno, exemplos/downloader, ignores de dados e\n  credenciais, instru\u00e7\u00f5es de clone/push. Aceite: checkout limpo instal\u00e1vel e\n  auditado; diff revisado; commits locais; sem push ou publica\u00e7\u00e3o autom\u00e1tica.",
+      "status": "complete",
+      "evidence": [
+        "CHANGELOG.md",
+        "requirements-product-v04.lock.txt",
+        ".github/workflows/tests.yml",
+        "docs/09_local_release.md",
+        "reports/product-v04/wheel-validation.json"
+      ],
+      "acceptance_note": "Version, lock, CI, installed wheel, documentation and local commits prepared; no remote publication."
+    }
+  ],
+  "version": "0.4.0",
+  "clinical_validation": false,
+  "implementation_commit": "a6e2d0e7d0818dba58932dd6de249639086dc8cf",
+  "summary": {
+    "complete": 27,
+    "partial": 2,
+    "scientific_gates_passed": false
+  }
+}

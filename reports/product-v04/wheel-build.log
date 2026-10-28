@@ -1,0 +1,16 @@
+Processing ./.
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: virtualtissue-sc
+  Building wheel for virtualtissue-sc (pyproject.toml): started
+  Building wheel for virtualtissue-sc (pyproject.toml): finished with status 'done'
+  Created wheel for virtualtissue-sc: filename=virtualtissue_sc-0.4.0-py3-none-any.whl size=86807 sha256=bf4e1be47c194c0023f09358c5d205562f72c88ab363e593932a3a20bb0c5e8d
+  Stored in directory: /Users/heldernakaya/Library/Caches/pip/wheels/31/60/4f/6e7275981661efdd5ce51e745d5a34205e3f00c93f99a32a52
+Successfully built virtualtissue-sc
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.2
+[notice] To update, run: /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv-software/bin/python -m pip install --upgrade pip

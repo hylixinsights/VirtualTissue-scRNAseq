@@ -1,58 +1,91 @@
-# Your own dissociated melanoma biopsy
+# Own-data preparation (v0.4)
 
-The tissue pipeline accepts one sample/timepoint at a time. Prepare upstream QC,
-doublet removal and reviewed cell annotations before running it. Cell Ranger's
-filtered matrix alone is not a substitute for biological annotation.
+Prepare exactly one biopsy. Do upstream QC/doublet review; the software validates
+counts and identifiers, but does not certify cell viability, tumor malignancy or
+state annotation. The example recipe is provisional, not a trained classifier.
 
-| Input | Counts | Annotation |
-|---|---|---|
-| Cell Ranger v3+ H5 | `matrix`, Gene Expression features | Separate metadata TSV |
-| 10x Matrix Market directory | `matrix.mtx[.gz]`, `features.tsv[.gz]`, `barcodes.tsv[.gz]` | Separate metadata TSV |
-| H5AD | Integer `X` or `--layer counts` | `obs` or explicit replacement metadata TSV |
+## Formats and metadata
 
-Matrix Market files have genes on rows and cells on columns. H5AD has cells
-on rows. Gene symbols belong in `var_names` or `var['gene_symbols']`.
-Gene Expression features are selected from multi-assay 10x inputs. Normalized
-noninteger values, zero-count cells, duplicate identifiers and mismatched
-metadata are rejected. External metadata replaces `obs` after an exact barcode
-join; its order may differ but its set of cell IDs must match the whole input.
+- H5AD: cells × genes. `--layer counts` selects a layer; `--layer raw` selects
+  `.raw.X` with its own gene metadata. If omitted, X must already be raw counts.
+- Cell Ranger v3+ H5: genes × barcodes on disk, transposed by the reader. Only
+  Gene Expression modality is retained. Antibody counts do not become genes.
+- MTX: `matrix.mtx[.gz]`, `features.tsv[.gz]` (or `genes.tsv`) and
+  `barcodes.tsv[.gz]`. Matrix is genes × cells, with exact row/column alignment.
+- SPECIAL neutral technical export: `counts.mtx`, headered `var.tsv` (`gene_id`),
+  `obs.parquet` (`cell_id`). Install `pip install -e '.[neutral]'`. Only barcode,
+  sample and technical QC columns are read, never outcomes, states or embeddings.
+  This adapter is not permission to fit SPECIAL or compute paired changes.
 
-Example `metadata.tsv` (tab-delimited):
+`--metadata cells.tsv` replaces obs with an exact barcode join; missing, extra or
+duplicate IDs are errors. Column order is irrelevant. Example:
 
 ```text
-cell_id	cell_type	sample_id	patient_id	timepoint
-AAAC...-1	Melanoma	P01_pre	P01	pre
-AAAG...-1	CD8_T	P01_pre	P01	pre
+cell_id\tsample_id\tpatient_id\tcell_type\tcd8_state\tclone_id
+AAAC-1\tP01_pre\tP01\tCD8_T\tMemory\t
+AAAG-1\tP01_pre\tP01\tMelanoma\t\t
 ```
 
-Canonical types are `Melanoma`, `CD8_T`, `T_cell`, `NK`, `Myeloid`, `Fibroblast`,
-`Endothelial`, `B_cell`, `Unknown`. Map your reviewed labels explicitly.
-The software does not prove malignancy. Retain uncertain identities as Unknown;
-no absent lineage is invented. At least one melanoma-labelled cell must survive
-subsampling. A metadata `sample_id` with multiple values requires `--sample-id`;
-multiple patients/timepoints within that selected sample are rejected. Without
-sample metadata, the input is treated as your declaration of one biopsy.
+Use actual tabs. Lineages: `Melanoma`, `CD8_T`, `T_cell`, `NK`, `Myeloid`,
+`Fibroblast`, `Endothelial`, `B_cell`, `Unknown`. CD8 requires `Memory`,
+`Activated`, `Cytotoxic`, `Dysfunctional` or `Unknown`; other lineages leave state
+empty. Clone is optional and never implies antigen specificity or a mother–daughter
+relationship. Patient identity is nullable; one supplied patient/timepoint per
+selected sample is enforced. Use `--sample-id` to explicitly subset mixed inputs.
+
+Without reviewed states, choose `--state-recipe rank-markers-v1`. Without reviewed
+lineages, choose `--recipe melanoma-markers`, which also requests state inference.
+These explicit recipe options supersede existing annotation columns. The bundle
+reports the choice, coverage, uncertainty and held-out-marker diagnostics.
+No states or lineages are manufactured to complete a desired composition.
+
+Gene symbols go in `var_names` or `var['gene_symbols']`. Otherwise supply
+`--gene-map mapping.tsv` with `gene_id` and `gene_symbol`, one unique row per
+feature ID and full coverage. Duplicate feature IDs are rejected; duplicate gene
+symbols use the best positive feature rank in the rank scorer and their total
+counts in the observed marker display. Species other than human require a new,
+reviewed program library; this version does not silently translate orthologs.
+
+Sampling defaults to proportional largest-remainder quotas by lineage, followed
+by seeded draws without replacement. `--sampling uniform` is available. The
+full and sampled composition, scheme and seed are exported. An exceptionally
+rare tumor lineage can be absent after integer allocation; increase sample size.
+No tumor/immune enrichment occurs silently.
+
+## Seurat export
+
+Export the RNA **counts**, not SCT, integrated, scale.data or log-normalized data.
+One simple route (run in your existing R/Seurat environment):
+
+```r
+library(SeuratObject)
+library(Matrix)
+x <- LayerData(object, assay="RNA", layer="counts") # join RNA count layers explicitly if needed
+stopifnot(!anyDuplicated(colnames(x)), !anyDuplicated(rownames(x)))
+dir.create("my10x") # choose a new empty directory
+writeMM(x, "my10x/matrix.mtx")
+write.table(data.frame(rownames(x), rownames(x), "Gene Expression"),
+            "my10x/features.tsv", sep="\t", quote=FALSE, row.names=FALSE, col.names=FALSE)
+write.table(colnames(x), "my10x/barcodes.tsv", quote=FALSE, row.names=FALSE, col.names=FALSE)
+metadata <- data.frame(cell_id=colnames(x), object[[]][colnames(x),,drop=FALSE])
+# Add reviewed cell_type and cd8_state; remove private/outcome fields before sharing.
+write.table(metadata, "cells.tsv", sep="\t", quote=FALSE, row.names=FALSE)
+```
 
 ```bash
-vtsc prepare-tissue my_10x_directory outputs/my-input.zip --metadata metadata.tsv --sample-id P01_pre --max-cells 400
-vtsc run-tissue outputs/my-input.zip outputs/my-control --scenario recognition-off
-vtsc run-tissue outputs/my-input.zip outputs/my-recognition --scenario declared-recognition
+vtsc prepare-tissue my10x outputs/biopsy.zip --metadata cells.tsv --sample-id P01_pre
+vtsc run-melanoma outputs/biopsy.zip outputs/run --arm anti-pd1
 ```
 
-`--recipe melanoma-markers` is an explicit demonstration option for unannotated
-human melanoma counts. It uses the fixed panels in `src/vtsc/tissue_inputs.py`,
-keeps unresolved cells, and reports composition. It is not a reference-based
-classifier, CNV analysis, doublet detector or substitute for reviewed annotation.
-Missing human program genes cause a clear error; do not relabel Ensembl IDs as
-symbols without a real identifier mapping.
+## Errors and limits
 
-The bundle contains selected barcodes, labels, initial program scores and
-source checksums. It does not contain the full expression matrix. IDs are not
-anonymized automatically. Keep your own data and derived results in ignored
-local directories and apply your institution's sharing rules.
+Fractional, negative, NaN and zero-total cell counts are rejected. Integer-valued
+normalization cannot be proven raw from numbers alone: the user must identify
+the genuine count layer. Missing feature coverage is reported, not interpreted
+as absent biological activity. Unknown state has no invented effector capacity.
 
-For Seurat, export the RNA raw counts as a sparse Matrix Market matrix with
-matching features and barcodes, plus a metadata TSV. Alternatively create an
-H5AD that retains raw counts and annotations. `.rds` is not directly accepted
-by this independent pipeline. The study-specific RDS audit scripts belong to
-the historical SPECIAL workflow.
+Bundles contain observed **selected marker** counts and source hashes, not the
+entire count matrix. Retain the original source for full RNA inspection. Generated
+daughters point to that immutable molecular source. Influx has no observed RNA.
+Public software does not grant rights to redistribute your data; provenance
+retains the supplied licence. There are no uploads or provider calls.

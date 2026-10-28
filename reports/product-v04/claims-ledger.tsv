@@ -1,0 +1,11 @@
+id	assertion	status	evidence	limit
+C01	Dynamic state changes alter actual contact damage	verified_implementation	tests/test_dynamic_melanoma.py	Not calibrated cellular kinetics
+C02	Anti-PD-1 enters an explicit checkpoint mechanism	implemented_assumption	src/vtsc/dynamics.py	Normalized exposure; no clinical dose/PK
+C03	Shared homogeneous mean matches ABM ensemble	verified_implementation	reports/product-v04/dynamics-validation.json	64 seeds; extras disabled; not arbitrary spatial equivalence
+C04	Four-state annotation is biologically validated	not_established	reports/product-v04/melanoma-input-audit.json	Provisional recipe; kappa 0.102; no independent labels
+C05	Own-data and public/synthetic routes execute	verified_implementation	reports/product-v04/integration.json	One biopsy; valid raw counts and explicit annotations/recipe required
+C06	M0–M3 estimator predicts new patients	not_established	reports/product-v04/dynamics-validation.json	Synthetic selected-rate recovery only
+C07	SPECIAL clinical gates passed	not_established	reports/STATUS.md	Original feasibility problem and T/G board unchanged
+C08	TME/malignant neutral export is exact	verified_technical	reports/product-v04/tme-export.json;reports/product-v04/malignant-export.json	No state/outcome analysis; CC-BY-NC-SA
+C09	Lin expression alignment verified	not_established	reports/product-v04/DATA_AUDIT.md	Metadata-only; no expression round trip
+C10	Portable installed wheel works outside checkout	verified_implementation	reports/product-v04/wheel-validation.json	Local macOS only; remote CI not run

@@ -1,0 +1,8 @@
+{
+  "ensemble_input": "outputs/v04-release/real-input.zip",
+  "ensemble_input_sha256": "1efa50adc0a92a907673043983c01217d2fe38e425cff99df11b764bb47a1325",
+  "final_input": "outputs/v04-final/real-input.zip",
+  "final_input_sha256": "43854da2f16b4aa49c24f53859d2f9e58c6dba020a5d1cb961ecfad5bd59c95c",
+  "cells_identical": true,
+  "difference": "Program-transform provenance text now says available genes; complete marker coverage makes the 400 exported cells unchanged. Both bundles retained."
+}

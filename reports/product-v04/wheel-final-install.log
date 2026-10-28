@@ -1,0 +1,8 @@
+WARNING: The directory '/Users/heldernakaya/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Processing ./dist/virtualtissue_sc-0.4.0-py3-none-any.whl
+Installing collected packages: virtualtissue-sc
+  Attempting uninstall: virtualtissue-sc
+    Found existing installation: virtualtissue-sc 0.4.0
+    Uninstalling virtualtissue-sc-0.4.0:
+      Successfully uninstalled virtualtissue-sc-0.4.0
+Successfully installed virtualtissue-sc-0.4.0

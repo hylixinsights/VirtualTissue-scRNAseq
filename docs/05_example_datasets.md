@@ -1,3 +1,13 @@
+# Current v0.4 sampling note
+
+The current `prepare-tissue` defaults to proportional stratified sampling by
+lineage (largest-remainder allocation), with explicit seed and no enrichment.
+The 400-cell example has 27 CD8 and 8 provisionally melanoma-labelled cells.
+The full 10x matrix has 10645 cells; marker annotation retains Unknown and does
+not confirm malignancy by CNV. Rank-state coverage and held-out-marker audits
+are in `reports/product-v04/melanoma-input-audit.json`. The exact v0.4 workflow
+is in the README; the following source attribution and v0.3 history are retained.
+
 # Melanoma example and provenance
 
 The primary example is [10k Human DTC Melanoma, Chromium GEM-X Single Cell 3′](https://www.10xgenomics.com/datasets/10k-human-dtc-melanoma-GEM-X),

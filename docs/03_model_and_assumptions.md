@@ -1,3 +1,5 @@
+> Historical v0.3 mechanics documentation. For the current dynamic CD8/anti-PD-1 model, see [the v0.4 contract](07_dynamic_contract.md).
+
 # Melanoma tissue model and assumptions (v0.3)
 
 This is a local rule agent prototype for software tests. It does not fit kinetics

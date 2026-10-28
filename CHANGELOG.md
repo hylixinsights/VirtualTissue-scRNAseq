@@ -1,3 +1,18 @@
+# v0.4.0 — 2026-10-28
+
+- Add four-state CD8 dynamics, shared compartment/spatial hazards, explicit
+  anti-PD-1 schedule/checkpoint mechanism and paired negative controls.
+- Separate immutable observed RNA, lineage and clone identity from simulated
+  profiles; record decisions, state age, probabilities, draws and causal context.
+- Add provisional rank annotation/Unknown, stratified own-biopsy preparation,
+  raw-layer/gene-map/neutral Seurat adapters and outcome-blind TME exports.
+- Add M0–M3 exploratory inference, baseline uncertainty, synthetic recovery,
+  identifiability checks, 64-seed mean consistency and 90-run sensitivity evidence.
+- Add offline synchronized viewer, deterministic recovery, versioned resources,
+  executable notebooks, packaged HTML and local installation verification.
+- Preserve clinical freeze, T/G board and Xenium engine. No clinical validation,
+  efficacy claim, paid provider call or external publication.
+
 # v0.3.0 — 2026-10-27
 
 - Correct the primary demonstration to dissociated 10x melanoma, with a pinned public matrix and an own-biopsy pipeline.

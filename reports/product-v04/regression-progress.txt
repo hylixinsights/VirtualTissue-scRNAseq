@@ -1,0 +1,102 @@
+..............................F...                                       [100%]
+=================================== FAILURES ===================================
+____ test_annotation_does_not_hide_non_tumor_cells_and_multisample_rejected ____
+
+tmp_path = PosixPath('/private/var/folders/b1/43cs4y810sn370h8x131ntd40000gn/T/pytest-of-heldernakaya/pytest-21/test_annotation_does_not_hide_0')
+
+    def test_annotation_does_not_hide_non_tumor_cells_and_multisample_rejected(tmp_path):
+        path=tmp_path/'source.h5ad';synthetic_melanoma(path,100)
+>       p=prepare_tissue(path,tmp_path/'demo.zip',recipe='melanoma-markers',max_cells=100)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_tissue.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_path = PosixPath('/private/var/folders/b1/43cs4y810sn370h8x131ntd40000gn/T/pytest-of-heldernakaya/pytest-21/test_annotation_does_not_hide_0/source.h5ad')
+output = PosixPath('/private/var/folders/b1/43cs4y810sn370h8x131ntd40000gn/T/pytest-of-heldernakaya/pytest-21/test_annotation_does_not_hide_0/demo.zip')
+metadata = None, layer = None, cell_type_column = 'cell_type'
+sample_id = 'synthetic_melanoma', recipe = 'melanoma-markers', max_cells = 100
+seed = 21, source_license = 'user supplied', state_column = 'cd8_state'
+state_recipe = None, gene_map = None, sampling = 'stratified'
+
+    def prepare_tissue(input_path, output, *, metadata=None, layer=None, cell_type_column='cell_type',
+                       sample_id=None, recipe=None, max_cells=400, seed=21, source_license='user supplied',
+                       state_column='cd8_state', state_recipe=None, gene_map=None, sampling='stratified'):
+        if not 2 <= max_cells <= 2000 or seed < 0: raise ValueError('Use 2–2000 cells and a nonnegative seed.')
+        data, sources = load_input(input_path, metadata, layer)
+        if gene_map:
+            mapping = pd.read_csv(gene_map, sep='\t', dtype=str, keep_default_na=False)
+            if set(mapping.columns) != {'gene_id','gene_symbol'} or mapping.gene_id.duplicated().any():
+                raise ValueError('Gene mapping needs unique gene_id and gene_symbol columns.')
+            mapping=mapping.set_index('gene_id').gene_symbol
+            if not set(data.var_names) <= set(mapping.index): raise ValueError('Gene mapping must cover every expression feature.')
+            data.var['gene_symbols']=mapping.loc[data.var_names].to_numpy()
+            sources.append({'name':Path(gene_map).name,'bytes':Path(gene_map).stat().st_size,'sha256':file_hashes(gene_map)['sha256']})
+        gene_names(data)
+        input_n = data.n_obs
+        if 'sample_id' in data.obs:
+            values = data.obs.sample_id
+            if values.isna().any() or values.astype(str).str.strip().eq('').any(): raise ValueError('Missing sample_id.')
+            samples = values.astype(str).unique()
+            if sample_id is None and len(samples) != 1: raise ValueError('Multiple samples: choose --sample-id; never pool biopsies.')
+            sample_id = sample_id or samples[0]
+            if sample_id not in samples: raise ValueError('Requested sample is absent.')
+            data = data[values.astype(str).eq(sample_id)].copy()
+        else: sample_id = sample_id or 'declared_single_biopsy'
+        for col in ['patient_id', 'timepoint']:
+            if col in data.obs and data.obs[col].nunique(dropna=False) > 1: raise ValueError(f'Multiple {col} values in selected biopsy.')
+        scores, detected, coverage = expression_features(data)
+        if any(not coverage[k] for k in PROGRAMS):
+            raise ValueError('No genes found for an RNA program; supply human gene symbols in var_names or var.gene_symbols.')
+        if recipe == 'melanoma-markers':
+            if any(len(coverage[k]) < 2 for k in PANELS):
+                raise ValueError('Marker recipe needs human gene symbols and at least two genes per lineage panel.')
+            labels, margins = annotate_demo(scores, detected)
+            annotation = 'provisional fixed marker recipe; Unknown retained; no CNV/malignancy validation'
+        elif recipe is None:
+            if cell_type_column not in data.obs: raise ValueError(f'Supply reviewed {cell_type_column!r} or explicitly use --recipe melanoma-markers.')
+            labels = data.obs[cell_type_column].astype(str).to_numpy(); margins = np.zeros(data.n_obs)
+            annotation = 'user supplied cell types; not validated by this software'
+        else: raise ValueError('Unknown annotation recipe.')
+        if not set(labels) <= set(TYPES): raise ValueError(f'Map your annotations to {TYPES}; unsupported: {set(labels) - set(TYPES)}')
+        if 'Melanoma' not in labels: raise ValueError('No melanoma-labelled cells; review annotations before making a melanoma simulation.')
+        rank_scores, rank_detected, rank_coverage = score_programs(data)
+        inferred_states, state_margins = classify(rank_scores, rank_detected)
+        cd8 = labels == 'CD8_T'
+        states = np.full(data.n_obs, None, dtype=object)
+        if state_column in data.obs:
+            given = data.obs[state_column]
+            if given[cd8].isna().any() or not set(given[cd8].astype(str)) <= set(STATES+['Unknown']):
+>               raise ValueError('CD8 annotations must be Memory, Activated, Cytotoxic, Dysfunctional or Unknown.')
+E               ValueError: CD8 annotations must be Memory, Activated, Cytotoxic, Dysfunctional or Unknown.
+
+src/vtsc/tissue_inputs.py:178: ValueError
+=============================== warnings summary ===============================
+tests/test_inputs_and_workflow.py: 19 warnings
+tests/test_tissue.py: 6 warnings
+  /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv-software/lib/python3.12/site-packages/anndata/compat/__init__.py:249: Pandas4Warning: The 'future.infer_string' option is deprecated and will be removed in pandas 4.0. Inferring str dtype for string data has been the default since pandas 3.0, and it will no longer be possible to disable it.
+    return a if pd.options.future.infer_string else a.astype(object)
+
+tests/test_inputs_and_workflow.py: 18 warnings
+tests/test_tissue.py: 6 warnings
+  /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv-software/lib/python3.12/site-packages/anndata/_io/specs/methods.py:1269: Pandas4Warning: The 'future.infer_string' option is deprecated and will be removed in pandas 4.0. Inferring str dtype for string data has been the default since pandas 3.0, and it will no longer be possible to disable it.
+    and not pd.options.future.infer_string
+
+tests/test_inputs_and_workflow.py::test_input_schema_rejects_normalized_counts_duplicate_ids_and_metadata_mismatch
+  /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/src/vtsc/inputs.py:101: UserWarning: Observation names are not unique. To make them unique, call `.obs_names_make_unique`.
+    data, files = ad.read_h5ad(path), [path]
+
+tests/test_inputs_and_workflow.py: 15 warnings
+tests/test_tissue.py: 6 warnings
+  /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv-software/lib/python3.12/site-packages/anndata/_core/anndata.py:1101: Pandas4Warning: The 'mode.chained_assignment' option is deprecated. It has had no effect since pandas 3.0, which removed the SettingWithCopyWarning it controlled. Chained assignment now emits a ChainedAssignmentError warning instead; use warnings.filterwarnings with category=ChainedAssignmentError to silence or escalate it. This option will be removed in pandas 4.0.
+    with pd.option_context("mode.chained_assignment", None):
+
+tests/test_inputs_and_workflow.py: 15 warnings
+tests/test_tissue.py: 6 warnings
+  /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv-software/lib/python3.12/site-packages/anndata/_core/views.py:327: Pandas4Warning: The 'mode.chained_assignment' option is deprecated. It has had no effect since pandas 3.0, which removed the SettingWithCopyWarning it controlled. Chained assignment now emits a ChainedAssignmentError warning instead; use warnings.filterwarnings with category=ChainedAssignmentError to silence or escalate it. This option will be removed in pandas 4.0.
+    with pd.option_context("mode.chained_assignment", None):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_tissue.py::test_annotation_does_not_hide_non_tumor_cells_and_multisample_rejected
+1 failed, 33 passed, 92 warnings in 2.50s

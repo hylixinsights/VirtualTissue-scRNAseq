@@ -1,0 +1,4677 @@
+{
+  "bundle_sha256": "1efa50adc0a92a907673043983c01217d2fe38e425cff99df11b764bb47a1325",
+  "seeds": [
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "rows": [
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "anti-pd1",
+      "seed": 21,
+      "initial_signature": "d5e764bd38771fde2d97f1c8a3df0e3783fc77ef5a085a6f748ea496276a47e9",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 5,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 109,
+          "death": 3,
+          "transition": 3,
+          "clearance_timeout": 1
+        },
+        "decisions": 38335,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 5,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "e7d4edeb33a710590445f7d07b45464939efbb9e29d7c0a0e11c2fa8b51931bc",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "anti-pd1",
+      "seed": 22,
+      "initial_signature": "4f671fbd8f9f4a2c227f975bc86ef87de5f732a99d112a5fdd1218c7d7f6303d",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 401,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 45,
+          "transition": 2,
+          "death": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38561,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "2a1ef91b282cb6a66f240bc947d4941c880b40ad3b73101c8be94d34da5e0d3d",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "anti-pd1",
+      "seed": 23,
+      "initial_signature": "8b03cf6094ab1eb04c8fb5b24c2df399795e543be22ff050c25aee22cdf65638",
+      "final_tumor": 4,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 1,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 395,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 183,
+          "transition": 3,
+          "death": 5,
+          "clearance_timeout": 2
+        },
+        "decisions": 38265,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 1,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "56503ea7f9dd30a0232ef4c74c069cf1c49b88d3425172edf3b3810b6b8f1709",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "anti-pd1",
+      "seed": 24,
+      "initial_signature": "9806fbac293d4a90a37e8eb5aa02d10062772340eaac3138e2abf7d06e23ec4a",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 2,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 113,
+          "death": 3,
+          "clearance_timeout": 3,
+          "transition": 1
+        },
+        "decisions": 38218,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 2,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "18b321629f1923108ed2cbdef1c3ecc633b93850443340521ec17bc51fe1888e",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "anti-pd1",
+      "seed": 25,
+      "initial_signature": "7f298d591419f32e42cf389f33756b9e504db9b9d70fe20e16fa39c3ea27bd38",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 92,
+          "transition": 4,
+          "division": 1,
+          "death": 4,
+          "phagocytosis": 2,
+          "clearance_timeout": 2
+        },
+        "decisions": 38313,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "19a02050641045a5dfc8321ce1557818520786eb7bb0af55b728398212185ec5",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "exposure-zero",
+      "seed": 21,
+      "initial_signature": "d5e764bd38771fde2d97f1c8a3df0e3783fc77ef5a085a6f748ea496276a47e9",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 4,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 400,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 135,
+          "transition": 4
+        },
+        "decisions": 38400,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 4,
+          "Cytotoxic": 0,
+          "Dysfunctional": 4,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "752f38951a2168ba5bcfd019e638ecb1170561e897e7bc7a5b57ac1bbaf04fe9",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "exposure-zero",
+      "seed": 22,
+      "initial_signature": "4f671fbd8f9f4a2c227f975bc86ef87de5f732a99d112a5fdd1218c7d7f6303d",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 401,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 45,
+          "transition": 2,
+          "death": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38561,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "80885762348114a87195d1d37013207a0385b9d3ee3527b7736b41de8fef86be",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "exposure-zero",
+      "seed": 23,
+      "initial_signature": "8b03cf6094ab1eb04c8fb5b24c2df399795e543be22ff050c25aee22cdf65638",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 6,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 217,
+          "transition": 4,
+          "death": 3,
+          "clearance_timeout": 1
+        },
+        "decisions": 38340,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 6,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "97f339f1265b31e2390730c3bae4c81a822ef7bc5098bce3b34b9c74a5f37723",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "exposure-zero",
+      "seed": 24,
+      "initial_signature": "9806fbac293d4a90a37e8eb5aa02d10062772340eaac3138e2abf7d06e23ec4a",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 2,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 131,
+          "death": 3,
+          "clearance_timeout": 2,
+          "transition": 1
+        },
+        "decisions": 38262,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 2,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "dc3d72af018894670b838492644818c4d53c46ca321f472e40824239b703ce30",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "exposure-zero",
+      "seed": 25,
+      "initial_signature": "7f298d591419f32e42cf389f33756b9e504db9b9d70fe20e16fa39c3ea27bd38",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 108,
+          "transition": 4,
+          "division": 1,
+          "death": 3,
+          "phagocytosis": 1,
+          "clearance_timeout": 2
+        },
+        "decisions": 38354,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "4e6286f531fd9b6431c4cc0ce35a71ae5b47894b5ffc90705aa4d44843e8297c",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "recognition-off",
+      "seed": 21,
+      "initial_signature": "d5e764bd38771fde2d97f1c8a3df0e3783fc77ef5a085a6f748ea496276a47e9",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 400,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "transition": 1
+        },
+        "decisions": 38400,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "377890dd567e2cba816d461ce2b4a1a22a50ede16d29014c96846a5999ea1024",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "recognition-off",
+      "seed": 22,
+      "initial_signature": "4f671fbd8f9f4a2c227f975bc86ef87de5f732a99d112a5fdd1218c7d7f6303d",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 401,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "transition": 2,
+          "death": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38561,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "3b184753247f21d8d37e59885f3e4591291240ac22b56b0244fae292903205f8",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "recognition-off",
+      "seed": 23,
+      "initial_signature": "8b03cf6094ab1eb04c8fb5b24c2df399795e543be22ff050c25aee22cdf65638",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 1,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 399,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "death": 1
+        },
+        "decisions": 38400,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 4,
+          "Cytotoxic": 0,
+          "Dysfunctional": 1,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "b73cd22c2061115645a4d1103778efb8c9a94fb8677d44e1905e5e98657c0b78",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "recognition-off",
+      "seed": 24,
+      "initial_signature": "9806fbac293d4a90a37e8eb5aa02d10062772340eaac3138e2abf7d06e23ec4a",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 2,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 399,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "death": 1,
+          "clearance_timeout": 1,
+          "transition": 1
+        },
+        "decisions": 38349,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 2,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "545d19db09befa2f7dcd08e9d936a5caca8a3e0a0d14a78fc145deee278b99e1",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "recognition-off",
+      "seed": 25,
+      "initial_signature": "7f298d591419f32e42cf389f33756b9e504db9b9d70fe20e16fa39c3ea27bd38",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 5,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 401,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 1
+        },
+        "decisions": 38475,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 5,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "8eaa1a6a4b9f2db3e2f979c3c9d51e74770d51440254917050ce3c1057176137",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "checkpoint-off",
+      "seed": 21,
+      "initial_signature": "d5e764bd38771fde2d97f1c8a3df0e3783fc77ef5a085a6f748ea496276a47e9",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 5,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 108,
+          "death": 3,
+          "phagocytosis": 1,
+          "transition": 3
+        },
+        "decisions": 38320,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 5,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "ce685467a69d7be5263c67757bfd7f1f4e25cf08b090ef534a185ceb6c90eb80",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "checkpoint-off",
+      "seed": 22,
+      "initial_signature": "4f671fbd8f9f4a2c227f975bc86ef87de5f732a99d112a5fdd1218c7d7f6303d",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 401,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 45,
+          "transition": 2,
+          "death": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38561,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "3659b77b75113184d89e1029c7e1ceb54b3cb126bea9a99a66ba90069627326a",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "checkpoint-off",
+      "seed": 23,
+      "initial_signature": "8b03cf6094ab1eb04c8fb5b24c2df399795e543be22ff050c25aee22cdf65638",
+      "final_tumor": 4,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 1,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 395,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 175,
+          "transition": 3,
+          "death": 5,
+          "clearance_timeout": 2
+        },
+        "decisions": 38245,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 1,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "602d3ac752f4f2fb77b7512b896f80fa6e134cbc3d4c3122013c3a1ec04598c5",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "checkpoint-off",
+      "seed": 24,
+      "initial_signature": "9806fbac293d4a90a37e8eb5aa02d10062772340eaac3138e2abf7d06e23ec4a",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 2,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 107,
+          "death": 3,
+          "clearance_timeout": 3,
+          "transition": 1
+        },
+        "decisions": 38202,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 2,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "a48949ceb2e0cf06c09454c9706b0ed10b5e009cf6f5db8edec06b653e82cf67",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "checkpoint-off",
+      "seed": 25,
+      "initial_signature": "7f298d591419f32e42cf389f33756b9e504db9b9d70fe20e16fa39c3ea27bd38",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 89,
+          "transition": 4,
+          "division": 1,
+          "death": 4,
+          "phagocytosis": 2,
+          "clearance_timeout": 2
+        },
+        "decisions": 38308,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "c7bb3bf825e671373cac4f9aee1e8a8b9263e386a0d889aff52b7c04af81ea46",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "transitions-off",
+      "seed": 21,
+      "initial_signature": "d5e764bd38771fde2d97f1c8a3df0e3783fc77ef5a085a6f748ea496276a47e9",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 399,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 116,
+          "death": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38353,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 4,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "335171dce50dd0785e801d9cedb671ce53e041f035232d78fb592f706a7c2bf5",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "transitions-off",
+      "seed": 22,
+      "initial_signature": "4f671fbd8f9f4a2c227f975bc86ef87de5f732a99d112a5fdd1218c7d7f6303d",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 400,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 60,
+          "death": 2,
+          "clearance_timeout": 1
+        },
+        "decisions": 38547,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 4,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "f605d95a0d9a9d0eae8d6a9ba223f9383256a2840b857cefbd37f47a41683a32",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "transitions-off",
+      "seed": 23,
+      "initial_signature": "8b03cf6094ab1eb04c8fb5b24c2df399795e543be22ff050c25aee22cdf65638",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 1,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 236,
+          "death": 3,
+          "clearance_timeout": 1
+        },
+        "decisions": 38342,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 4,
+          "Cytotoxic": 0,
+          "Dysfunctional": 1,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "6e2222008b5390826f665e3efa1ef0c6d0df0ea3cfccc641f1eb4dcac24bbf46",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "transitions-off",
+      "seed": 24,
+      "initial_signature": "9806fbac293d4a90a37e8eb5aa02d10062772340eaac3138e2abf7d06e23ec4a",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 113,
+          "death": 3,
+          "clearance_timeout": 3
+        },
+        "decisions": 38218,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "440acdfc7434682dc0246005e5044a7c7142ca42a6243f35abbc051577813793",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "transitions-off",
+      "seed": 25,
+      "initial_signature": "7f298d591419f32e42cf389f33756b9e504db9b9d70fe20e16fa39c3ea27bd38",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 5,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 400,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 151,
+          "division": 1,
+          "death": 1,
+          "phagocytosis": 1
+        },
+        "decisions": 38463,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 5,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "a7f642ea8ede1aaea56d1860b2480c965f2773df013cb00ee7d35424434b5581",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "spatial-shuffle",
+      "seed": 21,
+      "initial_signature": "d797085fa474ee9adc7e23c42542463aae9f93c7e5754da641b163aa82122681",
+      "final_tumor": 4,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 5,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 395,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 134,
+          "transition": 6,
+          "death": 5,
+          "phagocytosis": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38246,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 5,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "384b25ba826883019a32f8e5ca7d7e3e4f98b0ff52af19999bcec708e001e848",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "spatial-shuffle",
+      "seed": 22,
+      "initial_signature": "0a3a4dbd27449e4de5c54e66379582c8f37f115d9b05238fb72d553a3f05c9db",
+      "final_tumor": 4,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 396,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 87,
+          "transition": 1,
+          "death": 4,
+          "phagocytosis": 1,
+          "clearance_timeout": 3
+        },
+        "decisions": 38148,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "be441af11ff30524fee502145897761e9b6946e3cfc8e40207ec08828f59a268",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "spatial-shuffle",
+      "seed": 23,
+      "initial_signature": "7cd95780b5ba43484f3f9236d0d0c2a813deb8a83eca436f682a1cb9ee87a1bb",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 17,
+        "Activated": 4,
+        "Cytotoxic": 1,
+        "Dysfunctional": 1,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 32,
+          "transition": 2,
+          "death": 2,
+          "clearance_timeout": 1
+        },
+        "decisions": 38366,
+        "final_cd8_counts": {
+          "Memory": 17,
+          "Activated": 4,
+          "Cytotoxic": 1,
+          "Dysfunctional": 1,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "e9f83b2cae0dd9a020de39950086caafc2785807b4e38873ce16db2adc685f03",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "spatial-shuffle",
+      "seed": 24,
+      "initial_signature": "03ad0ea0f69ef9c2114d1ffc327feafa69795467b9d0e52169c6473fb0fc40a8",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 2,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 33,
+          "death": 3,
+          "clearance_timeout": 3,
+          "transition": 1
+        },
+        "decisions": 38216,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 2,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "cbf722b98850499ca91589aaab117cf1207eb39c5ab7d071adf394878e6dac98",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "controls",
+      "parameter": null,
+      "factor": 1.0,
+      "arm": "spatial-shuffle",
+      "seed": 25,
+      "initial_signature": "f42e1f6c6d0ca5bb5c2bab7c123a6d623ebcab2dceca57c91b826e5886c6d2de",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 6,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 399,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 88,
+          "transition": 3,
+          "division": 1,
+          "death": 2,
+          "phagocytosis": 2
+        },
+        "decisions": 38375,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 6,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "4db367ed8b9b600c0af40f40a0c3c1e11dfecc62fa91f5d23bdaba056d49a7bb",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 21,
+      "initial_signature": "28190a35bb6e9196b860dcd3b2436cdf14d0d53db7db9ef784f854b48f103a7d",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 399,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 25,
+          "death": 1,
+          "clearance_timeout": 1,
+          "transition": 1
+        },
+        "decisions": 38353,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "8876fab4592cc14afe40983e62a60778435f483674dede41d1fc9a00a83582cb",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 22,
+      "initial_signature": "8133f74b8c3b50e4c4f1a61b40f85f147955a5d64a24a6d615bcd9faba16d590",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 401,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 45,
+          "transition": 2,
+          "death": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38561,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "a3c97db7fab8bac04ec9aea6aecce99d77aba4783263b065f7fc01222f6f978d",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 23,
+      "initial_signature": "3727e65f09a8ce2efafe25ce41dae54e675320240c1ea140ec266d038817e7f9",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 17,
+        "Activated": 5,
+        "Cytotoxic": 0,
+        "Dysfunctional": 1,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 36,
+          "transition": 1,
+          "death": 2,
+          "clearance_timeout": 1
+        },
+        "decisions": 38333,
+        "final_cd8_counts": {
+          "Memory": 17,
+          "Activated": 5,
+          "Cytotoxic": 0,
+          "Dysfunctional": 1,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "fd00d56b5a14c19f5a51f36d48838ab5007489623a1520b4b2f48dfa7ffc6b73",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 24,
+      "initial_signature": "21acac1f6a277f426a90a577ed6e923f3426cddf6fce96020ab0d54227d60140",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 2,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 87,
+          "death": 2,
+          "clearance_timeout": 2,
+          "transition": 1
+        },
+        "decisions": 38263,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 2,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "aa74dbf82e2de17509cb9a0b5b5122ce249291e4151b8c1880a923fe3dff3045",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 25,
+      "initial_signature": "66eaafdcf5076bfeaf42e768161bd8d51a3c07a869bf82253781df7a1625cfae",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 6,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 65,
+          "transition": 3,
+          "division": 1,
+          "death": 3,
+          "phagocytosis": 2,
+          "clearance_timeout": 1
+        },
+        "decisions": 38354,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 6,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "32d0390b47b8ee30d4e1aa1bf853afd9d1645ea1270dfed87d59f6cdcc279058",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 21,
+      "initial_signature": "28190a35bb6e9196b860dcd3b2436cdf14d0d53db7db9ef784f854b48f103a7d",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 400,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 44,
+          "transition": 1
+        },
+        "decisions": 38400,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "4096d5a6c130222cf0d0cbad5abe0d1ffb2147e28215d37539791da6410ec7d0",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 22,
+      "initial_signature": "8133f74b8c3b50e4c4f1a61b40f85f147955a5d64a24a6d615bcd9faba16d590",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 401,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 45,
+          "transition": 2,
+          "death": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38561,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "9c1593ddb2322f8264e382ca42fcabcb9da0ba80dd33aac24387d631afbfdb3f",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 23,
+      "initial_signature": "3727e65f09a8ce2efafe25ce41dae54e675320240c1ea140ec266d038817e7f9",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 17,
+        "Activated": 5,
+        "Cytotoxic": 0,
+        "Dysfunctional": 1,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 44,
+          "transition": 1,
+          "death": 2,
+          "clearance_timeout": 1
+        },
+        "decisions": 38343,
+        "final_cd8_counts": {
+          "Memory": 17,
+          "Activated": 5,
+          "Cytotoxic": 0,
+          "Dysfunctional": 1,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "28877a88baea1641b73c70efad39166b909d97bdc670c243f5a22fb6e2300404",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 24,
+      "initial_signature": "21acac1f6a277f426a90a577ed6e923f3426cddf6fce96020ab0d54227d60140",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 2,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 87,
+          "death": 2,
+          "clearance_timeout": 2,
+          "transition": 1
+        },
+        "decisions": 38263,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 2,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "2d59783406e80db57abfa435fda0342463465c74f83763c010ce3ef26f8d71f7",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 25,
+      "initial_signature": "66eaafdcf5076bfeaf42e768161bd8d51a3c07a869bf82253781df7a1625cfae",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 6,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 399,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 75,
+          "transition": 3,
+          "division": 1,
+          "death": 2,
+          "phagocytosis": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38381,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 6,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "e12f945d98a51c71692d59008e44b67a610d7eb389a8c2dbe665711d4d12e2db",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 21,
+      "initial_signature": "65d8c961020ffa185bfcfb48a4b79b8f32e589838dc59f3f73bc0891c2d50981",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 6,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 194,
+          "death": 3,
+          "transition": 4,
+          "clearance_timeout": 1
+        },
+        "decisions": 38335,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 6,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "55703a76393d79569dae9f0f40cd25fd98f336a9ee8182e3046e6e98e4815919",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 22,
+      "initial_signature": "367d14734410b4b4fef50d220b938880a7a59e153b42807e25eaeb227a6790af",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 400,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 128,
+          "transition": 3,
+          "death": 2,
+          "clearance_timeout": 1
+        },
+        "decisions": 38553,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 4,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "d3425715ceb81ca0a307983ce62f000319072446e4f34ec08bede460f94b78ea",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 23,
+      "initial_signature": "eea7eb924ff4ab5ebcb619d9c30b81d6740d24f6b5dc78af803a1071e75623c2",
+      "final_tumor": 4,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 1,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 395,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 197,
+          "transition": 3,
+          "death": 5,
+          "clearance_timeout": 2
+        },
+        "decisions": 38256,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 1,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "42d6176cd60988bf05da35c41868db1db7a362fad6762c8f0e229daf3a0d6453",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 24,
+      "initial_signature": "78db854fda1ef8e198f496301a064c1ff30b49b6530f617e362942932042df86",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 2,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 108,
+          "death": 3,
+          "clearance_timeout": 3,
+          "transition": 1
+        },
+        "decisions": 38186,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 2,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "0881b453f84366ced02993c521d4aa7adeb80efac47b1d3638b761ea7f07a5a2",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 25,
+      "initial_signature": "4ea689463d50b851a1c4ed94f6ed4fe2d29b64e0de3e6cf072448e351b808d43",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 92,
+          "transition": 4,
+          "division": 1,
+          "death": 4,
+          "phagocytosis": 2,
+          "clearance_timeout": 2
+        },
+        "decisions": 38313,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "3fe7447bd578d459f5eebe467ac3830b900bd2348bfaa224ee9dde5a77aceb81",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 21,
+      "initial_signature": "65d8c961020ffa185bfcfb48a4b79b8f32e589838dc59f3f73bc0891c2d50981",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 5,
+        "Cytotoxic": 0,
+        "Dysfunctional": 4,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 400,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 220,
+          "transition": 5
+        },
+        "decisions": 38400,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 5,
+          "Cytotoxic": 0,
+          "Dysfunctional": 4,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "3d3a09c45c1adaf173eb8efb0fd9558d617a657cdeaf01e3d41245c9ad1dd34b",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 22,
+      "initial_signature": "367d14734410b4b4fef50d220b938880a7a59e153b42807e25eaeb227a6790af",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 401,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 131,
+          "transition": 3,
+          "death": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38561,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 4,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "ffa5596698ea86ba0ed7d019a10e327c97362a3af6f91a88a3f3b6952b80eb3f",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 23,
+      "initial_signature": "eea7eb924ff4ab5ebcb619d9c30b81d6740d24f6b5dc78af803a1071e75623c2",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 6,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 234,
+          "transition": 4,
+          "death": 3,
+          "clearance_timeout": 1
+        },
+        "decisions": 38313,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 6,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "7098980bf559e6d1efd4068f1d6f90ebd0c7f1b6c216af109b339ee80667b818",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 24,
+      "initial_signature": "78db854fda1ef8e198f496301a064c1ff30b49b6530f617e362942932042df86",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 2,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 117,
+          "death": 3,
+          "clearance_timeout": 3,
+          "transition": 1
+        },
+        "decisions": 38195,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 2,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "e30cae1399bdca449fb3f0ca92209ea039227d4b2487a9a11e4a6bef114c0800",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "reactive_fraction",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 25,
+      "initial_signature": "4ea689463d50b851a1c4ed94f6ed4fe2d29b64e0de3e6cf072448e351b808d43",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 108,
+          "transition": 4,
+          "division": 1,
+          "death": 3,
+          "phagocytosis": 1,
+          "clearance_timeout": 2
+        },
+        "decisions": 38354,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "183041c94d77ce5a3c7397a789a02c4caaed979ec4721bd72c9982f3a59e4ae0",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 21,
+      "initial_signature": "d5e764bd38771fde2d97f1c8a3df0e3783fc77ef5a085a6f748ea496276a47e9",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 5,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 110,
+          "death": 3,
+          "transition": 3,
+          "clearance_timeout": 1
+        },
+        "decisions": 38325,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 5,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "02bd14658de2cbd03a42640f8a63ef24fefa4379dd65fae9f1acc563561c14fb",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 22,
+      "initial_signature": "4f671fbd8f9f4a2c227f975bc86ef87de5f732a99d112a5fdd1218c7d7f6303d",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 401,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 45,
+          "transition": 2,
+          "death": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38561,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "5ebb478df1cae13a9ad974c1e0d93efe72e52ce2ead4935021566baab88b1324",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 23,
+      "initial_signature": "8b03cf6094ab1eb04c8fb5b24c2df399795e543be22ff050c25aee22cdf65638",
+      "final_tumor": 4,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 1,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 395,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 179,
+          "transition": 3,
+          "death": 5,
+          "clearance_timeout": 2
+        },
+        "decisions": 38256,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 1,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "334a4d9d03a3eea5b9e0a943062bc423e00e945c919353741da94db2495abc2b",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 24,
+      "initial_signature": "9806fbac293d4a90a37e8eb5aa02d10062772340eaac3138e2abf7d06e23ec4a",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 2,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 110,
+          "death": 3,
+          "clearance_timeout": 3,
+          "transition": 1
+        },
+        "decisions": 38209,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 2,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "4c5c2f1a9f9854653693a7e04ab682ba46cad535a8d44fb6cff496ddf7ee41b2",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 25,
+      "initial_signature": "7f298d591419f32e42cf389f33756b9e504db9b9d70fe20e16fa39c3ea27bd38",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 90,
+          "transition": 4,
+          "division": 1,
+          "death": 4,
+          "phagocytosis": 2,
+          "clearance_timeout": 2
+        },
+        "decisions": 38311,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "7938c4b24a35bd855d5a16e0282b9ef6f8196b52d07021c71d469df4bdf820c0",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 21,
+      "initial_signature": "d5e764bd38771fde2d97f1c8a3df0e3783fc77ef5a085a6f748ea496276a47e9",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 5,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 118,
+          "death": 3,
+          "transition": 3,
+          "clearance_timeout": 1
+        },
+        "decisions": 38348,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 5,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "07dc0b8173370683afdab311872144619cc7b20e5b9b90d43f003930c3444e1c",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 22,
+      "initial_signature": "4f671fbd8f9f4a2c227f975bc86ef87de5f732a99d112a5fdd1218c7d7f6303d",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 401,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 45,
+          "transition": 2,
+          "death": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38561,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "292bc4765086b278ec472659a44092dcc2e735425f85a33c420a88dc2e4aff4e",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 23,
+      "initial_signature": "8b03cf6094ab1eb04c8fb5b24c2df399795e543be22ff050c25aee22cdf65638",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 6,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 396,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 194,
+          "transition": 4,
+          "death": 4,
+          "clearance_timeout": 2
+        },
+        "decisions": 38291,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 6,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "76c0f8d66cd2ebe9196d83c0af73fffe50f3232118136d12e2a913eb03c3ec46",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 24,
+      "initial_signature": "9806fbac293d4a90a37e8eb5aa02d10062772340eaac3138e2abf7d06e23ec4a",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 2,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 115,
+          "death": 3,
+          "clearance_timeout": 3,
+          "transition": 1
+        },
+        "decisions": 38222,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 2,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "0ee2d18df50e00e3898f3eff7ae76321533ecbeedce3ce1e7fa90f4523842108",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 25,
+      "initial_signature": "7f298d591419f32e42cf389f33756b9e504db9b9d70fe20e16fa39c3ea27bd38",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 100,
+          "transition": 4,
+          "division": 1,
+          "death": 3,
+          "phagocytosis": 1,
+          "clearance_timeout": 2
+        },
+        "decisions": 38336,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "e0fd0f8d1d3530b2decbf09a7c8f04b1323a2a7251c5d4e573ca9329c83f1209",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 21,
+      "initial_signature": "d5e764bd38771fde2d97f1c8a3df0e3783fc77ef5a085a6f748ea496276a47e9",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 5,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 111,
+          "death": 3,
+          "transition": 3,
+          "phagocytosis": 1
+        },
+        "decisions": 38337,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 5,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "217cafe26455eb3289a4b49a606c07a134e580d7a8171d0b0452cdbdf9e5bde7",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 22,
+      "initial_signature": "4f671fbd8f9f4a2c227f975bc86ef87de5f732a99d112a5fdd1218c7d7f6303d",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 401,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 45,
+          "transition": 2,
+          "death": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38561,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "0e04070ede899318bec76f69180329153b3e78bb011aa3d2e791b8f0f12b2685",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 23,
+      "initial_signature": "8b03cf6094ab1eb04c8fb5b24c2df399795e543be22ff050c25aee22cdf65638",
+      "final_tumor": 4,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 1,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 395,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 186,
+          "transition": 3,
+          "death": 5,
+          "clearance_timeout": 2
+        },
+        "decisions": 38273,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 1,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "c57ecc24e4c0303e55145872cbc1d96b029632fb404d7cdcbda928f7334bf0fb",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 24,
+      "initial_signature": "9806fbac293d4a90a37e8eb5aa02d10062772340eaac3138e2abf7d06e23ec4a",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 2,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 114,
+          "death": 3,
+          "clearance_timeout": 3,
+          "transition": 1
+        },
+        "decisions": 38219,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 2,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "19c5ab8998519912e34abc73647fd695ab57086d3348e9bf38a2d40d8c2d85f3",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 25,
+      "initial_signature": "7f298d591419f32e42cf389f33756b9e504db9b9d70fe20e16fa39c3ea27bd38",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 94,
+          "transition": 4,
+          "division": 1,
+          "death": 4,
+          "phagocytosis": 2,
+          "clearance_timeout": 2
+        },
+        "decisions": 38316,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "79f6c3f53119ea00aeab0d6065a81036a92a167381548dd3510561f3e66cc80d",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 21,
+      "initial_signature": "d5e764bd38771fde2d97f1c8a3df0e3783fc77ef5a085a6f748ea496276a47e9",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 4,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 400,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 135,
+          "transition": 4
+        },
+        "decisions": 38400,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 4,
+          "Cytotoxic": 0,
+          "Dysfunctional": 4,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "83d0e64e685cf110475552644b389054a086002a0a4699e999dc580f3584e403",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 22,
+      "initial_signature": "4f671fbd8f9f4a2c227f975bc86ef87de5f732a99d112a5fdd1218c7d7f6303d",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 401,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 45,
+          "transition": 2,
+          "death": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38561,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "df02b1ce65480a9c1b5d5bc79b88cc170d159c03ba131f0d7d9e9deba7c1c042",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 23,
+      "initial_signature": "8b03cf6094ab1eb04c8fb5b24c2df399795e543be22ff050c25aee22cdf65638",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 6,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 220,
+          "transition": 4,
+          "death": 2,
+          "clearance_timeout": 1
+        },
+        "decisions": 38345,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 6,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "bee81198773bfdcaa1d13f4dd0821a339751a3426139eb4da88f80f42b23c22a",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 24,
+      "initial_signature": "9806fbac293d4a90a37e8eb5aa02d10062772340eaac3138e2abf7d06e23ec4a",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 2,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 131,
+          "death": 2,
+          "clearance_timeout": 2,
+          "transition": 1
+        },
+        "decisions": 38263,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 2,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "533446e7d437fe3d4a438d0b403b3f87b12f9891fceecb1e9c0c7bbd63639263",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "checkpoint_strength",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 25,
+      "initial_signature": "7f298d591419f32e42cf389f33756b9e504db9b9d70fe20e16fa39c3ea27bd38",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 112,
+          "transition": 4,
+          "division": 1,
+          "death": 3,
+          "phagocytosis": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38364,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "191adbc3ba5a4aed17f084f2da9756ad2718534edcb0c9b3208d0469457b6171",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 21,
+      "initial_signature": "d5e764bd38771fde2d97f1c8a3df0e3783fc77ef5a085a6f748ea496276a47e9",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 5,
+        "Cytotoxic": 1,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 109,
+          "death": 3,
+          "transition": 3,
+          "clearance_timeout": 1
+        },
+        "decisions": 38335,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 5,
+          "Cytotoxic": 1,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "a216db3c4837fb6a881769372bbdb44d35271ac86da50d288759ec71736126db",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 22,
+      "initial_signature": "4f671fbd8f9f4a2c227f975bc86ef87de5f732a99d112a5fdd1218c7d7f6303d",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 400,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 60,
+          "transition": 1,
+          "death": 2,
+          "clearance_timeout": 1
+        },
+        "decisions": 38547,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 4,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "9b38221bde3f0d46d0fc0764c8f96bdde89ba25f9c30ba1e53823cfc00796139",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 23,
+      "initial_signature": "8b03cf6094ab1eb04c8fb5b24c2df399795e543be22ff050c25aee22cdf65638",
+      "final_tumor": 4,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 7,
+        "Cytotoxic": 0,
+        "Dysfunctional": 1,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 395,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 183,
+          "transition": 3,
+          "death": 5,
+          "clearance_timeout": 2
+        },
+        "decisions": 38265,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 7,
+          "Cytotoxic": 0,
+          "Dysfunctional": 1,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "37b88de7e6fc2c6883aed4c446e6dec61fb19f3f32fd74d41234e905c2454d01",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 24,
+      "initial_signature": "9806fbac293d4a90a37e8eb5aa02d10062772340eaac3138e2abf7d06e23ec4a",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 113,
+          "death": 3,
+          "clearance_timeout": 3
+        },
+        "decisions": 38218,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "a53379c29a50aec0d89d76371a865b6e55018f9a4d4cc36f3ea8bdb342586bc7",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 0.5,
+      "arm": "anti-pd1",
+      "seed": 25,
+      "initial_signature": "7f298d591419f32e42cf389f33756b9e504db9b9d70fe20e16fa39c3ea27bd38",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 6,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 117,
+          "transition": 3,
+          "division": 1,
+          "death": 3,
+          "phagocytosis": 2
+        },
+        "decisions": 38376,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 6,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "44b7733b51a9dac3b80502243c89869a36c68923957964543f56a35131d7ec72",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 21,
+      "initial_signature": "d5e764bd38771fde2d97f1c8a3df0e3783fc77ef5a085a6f748ea496276a47e9",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 17,
+        "Activated": 3,
+        "Cytotoxic": 1,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 400,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 135,
+          "transition": 3
+        },
+        "decisions": 38400,
+        "final_cd8_counts": {
+          "Memory": 17,
+          "Activated": 3,
+          "Cytotoxic": 1,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "c533da69eca438ac1c80bfd7264cd4f729e0ad221de9331596de0200ebdfdc00",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 22,
+      "initial_signature": "4f671fbd8f9f4a2c227f975bc86ef87de5f732a99d112a5fdd1218c7d7f6303d",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 401,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 65,
+          "transition": 1,
+          "death": 1,
+          "clearance_timeout": 1
+        },
+        "decisions": 38561,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 4,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "6cd7c9794a87028cb0966c8c7b3f5fb03c27177021c3aac56cf27746fa64d160",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 23,
+      "initial_signature": "8b03cf6094ab1eb04c8fb5b24c2df399795e543be22ff050c25aee22cdf65638",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 6,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 217,
+          "transition": 4,
+          "death": 3,
+          "clearance_timeout": 1
+        },
+        "decisions": 38340,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 6,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "eb9f135d0fabd0243a1dec0efdc99de2cd7268fdf9292e1bbcd5816c513f077c",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 24,
+      "initial_signature": "9806fbac293d4a90a37e8eb5aa02d10062772340eaac3138e2abf7d06e23ec4a",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 18,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 131,
+          "death": 3,
+          "clearance_timeout": 2
+        },
+        "decisions": 38262,
+        "final_cd8_counts": {
+          "Memory": 18,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "262b369e38e7d9ae0295d555bbf2e11a6dbf8d49bddb82f08456fdb118e8f204",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 0.5,
+      "arm": "exposure-zero",
+      "seed": 25,
+      "initial_signature": "7f298d591419f32e42cf389f33756b9e504db9b9d70fe20e16fa39c3ea27bd38",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 6,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 399,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 126,
+          "transition": 3,
+          "division": 1,
+          "death": 2,
+          "phagocytosis": 1
+        },
+        "decisions": 38402,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 6,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "3c75bb22518ba0b2148115a67711bed2ecd4498fe43f49770e54b83e88e822cb",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 21,
+      "initial_signature": "d5e764bd38771fde2d97f1c8a3df0e3783fc77ef5a085a6f748ea496276a47e9",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 17,
+        "Activated": 4,
+        "Cytotoxic": 0,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 109,
+          "death": 3,
+          "transition": 4,
+          "clearance_timeout": 1
+        },
+        "decisions": 38335,
+        "final_cd8_counts": {
+          "Memory": 17,
+          "Activated": 4,
+          "Cytotoxic": 0,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "137348c76bdb95f468110532dee362787ca47fc2b1391a441a1d456d1e362ed2",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 22,
+      "initial_signature": "4f671fbd8f9f4a2c227f975bc86ef87de5f732a99d112a5fdd1218c7d7f6303d",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 20,
+        "Activated": 0,
+        "Cytotoxic": 2,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 400,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 43,
+          "transition": 7,
+          "death": 2,
+          "clearance_timeout": 1
+        },
+        "decisions": 38556,
+        "final_cd8_counts": {
+          "Memory": 20,
+          "Activated": 0,
+          "Cytotoxic": 2,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "85adc86d78f571d5fd33eb11b541ecc7a91f63fa99f372d69aa815ca67617348",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 23,
+      "initial_signature": "8b03cf6094ab1eb04c8fb5b24c2df399795e543be22ff050c25aee22cdf65638",
+      "final_tumor": 3,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 4,
+        "Cytotoxic": 2,
+        "Dysfunctional": 1,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 394,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 167,
+          "transition": 8,
+          "death": 6,
+          "clearance_timeout": 3
+        },
+        "decisions": 38225,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 4,
+          "Cytotoxic": 2,
+          "Dysfunctional": 1,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "7add552dc4ad5d3f119107b5a12fa011f78dd8360cf0d5420290df40523d3b2d",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 24,
+      "initial_signature": "9806fbac293d4a90a37e8eb5aa02d10062772340eaac3138e2abf7d06e23ec4a",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 1,
+        "Cytotoxic": 1,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 396,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 100,
+          "transition": 4,
+          "death": 4,
+          "clearance_timeout": 4
+        },
+        "decisions": 38184,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 1,
+          "Cytotoxic": 1,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "2cbf6cc06fbaa0994cb13f6357b040703c0a4ca9ebc9a9703964cf528f2141c2",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 2.0,
+      "arm": "anti-pd1",
+      "seed": 25,
+      "initial_signature": "7f298d591419f32e42cf389f33756b9e504db9b9d70fe20e16fa39c3ea27bd38",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 6,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 397,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 92,
+          "transition": 5,
+          "division": 1,
+          "death": 4,
+          "phagocytosis": 2,
+          "clearance_timeout": 2
+        },
+        "decisions": 38313,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 6,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "caa4cd2fdfde20ff10f1ec9d2bba94d2bea420c21d7dc6f661af05c9b39c260e",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": false,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 21,
+      "initial_signature": "d5e764bd38771fde2d97f1c8a3df0e3783fc77ef5a085a6f748ea496276a47e9",
+      "final_tumor": 8,
+      "final_cd8": {
+        "Memory": 17,
+        "Activated": 3,
+        "Cytotoxic": 0,
+        "Dysfunctional": 4,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 21,
+        "initial_cells": 400,
+        "final_alive": 400,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 135,
+          "transition": 5
+        },
+        "decisions": 38400,
+        "final_cd8_counts": {
+          "Memory": 17,
+          "Activated": 3,
+          "Cytotoxic": 0,
+          "Dysfunctional": 4,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "e92b42a72cd7f7cb7b69ceea378ccf570c1f5b870ef6cc8ddd8a0addfab386cb",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 22,
+      "initial_signature": "4f671fbd8f9f4a2c227f975bc86ef87de5f732a99d112a5fdd1218c7d7f6303d",
+      "final_tumor": 7,
+      "final_cd8": {
+        "Memory": 20,
+        "Activated": 0,
+        "Cytotoxic": 2,
+        "Dysfunctional": 3,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 22,
+        "initial_cells": 400,
+        "final_alive": 400,
+        "created_cells": 402,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "division": 2,
+          "attack": 45,
+          "transition": 7,
+          "death": 2,
+          "clearance_timeout": 1
+        },
+        "decisions": 38561,
+        "final_cd8_counts": {
+          "Memory": 20,
+          "Activated": 0,
+          "Cytotoxic": 2,
+          "Dysfunctional": 3,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "423791e0706ef3f0d8cbc933d0849efddd84e6ab0c4bdf12e7307c7c590b1f52",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 23,
+      "initial_signature": "8b03cf6094ab1eb04c8fb5b24c2df399795e543be22ff050c25aee22cdf65638",
+      "final_tumor": 3,
+      "final_cd8": {
+        "Memory": 15,
+        "Activated": 4,
+        "Cytotoxic": 2,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 23,
+        "initial_cells": 400,
+        "final_alive": 394,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 207,
+          "transition": 9,
+          "death": 6,
+          "clearance_timeout": 2
+        },
+        "decisions": 38314,
+        "final_cd8_counts": {
+          "Memory": 15,
+          "Activated": 4,
+          "Cytotoxic": 2,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "aac8510d16779babf23e3f2779b859db98f9cbc4017b511b0c1618f43eaf68a9",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 24,
+      "initial_signature": "9806fbac293d4a90a37e8eb5aa02d10062772340eaac3138e2abf7d06e23ec4a",
+      "final_tumor": 5,
+      "final_cd8": {
+        "Memory": 19,
+        "Activated": 1,
+        "Cytotoxic": 1,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 24,
+        "initial_cells": 400,
+        "final_alive": 396,
+        "created_cells": 400,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 124,
+          "transition": 4,
+          "death": 4,
+          "clearance_timeout": 2
+        },
+        "decisions": 38243,
+        "final_cd8_counts": {
+          "Memory": 19,
+          "Activated": 1,
+          "Cytotoxic": 1,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "3d266f9d789f9045bc468762bd39e7f8741f9acaae33f3841861465b612af3a9",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    },
+    {
+      "experiment": "sensitivity",
+      "parameter": "transition_scale",
+      "factor": 2.0,
+      "arm": "exposure-zero",
+      "seed": 25,
+      "initial_signature": "7f298d591419f32e42cf389f33756b9e504db9b9d70fe20e16fa39c3ea27bd38",
+      "final_tumor": 6,
+      "final_cd8": {
+        "Memory": 16,
+        "Activated": 6,
+        "Cytotoxic": 0,
+        "Dysfunctional": 2,
+        "Unknown": 3
+      },
+      "summary": {
+        "seed": 25,
+        "initial_cells": 400,
+        "final_alive": 398,
+        "created_cells": 401,
+        "observed_hours": 24.0,
+        "requested_hours": 24.0,
+        "stop_reason": "completed",
+        "complete": true,
+        "events": {
+          "attack": 108,
+          "transition": 5,
+          "division": 1,
+          "death": 3,
+          "phagocytosis": 1,
+          "clearance_timeout": 2
+        },
+        "decisions": 38354,
+        "final_cd8_counts": {
+          "Memory": 16,
+          "Activated": 6,
+          "Cytotoxic": 0,
+          "Dysfunctional": 2,
+          "Unknown": 3
+        },
+        "policy": "stochastic-hazards-v1",
+        "journal_root": "be82263cfd104ed51e3f2e918156ff8400c511f3835bd3a48d15c323557f2288",
+        "rates_fitted": false,
+        "evidence_class": "exploratory software experiment",
+        "clinical_validation": false,
+        "counterfactual": true,
+        "geometry_measured": false,
+        "drug_units": "normalized assumed exposure, not clinical dose"
+      }
+    }
+  ],
+  "paired_differences": [
+    {
+      "parameter": null,
+      "factor": 1.0,
+      "paired_tumor_differences": [
+        -3,
+        0,
+        -2,
+        0,
+        -1
+      ],
+      "mean": -1.2,
+      "quantiles_10_50_90": [
+        -2.6,
+        -1.0,
+        0.0
+      ]
+    },
+    {
+      "parameter": "reactive_fraction",
+      "factor": 0.5,
+      "paired_tumor_differences": [
+        -1,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "mean": -0.4,
+      "quantiles_10_50_90": [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "parameter": "reactive_fraction",
+      "factor": 2.0,
+      "paired_tumor_differences": [
+        -3,
+        -1,
+        -2,
+        0,
+        -1
+      ],
+      "mean": -1.4,
+      "quantiles_10_50_90": [
+        -2.6,
+        -1.0,
+        -0.3999999999999999
+      ]
+    },
+    {
+      "parameter": "checkpoint_strength",
+      "factor": 0.5,
+      "paired_tumor_differences": [
+        0,
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "mean": -0.4,
+      "quantiles_10_50_90": [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "parameter": "checkpoint_strength",
+      "factor": 2.0,
+      "paired_tumor_differences": [
+        -3,
+        0,
+        -3,
+        -1,
+        -1
+      ],
+      "mean": -1.6,
+      "quantiles_10_50_90": [
+        -3.0,
+        -1.0,
+        -0.3999999999999999
+      ]
+    },
+    {
+      "parameter": "transition_scale",
+      "factor": 0.5,
+      "paired_tumor_differences": [
+        -3,
+        -1,
+        -2,
+        0,
+        -1
+      ],
+      "mean": -1.4,
+      "quantiles_10_50_90": [
+        -2.6,
+        -1.0,
+        -0.3999999999999999
+      ]
+    },
+    {
+      "parameter": "transition_scale",
+      "factor": 2.0,
+      "paired_tumor_differences": [
+        -3,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "mean": -0.8,
+      "quantiles_10_50_90": [
+        -2.2,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "scope": "Monte Carlo variability and assumed-parameter sensitivity; not patient confidence intervals or clinical benefit",
+  "config": {
+    "schema_version": 2,
+    "mechanics": {
+      "name": "melanoma-local-policy-v1",
+      "dt_hours": 0.25,
+      "packing_fraction": 0.32,
+      "immune_speed_um_h": 10.0,
+      "contact_gap_um": 2.0,
+      "perception_um": 55.0,
+      "cycle_hours": 24.0,
+      "attack_damage_per_hour": 0.65,
+      "fatigue_per_hour": 0.32,
+      "recovery_per_hour": 0.22,
+      "corpse_hours": 6.0,
+      "cue_diffusion_um2_h": 90.0,
+      "cue_decay_per_hour": 0.3,
+      "cue_source_per_hour": 0.5,
+      "provenance": "Declared software hypotheses, not fitted biological rates. Generic cue has arbitrary units."
+    },
+    "model": {
+      "schema_version": 2,
+      "name": "assumed-cd8-anti-pd1-v1",
+      "evidence_class": "assumed",
+      "source": "A05 exploratory assumption; numerical values are not literature estimates",
+      "states": [
+        "Memory",
+        "Activated",
+        "Cytotoxic",
+        "Dysfunctional"
+      ],
+      "transitions": [
+        {
+          "source": "Memory",
+          "target": "Activated",
+          "rate_per_hour": 0.045,
+          "class": "activation",
+          "evidence_class": "assumed",
+          "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+        },
+        {
+          "source": "Activated",
+          "target": "Memory",
+          "rate_per_hour": 0.012,
+          "class": "rest",
+          "evidence_class": "assumed",
+          "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+        },
+        {
+          "source": "Activated",
+          "target": "Cytotoxic",
+          "rate_per_hour": 0.035,
+          "class": "effector",
+          "evidence_class": "assumed",
+          "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+        },
+        {
+          "source": "Activated",
+          "target": "Dysfunctional",
+          "rate_per_hour": 0.018,
+          "class": "dysfunction",
+          "evidence_class": "assumed",
+          "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+        },
+        {
+          "source": "Cytotoxic",
+          "target": "Dysfunctional",
+          "rate_per_hour": 0.022,
+          "class": "dysfunction",
+          "evidence_class": "assumed",
+          "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+        },
+        {
+          "source": "Cytotoxic",
+          "target": "Memory",
+          "rate_per_hour": 0.006,
+          "class": "rest",
+          "evidence_class": "assumed",
+          "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+        },
+        {
+          "source": "Dysfunctional",
+          "target": "Activated",
+          "rate_per_hour": 0.004,
+          "class": "reinvigoration",
+          "evidence_class": "assumed",
+          "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+        }
+      ],
+      "division_per_hour": {
+        "Memory": 0.001,
+        "Activated": 0.012,
+        "Cytotoxic": 0.003,
+        "Dysfunctional": 0.015
+      },
+      "death_per_hour": {
+        "Memory": 0.001,
+        "Activated": 0.002,
+        "Cytotoxic": 0.003,
+        "Dysfunctional": 0.004
+      },
+      "influx_cells_per_hour": {
+        "Memory": 0.0,
+        "Activated": 0.0,
+        "Cytotoxic": 0.0,
+        "Dysfunctional": 0.0
+      },
+      "profiles": {
+        "Memory": {
+          "dysfunction": 0.05,
+          "proliferation": 0.1,
+          "cytotoxicity": 0.08,
+          "persistence": 0.95
+        },
+        "Activated": {
+          "dysfunction": 0.15,
+          "proliferation": 0.65,
+          "cytotoxicity": 0.45,
+          "persistence": 0.65
+        },
+        "Cytotoxic": {
+          "dysfunction": 0.25,
+          "proliferation": 0.25,
+          "cytotoxicity": 0.95,
+          "persistence": 0.5
+        },
+        "Dysfunctional": {
+          "dysfunction": 0.9,
+          "proliferation": 0.7,
+          "cytotoxicity": 0.3,
+          "persistence": 0.45
+        },
+        "Unknown": {
+          "dysfunction": 0.0,
+          "proliferation": 0.0,
+          "cytotoxicity": 0.0,
+          "persistence": 0.0
+        }
+      },
+      "pd1_activity": {
+        "Memory": 0.2,
+        "Activated": 0.6,
+        "Cytotoxic": 0.55,
+        "Dysfunctional": 0.9
+      },
+      "pdl1_activity": 0.7,
+      "checkpoint_strength": 0.85,
+      "reactive_fraction": 0.65,
+      "target_antigen": 1.0,
+      "costimulation": 0.8,
+      "schedule": [
+        {
+          "start_hour": 2.0,
+          "end_hour": 96.0,
+          "exposure": 0.8
+        }
+      ],
+      "checkpoint_enabled": true,
+      "recognition_enabled": true,
+      "transitions_enabled": true,
+      "demography_enabled": true,
+      "parameter_provenance": {
+        "transitions.*.rate_per_hour": {
+          "unit": "1/hour",
+          "evidence_class": "assumed",
+          "source": "A05 exploratory assumption; numerical values are not literature estimates"
+        },
+        "division_per_hour.*": {
+          "unit": "1/hour",
+          "evidence_class": "assumed",
+          "source": "A05 exploratory assumption; numerical values are not literature estimates"
+        },
+        "death_per_hour.*": {
+          "unit": "1/hour",
+          "evidence_class": "assumed",
+          "source": "A05 exploratory assumption; numerical values are not literature estimates"
+        },
+        "influx_cells_per_hour.*": {
+          "unit": "cells/hour",
+          "evidence_class": "assumed",
+          "source": "A05 exploratory assumption; numerical values are not literature estimates"
+        },
+        "profiles.*.*": {
+          "unit": "normalized capacity [0,1]",
+          "evidence_class": "assumed",
+          "source": "A05 exploratory assumption; numerical values are not literature estimates"
+        },
+        "pd1_activity.*,pdl1_activity,checkpoint_strength,reactive_fraction,target_antigen,costimulation": {
+          "unit": "fraction [0,1]",
+          "evidence_class": "assumed",
+          "source": "A05 exploratory assumption; numerical values are not literature estimates"
+        },
+        "schedule": {
+          "unit": "hours; normalized exposure [0,1]",
+          "evidence_class": "assumed",
+          "source": "Piecewise constant exposure; not dose, pharmacokinetics or measured occupancy"
+        }
+      }
+    },
+    "mean_context": null,
+    "policy": "hazards",
+    "recording_cell_limit": 100000
+  },
+  "saturation": "Fractions/strength capped at 1 for factor 2; inspect effective value",
+  "all_completed": true
+}

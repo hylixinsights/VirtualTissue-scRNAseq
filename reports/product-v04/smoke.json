@@ -1,0 +1,91 @@
+{
+  "anti-pd1": {
+    "output": "outputs/v04-smoke/anti-pd1",
+    "explorer": "outputs/v04-smoke/anti-pd1/explorer.html",
+    "results_zip": "outputs/v04-smoke/anti-pd1.zip",
+    "seed": 21,
+    "initial_cells": 40,
+    "final_alive": 37,
+    "created_cells": 40,
+    "observed_hours": 4.0,
+    "requested_hours": 4.0,
+    "stop_reason": "completed",
+    "complete": true,
+    "events": {
+      "attack": 62,
+      "death": 3
+    },
+    "decisions": 627,
+    "final_cd8_counts": {
+      "Memory": 1,
+      "Activated": 2,
+      "Cytotoxic": 2,
+      "Dysfunctional": 1,
+      "Unknown": 0
+    },
+    "policy": "stochastic-hazards-v1",
+    "journal_root": "4277499c4a9fcd64cc4de3c500537c793d6ea152106b14a150ad33ac2f78c0a0",
+    "rates_fitted": false,
+    "evidence_class": "exploratory software experiment",
+    "clinical_validation": false,
+    "counterfactual": false,
+    "geometry_measured": false,
+    "drug_units": "normalized assumed exposure, not clinical dose"
+  },
+  "exposure-zero": {
+    "output": "outputs/v04-smoke/exposure-zero",
+    "explorer": "outputs/v04-smoke/exposure-zero/explorer.html",
+    "results_zip": "outputs/v04-smoke/exposure-zero.zip",
+    "seed": 21,
+    "initial_cells": 40,
+    "final_alive": 38,
+    "created_cells": 40,
+    "observed_hours": 4.0,
+    "requested_hours": 4.0,
+    "stop_reason": "completed",
+    "complete": true,
+    "events": {
+      "attack": 62,
+      "death": 2
+    },
+    "decisions": 627,
+    "final_cd8_counts": {
+      "Memory": 1,
+      "Activated": 2,
+      "Cytotoxic": 2,
+      "Dysfunctional": 1,
+      "Unknown": 0
+    },
+    "policy": "stochastic-hazards-v1",
+    "journal_root": "4dd254cb49657746ffb2464e5204260691b9c0b83ce59adb8de26f45e86d6a6f",
+    "rates_fitted": false,
+    "evidence_class": "exploratory software experiment",
+    "clinical_validation": false,
+    "counterfactual": true,
+    "geometry_measured": false,
+    "drug_units": "normalized assumed exposure, not clinical dose"
+  },
+  "comparison": {
+    "output": "outputs/v04-smoke/comparison",
+    "explorer": "outputs/v04-smoke/comparison/explorer.html",
+    "same_input": true,
+    "same_seed": true,
+    "same_initial_positions": true,
+    "shared_hours": 4.0,
+    "configuration_differences": {
+      "schedule": [
+        [
+          {
+            "start_hour": 2.0,
+            "end_hour": 96.0,
+            "exposure": 0.8
+          }
+        ],
+        []
+      ]
+    },
+    "arm_a": "anti-pd1",
+    "arm_b": "exposure-zero",
+    "interpretation": "Paired simulated scenarios. Exposure-zero is a hypothesis-dependent counterfactual, not an observed untreated biopsy."
+  }
+}

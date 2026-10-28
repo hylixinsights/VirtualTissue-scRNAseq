@@ -1,0 +1,8 @@
+Collecting pyarrow==26.0.0
+  Using cached pyarrow-26.0.0-cp312-cp312-macosx_12_0_arm64.whl.metadata (3.0 kB)
+Using cached pyarrow-26.0.0-cp312-cp312-macosx_12_0_arm64.whl (36.3 MB)
+Installing collected packages: pyarrow
+Successfully installed pyarrow-26.0.0
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.2
+[notice] To update, run: /Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/.venv-software/bin/python -m pip install --upgrade pip
