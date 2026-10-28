@@ -20,3 +20,12 @@ The original SPECIAL/Lin plan, frozen config, candidate counts, licensing and
 feasibility gates are unchanged. This software prototype does not fit those data,
 consume a lockbox or imply that their research gates have passed. A future
 clinical or biological validation claim still requires its planned evidence.
+
+## Scope clarification — 2026-10-28
+
+This document records software implementation choices, not a replacement
+scientific protocol or permission to waive the original predictive gates.
+The user's example/pipeline request did not specifically prescribe the PBMC
+recipe, scoring formula or local kinetic rules chosen by the assistant.
+See `reports/plan-alignment-audit-2026-10-28.md` for the remaining original
+requirements. No original research task is completed by these prototypes.

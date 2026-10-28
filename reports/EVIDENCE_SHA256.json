@@ -1,10 +1,10 @@
 {
-  "created_at_utc": "2026-10-28T02:51:25.900629+00:00",
+  "created_at_utc": "2026-10-28T03:04:54.344652+00:00",
   "files": [
     {
       "path": "reports/STATUS.md",
-      "bytes": 4167,
-      "sha256": "1b9579b0a0a6b81293e161bd5540710542a15458ffa686fd88a032cc44cb600a"
+      "bytes": 4485,
+      "sha256": "bff24111916723a3f12efed32675300f438616399069ffc02f7486d72c09f90b"
     },
     {
       "path": "reports/T0.1_environment.md",
@@ -48,8 +48,8 @@
     },
     {
       "path": "reports/cohort_expansion_review.md",
-      "bytes": 15586,
-      "sha256": "fe582d84954f759e649948593de80e8bcdc26b36b4bed639b8fc4e4d3732c2ed"
+      "bytes": 15783,
+      "sha256": "c9e9e075a01ab0a557c72e3e695e595566569234470180207ca03d2ba3431fcd"
     },
     {
       "path": "reports/evidence/PMC12409281.xml",
@@ -417,6 +417,16 @@
       "sha256": "49cec277f506e01ea7671ebe6cd7a013884672d4359510af408190cbc783acd0"
     },
     {
+      "path": "reports/plan-alignment-audit-2026-10-28.json",
+      "bytes": 12521,
+      "sha256": "9680eac3ff9cacae2966c8295a82364b6f023797fce1ed51d29ff9127bb031f2"
+    },
+    {
+      "path": "reports/plan-alignment-audit-2026-10-28.md",
+      "bytes": 10403,
+      "sha256": "497fcb3e738749af29d7ca4b036f4ca45ed6f144a346a73b3167a9c4c624163c"
+    },
+    {
       "path": "reports/software/environment-tested.txt",
       "bytes": 1507,
       "sha256": "7656aa6c90da0aaffe148e1fc08f0cfb0298666738e0215afd15aa143886ce66"
@@ -483,8 +493,8 @@
     },
     {
       "path": "reports/task-board.json",
-      "bytes": 9385,
-      "sha256": "d839fab54a1d5c71dccd9b1f3d7e8b073ba2965c8c1edcf6fc0a1282a873d566"
+      "bytes": 9876,
+      "sha256": "31a2c70434b56012e42f9ab5402461ab87c85f1f46edd9b4d5fecb6900f20457"
     },
     {
       "path": "tables/S2_metadata_dictionary.tsv",
@@ -618,13 +628,13 @@
     },
     {
       "path": "prereg/amendment-A03-software-testing-2026-10-27.md",
-      "bytes": 1447,
-      "sha256": "fcddca2e5287505466dd588ca6540de49f1042c2ae2524534970afefe5619c62"
+      "bytes": 1932,
+      "sha256": "b9facaaaa3ab3dd45c9ad0adf3b5b0439f701601b94d531cc3b7684d7ad5f9a2"
     },
     {
       "path": "prereg/amendment-A04-melanoma-prototype-2026-10-27.md",
-      "bytes": 1380,
-      "sha256": "55243f3eda2d012fb58779a11a40325a6a07c461ce977a29a688b5028c1a5fb3"
+      "bytes": 1865,
+      "sha256": "168006ca680920cb245467045f69c0e6da1920a9908ed1de53b6cc42dcc40e06"
     },
     {
       "path": "prereg/plan-v1-original-2026-10-27.md",
@@ -638,8 +648,8 @@
     },
     {
       "path": "prereg/working-plan-v1.2-2026-10-27.md",
-      "bytes": 65366,
-      "sha256": "97654572d325fdd0a490c82ae316185125c8aa15efdea21488461883bceb545e"
+      "bytes": 66057,
+      "sha256": "67d1e3257d2484b660290e62950fe0fa4f96c6af52c614ec6e8571355767102e"
     },
     {
       "path": "config/cohort-expansion-audit.yaml",
@@ -678,8 +688,8 @@
     },
     {
       "path": "docs/data-request-draft.txt",
-      "bytes": 3134,
-      "sha256": "672f67cf0de95fc47525b1be8f8b35163b74680ec3bbd265f700ed8eb9c26e56"
+      "bytes": 3324,
+      "sha256": "9e300d54dc75c5eb3418578d296e3edb3f782cf00ec37a80ab2cccb452f8c8ef"
     },
     {
       "path": "docs/images/explorer_demo.png",
@@ -708,8 +718,8 @@
     },
     {
       "path": "docs/research-audit.md",
-      "bytes": 1746,
-      "sha256": "2e55319a4ac4e5291bbe331ff2cf2d418f85d5bccdd990290eb2b9371d535004"
+      "bytes": 1984,
+      "sha256": "247507238fd9d0c4ae85cc1fa28df64146a521e34fb600d163bc0243fc5ee508"
     },
     {
       "path": "requirements.lock.txt",

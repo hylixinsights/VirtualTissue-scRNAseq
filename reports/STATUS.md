@@ -1,9 +1,11 @@
-# Execution status — 2026-10-27
+# Execution status — 2026-10-28
 
 The independent **v0.3 melanoma software workflow** follows the user's A04
 correction: real dissociated 10x melanoma, own-data inputs, assumed 2D geometry,
 interacting agents and an offline tissue viewer. PBMC/nonspatial v0.2 is legacy.
-See `README.md` and `reports/software/melanoma-validation.md`. This does not
+See `README.md`, `reports/software/melanoma-validation.md` and the explicit
+comparison in `reports/plan-alignment-audit-2026-10-28.md`. The prototype does not
+implement the original CD8 state-prediction model. This does not
 pass or alter the clinical research gates below; no clinical model was fitted.
 
 The planned prediction study remains stopped at a necessary feasibility
@@ -43,10 +45,12 @@ Only five deposited pairs meet ≥30 total CD8. The historical clinical bound of
 23 is superseded by the current count result of 12. Explicitly cycling CD8 were
 included; alternative lineage rules give the same candidate sets.
 
-Next dependency: resolve the missing libraries and patient/library crosswalk,
-P2's On day, exact drug/histology/lesion fields, chemistry discrepancy and
-SPECIAL intervals, or obtain additional qualifying data. An author data request
-is drafted in `docs/data-request-draft.txt` and has not been sent.
+Next work uses public sources only: pre-specify a lineage/QC audit for the
+public full-TME object; verify additional usable CD8 cells; reconcile Lin matrices,
+library identity and duplicate patients from available deposits; and seek further
+independent paired melanoma tumor data if needed. Unrecoverable metadata remain
+unknown and are handled explicitly. The user declined author contact on 2026-10-28;
+the old correspondence draft is inactive and is not a dependency.
 A02.3 remains partial because raw-matrix alignment and exact library identity
 are unverified; A02.4 is partial after public-source reconciliation. A02.5 is
 not started because the numerical prerequisite fails.

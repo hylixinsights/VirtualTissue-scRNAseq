@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-27T21:08:07.131298+00:00",
+  "updated_at_utc": "2026-10-28T03:04:54.254069+00:00",
   "tasks": [
     {
       "id": "T0.1",
@@ -232,7 +232,7 @@
       "description": "Claims audit**: claims ledger (\u00a712.4); every claim maps to a result file and an evidence class. Optional: run the comp-bio-slop-check skill on the manuscript draft \u00b7 S"
     }
   ],
-  "next_action": "Resolve missing Lin libraries/crosswalk and clinical fields, or acquire additional qualifying data; see unsent docs/data-request-draft.txt. Primary count prerequisite fails (12 < 14).",
+  "next_action": "Public sources only: pre-specify full-TME lineage/QC audit, verify public SPECIAL TME/malignant objects, complete public Lin matrix/library alignment and screen additional independent paired melanoma tumor cohorts. Preserve unknowns and current research gates; no author contact.",
   "lockbox_assigned": false,
   "state_changes_inspected": false,
   "state_changes_inspected_scope": "SPECIAL individual state compositions not inspected; published Sade-Feldman state summary exposure recorded separately",
@@ -276,5 +276,16 @@
     "status": "implemented; validation in reports/software/melanoma-validation.md",
     "scope": "A04: dissociated melanoma, own-biopsy agent simulation and viewer",
     "research_gates_passed": false
+  },
+  "communication_policy": {
+    "recorded_date": "2026-10-28",
+    "author_contact": false,
+    "data_requests": false,
+    "reason": "User explicitly declined emailing authors; use already public sources."
+  },
+  "plan_alignment": {
+    "review": "reports/plan-alignment-audit-2026-10-28.md",
+    "prototype_equivalent_to_original_plan": false,
+    "research_task_statuses_changed": false
   }
 }

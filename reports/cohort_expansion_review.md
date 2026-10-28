@@ -158,9 +158,12 @@ are audited; raw-matrix alignment and final clinical identity remain open.
 Because the necessary sample-size condition already fails, model fitting and
 lockbox assignment remain stopped. The next evidence needed is:
 
-1. Obtain the Lin library crosswalk and absent libraries or their documented
-   exclusions; reconcile drugs, histology, chemistry, lesion matching and P2's
-   On identity. `docs/data-request-draft.txt` is prepared, **not sent**.
+1. Inspect public deposit versions, supplements and metadata for the Lin library
+   crosswalk, missing libraries/documented exclusions and P2's On identity;
+   reconcile drugs, histology, chemistry and lesions only where public evidence
+   supports the match. Otherwise retain the uncertainty. On 2026-10-28 the user
+   declined author contact; `docs/data-request-draft.txt` is inactive and is not
+   an execution dependency.
 2. Reconcile patient identities across source studies. Reused SPECIAL samples
    remain SPECIAL. Broad lineage labels may screen feasibility; inherited
    integrated states/embeddings may not supply a fitted reference or test labels.

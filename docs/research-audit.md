@@ -3,7 +3,9 @@
 The new software-test purpose does not amend the frozen clinical eligibility
 thresholds or grant a prediction/spatial gate pass. The user explicitly requested
 an example-driven, bring-your-own-data prototype for group testing; see
-[A03](../prereg/amendment-A03-software-testing-2026-10-27.md).
+[A03](../prereg/amendment-A03-software-testing-2026-10-27.md) and the
+[alignment review](../reports/plan-alignment-audit-2026-10-28.md). The prototype
+does not implement the original predictive protocol.
 
 The research audit currently has at most 12 count candidates at ≥30 CD8 in both
 biopsies, split into 4 monotherapy and 8 combination candidates. It remains
@@ -29,5 +31,7 @@ vtsc status
 
 Large source files remain outside Git. The Lin metadata-only fallback and its
 limits are documented in [lin-metadata-reproduction.md](lin-metadata-reproduction.md).
-The [data-request draft](data-request-draft.txt) has not been sent. No new SPECIAL
-or Lin state compositions were opened to build the software example.
+The user declined author contact on 2026-10-28. The old correspondence draft
+is inactive; all next steps use public sources and record unresolved fields
+as unknown. No new SPECIAL or Lin state compositions were opened to build the
+software example.

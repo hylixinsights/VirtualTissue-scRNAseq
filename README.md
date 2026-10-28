@@ -13,6 +13,10 @@ This is a **v0.3 research software prototype for group testing**. RNA supplies
 initial labels and program scores. Spatial arrangement and kinetic rules are
 explicit hypotheses. Dissociated cells do not supply measured tissue positions.
 The model does not predict a patient's response or infer antigen recognition.
+It also does not yet implement the original SPECIAL plan for predicting CD8
+state changes in unseen patients. See the [requirement-by-requirement alignment
+audit](reports/plan-alignment-audit-2026-10-28.md); no scientific task or gate is
+completed by the demonstration alone.
 
 The example is **dissociated human melanoma**, not PBMC or Xenium. The original
 v0.2 PBMC/CD8 state model addressed the wrong demonstration scope; it remains

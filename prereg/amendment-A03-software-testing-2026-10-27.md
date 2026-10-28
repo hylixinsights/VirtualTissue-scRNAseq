@@ -23,3 +23,12 @@ Acceptance for software testing is correct implementation, reproducibility,
 usable inputs/results and clear assumptions. It is not a biological validation
 gate. The future predictive research pipeline still needs a feasible cohort,
 state calibration, access guards, estimation/recovery and held-out evaluation.
+
+## Scope clarification — 2026-10-28
+
+This document records software implementation choices, not a replacement
+scientific protocol or permission to waive the original predictive gates.
+The user's example/pipeline request did not specifically prescribe the PBMC
+recipe, scoring formula or local kinetic rules chosen by the assistant.
+See `reports/plan-alignment-audit-2026-10-28.md` for the remaining original
+requirements. No original research task is completed by these prototypes.

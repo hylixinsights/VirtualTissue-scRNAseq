@@ -1,0 +1,355 @@
+{
+  "date": "2026-10-28",
+  "inspected_commit": "ade322f",
+  "verdict": "software prototype is not equivalent to the original predictive protocol",
+  "sources_at_audit_start": [
+    {
+      "path": "prereg/plan-v1-original-2026-10-27.md",
+      "sha256": "5a87f9762a56526d0e1b960d931f818133e34bda9505705671a949999761d874"
+    },
+    {
+      "path": "prereg/plan-v1.1-frozen-2026-10-27.md",
+      "sha256": "71f2735c810113d231f0a04470dbe56e2d59508e55dc684bf6720cf13c89be97"
+    },
+    {
+      "path": "prereg/working-plan-v1.2-2026-10-27.md",
+      "sha256": "97654572d325fdd0a490c82ae316185125c8aa15efdea21488461883bceb545e"
+    },
+    {
+      "path": "config/study.yaml",
+      "sha256": "565fddefad5a855cb0f00ed8a8cb7f6f33122fadb691f0780b3d1c5858c2e1a8"
+    },
+    {
+      "path": "reports/cohort_expansion_review.md",
+      "sha256": "fe582d84954f759e649948593de80e8bcdc26b36b4bed639b8fc4e4d3732c2ed"
+    },
+    {
+      "path": "reports/task-board.json",
+      "sha256": "d839fab54a1d5c71dccd9b1f3d7e8b073ba2965c8c1edcf6fc0a1282a873d566"
+    },
+    {
+      "path": "reports/evidence/cohort-expansion/lin-object-count-audit.json",
+      "sha256": "890ab3340643cfe32c0b00e865bdd495f770cb507e8716bb804926412660b043"
+    },
+    {
+      "path": "reports/evidence/cohort-audit.json",
+      "sha256": "9c7785221a42bc876a59f62637da1f29a3807ec91a86c9e0c7d76343f19d81ee"
+    },
+    {
+      "path": "reports/software/melanoma-validation.json",
+      "sha256": "1f70bd8f3e5f35c7a2979e2b9340f81391eef7bc057284c3f95326c0e806173a"
+    },
+    {
+      "path": "data/MANIFEST.json",
+      "sha256": "4485211848e3d9099e902c953efce8ede61185a9ea94f6f21ab3b91e6c0372b2"
+    },
+    {
+      "path": "src/vtsc/tissue.py",
+      "sha256": "bd7c28459b90466e81c0fe4f18b76eeffc443baa6322cac8440cc325a6037d1f"
+    },
+    {
+      "path": "src/vtsc/tissue_inputs.py",
+      "sha256": "bc137a609db0b901d4e0dff6c848647f3c43590fcabd53b3d3476c011d60ace0"
+    },
+    {
+      "path": "src/vtsc/model.py",
+      "sha256": "946d7fb46505e147f4f47a834fc10e90d85ab1564df3f25d6945b05e4267940f"
+    },
+    {
+      "path": "/Users/heldernakaya/.codex/attachments/f9c0e0f7-7e04-4a5f-8b85-937ed8792782/Texto colado.txt",
+      "sha256": "97654572d325fdd0a490c82ae316185125c8aa15efdea21488461883bceb545e"
+    },
+    {
+      "path": "/Users/heldernakaya/.codex/attachments/28daa104-f930-4c50-92d2-220c75ddee0b/Texto colado.txt",
+      "sha256": "fe582d84954f759e649948593de80e8bcdc26b36b4bed639b8fc4e4d3732c2ed"
+    }
+  ],
+  "task_board_entries": 46,
+  "recorded_status_counts": {
+    "complete": 6,
+    "partial": 2,
+    "pending": 38
+  },
+  "tasks": [
+    {
+      "id": "T0.1",
+      "recorded_status": "complete",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T0.2",
+      "recorded_status": "complete",
+      "v03_completes_task": false,
+      "assessment": "Priority-1 files; full TME and malignant objects not acquired."
+    },
+    {
+      "id": "T0.3",
+      "recorded_status": "complete",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T0.4",
+      "recorded_status": "complete",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T1.1",
+      "recorded_status": "complete",
+      "v03_completes_task": false,
+      "assessment": "Immune-object export only; not all TME data."
+    },
+    {
+      "id": "T1.2",
+      "recorded_status": "complete",
+      "v03_completes_task": false,
+      "assessment": "Inventory complete with missing dates and unresolved metadata explicitly retained."
+    },
+    {
+      "id": "T1.3",
+      "recorded_status": "partial",
+      "v03_completes_task": false,
+      "assessment": "Count precheck only; not final eligibility."
+    },
+    {
+      "id": "T1.4",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T1.5",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T1.6",
+      "recorded_status": "partial",
+      "v03_completes_task": false,
+      "assessment": "Metadata audit only; score analyses absent."
+    },
+    {
+      "id": "T1.7",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T2.1",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T2.2",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T2.3",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T2.4",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T2.5",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T2.6",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "G2",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T3.1",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Declared-rate simulator is not a fitted M0\u2013M3 ladder."
+    },
+    {
+      "id": "T3.2",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T3.3",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T3.4",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T3.5",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T3.6",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T4.1",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T4.2",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T4.3",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "G4",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T5.1",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T5.2",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T5.3",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Action-based prototype lacks fitted CD8 state transitions and anti-PD-1 schedule."
+    },
+    {
+      "id": "T5.4",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Legacy Markov expectation check is not ABM-to-M3 equivalence."
+    },
+    {
+      "id": "T5.5",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T5.6",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T6.1",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "No Jev calls or pilot."
+    },
+    {
+      "id": "T6.2",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T7.1",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T7.2",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T7.3",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T7.4",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T7.5",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T8.1",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T8.2",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T8.3",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    },
+    {
+      "id": "T8.4",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Notebook/unit checks do not reproduce the planned paper outputs."
+    },
+    {
+      "id": "T8.5",
+      "recorded_status": "pending",
+      "v03_completes_task": false,
+      "assessment": "Recorded research task status retained; no new completion credited to the software prototype."
+    }
+  ],
+  "public_data_only": true,
+  "author_outreach_authorized": false,
+  "scientific_gates_passed_by_prototype": false,
+  "new_state_outcomes_inspected": false
+}

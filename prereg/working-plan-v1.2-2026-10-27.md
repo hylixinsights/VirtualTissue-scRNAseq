@@ -1050,3 +1050,15 @@ user biopsy, with declared synthetic geometry, local interacting agents, and
 a tissue viewer with auditable action menus/decisions. See A04 and the v0.3
 README. This independent uncalibrated software prototype does not pass the
 SPECIAL/Lin clinical feasibility gates or modify the frozen study.
+
+
+### D20 — 2026-10-28: original-plan alignment and no author outreach
+
+The user requested comparison against the original plan and explicitly declined
+emailing authors. The v0.3 melanoma agent demonstration is a separate software
+prototype, not the fitted CD8 state-prediction pipeline or a G1/G4/G5 pass.
+Current task statuses remain unchanged. All next data work uses public deposits,
+articles, supplements and metadata; absent/ambiguous information stays explicit.
+Historical correspondence is inactive and no author response is a dependency.
+See `reports/plan-alignment-audit-2026-10-28.md` for the detailed comparison and
+public-source work queue. The original freeze is not edited.
