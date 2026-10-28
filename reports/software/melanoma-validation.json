@@ -1,0 +1,64 @@
+{
+  "version": "0.3.0",
+  "tests_passed": 34,
+  "notebooks_passed": 3,
+  "public_dataset": "10x_melanoma_gemx_3p",
+  "source_hash": "a2472fd15fbc708c50b95aff7f762872929a0365b9d06454cc558d29d4400091",
+  "runs": {
+    "melanoma_tissue": {
+      "seed": 21,
+      "initial_cells": 400,
+      "final_alive": 394,
+      "observed_hours": 24.0,
+      "requested_hours": 24.0,
+      "stop_reason": "completed",
+      "decisions": 38084,
+      "events": {
+        "attack": 142,
+        "death": 6,
+        "clearance_timeout": 5
+      },
+      "geometry_measured": false,
+      "policy": "deterministic local priority with seeded exploratory movement",
+      "rates_fitted": false
+    },
+    "melanoma_recognition_off": {
+      "seed": 21,
+      "initial_cells": 400,
+      "final_alive": 400,
+      "observed_hours": 24.0,
+      "requested_hours": 24.0,
+      "stop_reason": "completed",
+      "decisions": 38400,
+      "events": {},
+      "geometry_measured": false,
+      "policy": "deterministic local priority with seeded exploratory movement",
+      "rates_fitted": false
+    }
+  },
+  "local_artifacts": [
+    "outputs/melanoma_tissue/explorer.html",
+    "outputs/melanoma_recognition_off/explorer.html",
+    "outputs/melanoma_reopened.html"
+  ],
+  "source_files": {
+    "src/vtsc/tissue_inputs.py": "bc137a609db0b901d4e0dff6c848647f3c43590fcabd53b3d3476c011d60ace0",
+    "src/vtsc/tissue.py": "bd7c28459b90466e81c0fe4f18b76eeffc443baa6322cac8440cc325a6037d1f",
+    "src/vtsc/results.py": "3e058dc90eaf59193bd806c232cf8ed855a8e570b8eee94461100d54b02073fb",
+    "src/vtsc/__init__.py": "2fff64bb812a4089421acf912bfcaec65eaf1fe6d7685e8ad85a92168fb190a4",
+    "src/vtsc/model.py": "946d7fb46505e147f4f47a834fc10e90d85ab1564df3f25d6945b05e4267940f",
+    "src/vtsc/inputs.py": "94bec5c5f718c18245095eadd5315badb236249f2e102641b31f5f51e5f0ae68",
+    "src/vtsc/cli.py": "32a3d004b0352fc98eae3a17e9df5a4a93c4ba54bf16f1efba74e89f7b91780d",
+    "src/vtsc/provenance.py": "42d525e83aea7df7a62d7411ee908cf387059c00d5547b7444333fd1ae7fd7e1",
+    "src/vtsc/tissue_results.py": "02e856f89c6298641235c78fff13f6bb36e4b92ea33497eaef40418a898c5d4b",
+    "src/vtsc/web/tissue.html": "651ba286ffa1299c7fcb000d6f6f4868288ea5503a871c62f682cedda6614901",
+    "notebooks/Part4_Explore_Results.ipynb": "a41a8cd2fa35dfd7934c19b2daf8a9cb8eba2feb8b7845b50ddb0da0d82af972",
+    "notebooks/Part1_Prepare_scRNAseq.ipynb": "403a4417465cc3efada3db762446b90a0fe1f79669127c4a877ff7240e0c4333",
+    "notebooks/Part2-3_Run_Simulation.ipynb": "e0172fad9ad71b66b3d5ec83fbd87bcd5979254b225355820cb9c9843ecad1b1",
+    "docs/images/melanoma_demo.png": "3db7a430142d22e62f5022d5403952a4e37ad820fa4711b99245527048f49526"
+  },
+  "wheel_contains_html": true,
+  "wheel_smoke_passed": true,
+  "clinical_validation": false,
+  "github_published": false
+}

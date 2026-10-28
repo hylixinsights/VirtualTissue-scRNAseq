@@ -1,199 +1,185 @@
 # VirtualTissue-scRNAseq
 
-**Prepare your single-cell data, declare a cell-state model, run reproducible simulations, and inspect every event.**
+**Build an inspectable melanoma agent simulation from dissociated 10x single-cell RNA-seq.**
 
-This development release gives a research group a complete, local workflow for
-testing simulation software with its own annotated scRNA-seq data. It includes
-an offline synthetic example, a checksum-verified public PBMC example, command-line
-tools, three notebooks, and an interactive HTML explorer. No API key, GPU, R
-installation or paid service is needed for this workflow.
+Load one biopsy, retain its tumor and microenvironment cells, initialize RNA programs,
+and run cells that move, encounter neighbors, choose permitted actions, grow,
+divide, attack or clear dead cells. Open the portable offline viewer to follow a
+cell's identity, local context, allowed actions, chosen action and outcome.
 
-**Current scope:** non-spatial, continuous-time state transitions, division,
-death and influx with **user-declared rates**. Expression and annotations define
-the starting population. The software does not infer kinetic rates from a
-snapshot, reconstruct tissue geometry, predict a drug response or validate a
-clinical hypothesis. The original SPECIAL research audit remains separate and
-its feasibility gate remains unresolved.
+![Melanoma agents and their recorded decisions](docs/images/melanoma_demo.png)
 
-![Synthetic software experiment: trajectory, expected counts and state composition](docs/images/synthetic_demo.png)
+This is a **v0.3 research software prototype for group testing**. RNA supplies
+initial labels and program scores. Spatial arrangement and kinetic rules are
+explicit hypotheses. Dissociated cells do not supply measured tissue positions.
+The model does not predict a patient's response or infer antigen recognition.
 
-*Generated synthetic cells, illustrative rates, seed 21. Solid lines show one
-stochastic trajectory at output times; dashed lines show the uncapped model's
-mathematical expectation. These are software outputs, not patient predictions.*
+The example is **dissociated human melanoma**, not PBMC or Xenium. The original
+v0.2 PBMC/CD8 state model addressed the wrong demonstration scope; it remains
+available only as a legacy regression fixture. The main workflow below uses
+the new interacting tissue engine.
 
-## Choose your starting point
+## Start with real melanoma
 
-| Goal | Start here |
-|---|---|
-| Test installation and simulation without downloading data | [Local quick start](#local-quick-start) |
-| Run a real public scRNA-seq matrix | [PBMC3k example](#public-example-pbmc3k) |
-| Use your own annotated data | [Own-data guide](docs/02_your_own_data.md) |
-| Use notebooks or Google Colab | [Notebook guide](notebooks/README.md) |
-| Edit model assumptions | [Model guide](docs/03_model_and_assumptions.md) |
-| Inspect saved runs or compare a control | [Results guide](docs/04_results.md) |
-| Report a reproducible bug | [Group testing guide](docs/06_group_testing.md) |
-| Continue the SPECIAL/Lin clinical study | [Separate research workflow](docs/research-audit.md) |
-
-## The four parts
-
-```mermaid
-flowchart LR
-    A["H5AD or 10x Matrix Market<br/>raw counts + reviewed cell states"] --> B["1 · Prepare<br/>validate IDs/counts · select one sample"]
-    B --> C["2 · Check<br/>checksum bundle · declared model"]
-    C --> D["3 · Run<br/>exact stochastic events · seed · caps"]
-    D --> E["4 · Explore<br/>offline HTML · figures · tables · event history"]
-```
-
-A prepared ZIP contains initial cell IDs, states, a model, provenance and
-checksums. It contains **no expression matrix**. Run the same bundle repeatedly
-with different seeds or explicitly changed assumptions. Checksums detect changes;
-they are not signatures establishing who supplied the data.
-
-## Local quick start
-
-Use Python **3.12 or 3.13**. A clean installation was tested on Python 3.12/macOS;
-Linux/Windows and Python 3.13 are configured in CI, with results pending the
-first GitHub run.
+Python **3.12 or 3.13**, macOS/Linux/Windows. The download needs `curl` (included
+on current macOS, most Linux distributions and Windows 10+). After this version
+has been uploaded to GitHub:
 
 ```bash
 git clone https://github.com/hylixinsights/VirtualTissue-scRNAseq.git
 cd VirtualTissue-scRNAseq
-python3.12 -m venv .venv
+python -m venv .venv
+# macOS/Linux
 source .venv/bin/activate
-python -m pip install -e ".[test,notebooks]"
+# Windows PowerShell: .venv\Scripts\Activate.ps1
+pip install -e ".[test]"
 
-# Generate counts, prepare a bundle, run a model and its no-events control.
-vtsc demo outputs/my_first_test --cells 300 --hours 48 --seed 21
-vtsc explore outputs/my_first_test/baseline --open
-python -m pytest -q
+vtsc download-example example_data/melanoma10x
+vtsc prepare-tissue example_data/melanoma10x/filtered_feature_bc_matrix.h5 outputs/melanoma-input.zip --recipe melanoma-markers --max-cells 400
+vtsc run-tissue outputs/melanoma-input.zip outputs/melanoma-recognition --scenario declared-recognition --hours 24 --seed 21
+vtsc run-tissue outputs/melanoma-input.zip outputs/melanoma-control --scenario recognition-off --hours 24 --seed 21
+vtsc explore outputs/melanoma-recognition --open
 ```
 
-On Windows PowerShell, create the environment with `py -3.12 -m venv .venv`
-and activate it with `.venv\Scripts\Activate.ps1`. If activation is restricted,
-use `.venv\Scripts\python.exe` and `.venv\Scripts\vtsc.exe` directly.
+The official matrix is about **57 MB**, pinned by SHA-256. Generated files stay
+under ignored `example_data/` and `outputs/`. Nothing is uploaded by these commands.
+For an existing checkout, start at environment creation rather than cloning.
 
-The demonstrated 300-cell baseline finishes with 302 cells and 394 events;
-the control has 300 cells and zero events. See the saved [test summaries](reports/software/).
-A control that changes population or state is a software failure. Use a new
-output name for each test; existing runs are never silently overwritten.
-48 **simulated** hours do not mean 48 hours of waiting.
+The source is [10x Genomics: 10k Human DTC Melanoma, Chromium GEM-X Single Cell 3′](https://www.10xgenomics.com/datasets/10k-human-dtc-melanoma-GEM-X),
+licensed **CC BY 4.0**. The downloaded matrix contains 10,645 cells. The example's
+fixed marker recipe is provisional: review `provenance.json`, especially
+`full_composition` and `sampled_composition`. The observed marker composition is
+lymphocyte-rich. Uniform subsampling does **not** enrich tumor cells, invent immune
+cells or preserve original neighborhood structure. Dataset details and a source
+metadata discrepancy are retained in [the dataset guide](docs/05_example_datasets.md).
 
-Core numerical dependencies are pinned in `pyproject.toml`; notebook extras
-have compatible ranges. The full tested environment is recorded in
-`reports/software/environment-tested.txt`. The larger `requirements.lock.txt`
-and R locks belong to the historical research audit.
+`declared-recognition` explicitly assumes that eligible cytotoxic cells can
+recognize melanoma-labelled targets. This is a software scenario, not evidence
+that those targets express cognate antigen. The default `recognition-off`
+scenario disables attacks while retaining movement and growth.
 
-## Public example: PBMC3k
-
-The real-data example is **10x Genomics PBMC3k**, from one healthy donor,
-licensed **CC BY 4.0** on the [original dataset page](https://www.10xgenomics.com/datasets/3-k-pbm-cs-from-a-healthy-donor-1-standard-1-1-0).
-The downloader retrieves the original ~7.3 MiB archive and verifies its pinned
-SHA-256. Expression data are downloaded locally, not bundled in this repository.
+## No-download test
 
 ```bash
-vtsc download-example example_data/pbmc3k
-vtsc validate example_data/pbmc3k/matrix
-vtsc prepare example_data/pbmc3k/matrix outputs/pbmc_input.zip \
-  --recipe pbmc-cd8-demo \
-  --source-license "CC-BY-4.0; 10x Genomics PBMC3k, 2016"
-vtsc check outputs/pbmc_input.zip --hours 48
-vtsc run outputs/pbmc_input.zip outputs/pbmc_baseline --hours 48 --seed 21
-vtsc run outputs/pbmc_input.zip outputs/pbmc_control --scenario no-events --hours 48 --seed 21
-vtsc compare outputs/pbmc_baseline outputs/pbmc_control outputs/pbmc_comparison
-vtsc explore outputs/pbmc_baseline --open
+vtsc demo outputs/synthetic-melanoma --cells 300 --hours 24 --seed 21
+vtsc explore outputs/synthetic-melanoma/declared-recognition --open
 ```
 
-The fixed demonstration recipe selects cells with detected CD3D/CD3E and
-CD8A/CD8B and assigns three illustrative expression labels. It selects 427 of
-2,700 source cells in the tested archive. This is a simple software fixture,
-**not a validated CD8 classifier or melanoma reference**. No treatment trajectory
-is observed in this dataset. Formulae, tie handling, sources and the verified
-PBMC1k alternative are in the [dataset guide](docs/05_example_datasets.md).
+This generates a labelled **synthetic melanoma microenvironment** for repeatable
+software tests. It does not substitute for the real melanoma example. Both
+recognition scenarios use the same initial cells, geometry and random seed.
+Their paths subsequently diverge as actions differ.
 
-## Your own data
+## Use your own biopsy
 
-Supply raw counts in H5AD or 10x Matrix Market plus a reviewed `state` annotation.
-Prepare one biological sample and one timepoint per bundle. A longitudinal
-clinical cohort is not required to test the software.
+Supported inputs: Cell Ranger v3+ `filtered_feature_bc_matrix.h5`, a 10x Matrix
+Market directory, or AnnData `.h5ad`. Supply raw counts and reviewed `cell_type`
+annotations in `obs` or a TSV joined by `cell_id`. Prepare **one sample/timepoint**.
 
 ```bash
-vtsc model-template my_model.yaml
-# Edit states, rates and rate_provenance in my_model.yaml.
-vtsc validate my_cells.h5ad --layer counts
-vtsc prepare my_cells.h5ad outputs/my_input.zip \
-  --layer counts --state-column state --sample-id sample_01 --model my_model.yaml
-vtsc check outputs/my_input.zip --hours 24
-vtsc run outputs/my_input.zip outputs/my_run --hours 24 --seed 42
-vtsc explore outputs/my_run --open
+vtsc validate my_biopsy.h5ad --layer counts
+vtsc prepare-tissue my_biopsy.h5ad outputs/my-input.zip --layer counts --cell-type-column cell_type --sample-id patient01_pre --max-cells 400
+vtsc tissue-template examples/my-assumptions.yaml
+vtsc run-tissue outputs/my-input.zip outputs/my-run --config examples/my-assumptions.yaml --scenario recognition-off
+vtsc explore outputs/my-run --open
 ```
 
-If raw counts are already in `X`, omit `--layer counts`. For Matrix Market,
-provide `--metadata my_cells.tsv`; the join is by exact `cell_id`, never row
-order. Multiple samples require explicit selection. The [own-data guide](docs/02_your_own_data.md)
-covers metadata, Seurat export, reviewed states, duplicate identifiers,
-sampling limits and common errors.
+Map annotations to `Melanoma`, `CD8_T`, `T_cell`, `NK`, `Myeloid`, `Fibroblast`,
+`Endothelial`, `B_cell`, or `Unknown`. Unknown cells remain visible and take
+space; unsupported identities are not silently converted. At least one
+melanoma-labelled cell is required. Human gene symbols must be in `var_names`
+or `var['gene_symbols']`. No cell type is added to compensate for missing cells.
+See [the own-data guide](docs/02_your_own_data.md) for input contracts, metadata
+and Seurat export guidance.
 
-## Notebooks and Colab
+## What the agents do
 
-| Part | Notebook | Inputs / outputs |
+| Component | Implemented behavior | Source |
 |---|---|---|
-| 1 · Prepare | [Part1_Prepare_scRNAseq.ipynb](notebooks/Part1_Prepare_scRNAseq.ipynb) | Synthetic, PBMC3k or own counts → input ZIP |
-| 2–3 · Check and run | [Part2-3_Run_Simulation.ipynb](notebooks/Part2-3_Run_Simulation.ipynb) | Input ZIP → baseline, control, results ZIPs |
-| 4 · Explore | [Part4_Explore_Results.ipynb](notebooks/Part4_Explore_Results.ipynb) | Saved run/ZIP → explorer, plots and summary |
+| Initial identity | Reviewed labels or explicit provisional marker recipe | Input RNA / user annotation |
+| Initial programs | Cytotoxicity, proliferation, interferon | Fixed marker panels, log-normalized counts |
+| Geometry | Non-overlapping discs; two assumed tumor nests or mixed placement | User-selected spatial hypothesis |
+| Movement | Local generic cue gradient + seeded exploration, excluded volume | Declared rule |
+| Decision menu | Contact, lineage, fatigue and cycle gates | Local state at each step |
+| Cytotoxicity | Contact damage only with declared recognition; fatigue and recovery | Declared rule modulated by initial cytotoxic score |
+| Growth/division | RNA-modulated cycle; growth and daughter placement require space | Declared rule |
+| Clearance | Myeloid contact clearance or corpse timeout | Declared rule |
+| Viewer | Membranes, nuclei, contacts, cue field, playback, zoom/pan, agent history | Recorded state and events; schematic cell shapes |
 
-Start with [Part 1 in Colab](https://colab.research.google.com/github/hylixinsights/VirtualTissue-scRNAseq/blob/main/notebooks/Part1_Prepare_scRNAseq.ipynb),
-then [Parts 2–3](https://colab.research.google.com/github/hylixinsights/VirtualTissue-scRNAseq/blob/main/notebooks/Part2-3_Run_Simulation.ipynb)
-and [Part 4](https://colab.research.google.com/github/hylixinsights/VirtualTissue-scRNAseq/blob/main/notebooks/Part4_Explore_Results.ipynb).
-These links become available after this version is pushed. Save copies to your
-own Drive and follow the [path/persistence instructions](notebooks/README.md).
-The notebooks also run locally in a Jupyter-compatible editor. They do not
-silently mount Drive, upload your data or contact a model API.
+The local policy chooses from the kernel's allowed actions. Every choice and its
+outcome is saved. These are explicit programmed decisions, **not Jev/LLM calls**.
+No paid service or external API is used. There is no anti-PD-1 drug mechanism,
+learned ligand–receptor network, measured diffusion, vascular supply, calibrated
+TCR specificity or validated treatment-response model in this version.
 
-## What a run produces
+For equations, units, action priority, limitations and controls, read
+[model and assumptions](docs/03_model_and_assumptions.md).
 
-| File | Purpose |
-|---|---|
-| `explorer.html` | Offline timeline, live-agent grid and selected-cell history |
-| `overview.png` | Counts, uncapped expectation and state fractions |
-| `trajectory.tsv`, `mean_field.tsv` | Stochastic counts and mathematical expectation |
-| `events.tsv` | Every applied transition, birth, death and influx event |
-| `final_cells.tsv` | Surviving IDs/states, including simulated daughters/new arrivals |
-| `summary.json`, `model.yaml` | Seed, requested/observed duration, caps and assumptions |
-| `run.json`, `manifest.json` | Reopenable run, provenance and checksums |
-| Sibling `RUN_NAME.zip` | Shareable copy of the complete run folder |
+## Inspect and share a run with the group
 
-Default caps are 5,000 live cells and 50,000 events. Reaching a cap is reported
-as **incomplete** with the actual observed time. The explorer displays up to
-2,000 live agents at a time; tables retain all agents/events. Grid positions
-are only for display and have no spatial or biological interpretation.
+Open `explorer.html` directly in a browser; it works offline with no CDN. Click
+**Find interaction** to jump to a recorded attack and zoom onto the agent. Click
+any cell to inspect its input scores and recent decisions. Drag to pan, use Fit
+to reset, toggle Signal field, and scrub or play the timeline. Appearance is a
+schematic rendering, not a microscopy reconstruction.
 
-![Offline explorer showing the history of a selected synthetic cell](docs/images/explorer_demo.png)
+Every run saves:
 
-## Validation and limits
+- `explorer.html`: self-contained viewer;
+- `run.json`: frame coordinates, lineage catalog, programs, decisions and events;
+- `decisions.jsonl` and `events.jsonl`: machine-readable audit trail;
+- `trajectory.tsv`, `summary.json`, `assumptions.yaml`, `provenance.json`;
+- `manifest.json`: checksums, plus a sibling results ZIP.
 
-Tests cover analytical expectations, Monte Carlo agreement, seeded repeatability,
-population accounting, extinction, negative controls, caps, metadata alignment,
-malformed counts, sample selection, checksum tampering, result reopening and HTML
-escaping. Both example workflows were executed locally. See [validation evidence](reports/software/validation.md).
+Reopen and verify a saved archive without rerunning:
 
-This release has no spatial movement, contacts, ligand fields, Jev policy,
-learned rates, treatment-effect inference, state calibration, parameter fitting
-or clinical validation. Division is a net +1 birth with inherited state;
-simulated expression is not generated. A successful test establishes software
-behavior under assumptions, not biological truth.
+```bash
+vtsc explore outputs/melanoma-recognition.zip --html outputs/reopened-melanoma.html --open
+```
 
-## Repository and licences
+The original `compare` command belongs to the legacy nonspatial engine. For
+new tissue runs, compare `trajectory.tsv`, `summary.json` and decisions from
+matched input bundles; use several seeds and both layouts before interpreting
+spatial sensitivity. [Results guide](docs/04_results.md).
 
-`src/vtsc/` contains the simulator and input/output tools; `examples/` contains
-model/dataset definitions; `notebooks/`, `docs/` and `tests/` support users.
-`prereg/`, historical `reports/`, `tables/` and R scripts retain the separate
-SPECIAL/Lin research record. The frozen clinical design is unchanged.
+## Notebook workflow
 
-Original software and generated synthetic fixtures use MIT. PBMC3k uses
-CC BY 4.0 with 10x attribution; SPECIAL-derived material retains CC BY-NC-SA
-4.0 and other third-party assets retain their source terms. Do not apply the
-code licence to every file. See [DATA_LICENSE.md](DATA_LICENSE.md) and [CITATION.cff](CITATION.cff).
+Install `pip install -e ".[notebooks]"`, then run:
 
-For group testing, share the version, command, model, seed, summary and smallest
-permitted reproducer. Your own patient data remain in the local folders you
-control; `outputs/` and `example_data/` are ignored by Git.
+1. [Part 1 — prepare melanoma](notebooks/Part1_Prepare_scRNAseq.ipynb): real example, synthetic fixture or own biopsy.
+2. [Parts 2–3 — run agents and control](notebooks/Part2-3_Run_Simulation.ipynb).
+3. [Part 4 — inspect saved results](notebooks/Part4_Explore_Results.ipynb).
+
+The public melanoma is the notebook default. Local validation also executes the
+synthetic path without network access. Hosted Colab has not been tested; the
+repository must contain this release before its clone links work.
+
+## Validation and bug reports
+
+```bash
+python -m pytest -q
+vtsc verify-freeze
+```
+
+Tests cover raw-count formats and sample separation, checksums, repeatability,
+contact and recognition gates, fatigue, no resurrection, population accounting,
+non-overlap, movement bounds, division, negative controls, own-data preparation
+and portable output. [Current validation](reports/software/melanoma-validation.md)
+records the real-data run and browser checks. These are software checks,
+not biological validation. [Group testing protocol](docs/06_group_testing.md).
+
+## Research history and licences
+
+Original code and generated synthetic fixtures: **MIT**. The public melanoma
+example and its derivatives retain **CC BY 4.0** attribution. Own data retain
+their source terms. See [DATA_LICENSE.md](DATA_LICENSE.md) and [CITATION.cff](CITATION.cff).
+
+The separate SPECIAL/Lin prediction study remains at its feasibility gate.
+Its frozen plan and CC BY-NC-SA assets have not been repurposed as this demo.
+[Research audit](docs/research-audit.md) · [Status](reports/STATUS.md) ·
+[A04 scope correction](prereg/amendment-A04-melanoma-prototype-2026-10-27.md).
+
+The [VirtualTissue-Xenium](https://github.com/hylixinsights/VirtualTissue-Xenium)
+project supplies the interaction/inspection reference. Its spatial input is
+measured; this project's spatial layout is assumed because its input is
+**dissociated scRNA-seq**.

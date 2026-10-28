@@ -1,0 +1,16 @@
+name: melanoma-local-policy-v1
+dt_hours: 0.25
+packing_fraction: 0.32
+immune_speed_um_h: 10.0
+contact_gap_um: 2.0
+perception_um: 55.0
+cycle_hours: 24.0
+attack_damage_per_hour: 0.65
+fatigue_per_hour: 0.32
+recovery_per_hour: 0.22
+corpse_hours: 6.0
+cue_diffusion_um2_h: 90.0
+cue_decay_per_hour: 0.3
+cue_source_per_hour: 0.5
+provenance: Declared software hypotheses, not fitted biological rates. Generic cue
+  has arbitrary units.

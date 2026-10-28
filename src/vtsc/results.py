@@ -155,6 +155,8 @@ def compare_runs(first, second, output):
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     a, b = read_run(first), read_run(second)
+    if a.get('kind') == 'vtsc_tissue_run' or b.get('kind') == 'vtsc_tissue_run':
+        raise ValueError('compare is for legacy nonspatial runs; compare tissue trajectory.tsv and summary.json or use the notebooks.')
     if a['bundle_sha256'] != b['bundle_sha256'] or a['model']['states'] != b['model']['states']:
         raise ValueError('Comparison requires the same initial bundle and state vocabulary.')
     end = min(a['summary']['observed_hours'], b['summary']['observed_hours'])

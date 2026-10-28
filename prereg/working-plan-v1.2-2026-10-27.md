@@ -1040,3 +1040,13 @@ jev:
 4. Run the task; save outputs with hashes; write `reports/<TASK>.md`.
 5. Update this plan's ticks, Decision log and Deviation log; save to the Project.
 6. Never: touch lockbox on-treatment data early, use response as input, spend Jev credits without approval, or edit the validated engine.
+
+
+### D19 — 2026-10-27: correct prototype to dissociated melanoma
+
+The user explicitly rejected PBMC and an arbitrary nonspatial grid. The primary
+software workflow now uses dissociated 10x melanoma (CC BY 4.0) or one annotated
+user biopsy, with declared synthetic geometry, local interacting agents, and
+a tissue viewer with auditable action menus/decisions. See A04 and the v0.3
+README. This independent uncalibrated software prototype does not pass the
+SPECIAL/Lin clinical feasibility gates or modify the frozen study.

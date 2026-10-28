@@ -1,20 +1,19 @@
 # Data licence and permitted project use
 
-## Software-testing examples (v0.2)
+## Melanoma software examples (v0.3)
 
-Original simulator code and programmatically generated synthetic fixtures are
-MIT-licensed. Synthetic fixtures contain no patient measurements. The optional
-10x PBMC3k example is CC BY 4.0, explicitly declared on its original dataset
-page; the source and attribution are recorded in `examples/datasets.json` and
-the locally downloaded `SOURCE.json`. PBMC-derived bundles and results retain
-the source terms and should identify the subset/annotation/simulation changes.
-PBMC1k v3 is also explicitly CC BY 4.0 but has not yet been tested here.
-See `docs/05_example_datasets.md` for URLs and attribution text.
+Original code and generated synthetic melanoma fixtures are MIT-licensed. The
+primary real example is the official 10x Genomics dissociated melanoma matrix,
+explicitly [CC BY 4.0](https://www.10xgenomics.com/datasets/10k-human-dtc-melanoma-GEM-X).
+Source identifiers, attribution, license URL, a locally computed checksum and
+modifications are recorded in `examples/datasets.json`, downloaded `SOURCE.json`
+and derived input/run provenance. Retain these notices with shared derivatives.
+See `docs/05_example_datasets.md` for attribution text and the source discrepancy.
 
-Own-data inputs retain the user's applicable permissions/terms. Neither a
-public software repository nor a `--source-license` field grants rights to
-redistribute somebody else's data. The example pipeline does not read SPECIAL
-or the Lin atlas, and does not depend on their licences or clinical eligibility.
+The v0.2 PBMC example remains a legacy regression fixture with its original
+CC BY 4.0 terms; it is not a melanoma substitute. Own-data inputs retain their
+source permissions. A public software repository does not grant redistribution
+rights to private data. No SPECIAL/Lin input is required for the tissue demo.
 
 ## Historical SPECIAL research assets
 

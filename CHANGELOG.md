@@ -1,3 +1,10 @@
+# v0.3.0 — 2026-10-27
+
+- Correct the primary demonstration to dissociated 10x melanoma, with a pinned public matrix and an own-biopsy pipeline.
+- Add synthetic spatial initialization, local action menus, movement/exclusion, growth/division, contact recognition/damage, fatigue and clearance.
+- Add tissue rendering, agent inspection, replay, zoom/pan and cue overlays; export decisions/events and provenance.
+- Make PBMC/nonspatial code legacy-only. Preserve the frozen clinical study and record A04.
+
 # Changelog
 
 ## 0.2.0 — 2026-10-27

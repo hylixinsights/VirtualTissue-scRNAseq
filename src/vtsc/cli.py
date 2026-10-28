@@ -1,6 +1,7 @@
 """Project status, integrity registration and immutable pre-analysis freeze."""
 
 import argparse
+import subprocess
 import json
 import sys
 from zipfile import BadZipFile
@@ -11,7 +12,7 @@ from .provenance import file_hashes, inspect_download, utc_now, verify_freeze, w
 
 
 def _main():
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(description='Melanoma simulation from dissociated scRNA-seq and independent research audits')
     parser.add_argument("--root", type=Path, default=Path.cwd())
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("status")
@@ -22,17 +23,40 @@ def _main():
     freeze = sub.add_parser("freeze")
     freeze.add_argument("--file", action="append", required=True)
     freeze.add_argument("--commit", required=True)
-    demo = sub.add_parser('demo', help='Offline synthetic end-to-end software test')
+    demo = sub.add_parser('demo', help='Offline synthetic melanoma tissue test with recognition control')
     demo.add_argument('output', type=Path)
     demo.add_argument('--cells', type=int, default=300)
     demo.add_argument('--seed', type=int, default=21)
-    demo.add_argument('--hours', type=float, default=48)
+    demo.add_argument('--hours', type=float, default=24)
     synth = sub.add_parser('synthetic', help='Generate a raw-count annotated H5AD fixture')
     synth.add_argument('output', type=Path)
     synth.add_argument('--cells', type=int, default=300)
     synth.add_argument('--seed', type=int, default=7)
-    download = sub.add_parser('download-example', help='Download checksum-pinned CC BY 4.0 PBMC3k')
+    download = sub.add_parser('download-example', help='Download checksum-pinned CC BY 4.0 dissociated melanoma')
     download.add_argument('output', type=Path)
+    download.add_argument('--dataset', choices=['melanoma', 'pbmc3k-legacy'], default='melanoma')
+    tissue_template = sub.add_parser('tissue-template', help='Write declared tissue assumptions')
+    tissue_template.add_argument('output', type=Path)
+    tissue_prepare = sub.add_parser('prepare-tissue', help='Prepare one melanoma biopsy with its microenvironment')
+    tissue_prepare.add_argument('input', type=Path)
+    tissue_prepare.add_argument('output', type=Path)
+    tissue_prepare.add_argument('--metadata', type=Path)
+    tissue_prepare.add_argument('--layer')
+    tissue_prepare.add_argument('--cell-type-column', default='cell_type')
+    tissue_prepare.add_argument('--sample-id')
+    tissue_prepare.add_argument('--recipe', choices=['melanoma-markers'])
+    tissue_prepare.add_argument('--max-cells', type=int, default=400)
+    tissue_prepare.add_argument('--seed', type=int, default=21)
+    tissue_prepare.add_argument('--source-license', default='user supplied')
+    tissue_run = sub.add_parser('run-tissue', help='Run interacting agents on assumed 2D geometry')
+    tissue_run.add_argument('bundle', type=Path)
+    tissue_run.add_argument('output', type=Path)
+    tissue_run.add_argument('--scenario', choices=['recognition-off', 'declared-recognition', 'frozen'], default='recognition-off')
+    tissue_run.add_argument('--layout', choices=['tumor-nests', 'mixed'], default='tumor-nests')
+    tissue_run.add_argument('--config', type=Path)
+    tissue_run.add_argument('--hours', type=float, default=24)
+    tissue_run.add_argument('--seed', type=int, default=21)
+    tissue_run.add_argument('--max-cells', type=int, default=1500)
     template = sub.add_parser('model-template', help='Write an editable assumption file')
     template.add_argument('output', type=Path)
     for name in ['validate', 'prepare']:
@@ -72,7 +96,7 @@ def _main():
     compare.add_argument('output', type=Path)
     args = parser.parse_args()
     root = args.root.resolve()
-    if args.command in ['demo', 'synthetic', 'download-example', 'model-template', 'validate', 'prepare', 'check', 'run', 'explore', 'compare']:
+    if args.command in ['prepare-tissue', 'run-tissue', 'tissue-template', 'demo', 'synthetic', 'download-example', 'model-template', 'validate', 'prepare', 'check', 'run', 'explore', 'compare']:
         result = software_command(args)
         print(json.dumps(result, indent=2, allow_nan=False))
         return
@@ -124,6 +148,24 @@ def software_command(args):
     from .model import load_model, mean_field
     from .results import run_bundle, read_run, write_html, compare_runs
     import yaml
+    if args.command == 'prepare-tissue':
+        from .tissue_inputs import prepare_tissue
+        return prepare_tissue(args.input, args.output, metadata=args.metadata, layer=args.layer,
+                              cell_type_column=args.cell_type_column, sample_id=args.sample_id,
+                              recipe=args.recipe, max_cells=args.max_cells, seed=args.seed, source_license=args.source_license)
+    if args.command == 'run-tissue':
+        from .tissue_results import run_tissue
+        return run_tissue(args.bundle, args.output, scenario=args.scenario, layout=args.layout,
+                          config_path=args.config, hours=args.hours, seed=args.seed, max_cells=args.max_cells)
+    if args.command == 'tissue-template':
+        from .tissue import DEFAULT
+        if args.output.exists(): raise FileExistsError(args.output)
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(yaml.safe_dump(DEFAULT, sort_keys=False))
+        return {'config': str(args.output), 'rates_fitted': False}
+    if args.command == 'demo':
+        from .tissue_results import tissue_demo
+        return tissue_demo(args.output, cells=args.cells, hours=args.hours, seed=args.seed)
     if args.command == 'model-template':
         if args.output.exists():
             raise FileExistsError(args.output)
@@ -133,7 +175,8 @@ def software_command(args):
     if args.command == 'synthetic':
         return synthetic_example(args.output, cells=args.cells, seed=args.seed)
     if args.command == 'download-example':
-        return download_pbmc(args.output)
+        from .tissue_inputs import download_melanoma
+        return download_pbmc(args.output) if args.dataset == 'pbmc3k-legacy' else download_melanoma(args.output)
     if args.command == 'validate':
         data, sources = load_input(args.input, args.metadata, args.layer)
         return {'valid_counts': True, 'cells': data.n_obs, 'features': data.n_vars,
@@ -162,16 +205,6 @@ def software_command(args):
     if args.command == 'run':
         return run_bundle(args.bundle, args.output, model_path=args.model, scenario=args.scenario, hours=args.hours,
                           interval=args.interval, seed=args.seed, max_cells=args.max_cells, max_events=args.max_events)
-    if args.command == 'demo':
-        if args.output.exists():
-            raise FileExistsError('Demo output already exists. Use a new directory.')
-        synthetic_example(args.output / 'synthetic.h5ad', cells=args.cells, seed=args.seed)
-        bundle = args.output / 'input.zip'
-        prepare(args.output / 'synthetic.h5ad', bundle, source_license='MIT; generated synthetic fixture, no patient data')
-        baseline = run_bundle(bundle, args.output / 'baseline', hours=args.hours, seed=args.seed)
-        control = run_bundle(bundle, args.output / 'no_events', hours=args.hours, seed=args.seed, scenario='no-events')
-        compare_runs(args.output / 'baseline', args.output / 'no_events', args.output / 'comparison')
-        return {'baseline': baseline, 'control': control, 'explorer': str(args.output / 'baseline/explorer.html')}
     if args.command == 'compare':
         return compare_runs(args.first, args.second, args.output)
     result = read_run(args.input)
@@ -180,7 +213,11 @@ def software_command(args):
         if target.exists():
             raise FileExistsError(target)
         target.parent.mkdir(parents=True, exist_ok=True)
-        write_html(result, target)
+        if result.get('kind') == 'vtsc_tissue_run':
+            from .tissue_results import write_tissue_html
+            write_tissue_html(result, target)
+        else:
+            write_html(result, target)
     elif args.input.is_dir():
         target = args.input / 'explorer.html'
     if args.open:
@@ -194,7 +231,7 @@ def software_command(args):
 def main():
     try:
         _main()
-    except (ValueError, OSError, KeyError, BadZipFile, yaml.YAMLError) as error:
+    except (ValueError, OSError, KeyError, BadZipFile, yaml.YAMLError, subprocess.CalledProcessError) as error:
         print(f'vtsc: {error}', file=sys.stderr)
         raise SystemExit(2) from None
 

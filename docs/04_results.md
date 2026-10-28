@@ -1,40 +1,28 @@
-# Inspect, share and compare results
+# Inspect a tissue run
 
-```bash
-vtsc explore outputs/my_run --open
-vtsc explore outputs/my_run.zip --html outputs/reopened.html --open
-vtsc compare outputs/my_run outputs/my_control outputs/comparison
-```
+Open `explorer.html` directly; no server or network is required. Find interaction
+jumps to the next saved contact attack and zooms onto the actor. Cell selection
+shows the barcode, current fate, latest allowed actions, decision, target, distance,
+local cue, fatigue, damage, cycle and fixed initial RNA program scores. The timeline
+is a replay of recorded frames. Position interpolation between frames is for display;
+actions, counts and decisions use the selected recorded frame.
 
-`explore` verifies recorded file hashes before reopening the run. A changed
-event table, model or figure fails verification. A checksum establishes file
-integrity relative to the manifest, not independent authenticity.
+The signal overlay is a generic simulated cue, not measured expression. Cell
+membranes and nuclei are schematic, and their visible shapes are not segmentations.
+Drag to pan, use +/− to zoom and Fit to reset. A recognition-off run should report
+no recorded attacks. At time zero there are no decisions yet.
 
-Open `explorer.html` in any modern browser. No server, internet connection or API
-key is needed. Move the slider or press Play; click a live agent to inspect its
-recorded history, including daughters. The visualization displays up to 2,000
-live cells in an arbitrary grid; a position is never a tissue coordinate.
-Cells that have died can be inspected in `events.tsv`; the current live-cell grid
-does not provide a deceased-cell picker.
+`vtsc explore RUN_OR_ZIP` verifies the manifest. For a ZIP, add
+`--html outputs/reopened.html --open` to regenerate a viewer. No simulation is rerun.
 
-`trajectory.tsv` contains exact process states sampled at output times. Events
-between samples may cancel; `events.tsv` contains the full-precision sequence.
-`final_cells.tsv` includes live measured/supplied IDs and new `sim_...` IDs;
-new identifiers are checked against all previous IDs to avoid collisions.
-No input expression matrix is copied into the run.
+`run.json` contains the immutable lineage catalog, compact frame arrays (column
+names in `frame_columns`), decision records and events. Agent indices refer to
+`catalog`. Only present agents are in a frame; cleared cells remain in the catalog.
+Daughters carry a parent index and birth time. Cell types and RNA programs are fixed.
+`decisions.jsonl` and `events.jsonl` duplicate those records for line-oriented analysis.
 
-The results ZIP contains the same files as the run directory. Share it only
-when its IDs, state labels and source terms permit sharing. A ZIP remains
-subject to the input's licence and your own data-governance rules.
-
-Comparisons require the **same input bundle hash and state vocabulary**. The
-plot ends at the shorter observed horizon. It is a descriptive comparison of
-software assumptions; there is no automatic significance test or treatment-effect
-estimate. Use multiple independent seeds for uncertainty assessment and report
-any capped runs.
-
-An incomplete run is not necessarily a software bug: the maximum population
-or event count may have been reached. Inspect the summary before raising caps.
-Large horizons and explosive birth rates can exceed memory/disk or overflow the
-analytical expectation. Reduce them rather than interpreting numerical overflow
-as biological saturation.
+Compare matched `trajectory.tsv` and `summary.json` files. Check initial bundle
+hash, seed, scenario, layout, parameters and observed duration before interpreting
+a difference. The legacy `vtsc compare` is for the older nonspatial engine and
+rejects tissue recordings. This release offers descriptive comparisons, not a
+calibrated statistical comparison or fitted treatment contrast.

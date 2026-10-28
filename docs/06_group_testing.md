@@ -1,29 +1,23 @@
-# Group testing and bug reports
+# Group testing: melanoma from dissociated scRNA-seq
 
-Start with `vtsc demo outputs/test_01 --cells 300 --hours 48 --seed 21`.
-Open the baseline explorer and the no-events control. Check that the control
-has no events and unchanged states/population. Run `python -m pytest -q`.
-Then try PBMC3k, followed by one small, reviewed sample from your own data.
+Run the README's real-melanoma workflow and its recognition-off control, then
+repeat with your own reviewed biopsy. The synthetic melanoma fixture is useful
+for offline tests and debugging; identify it explicitly in reports.
 
-Useful tests include reopening the results ZIP on another computer, changing
-the random seed, using a custom state vocabulary/rate file, deliberately reaching
-an event cap, and correcting a deliberately mismatched metadata barcode.
-The last case must fail visibly instead of silently attaching the wrong labels.
+1. Confirm source checksums, sample identity and full/sampled lineage composition.
+2. Open the viewer. Find interaction should jump to a real recorded attack and show its physical distance, allowed actions and target.
+3. Click tumor, immune and unresolved cells. Inspect initial scores separately from simulated damage, fatigue and cycle state.
+4. Play, pause, scrub backwards, zoom, drag, reset and toggle the field. Counts must match the selected frame.
+5. The recognition-off control must have zero attacks and attack-mediated deaths; frozen must preserve all positions and counts.
+6. Reopen the saved ZIP with `vtsc explore` and verify checksums. Same input/seed/config should reproduce the same trajectory.
+7. Try `--layout mixed` and another seed. Geometry sensitivity is expected because positions are assumed.
+8. Test your own H5AD/Cell Ranger H5/MTX and annotated metadata. Sample mixing and malformed annotations should produce clear errors.
 
-For an actionable bug report include:
+Report the software commit/version, OS/Python, command, seed, input type, selected
+sample, scenario/layout/config, error text and minimal reproducible example.
+Attach `summary.json`, relevant decisions and a screenshot when appropriate.
+Do not attach private expression data or identifying metadata to public issues.
 
-- Commit/version, Python version and operating system.
-- Exact command, model YAML, seed and expected behavior.
-- Complete error text, or `summary.json` plus the observed discrepancy.
-- The smallest synthetic/permitted input that reproduces it.
-- Whether the same problem appears in the default synthetic demo.
-
-Do not attach patient expression or identifying metadata to a public issue.
-The generated synthetic example is the preferred reproducer. A local sharing
-intent does not make a public GitHub repository private; do not commit the
-group's private inputs or output ZIPs.
-
-CI runs core tests, the freeze check and a short offline demo. It does not fetch
-external biological data or run the clinical research study. A green CI run
-does not establish biological validation. Platform results are only confirmed
-after the corresponding jobs actually complete.
+A clean test run establishes software behavior, not biological truth. Please
+review the fixed marker recipe, cell identity mapping and declared rules as
+scientific assumptions separately from bugs in executing those rules.

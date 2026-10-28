@@ -1,7 +1,7 @@
 {
   "python": "3.12.13",
   "kernel": "isolated software environment",
-  "scope": "Real local kernels; synthetic path; installation tested separately; hosted Colab not tested",
+  "scope": "Real local kernels; synthetic melanoma agent path; installation tested separately; hosted Colab not tested",
   "notebooks": [
     {
       "notebook": "notebooks/Part1_Prepare_scRNAseq.ipynb",
@@ -10,12 +10,12 @@
     },
     {
       "notebook": "notebooks/Part2-3_Run_Simulation.ipynb",
-      "code_cells": 5,
+      "code_cells": 4,
       "executed_without_errors": true
     },
     {
       "notebook": "notebooks/Part4_Explore_Results.ipynb",
-      "code_cells": 5,
+      "code_cells": 4,
       "executed_without_errors": true
     }
   ]

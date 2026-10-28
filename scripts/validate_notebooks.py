@@ -27,6 +27,7 @@ with tempfile.TemporaryDirectory(prefix='vtsc-notebooks-') as temporary:
             for cell in nb.cells:
                 if cell.cell_type == 'code':
                     cell.source = cell.source.replace('INSTALL_PACKAGE = True', 'INSTALL_PACKAGE = False')
+                    cell.source = cell.source.replace('DATA_SOURCE = "melanoma"', 'DATA_SOURCE = "synthetic"')
             NotebookClient(nb, timeout=180, kernel_name='vtsc-test',
                            resources={'metadata': {'path': str(ROOT)}}).execute()
             results.append({'notebook': str(path.relative_to(ROOT)),
@@ -35,5 +36,5 @@ with tempfile.TemporaryDirectory(prefix='vtsc-notebooks-') as temporary:
             print(path.name, 'PASS', flush=True)
 (ROOT / 'reports/software/notebook-validation.json').write_text(json.dumps({
     'python': sys.version.split()[0], 'kernel': 'isolated software environment',
-    'scope': 'Real local kernels; synthetic path; installation tested separately; hosted Colab not tested',
+    'scope': 'Real local kernels; synthetic melanoma agent path; installation tested separately; hosted Colab not tested',
     'notebooks': results}, indent=2) + '\n')

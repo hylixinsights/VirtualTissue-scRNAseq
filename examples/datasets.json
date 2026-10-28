@@ -1,32 +1,24 @@
 {
-  "schema_version": 1,
-  "default": {
-    "id": "synthetic",
-    "license": "MIT",
-    "contains_patient_data": false,
-    "command": "vtsc synthetic example_data/synthetic.h5ad"
-  },
-  "downloadable": [
-    {
-      "id": "10x_pbmc3k",
-      "title": "3k PBMCs from a Healthy Donor",
-      "source_url": "https://www.10xgenomics.com/datasets/3-k-pbm-cs-from-a-healthy-donor-1-standard-1-1-0",
-      "download_url": "https://cf.10xgenomics.com/samples/cell-exp/1.1.0/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "attribution": "10x Genomics, 3k PBMCs from a Healthy Donor, Cell Ranger 1.1.0, 2016.",
-      "sha256": "847d6ebd9a1ec9a768f2be7e40ca42cbfe75ebeb6d76a4c24167041699dc28b5",
-      "bytes": 7621991,
-      "license_verified_date": "2026-10-27",
-      "use": "Input/annotation/software demonstration; not tumour or treatment validation."
-    }
-  ],
-  "verified_alternative": {
-    "id": "10x_pbmc1k_v3",
-    "source_url": "https://www.10xgenomics.com/datasets/1-k-pbm-cs-from-a-healthy-donor-v-3-chemistry-3-standard-3-0-0",
+  "primary": {
+    "id": "10x_melanoma_gemx_3p",
+    "title": "10k Human DTC Melanoma, Chromium GEM-X Single Cell 3\u2032",
+    "source_url": "https://www.10xgenomics.com/datasets/10k-human-dtc-melanoma-GEM-X",
+    "download_url": "https://cf.10xgenomics.com/samples/cell-exp/8.0.0/10k_Human_DTC_Melanoma_3p_gemx_10k_Human_DTC_Melanoma_3p_gemx/10k_Human_DTC_Melanoma_3p_gemx_10k_Human_DTC_Melanoma_3p_gemx_count_sample_filtered_feature_bc_matrix.h5",
+    "sha256": "a2472fd15fbc708c50b95aff7f762872929a0365b9d06454cc558d29d4400091",
+    "bytes": 56774638,
+    "cells": 10645,
+    "features": 38606,
     "license": "CC-BY-4.0",
-    "license_verified_date": "2026-10-27",
-    "cells_reported_by_source": 1222,
-    "tested_in_this_pipeline": false
-  }
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "10x Genomics (2024), 10k Human DTC Melanoma, Chromium GEM-X Single Cell 3\u2032, Cell Ranger 8.0.0. Subsampling, marker annotation and simulated geometry by VirtualTissue-scRNAseq.",
+    "verified_date": "2026-10-27",
+    "source_discrepancy": "The descriptive text says dissociated melanoma tissue; the structured Anatomical Entity field says Blood. This discrepancy is retained, not silently corrected.",
+    "use": "Single donor software example; no paired treatment outcomes or measured positions."
+  },
+  "offline_fixture": {
+    "kind": "synthetic melanoma microenvironment",
+    "license": "MIT",
+    "patient_data": false
+  },
+  "legacy_note": "PBMC3k is retained only in v0.2 regression code, not the primary demo."
 }

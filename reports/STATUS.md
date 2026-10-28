@@ -1,10 +1,10 @@
 # Execution status — 2026-10-27
 
-The independent **v0.2 software-test workflow** is now implemented under the
-user-approved A03 scope: synthetic/PBMC examples, own-data preparation,
-declared-rate simulation and offline results. See `README.md` and
-`reports/software/validation.md`. This does not pass or alter the clinical
-research gates described below; no clinical model was fitted.
+The independent **v0.3 melanoma software workflow** follows the user's A04
+correction: real dissociated 10x melanoma, own-data inputs, assumed 2D geometry,
+interacting agents and an offline tissue viewer. PBMC/nonspatial v0.2 is legacy.
+See `README.md` and `reports/software/melanoma-validation.md`. This does not
+pass or alter the clinical research gates below; no clinical model was fitted.
 
 The planned prediction study remains stopped at a necessary feasibility
 condition after the user-approved separate-stratum expansion audit.
@@ -32,7 +32,7 @@ these counts. No final eligibility or G1 pass is claimed.
 Read `T1.7_preliminary_feasibility.md` for the finding and revision options.
 The user approved including both nivolumab and pembrolizumab; no other scientific
 threshold was relaxed. No patients were assigned to a lockbox, no SPECIAL state
-changes were inspected, and no model/space/Jev work was started.
+changes were inspected, and no SPECIAL clinical model/space/Jev work was started. Independent software prototypes are described above.
 
 ## Cohort expansion selected by the user
 

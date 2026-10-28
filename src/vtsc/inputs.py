@@ -80,6 +80,23 @@ def load_input(path, metadata=None, layer=None):
         if layer:
             raise ValueError('--layer applies only to H5AD inputs.')
         data, files = matrix_directory(path)
+    elif path.suffix == '.h5':
+        if layer:
+            raise ValueError('--layer applies only to H5AD inputs.')
+        import h5py
+        with h5py.File(path, 'r') as handle:
+            if 'matrix' not in handle:
+                raise ValueError('Expected a Cell Ranger v3+ feature-barcode H5 matrix.')
+            m = handle['matrix']
+            x = sparse.csc_matrix((m['data'][:], m['indices'][:], m['indptr'][:]), shape=tuple(m['shape'][:])).T.tocsr()
+            decode = lambda a: [v.decode() if isinstance(v, bytes) else str(v) for v in a]
+            features = m['features']
+            var = pd.DataFrame({'gene_symbols': decode(features['name'][:]),
+                                'feature_type': decode(features['feature_type'][:])},
+                               index=decode(features['id'][:]))
+            data = ad.AnnData(x, obs=pd.DataFrame(index=decode(m['barcodes'][:])), var=var)
+            data = data[:, data.var.feature_type.eq('Gene Expression').to_numpy()].copy()
+        files = [path]
     elif path.suffix == '.h5ad':
         data, files = ad.read_h5ad(path), [path]
         if layer:
@@ -87,7 +104,7 @@ def load_input(path, metadata=None, layer=None):
                 raise ValueError(f'Missing layer {layer!r}; available: {list(data.layers)}')
             data.X = data.layers[layer].copy()
     else:
-        raise ValueError('Input must be an H5AD file or a 10x Matrix Market directory.')
+        raise ValueError('Input must be an H5AD file, Cell Ranger H5 file or a 10x Matrix Market directory.')
     if not data.obs_names.is_unique or not data.var_names.is_unique:
         raise ValueError('Cell and feature IDs must be unique; do not silently rename duplicates.')
     if data.n_obs == 0 or data.n_vars == 0:

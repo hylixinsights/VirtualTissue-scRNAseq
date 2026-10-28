@@ -272,9 +272,9 @@
     }
   ],
   "software_prototype": {
-    "amendment": "A03",
-    "status": "implemented_and_locally_tested",
-    "scope": "Own-data input, synthetic/PBMC demos, declared-rate non-spatial simulation; separate from clinical gates",
-    "validation": "reports/software/validation.md"
+    "version": "0.3.0",
+    "status": "implemented; validation in reports/software/melanoma-validation.md",
+    "scope": "A04: dissociated melanoma, own-biopsy agent simulation and viewer",
+    "research_gates_passed": false
   }
 }
