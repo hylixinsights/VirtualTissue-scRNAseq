@@ -1,0 +1,8 @@
+{
+  "scope": "A05 product assumptions; independent of clinical preregistration freeze",
+  "version": "0.4.0",
+  "files": {
+    "programs_cd8_v1.json": "d69846af3ad5246bf7abc53f940362533585cbe3608177290ff02391aa6014d5",
+    "assumed_state_graph_v1.json": "e8d2bf7205b720033f315ace690979117091f60198e2e5eb0e9b247b38046cce"
+  }
+}

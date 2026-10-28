@@ -79,7 +79,7 @@ def load_input(path, metadata=None, layer=None):
     if path.is_dir():
         if layer:
             raise ValueError('--layer applies only to H5AD inputs.')
-        data, files = matrix_directory(path)
+        data, files = neutral_directory(path) if (path / 'counts.mtx').exists() else matrix_directory(path)
     elif path.suffix == '.h5':
         if layer:
             raise ValueError('--layer applies only to H5AD inputs.')
@@ -99,7 +99,10 @@ def load_input(path, metadata=None, layer=None):
         files = [path]
     elif path.suffix == '.h5ad':
         data, files = ad.read_h5ad(path), [path]
-        if layer:
+        if layer == 'raw':
+            if data.raw is None: raise ValueError('H5AD has no .raw matrix.')
+            data = data.raw.to_adata()
+        elif layer:
             if layer not in data.layers:
                 raise ValueError(f'Missing layer {layer!r}; available: {list(data.layers)}')
             data.X = data.layers[layer].copy()
@@ -307,3 +310,25 @@ def download_pbmc(destination):
             target.write_bytes(content)
     (destination / 'SOURCE.json').write_bytes(json_bytes(PBMC))
     return {'matrix_directory': str(folder), **PBMC}
+
+
+def neutral_directory(path):
+    """SPECIAL neutral schema: genes x cells, exact barcode order, safe metadata only."""
+    files=[path/'counts.mtx',path/'obs.parquet',path/'var.tsv']
+    if not all(p.is_file() for p in files): raise ValueError('Neutral input needs counts.mtx, obs.parquet and var.tsv.')
+    try:
+        import pyarrow.parquet as pq
+    except ImportError as e:
+        raise ValueError('Neutral parquet inputs require pip install virtualtissue-sc[neutral].') from e
+    columns=pq.ParquetFile(files[1]).schema.names
+    safe=[k for k in ['cell_id','sample_id','sample_ID','qc_total_counts','qc_detected_genes','qc_mito_fraction'] if k in columns]
+    obs=pd.read_parquet(files[1],columns=safe); var=pd.read_csv(files[2],sep='\t',dtype=str)
+    if 'cell_id' not in obs or 'gene_id' not in var: raise ValueError('Neutral export requires cell_id and gene_id headers.')
+    x=sparse.csr_matrix(sio.mmread(files[0]).T)
+    if x.shape!=(len(obs),len(var)): raise ValueError('Neutral matrix dimensions do not align with metadata.')
+    safe=[k for k in ['cell_id','sample_id','sample_ID','qc_total_counts','qc_detected_genes','qc_mito_fraction'] if k in obs]
+    obs=obs[safe].set_index('cell_id'); obs=obs.rename(columns={'sample_ID':'sample_id'})
+    var=var.set_index('gene_id')
+    a=ad.AnnData(x,obs=obs,var=var)
+    a.uns['source']='Neutral technical export; no outcome/state metadata admitted'
+    return a,files

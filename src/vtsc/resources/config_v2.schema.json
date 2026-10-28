@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "VTSC complete scenario v2",
+  "required": [
+    "schema_version",
+    "mechanics",
+    "model",
+    "mean_context",
+    "policy",
+    "recording_cell_limit"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "mechanics": {
+      "type": "object",
+      "required": [
+        "name",
+        "dt_hours",
+        "packing_fraction",
+        "immune_speed_um_h",
+        "contact_gap_um",
+        "perception_um",
+        "cycle_hours",
+        "attack_damage_per_hour",
+        "fatigue_per_hour",
+        "recovery_per_hour",
+        "corpse_hours",
+        "cue_diffusion_um2_h",
+        "cue_decay_per_hour",
+        "cue_source_per_hour",
+        "provenance"
+      ]
+    },
+    "model": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "name",
+        "evidence_class",
+        "source",
+        "states",
+        "transitions",
+        "division_per_hour",
+        "death_per_hour",
+        "influx_cells_per_hour",
+        "profiles",
+        "pd1_activity",
+        "pdl1_activity",
+        "checkpoint_strength",
+        "reactive_fraction",
+        "target_antigen",
+        "costimulation",
+        "schedule",
+        "checkpoint_enabled",
+        "recognition_enabled",
+        "transitions_enabled",
+        "demography_enabled",
+        "parameter_provenance"
+      ]
+    },
+    "mean_context": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "policy": {
+      "enum": [
+        "hazards",
+        "local",
+        "mock"
+      ]
+    },
+    "recording_cell_limit": {
+      "type": "integer",
+      "minimum": 100,
+      "maximum": 200000
+    }
+  }
+}

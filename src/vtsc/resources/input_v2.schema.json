@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "VTSC tissue input v2",
+  "required": [
+    "schema_version",
+    "cells",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "cells": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2000,
+      "items": {
+        "type": "object",
+        "required": [
+          "cell_id",
+          "lineage",
+          "cell_type",
+          "sample_id",
+          "cd8_state",
+          "molecular_source_id",
+          "observed_rna_t0",
+          "observed_axes_t0",
+          "programs"
+        ],
+        "properties": {
+          "cell_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "lineage": {
+            "enum": [
+              "Melanoma",
+              "CD8_T",
+              "T_cell",
+              "NK",
+              "Myeloid",
+              "B_cell",
+              "Fibroblast",
+              "Endothelial",
+              "Unknown"
+            ]
+          },
+          "cd8_state": {
+            "enum": [
+              "Memory",
+              "Activated",
+              "Cytotoxic",
+              "Dysfunctional",
+              "Unknown",
+              null
+            ]
+          },
+          "sample_id": {
+            "type": "string"
+          },
+          "observed_rna_t0": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "observed_axes_t0": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object"
+    }
+  }
+}

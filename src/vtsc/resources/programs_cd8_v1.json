@@ -1,0 +1,111 @@
+{
+  "version": "cd8-rank-v1",
+  "evidence_class": "inferred, provisional marker recipe",
+  "source": "A05; Li Cell 2019 doi:10.1016/j.cell.2018.11.043; Sade-Feldman Cell 2018 doi:10.1016/j.cell.2018.10.038",
+  "method": "Capped positive-gene within-cell rank enrichment, U-statistic normalization; not calibrated state probabilities",
+  "state": {
+    "Memory": [
+      "TCF7",
+      "CCR7",
+      "SELL",
+      "LEF1"
+    ],
+    "Activated": [
+      "GZMK",
+      "CD69",
+      "IL2RA",
+      "TNFRSF9"
+    ],
+    "Cytotoxic": [
+      "GZMB",
+      "PRF1",
+      "CTSW",
+      "FGFBP2"
+    ],
+    "Dysfunctional": [
+      "PDCD1",
+      "HAVCR2",
+      "LAG3",
+      "TOX",
+      "ENTPD1"
+    ]
+  },
+  "held_out": {
+    "Memory": [
+      "IL7R",
+      "BCL2"
+    ],
+    "Activated": [
+      "NR4A2",
+      "EGR2"
+    ],
+    "Cytotoxic": [
+      "GZMH",
+      "CCL5"
+    ],
+    "Dysfunctional": [
+      "CXCL13",
+      "LAYN",
+      "TIGIT"
+    ]
+  },
+  "axes": {
+    "dysfunction": [
+      "PDCD1",
+      "HAVCR2",
+      "LAG3",
+      "TOX",
+      "ENTPD1"
+    ],
+    "proliferation": [
+      "MKI67",
+      "TOP2A",
+      "PCNA",
+      "MCM2",
+      "TYMS"
+    ],
+    "cytotoxicity": [
+      "GZMB",
+      "PRF1",
+      "CTSW",
+      "FGFBP2"
+    ],
+    "persistence": [
+      "IL7R",
+      "BCL2",
+      "TCF7"
+    ]
+  },
+  "controls": {
+    "dissociation": [
+      "FOS",
+      "JUN",
+      "JUNB",
+      "HSPA1A",
+      "EGR1"
+    ],
+    "tcr_signal": [
+      "NR4A1",
+      "NR4A2",
+      "NR4A3",
+      "EGR2"
+    ],
+    "myeloid_inflammation": [
+      "CXCL9",
+      "CXCL10",
+      "STAT1",
+      "IRF1"
+    ],
+    "antigen_presentation": [
+      "HLA-A",
+      "HLA-B",
+      "B2M",
+      "TAP1"
+    ]
+  },
+  "max_rank": 1500,
+  "min_detected_state_markers": 2,
+  "min_margin": 0.08,
+  "min_state_score": 0.15,
+  "limits": "Not Tpex diagnosis, CNV validation, exhaustion protein measurement, or a training-fold reference."
+}

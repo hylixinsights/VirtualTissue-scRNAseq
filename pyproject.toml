@@ -4,13 +4,14 @@ build-backend = "hatchling.build"
 
 [project]
 name = "virtualtissue-sc"
-version = "0.3.0"
+version = "0.4.0"
 description = "Melanoma agent simulations from dissociated single-cell data"
 readme = "README.md"
 requires-python = ">=3.12,<3.14"
 dependencies = ["PyYAML==6.0.3", "numpy==2.5.4", "scipy==1.18.1", "pandas==3.1.0", "anndata==0.13.4", "matplotlib==3.11.2"]
 
 [project.optional-dependencies]
+neutral = ["pyarrow==26.0.0"]
 test = ["pytest==9.1.1"]
 notebooks = ["ipykernel>=6.29,<8", "nbformat>=5.10,<6", "nbclient>=0.10,<1", "nbconvert>=7.16,<8"]
 research = ["openpyxl==3.1.5", "pdfplumber>=0.11,<0.12"]

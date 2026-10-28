@@ -23,9 +23,9 @@ def _main():
     freeze = sub.add_parser("freeze")
     freeze.add_argument("--file", action="append", required=True)
     freeze.add_argument("--commit", required=True)
-    demo = sub.add_parser('demo', help='Offline synthetic melanoma tissue test with recognition control')
+    demo = sub.add_parser('demo', help='Offline dynamic CD8 melanoma with paired anti-PD-1/exposure-zero arms')
     demo.add_argument('output', type=Path)
-    demo.add_argument('--cells', type=int, default=300)
+    demo.add_argument('--cells', type=int, default=120)
     demo.add_argument('--seed', type=int, default=21)
     demo.add_argument('--hours', type=float, default=24)
     synth = sub.add_parser('synthetic', help='Generate a raw-count annotated H5AD fixture')
@@ -42,6 +42,10 @@ def _main():
     tissue_prepare.add_argument('output', type=Path)
     tissue_prepare.add_argument('--metadata', type=Path)
     tissue_prepare.add_argument('--layer')
+    tissue_prepare.add_argument('--state-column', default='cd8_state')
+    tissue_prepare.add_argument('--state-recipe', choices=['rank-markers-v1'])
+    tissue_prepare.add_argument('--gene-map', type=Path)
+    tissue_prepare.add_argument('--sampling', choices=['stratified','uniform'], default='stratified')
     tissue_prepare.add_argument('--cell-type-column', default='cell_type')
     tissue_prepare.add_argument('--sample-id')
     tissue_prepare.add_argument('--recipe', choices=['melanoma-markers'])
@@ -57,6 +61,31 @@ def _main():
     tissue_run.add_argument('--hours', type=float, default=24)
     tissue_run.add_argument('--seed', type=int, default=21)
     tissue_run.add_argument('--max-cells', type=int, default=1500)
+    dynamic_template = sub.add_parser('melanoma-template', help='Write complete versioned CD8/drug/mechanics contract')
+    dynamic_template.add_argument('output', type=Path)
+    dynamic = sub.add_parser('run-melanoma', help='Dynamic CD8 states and explicit normalized anti-PD-1 exposure')
+    dynamic.add_argument('bundle', type=Path)
+    dynamic.add_argument('output', type=Path)
+    dynamic.add_argument('--arm', choices=['anti-pd1','exposure-zero','recognition-off','checkpoint-off','transitions-off','spatial-shuffle','frozen'], default='anti-pd1')
+    dynamic.add_argument('--config', type=Path)
+    dynamic.add_argument('--hours', type=float, default=24)
+    dynamic.add_argument('--seed', type=int, default=21)
+    dynamic.add_argument('--max-cells', type=int, default=1500)
+    dynamic.add_argument('--layout', choices=['mixed','tumor-nests'], default='tumor-nests')
+    matched = sub.add_parser('compare-melanoma', help='Synchronized offline inspection of matched arms')
+    matched.add_argument('first', type=Path)
+    matched.add_argument('second', type=Path)
+    matched.add_argument('output', type=Path)
+    recovery = sub.add_parser('recover-melanoma', help='Recompute a verified recording deterministically into a new output; optionally extend')
+    recovery.add_argument('input', type=Path)
+    recovery.add_argument('output', type=Path)
+    recovery.add_argument('--hours', type=float)
+    ens = sub.add_parser('ensemble-melanoma', help='Paired controls and predeclared parameter sensitivity')
+    ens.add_argument('bundle', type=Path)
+    ens.add_argument('output', type=Path)
+    ens.add_argument('--seeds', type=int, nargs='+', default=[21,22,23,24,25])
+    ens.add_argument('--hours', type=float, default=24)
+    ens.add_argument('--config', type=Path)
     template = sub.add_parser('model-template', help='Write an editable assumption file')
     template.add_argument('output', type=Path)
     for name in ['validate', 'prepare']:
@@ -96,7 +125,7 @@ def _main():
     compare.add_argument('output', type=Path)
     args = parser.parse_args()
     root = args.root.resolve()
-    if args.command in ['prepare-tissue', 'run-tissue', 'tissue-template', 'demo', 'synthetic', 'download-example', 'model-template', 'validate', 'prepare', 'check', 'run', 'explore', 'compare']:
+    if args.command in ['run-melanoma','melanoma-template','compare-melanoma','recover-melanoma','ensemble-melanoma','prepare-tissue', 'run-tissue', 'tissue-template', 'demo', 'synthetic', 'download-example', 'model-template', 'validate', 'prepare', 'check', 'run', 'explore', 'compare']:
         result = software_command(args)
         print(json.dumps(result, indent=2, allow_nan=False))
         return
@@ -152,7 +181,8 @@ def software_command(args):
         from .tissue_inputs import prepare_tissue
         return prepare_tissue(args.input, args.output, metadata=args.metadata, layer=args.layer,
                               cell_type_column=args.cell_type_column, sample_id=args.sample_id,
-                              recipe=args.recipe, max_cells=args.max_cells, seed=args.seed, source_license=args.source_license)
+                              recipe=args.recipe, max_cells=args.max_cells, seed=args.seed, source_license=args.source_license,
+                              state_column=args.state_column, state_recipe=args.state_recipe, gene_map=args.gene_map, sampling=args.sampling)
     if args.command == 'run-tissue':
         from .tissue_results import run_tissue
         return run_tissue(args.bundle, args.output, scenario=args.scenario, layout=args.layout,
@@ -164,8 +194,26 @@ def software_command(args):
         args.output.write_text(yaml.safe_dump(DEFAULT, sort_keys=False))
         return {'config': str(args.output), 'rates_fitted': False}
     if args.command == 'demo':
-        from .tissue_results import tissue_demo
-        return tissue_demo(args.output, cells=args.cells, hours=args.hours, seed=args.seed)
+        from .melanoma_results import melanoma_demo
+        return melanoma_demo(args.output, cells=args.cells, hours=args.hours, seed=args.seed)
+    if args.command == 'melanoma-template':
+        from .melanoma import DEFAULT_CONFIG
+        if args.output.exists(): raise FileExistsError(args.output)
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(yaml.safe_dump(DEFAULT_CONFIG, sort_keys=False))
+        return {'config':str(args.output),'evidence_class':'assumed','clinical_validation':False}
+    if args.command == 'run-melanoma':
+        from .melanoma_results import run_melanoma
+        return run_melanoma(args.bundle,args.output,config_path=args.config,arm=args.arm,layout=args.layout,hours=args.hours,seed=args.seed,max_cells=args.max_cells)
+    if args.command == 'compare-melanoma':
+        from .melanoma_results import compare_melanoma
+        return compare_melanoma(args.first,args.second,args.output)
+    if args.command == 'recover-melanoma':
+        from .melanoma_results import recover_melanoma
+        return recover_melanoma(args.input,args.output,hours=args.hours)
+    if args.command == 'ensemble-melanoma':
+        from .melanoma_results import ensemble_melanoma
+        return ensemble_melanoma(args.bundle,args.output,seeds=args.seeds,hours=args.hours,config_path=args.config)
     if args.command == 'model-template':
         if args.output.exists():
             raise FileExistsError(args.output)
@@ -208,12 +256,18 @@ def software_command(args):
     if args.command == 'compare':
         return compare_runs(args.first, args.second, args.output)
     result = read_run(args.input)
+    if result.get('kind') in ['vtsc_melanoma_run','vtsc_melanoma_comparison']:
+        from .melanoma_results import verify_dynamic
+        verify_dynamic(result)
     target = args.html
     if target:
         if target.exists():
             raise FileExistsError(target)
         target.parent.mkdir(parents=True, exist_ok=True)
-        if result.get('kind') == 'vtsc_tissue_run':
+        if result.get('kind') in ['vtsc_melanoma_run','vtsc_melanoma_comparison']:
+            from .melanoma_results import write_melanoma_html
+            write_melanoma_html(result,target)
+        elif result.get('kind') == 'vtsc_tissue_run':
             from .tissue_results import write_tissue_html
             write_tissue_html(result, target)
         else:
@@ -225,7 +279,7 @@ def software_command(args):
             raise ValueError('For a results ZIP, specify --html before --open.')
         import webbrowser
         webbrowser.open(target.resolve().as_uri())
-    return {'verified': True, 'summary': result['summary'], 'explorer': str(target) if target else None}
+    return {'verified': True, 'summary': result.get('summary',result.get('comparison')), 'explorer': str(target) if target else None}
 
 
 def main():

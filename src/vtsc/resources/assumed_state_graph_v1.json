@@ -1,0 +1,179 @@
+{
+  "schema_version": 2,
+  "name": "assumed-cd8-anti-pd1-v1",
+  "evidence_class": "assumed",
+  "source": "A05 exploratory assumption; numerical values are not literature estimates",
+  "states": [
+    "Memory",
+    "Activated",
+    "Cytotoxic",
+    "Dysfunctional"
+  ],
+  "transitions": [
+    {
+      "source": "Memory",
+      "target": "Activated",
+      "rate_per_hour": 0.045,
+      "class": "activation",
+      "evidence_class": "assumed",
+      "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+    },
+    {
+      "source": "Activated",
+      "target": "Memory",
+      "rate_per_hour": 0.012,
+      "class": "rest",
+      "evidence_class": "assumed",
+      "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+    },
+    {
+      "source": "Activated",
+      "target": "Cytotoxic",
+      "rate_per_hour": 0.035,
+      "class": "effector",
+      "evidence_class": "assumed",
+      "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+    },
+    {
+      "source": "Activated",
+      "target": "Dysfunctional",
+      "rate_per_hour": 0.018,
+      "class": "dysfunction",
+      "evidence_class": "assumed",
+      "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+    },
+    {
+      "source": "Cytotoxic",
+      "target": "Dysfunctional",
+      "rate_per_hour": 0.022,
+      "class": "dysfunction",
+      "evidence_class": "assumed",
+      "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+    },
+    {
+      "source": "Cytotoxic",
+      "target": "Memory",
+      "rate_per_hour": 0.006,
+      "class": "rest",
+      "evidence_class": "assumed",
+      "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+    },
+    {
+      "source": "Dysfunctional",
+      "target": "Activated",
+      "rate_per_hour": 0.004,
+      "class": "reinvigoration",
+      "evidence_class": "assumed",
+      "provenance": "A05 exploratory assumption; numerical values are not literature estimates"
+    }
+  ],
+  "division_per_hour": {
+    "Memory": 0.001,
+    "Activated": 0.012,
+    "Cytotoxic": 0.003,
+    "Dysfunctional": 0.015
+  },
+  "death_per_hour": {
+    "Memory": 0.001,
+    "Activated": 0.002,
+    "Cytotoxic": 0.003,
+    "Dysfunctional": 0.004
+  },
+  "influx_cells_per_hour": {
+    "Memory": 0.0,
+    "Activated": 0.0,
+    "Cytotoxic": 0.0,
+    "Dysfunctional": 0.0
+  },
+  "profiles": {
+    "Memory": {
+      "dysfunction": 0.05,
+      "proliferation": 0.1,
+      "cytotoxicity": 0.08,
+      "persistence": 0.95
+    },
+    "Activated": {
+      "dysfunction": 0.15,
+      "proliferation": 0.65,
+      "cytotoxicity": 0.45,
+      "persistence": 0.65
+    },
+    "Cytotoxic": {
+      "dysfunction": 0.25,
+      "proliferation": 0.25,
+      "cytotoxicity": 0.95,
+      "persistence": 0.5
+    },
+    "Dysfunctional": {
+      "dysfunction": 0.9,
+      "proliferation": 0.7,
+      "cytotoxicity": 0.3,
+      "persistence": 0.45
+    },
+    "Unknown": {
+      "dysfunction": 0.0,
+      "proliferation": 0.0,
+      "cytotoxicity": 0.0,
+      "persistence": 0.0
+    }
+  },
+  "pd1_activity": {
+    "Memory": 0.2,
+    "Activated": 0.6,
+    "Cytotoxic": 0.55,
+    "Dysfunctional": 0.9
+  },
+  "pdl1_activity": 0.7,
+  "checkpoint_strength": 0.85,
+  "reactive_fraction": 0.65,
+  "target_antigen": 1.0,
+  "costimulation": 0.8,
+  "schedule": [
+    {
+      "start_hour": 2.0,
+      "end_hour": 96.0,
+      "exposure": 0.8
+    }
+  ],
+  "checkpoint_enabled": true,
+  "recognition_enabled": true,
+  "transitions_enabled": true,
+  "demography_enabled": true,
+  "parameter_provenance": {
+    "transitions.*.rate_per_hour": {
+      "unit": "1/hour",
+      "evidence_class": "assumed",
+      "source": "A05 exploratory assumption; numerical values are not literature estimates"
+    },
+    "division_per_hour.*": {
+      "unit": "1/hour",
+      "evidence_class": "assumed",
+      "source": "A05 exploratory assumption; numerical values are not literature estimates"
+    },
+    "death_per_hour.*": {
+      "unit": "1/hour",
+      "evidence_class": "assumed",
+      "source": "A05 exploratory assumption; numerical values are not literature estimates"
+    },
+    "influx_cells_per_hour.*": {
+      "unit": "cells/hour",
+      "evidence_class": "assumed",
+      "source": "A05 exploratory assumption; numerical values are not literature estimates"
+    },
+    "profiles.*.*": {
+      "unit": "normalized capacity [0,1]",
+      "evidence_class": "assumed",
+      "source": "A05 exploratory assumption; numerical values are not literature estimates"
+    },
+    "pd1_activity.*,pdl1_activity,checkpoint_strength,reactive_fraction,target_antigen,costimulation": {
+      "unit": "fraction [0,1]",
+      "evidence_class": "assumed",
+      "source": "A05 exploratory assumption; numerical values are not literature estimates"
+    },
+    "schedule": {
+      "unit": "hours; normalized exposure [0,1]",
+      "evidence_class": "assumed",
+      "source": "Piecewise constant exposure; not dose, pharmacokinetics or measured occupancy"
+    }
+  }
+}

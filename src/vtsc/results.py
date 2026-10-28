@@ -137,8 +137,8 @@ def read_run(path):
     else:
         with zipfile.ZipFile(path) as archive:
             infos = archive.infolist()
-            if len({i.filename for i in infos}) != len(infos) or sum(i.file_size for i in infos) > 150_000_000:
-                raise ValueError('Duplicate result members or results ZIP exceeds 150 MB.')
+            if len({i.filename for i in infos}) != len(infos) or sum(i.file_size for i in infos) > 400_000_000:
+                raise ValueError('Duplicate result members or results ZIP exceeds 400 MB.')
             payload = {i.filename: archive.read(i) for i in infos}
         manifest = json.loads(payload['manifest.json'])
         read = lambda name: payload[name]
@@ -155,7 +155,7 @@ def compare_runs(first, second, output):
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     a, b = read_run(first), read_run(second)
-    if a.get('kind') == 'vtsc_tissue_run' or b.get('kind') == 'vtsc_tissue_run':
+    if a.get('kind') in ['vtsc_tissue_run','vtsc_melanoma_run','vtsc_melanoma_comparison'] or b.get('kind') in ['vtsc_tissue_run','vtsc_melanoma_run','vtsc_melanoma_comparison']:
         raise ValueError('compare is for legacy nonspatial runs; compare tissue trajectory.tsv and summary.json or use the notebooks.')
     if a['bundle_sha256'] != b['bundle_sha256'] or a['model']['states'] != b['model']['states']:
         raise ValueError('Comparison requires the same initial bundle and state vocabulary.')
