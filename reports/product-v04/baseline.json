@@ -1,0 +1,2179 @@
+{
+  "source_commit": "d85b25274b5b9e87201a5301117244150b4c7532",
+  "git_clean_at_start": true,
+  "remotes": [],
+  "tests_passed": 34,
+  "freeze_valid": true,
+  "protected_hashes": {
+    "prereg/FREEZE.json": "90bdff3ae7b0cae443b0029ace2bc29e635ce158945898e08eed4e59a36f85df",
+    "config/study.yaml": "565fddefad5a855cb0f00ed8a8cb7f6f33122fadb691f0780b3d1c5858c2e1a8",
+    "reports/task-board.json": "31a2c70434b56012e42f9ab5402461ab87c85f1f46edd9b4d5fecb6900f20457",
+    "tables/claims_ledger.tsv": "72d28cde3fea08827a9045c7aaf1630d560d5e90c7c7843d57aab498fdabcebf"
+  },
+  "inventory": [
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/raw/Entire_TME.rds",
+      "recorded_status": "missing",
+      "expected_bytes": 2718597537,
+      "licence": "CC-BY-NC-SA-4.0",
+      "exists_now": false,
+      "bytes_now": null
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/raw/GC_all_immune_sharing.rds",
+      "recorded_status": "verified",
+      "expected_bytes": 991078732,
+      "licence": "CC-BY-NC-SA-4.0",
+      "exists_now": true,
+      "bytes_now": 991078732
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/raw/Malignant_cells.rds",
+      "recorded_status": "missing",
+      "expected_bytes": 864438613,
+      "licence": "CC-BY-NC-SA-4.0",
+      "exists_now": false,
+      "bytes_now": null
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/raw/Pozniak_README_v5.txt",
+      "recorded_status": "verified",
+      "expected_bytes": 2128,
+      "licence": "CC-BY-NC-SA-4.0",
+      "exists_now": true,
+      "bytes_now": 2128
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/raw/Pozniak_README_v6.txt",
+      "recorded_status": "verified",
+      "expected_bytes": 2170,
+      "licence": "CC-BY-NC-SA-4.0",
+      "exists_now": true,
+      "bytes_now": 2170
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/raw/clinical/Pozniak_Cell2024_TableS1.xlsx",
+      "recorded_status": "hashed_only",
+      "expected_bytes": null,
+      "licence": "verify_article_supplement_terms",
+      "exists_now": true,
+      "bytes_now": 13109
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/raw/clinical/cd-24-1208_supplemental_table_s1_suppst1.xlsx",
+      "recorded_status": "verified",
+      "expected_bytes": 20976,
+      "licence": "CC-BY-4.0",
+      "exists_now": true,
+      "bytes_now": 20976
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/Lin2026/raw/mmc1.pdf",
+      "recorded_status": "hashed_only",
+      "expected_bytes": null,
+      "licence": "Article supplement; reuse terms not independently verified",
+      "exists_now": true,
+      "bytes_now": 5264978
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/Lin2026/raw/mmc2.xlsx",
+      "recorded_status": "hashed_only",
+      "expected_bytes": null,
+      "licence": "Article supplement; reuse terms not independently verified",
+      "exists_now": true,
+      "bytes_now": 15372
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SadeFeldman2018/raw/Cell2018_TableS1.xlsx",
+      "recorded_status": "hashed_only",
+      "expected_bytes": null,
+      "licence": "Article supplement; reuse terms not independently verified",
+      "exists_now": true,
+      "bytes_now": 1352332
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SadeFeldman2018/raw/GSE120575_patient_ID_single_cells.txt.gz",
+      "recorded_status": "hashed_only",
+      "expected_bytes": null,
+      "licence": "GEO source terms; explicit file reuse licence not independently verified",
+      "exists_now": true,
+      "bytes_now": 83035
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/Liu2026/raw/biorxiv-2026.09.12.751186v1.pdf",
+      "recorded_status": "hashed_only",
+      "expected_bytes": null,
+      "licence": "Source preprint; data-release status distinct from article terms",
+      "exists_now": true,
+      "bytes_now": 17231197
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/Lin2026/raw/seurat_full.qs2.part",
+      "recorded_status": "partial_stopped_not_valid_for_analysis",
+      "expected_bytes": 4021369094,
+      "licence": "Deposit declares CC-BY-4.0; upstream cohort terms require separate reconciliation",
+      "exists_now": true,
+      "bytes_now": 109383680
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/reports/evidence/cohort-expansion/GSE120575-series.txt",
+      "recorded_status": "saved_source_snapshot",
+      "expected_bytes": null,
+      "licence": null,
+      "exists_now": true,
+      "bytes_now": 3433
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/reports/evidence/cohort-expansion/GSE123813-series.txt",
+      "recorded_status": "saved_source_snapshot",
+      "expected_bytes": null,
+      "licence": null,
+      "exists_now": true,
+      "bytes_now": 7245
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/reports/evidence/cohort-expansion/GSE164237-series.txt",
+      "recorded_status": "saved_source_snapshot",
+      "expected_bytes": null,
+      "licence": null,
+      "exists_now": true,
+      "bytes_now": 3981
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/reports/evidence/cohort-expansion/GSE272993-series.txt",
+      "recorded_status": "saved_source_snapshot",
+      "expected_bytes": null,
+      "licence": null,
+      "exists_now": true,
+      "bytes_now": 16462
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/reports/evidence/cohort-expansion/Lin2026-EGA.html",
+      "recorded_status": "saved_source_snapshot",
+      "expected_bytes": null,
+      "licence": null,
+      "exists_now": true,
+      "bytes_now": 19545
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/reports/evidence/cohort-expansion/Lin2026-article.xml",
+      "recorded_status": "saved_source_snapshot",
+      "expected_bytes": null,
+      "licence": null,
+      "exists_now": true,
+      "bytes_now": 1832
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/reports/evidence/cohort-expansion/PMC13130630.xml",
+      "recorded_status": "saved_source_snapshot",
+      "expected_bytes": null,
+      "licence": null,
+      "exists_now": true,
+      "bytes_now": 323250
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/reports/evidence/cohort-expansion/Sun2024.html",
+      "recorded_status": "saved_source_snapshot",
+      "expected_bytes": null,
+      "licence": null,
+      "exists_now": true,
+      "bytes_now": 127379
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/reports/evidence/cohort-expansion/zenodo-18825477.json",
+      "recorded_status": "saved_source_snapshot",
+      "expected_bytes": null,
+      "licence": null,
+      "exists_now": true,
+      "bytes_now": 4698
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/reports/evidence/cohort-expansion/zenodo-19586163.json",
+      "recorded_status": "saved_source_snapshot",
+      "expected_bytes": null,
+      "licence": null,
+      "exists_now": true,
+      "bytes_now": 5831
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/Lin2026/raw/seurat_full.qs2",
+      "recorded_status": "verified",
+      "expected_bytes": null,
+      "licence": "Deposit declares CC-BY-4.0; upstream cohort terms require separate reconciliation",
+      "exists_now": true,
+      "bytes_now": 4021369094
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/Lin2026/derived/audit-quarantine/source_metadata.parquet",
+      "recorded_status": "derived_metadata_audit_only",
+      "expected_bytes": null,
+      "licence": "Source-derived; no MIT relicensing; upstream cohort terms retained",
+      "exists_now": true,
+      "bytes_now": 23271965
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/Lin2026/derived/audit-quarantine/source_metadata.json",
+      "recorded_status": "derived_metadata_audit_only",
+      "expected_bytes": null,
+      "licence": "Source-derived; no MIT relicensing; upstream cohort terms retained",
+      "exists_now": true,
+      "bytes_now": 1219
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/Lin2026/derived/audit-quarantine/source_stream.integrity.json",
+      "recorded_status": "derived_metadata_audit_only",
+      "expected_bytes": null,
+      "licence": "Source-derived; no MIT relicensing; upstream cohort terms retained",
+      "exists_now": true,
+      "bytes_now": 249
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/Lin2026/derived/audit-quarantine/source_stream.rds",
+      "recorded_status": "derived_stream_checksum_recorded_during_decode",
+      "expected_bytes": null,
+      "licence": "Contains all atlas source content; upstream cohort terms retained",
+      "exists_now": true,
+      "bytes_now": 28600818752
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA061/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 107490,
+      "exists_now": true,
+      "bytes_now": 107490
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA061/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 106047,
+      "exists_now": true,
+      "bytes_now": 106047
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA061/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 6697,
+      "exists_now": true,
+      "bytes_now": 6697
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA061/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 2714419,
+      "exists_now": true,
+      "bytes_now": 2714419
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA061/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 11213,
+      "exists_now": true,
+      "bytes_now": 11213
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA061/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA066/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 257987,
+      "exists_now": true,
+      "bytes_now": 257987
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA066/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 256544,
+      "exists_now": true,
+      "bytes_now": 256544
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA066/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 14773,
+      "exists_now": true,
+      "bytes_now": 14773
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA066/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 8139167,
+      "exists_now": true,
+      "bytes_now": 8139167
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA066/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 20494,
+      "exists_now": true,
+      "bytes_now": 20494
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA066/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA070/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 56977,
+      "exists_now": true,
+      "bytes_now": 56977
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA070/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 55534,
+      "exists_now": true,
+      "bytes_now": 55534
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA070/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 3934,
+      "exists_now": true,
+      "bytes_now": 3934
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA070/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 2035595,
+      "exists_now": true,
+      "bytes_now": 2035595
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA070/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 8114,
+      "exists_now": true,
+      "bytes_now": 8114
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA070/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA074/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 123041,
+      "exists_now": true,
+      "bytes_now": 123041
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA074/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 121598,
+      "exists_now": true,
+      "bytes_now": 121598
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA074/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 7632,
+      "exists_now": true,
+      "bytes_now": 7632
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA074/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 3949575,
+      "exists_now": true,
+      "bytes_now": 3949575
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA074/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 12326,
+      "exists_now": true,
+      "bytes_now": 12326
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA074/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA136/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 229795,
+      "exists_now": true,
+      "bytes_now": 229795
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA136/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 228352,
+      "exists_now": true,
+      "bytes_now": 228352
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA136/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 13464,
+      "exists_now": true,
+      "bytes_now": 13464
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA136/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 8082462,
+      "exists_now": true,
+      "bytes_now": 8082462
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA136/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 19078,
+      "exists_now": true,
+      "bytes_now": 19078
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA136/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA141/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 159351,
+      "exists_now": true,
+      "bytes_now": 159351
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA141/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 157908,
+      "exists_now": true,
+      "bytes_now": 157908
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA141/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 9564,
+      "exists_now": true,
+      "bytes_now": 9564
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA141/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 5116077,
+      "exists_now": true,
+      "bytes_now": 5116077
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA141/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 14648,
+      "exists_now": true,
+      "bytes_now": 14648
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA141/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA144/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 278473,
+      "exists_now": true,
+      "bytes_now": 278473
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA144/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 277030,
+      "exists_now": true,
+      "bytes_now": 277030
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA144/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 16063,
+      "exists_now": true,
+      "bytes_now": 16063
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA144/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 11178881,
+      "exists_now": true,
+      "bytes_now": 11178881
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA144/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 22294,
+      "exists_now": true,
+      "bytes_now": 22294
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA144/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA149/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 265426,
+      "exists_now": true,
+      "bytes_now": 265426
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA149/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 263983,
+      "exists_now": true,
+      "bytes_now": 263983
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA149/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 15417,
+      "exists_now": true,
+      "bytes_now": 15417
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA149/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 9524617,
+      "exists_now": true,
+      "bytes_now": 9524617
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA149/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 21300,
+      "exists_now": true,
+      "bytes_now": 21300
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA149/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA152/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 376281,
+      "exists_now": true,
+      "bytes_now": 376281
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA152/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 374838,
+      "exists_now": true,
+      "bytes_now": 374838
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA152/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 21234,
+      "exists_now": true,
+      "bytes_now": 21234
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA152/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 13716218,
+      "exists_now": true,
+      "bytes_now": 13716218
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA152/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 28088,
+      "exists_now": true,
+      "bytes_now": 28088
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA152/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA155/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 397216,
+      "exists_now": true,
+      "bytes_now": 397216
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA155/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 395773,
+      "exists_now": true,
+      "bytes_now": 395773
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA155/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 22275,
+      "exists_now": true,
+      "bytes_now": 22275
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA155/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 11744765,
+      "exists_now": true,
+      "bytes_now": 11744765
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA155/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 28488,
+      "exists_now": true,
+      "bytes_now": 28488
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA155/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA192/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 831100,
+      "exists_now": true,
+      "bytes_now": 831100
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA192/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 829657,
+      "exists_now": true,
+      "bytes_now": 829657
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA192/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 44932,
+      "exists_now": true,
+      "bytes_now": 44932
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA192/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 36279243,
+      "exists_now": true,
+      "bytes_now": 36279243
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA192/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 54309,
+      "exists_now": true,
+      "bytes_now": 54309
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA192/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA196/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 741445,
+      "exists_now": true,
+      "bytes_now": 741445
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA196/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 740002,
+      "exists_now": true,
+      "bytes_now": 740002
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA196/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 40567,
+      "exists_now": true,
+      "bytes_now": 40567
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA196/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 24084840,
+      "exists_now": true,
+      "bytes_now": 24084840
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA196/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 48103,
+      "exists_now": true,
+      "bytes_now": 48103
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/sc5rCMA196/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA036/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 45162,
+      "exists_now": true,
+      "bytes_now": 45162
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA036/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 43719,
+      "exists_now": true,
+      "bytes_now": 43719
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA036/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 3152,
+      "exists_now": true,
+      "bytes_now": 3152
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA036/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 938389,
+      "exists_now": true,
+      "bytes_now": 938389
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA036/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 7037,
+      "exists_now": true,
+      "bytes_now": 7037
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA036/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA038/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 389563,
+      "exists_now": true,
+      "bytes_now": 389563
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA038/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 388120,
+      "exists_now": true,
+      "bytes_now": 388120
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA038/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 21948,
+      "exists_now": true,
+      "bytes_now": 21948
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA038/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 15726278,
+      "exists_now": true,
+      "bytes_now": 15726278
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA038/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 28978,
+      "exists_now": true,
+      "bytes_now": 28978
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA038/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA040/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 54162,
+      "exists_now": true,
+      "bytes_now": 54162
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA040/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 52719,
+      "exists_now": true,
+      "bytes_now": 52719
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA040/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 3685,
+      "exists_now": true,
+      "bytes_now": 3685
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA040/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 1980194,
+      "exists_now": true,
+      "bytes_now": 1980194
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA040/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 7752,
+      "exists_now": true,
+      "bytes_now": 7752
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA040/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA041/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 30892,
+      "exists_now": true,
+      "bytes_now": 30892
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA041/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 29449,
+      "exists_now": true,
+      "bytes_now": 29449
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA041/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 2371,
+      "exists_now": true,
+      "bytes_now": 2371
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA041/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 650534,
+      "exists_now": true,
+      "bytes_now": 650534
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA041/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 6031,
+      "exists_now": true,
+      "bytes_now": 6031
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA041/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA044/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 269136,
+      "exists_now": true,
+      "bytes_now": 269136
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA044/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 267693,
+      "exists_now": true,
+      "bytes_now": 267693
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA044/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 15485,
+      "exists_now": true,
+      "bytes_now": 15485
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA044/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 14767139,
+      "exists_now": true,
+      "bytes_now": 14767139
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA044/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 21833,
+      "exists_now": true,
+      "bytes_now": 21833
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA044/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA046/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 105373,
+      "exists_now": true,
+      "bytes_now": 105373
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA046/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 103930,
+      "exists_now": true,
+      "bytes_now": 103930
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA046/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 6405,
+      "exists_now": true,
+      "bytes_now": 6405
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA046/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 2868861,
+      "exists_now": true,
+      "bytes_now": 2868861
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA046/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 11077,
+      "exists_now": true,
+      "bytes_now": 11077
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA046/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA048/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 58983,
+      "exists_now": true,
+      "bytes_now": 58983
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA048/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 57540,
+      "exists_now": true,
+      "bytes_now": 57540
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA048/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 3976,
+      "exists_now": true,
+      "bytes_now": 3976
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA048/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 1943047,
+      "exists_now": true,
+      "bytes_now": 1943047
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA048/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 8074,
+      "exists_now": true,
+      "bytes_now": 8074
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA048/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA049/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 91488,
+      "exists_now": true,
+      "bytes_now": 91488
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA049/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 90045,
+      "exists_now": true,
+      "bytes_now": 90045
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA049/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 5770,
+      "exists_now": true,
+      "bytes_now": 5770
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA049/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 3259654,
+      "exists_now": true,
+      "bytes_now": 3259654
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA049/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 10199,
+      "exists_now": true,
+      "bytes_now": 10199
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA049/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA050/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 60991,
+      "exists_now": true,
+      "bytes_now": 60991
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA050/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 59548,
+      "exists_now": true,
+      "bytes_now": 59548
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA050/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 4099,
+      "exists_now": true,
+      "bytes_now": 4099
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA050/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 1379001,
+      "exists_now": true,
+      "bytes_now": 1379001
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA050/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 8116,
+      "exists_now": true,
+      "bytes_now": 8116
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA050/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA054/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 50946,
+      "exists_now": true,
+      "bytes_now": 50946
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA054/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 49503,
+      "exists_now": true,
+      "bytes_now": 49503
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA054/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 3569,
+      "exists_now": true,
+      "bytes_now": 3569
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA054/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 1510215,
+      "exists_now": true,
+      "bytes_now": 1510215
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA054/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 7687,
+      "exists_now": true,
+      "bytes_now": 7687
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA054/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA055/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 167637,
+      "exists_now": true,
+      "bytes_now": 167637
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA055/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 166194,
+      "exists_now": true,
+      "bytes_now": 166194
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA055/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 10016,
+      "exists_now": true,
+      "bytes_now": 10016
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA055/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 5273506,
+      "exists_now": true,
+      "bytes_now": 5273506
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA055/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 15131,
+      "exists_now": true,
+      "bytes_now": 15131
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA055/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA063/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 149820,
+      "exists_now": true,
+      "bytes_now": 149820
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA063/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 148377,
+      "exists_now": true,
+      "bytes_now": 148377
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA063/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 9158,
+      "exists_now": true,
+      "bytes_now": 9158
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA063/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 6576302,
+      "exists_now": true,
+      "bytes_now": 6576302
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA063/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 14296,
+      "exists_now": true,
+      "bytes_now": 14296
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA063/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA064/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 109150,
+      "exists_now": true,
+      "bytes_now": 109150
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA064/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 107707,
+      "exists_now": true,
+      "bytes_now": 107707
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA064/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 6834,
+      "exists_now": true,
+      "bytes_now": 6834
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA064/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 4639972,
+      "exists_now": true,
+      "bytes_now": 4639972
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA064/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 11572,
+      "exists_now": true,
+      "bytes_now": 11572
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA064/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA068/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 77975,
+      "exists_now": true,
+      "bytes_now": 77975
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA068/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 76532,
+      "exists_now": true,
+      "bytes_now": 76532
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA068/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 5055,
+      "exists_now": true,
+      "bytes_now": 5055
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA068/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 2244759,
+      "exists_now": true,
+      "bytes_now": 2244759
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA068/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 9347,
+      "exists_now": true,
+      "bytes_now": 9347
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA068/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA072/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 123044,
+      "exists_now": true,
+      "bytes_now": 123044
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA072/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 121601,
+      "exists_now": true,
+      "bytes_now": 121601
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA072/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 7617,
+      "exists_now": true,
+      "bytes_now": 7617
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA072/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 5387048,
+      "exists_now": true,
+      "bytes_now": 5387048
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA072/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 12449,
+      "exists_now": true,
+      "bytes_now": 12449
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA072/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA076/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 131701,
+      "exists_now": true,
+      "bytes_now": 131701
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA076/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 130258,
+      "exists_now": true,
+      "bytes_now": 130258
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA076/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 8069,
+      "exists_now": true,
+      "bytes_now": 8069
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA076/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 9129408,
+      "exists_now": true,
+      "bytes_now": 9129408
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA076/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 13205,
+      "exists_now": true,
+      "bytes_now": 13205
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA076/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA077/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 49704,
+      "exists_now": true,
+      "bytes_now": 49704
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA077/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 48261,
+      "exists_now": true,
+      "bytes_now": 48261
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA077/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 3517,
+      "exists_now": true,
+      "bytes_now": 3517
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA077/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 1684409,
+      "exists_now": true,
+      "bytes_now": 1684409
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA077/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 7616,
+      "exists_now": true,
+      "bytes_now": 7616
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA077/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA087/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 50532,
+      "exists_now": true,
+      "bytes_now": 50532
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA087/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 49089,
+      "exists_now": true,
+      "bytes_now": 49089
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA087/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 3592,
+      "exists_now": true,
+      "bytes_now": 3592
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA087/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 1786565,
+      "exists_now": true,
+      "bytes_now": 1786565
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA087/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 7568,
+      "exists_now": true,
+      "bytes_now": 7568
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA087/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA088/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 179275,
+      "exists_now": true,
+      "bytes_now": 179275
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA088/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 177832,
+      "exists_now": true,
+      "bytes_now": 177832
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA088/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 10686,
+      "exists_now": true,
+      "bytes_now": 10686
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA088/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 6233598,
+      "exists_now": true,
+      "bytes_now": 6233598
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA088/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 16033,
+      "exists_now": true,
+      "bytes_now": 16033
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA088/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA089/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 55799,
+      "exists_now": true,
+      "bytes_now": 55799
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA089/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 54356,
+      "exists_now": true,
+      "bytes_now": 54356
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA089/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 3784,
+      "exists_now": true,
+      "bytes_now": 3784
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA089/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 1509514,
+      "exists_now": true,
+      "bytes_now": 1509514
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA089/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 7866,
+      "exists_now": true,
+      "bytes_now": 7866
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA089/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA090/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 169322,
+      "exists_now": true,
+      "bytes_now": 169322
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA090/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 167879,
+      "exists_now": true,
+      "bytes_now": 167879
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA090/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 9988,
+      "exists_now": true,
+      "bytes_now": 9988
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA090/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 10363610,
+      "exists_now": true,
+      "bytes_now": 10363610
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA090/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 15622,
+      "exists_now": true,
+      "bytes_now": 15622
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA090/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA091/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 1051859,
+      "exists_now": true,
+      "bytes_now": 1051859
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA091/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 1050416,
+      "exists_now": true,
+      "bytes_now": 1050416
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA091/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 57858,
+      "exists_now": true,
+      "bytes_now": 57858
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA091/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 45793528,
+      "exists_now": true,
+      "bytes_now": 45793528
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA091/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 67631,
+      "exists_now": true,
+      "bytes_now": 67631
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA091/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA093/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 360449,
+      "exists_now": true,
+      "bytes_now": 360449
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA093/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 359006,
+      "exists_now": true,
+      "bytes_now": 359006
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA093/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 20505,
+      "exists_now": true,
+      "bytes_now": 20505
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA093/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 15740563,
+      "exists_now": true,
+      "bytes_now": 15740563
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA093/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 27467,
+      "exists_now": true,
+      "bytes_now": 27467
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA093/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA094/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 2811349,
+      "exists_now": true,
+      "bytes_now": 2811349
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA094/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 2809906,
+      "exists_now": true,
+      "bytes_now": 2809906
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA094/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 148946,
+      "exists_now": true,
+      "bytes_now": 148946
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA094/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 95860588,
+      "exists_now": true,
+      "bytes_now": 95860588
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA094/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 153794,
+      "exists_now": true,
+      "bytes_now": 153794
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA094/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA109/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 103816,
+      "exists_now": true,
+      "bytes_now": 103816
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA109/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 102373,
+      "exists_now": true,
+      "bytes_now": 102373
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA109/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 6468,
+      "exists_now": true,
+      "bytes_now": 6468
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA109/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 5932997,
+      "exists_now": true,
+      "bytes_now": 5932997
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA109/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 11229,
+      "exists_now": true,
+      "bytes_now": 11229
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA109/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA112/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 153559,
+      "exists_now": true,
+      "bytes_now": 153559
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA112/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 152116,
+      "exists_now": true,
+      "bytes_now": 152116
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA112/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 9287,
+      "exists_now": true,
+      "bytes_now": 9287
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA112/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 6883076,
+      "exists_now": true,
+      "bytes_now": 6883076
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA112/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 14498,
+      "exists_now": true,
+      "bytes_now": 14498
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA112/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA118/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 109976,
+      "exists_now": true,
+      "bytes_now": 109976
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA118/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 108533,
+      "exists_now": true,
+      "bytes_now": 108533
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA118/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 6695,
+      "exists_now": true,
+      "bytes_now": 6695
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA118/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 3455483,
+      "exists_now": true,
+      "bytes_now": 3455483
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA118/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 11306,
+      "exists_now": true,
+      "bytes_now": 11306
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA118/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA119/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 1384113,
+      "exists_now": true,
+      "bytes_now": 1384113
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA119/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 1382670,
+      "exists_now": true,
+      "bytes_now": 1382670
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA119/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 75471,
+      "exists_now": true,
+      "bytes_now": 75471
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA119/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 86665325,
+      "exists_now": true,
+      "bytes_now": 86665325
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA119/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 89070,
+      "exists_now": true,
+      "bytes_now": 89070
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA119/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA120/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 100969,
+      "exists_now": true,
+      "bytes_now": 100969
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA120/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 99526,
+      "exists_now": true,
+      "bytes_now": 99526
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA120/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 6348,
+      "exists_now": true,
+      "bytes_now": 6348
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA120/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 4376802,
+      "exists_now": true,
+      "bytes_now": 4376802
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA120/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 10925,
+      "exists_now": true,
+      "bytes_now": 10925
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA120/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA121/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 101793,
+      "exists_now": true,
+      "bytes_now": 101793
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA121/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 100350,
+      "exists_now": true,
+      "bytes_now": 100350
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA121/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 6362,
+      "exists_now": true,
+      "bytes_now": 6362
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA121/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 6102756,
+      "exists_now": true,
+      "bytes_now": 6102756
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA121/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 11063,
+      "exists_now": true,
+      "bytes_now": 11063
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA121/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA129/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 54173,
+      "exists_now": true,
+      "bytes_now": 54173
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA129/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 52730,
+      "exists_now": true,
+      "bytes_now": 52730
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA129/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 3763,
+      "exists_now": true,
+      "bytes_now": 3763
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA129/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 1043715,
+      "exists_now": true,
+      "bytes_now": 1043715
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA129/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 7781,
+      "exists_now": true,
+      "bytes_now": 7781
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA129/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA130/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 51343,
+      "exists_now": true,
+      "bytes_now": 51343
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA130/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 49900,
+      "exists_now": true,
+      "bytes_now": 49900
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA130/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 3551,
+      "exists_now": true,
+      "bytes_now": 3551
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA130/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 1731472,
+      "exists_now": true,
+      "bytes_now": 1731472
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA130/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 7533,
+      "exists_now": true,
+      "bytes_now": 7533
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA130/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA131/author_harmony.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 402857,
+      "exists_now": true,
+      "bytes_now": 402857
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA131/author_pca.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 401414,
+      "exists_now": true,
+      "bytes_now": 401414
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA131/author_umap.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 22684,
+      "exists_now": true,
+      "bytes_now": 22684
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA131/counts.mtx",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 23879574,
+      "exists_now": true,
+      "bytes_now": 23879574
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA131/obs.parquet",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 30792,
+      "exists_now": true,
+      "bytes_now": 30792
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/data/SPECIAL/derived/immune/scrCMA131/var.tsv",
+      "recorded_status": "immune_export_roundtrip_previously_verified",
+      "expected_bytes": 172079,
+      "exists_now": true,
+      "bytes_now": 172079
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/example_data/melanoma10x/filtered_feature_bc_matrix.h5",
+      "recorded_status": "verified",
+      "expected_bytes": 56774638,
+      "licence": "CC-BY-4.0",
+      "exists_now": true,
+      "bytes_now": 56774638
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/melanoma10x_input.zip",
+      "recorded_status": "software_example_not_clinical_validation",
+      "exists_now": true,
+      "bytes_now": 10794
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/melanoma_tissue/run.json",
+      "recorded_status": "software_example_not_clinical_validation",
+      "exists_now": true,
+      "bytes_now": 22560167
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/melanoma_tissue/explorer.html",
+      "recorded_status": "software_example_not_clinical_validation",
+      "exists_now": true,
+      "bytes_now": 11538392
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/melanoma_tissue.zip",
+      "recorded_status": "software_example_not_clinical_validation",
+      "exists_now": true,
+      "bytes_now": 1911239
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/melanoma_recognition_off/run.json",
+      "recorded_status": "software_example_not_clinical_validation",
+      "exists_now": true,
+      "bytes_now": 22702961
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/melanoma_recognition_off/explorer.html",
+      "recorded_status": "software_example_not_clinical_validation",
+      "exists_now": true,
+      "bytes_now": 11624966
+    },
+    {
+      "path": "/Users/heldernakaya/Desktop/2026/Papers/VirtualTissue/scRNAseq/VirtualTissue-SC/outputs/melanoma_recognition_off.zip",
+      "recorded_status": "software_example_not_clinical_validation",
+      "exists_now": true,
+      "bytes_now": 1871265
+    }
+  ]
+}

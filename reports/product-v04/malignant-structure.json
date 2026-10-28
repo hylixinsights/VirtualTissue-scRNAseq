@@ -1,0 +1,56 @@
+{
+  "source": "../data/SPECIAL/raw/Malignant_cells.rds",
+  "object_class": "Seurat",
+  "stored_seurat_version": "3.1.5",
+  "cells": 14208,
+  "assays": [
+    {
+      "name": "RNA",
+      "class": "Assay",
+      "dimensions": [22897, 14208],
+      "layers": ["counts", "data", "scale.data"]
+    },
+    {
+      "name": "SCT",
+      "class": "Assay",
+      "dimensions": [21035, 14208],
+      "layers": ["counts", "data", "scale.data"]
+    }
+  ],
+  "reductions": ["pca", "harmony", "umap"],
+  "metadata_columns": [
+    {
+      "name": "Malignant_clusters",
+      "class": "character",
+      "missing": 0,
+      "unique_values": 11
+    },
+    {
+      "name": "Response",
+      "class": "character",
+      "missing": 0,
+      "unique_values": 2
+    },
+    {
+      "name": "Timepoint",
+      "class": "character",
+      "missing": 0,
+      "unique_values": 2
+    },
+    {
+      "name": "sample_ID",
+      "class": "character",
+      "missing": 0,
+      "unique_values": 35
+    },
+    {
+      "name": "patient_ID",
+      "class": "numeric",
+      "missing": 0,
+      "unique_values": 20
+    }
+  ],
+  "time_field_candidates": "Timepoint",
+  "sample_field_candidates": ["sample_ID", "patient_ID"],
+  "inspected_state_compositions": false
+}

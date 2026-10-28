@@ -1,0 +1,50 @@
+{
+  "source": "../data/SPECIAL/raw/Entire_TME.rds",
+  "object_class": "Seurat",
+  "stored_seurat_version": "3.1.5",
+  "cells": 59170,
+  "assays": [
+    {
+      "name": "RNA",
+      "class": "Assay",
+      "dimensions": [22897, 59170],
+      "layers": ["counts", "data", "scale.data"]
+    },
+    {
+      "name": "SCT",
+      "class": "Assay",
+      "dimensions": [22785, 59170],
+      "layers": ["counts", "data", "scale.data"]
+    }
+  ],
+  "reductions": ["pca", "harmony", "umap"],
+  "metadata_columns": [
+    {
+      "name": "orig.ident",
+      "class": "character",
+      "missing": 0,
+      "unique_values": 46
+    },
+    {
+      "name": "BT/OT",
+      "class": "character",
+      "missing": 0,
+      "unique_values": 2
+    },
+    {
+      "name": "GC number",
+      "class": "numeric",
+      "missing": 0,
+      "unique_values": 23
+    },
+    {
+      "name": "seurat_clusters",
+      "class": "factor",
+      "missing": 0,
+      "unique_values": 31
+    }
+  ],
+  "time_field_candidates": [],
+  "sample_field_candidates": "orig.ident",
+  "inspected_state_compositions": false
+}

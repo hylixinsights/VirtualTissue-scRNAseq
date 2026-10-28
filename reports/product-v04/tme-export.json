@@ -1,0 +1,1072 @@
+{
+  "input_sha256": "3028b345add584ce3287416a16f41167a9dc8f54265f5d58760d57a77e15a675",
+  "cells": 59170,
+  "genes": 22897,
+  "samples": 46,
+  "matrix_orientation": "genes_by_cells",
+  "exact_roundtrip": true,
+  "clinical_metadata_exported": false,
+  "states_inspected": false,
+  "paired_changes_computed": false,
+  "licence": "CC-BY-NC-SA-4.0",
+  "per_sample": [
+    {
+      "directory": "sample_001",
+      "cells": 247,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 3894632,
+          "sha256": "2d7710457c7a2b39edb067b4eb5d0eb65b0e60953093e1a57e85104a9981743a"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 10264,
+          "sha256": "7302f63695ad7cb20af74c7d00e8f6648f06dcb345fc22286398569b7f47b650"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_002",
+      "cells": 547,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 8932654,
+          "sha256": "0b2f1037fe23a0be7cd65eaa236bb89674594f041255854392d10fef04a308a8"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 18876,
+          "sha256": "60aad213047b29443391e7c9c1f5a0614e722035b2ff9b1184a67b044c46d619"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_003",
+      "cells": 426,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 15286880,
+          "sha256": "cde374579b7bd0ac2b7ced7066a92c5a061e2c9890c6788f59e6135b7736023e"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 15980,
+          "sha256": "54d5b04a793f819bafbf5d1fb7b52b006f25bda83552ea25c996a33ebdb0dd21"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_004",
+      "cells": 636,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 15395821,
+          "sha256": "d12974ab9abc4ad45abdd39733f4ad6bd5cd7772c37f0cfbb93a2bdf77356cc8"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 21984,
+          "sha256": "27823e4aea60e3a8c6569aab66818f96d67da95ea65b35e6f1e80e18e369bed2"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_005",
+      "cells": 1442,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 51527245,
+          "sha256": "52f12dc9a9b09ed5f9a48d4b72a84ac97ad589d708d53e1d343a6f83e515e4fb"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 46377,
+          "sha256": "f09b01a0516cf8b31e792f774d4f35809d09362b035e9cf6fecb1734f22702b3"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_006",
+      "cells": 1575,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 56042972,
+          "sha256": "816692346d2d822a7427478050b89694f5168d7a3997e92f9ca9ca2c0886c55a"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 49962,
+          "sha256": "cc84f518af49ced7ddc699ca3999e83194f294c55c79680e17bcdf8c2a76f00c"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_007",
+      "cells": 1432,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 52685055,
+          "sha256": "2f2b4a915dd7235f6ad8611c15863a4d42a835f7afa371eb4af9e631e54eb2a3"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 45789,
+          "sha256": "7d55eb4369c3dbc31eb8729a19acc42aadfa694aeda72ee919d75d70e9a2a952"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_008",
+      "cells": 3005,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 133560805,
+          "sha256": "c6acf81d5c0648d133bf4874ebb8b65ccbd3a3d9854993f09f5e2a81473c6abe"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 92812,
+          "sha256": "bcc5677c4f64de14bcc433894ee4a15edb3c63325670d8c1c287a155cc512928"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_009",
+      "cells": 823,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 15306628,
+          "sha256": "ae42e96ccf604b8056d45e09aef6c9688595a66aae52214ec2cd2c4f9323beb7"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 26727,
+          "sha256": "dbdb154ba9e26f4caa50c68ea6f4bcfde53aff64a800f7a845b9155df28453a6"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_010",
+      "cells": 833,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 12671585,
+          "sha256": "77c4c86dccaa3d2299357ea2fb6607ee566f8a4ca9e49a83ce6d1a5b33f51c8d"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 26201,
+          "sha256": "d82623d6914fb936e524bd08c5ea745e81f47d3dbd84afaae4bcdcc6f271b78c"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_011",
+      "cells": 328,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 7196433,
+          "sha256": "5db9ded63fd4b010a656a200096eac5f93236d88b07d8d05bc039a6fc9845301"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 12808,
+          "sha256": "c5dacce956dd2fd149d1977ee8b86864f0d7ce33ab311ef372197758d0d09bc6"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_012",
+      "cells": 1725,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 37510091,
+          "sha256": "dceb06bf034359baf3999db6b592eeeecedcdcf25c1285783a6f226be541d9d9"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 51308,
+          "sha256": "d6c6bf93c02fb29d9440fab3ed1a7de74f5711dae973630e15ecb4ff0f78b76b"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_013",
+      "cells": 1536,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 24620946,
+          "sha256": "9512c16aad1fe48e390f87945ed9ae8aefedf16a85ee1638799296f4e2e17c02"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 44769,
+          "sha256": "4ec0f5022f457c4ee140373df850caf521f7f1f890305247330234d0d8d2e9fc"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_014",
+      "cells": 3475,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 90664691,
+          "sha256": "9f5fd73694914ac939cd0ce4b85f120a6ed14c09e554908533ae60c2062e0f60"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 99809,
+          "sha256": "84395d1c33fdf4a42e7d189671adbeb2f8b5707cd6aaa10601947124e0c3ca92"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_015",
+      "cells": 1760,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 60206759,
+          "sha256": "2e733ad17b859d79b82a2db540a488eed04e8a197765a19461e1f2f16d39153b"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 55392,
+          "sha256": "f8dcd83b80b2dbb3bca4f6df4cc61889b36e540655984956a0041c85ad294453"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_016",
+      "cells": 2015,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 61399994,
+          "sha256": "9fcf9b81a93e970ecff125b67c5f56a218b197454cef3b906a0967980a74b2fe"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 61345,
+          "sha256": "c19b78262ca5df9645525880daf97813ed87192b19dbdf837ec47e9650a9cbe9"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_017",
+      "cells": 291,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 10684451,
+          "sha256": "c6048753b727909a7c1147f541d8fad7e5235f6ba18c79cb12523023b5fca9c3"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 11846,
+          "sha256": "7baa7523b15aa963289a86ceb8318fea0fe02cd88a16aaf5bebac83e09055603"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_018",
+      "cells": 597,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 17017587,
+          "sha256": "1932afda7f19fc1b8fdd017a3057772799f6080c6958e0517061cdbb1b0594c9"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 20954,
+          "sha256": "209010748ae87cbf2fb3b5d9674ccd97d9928237f67b0e549a29f06517368830"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_019",
+      "cells": 1589,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 30748787,
+          "sha256": "0e9a3ad6cde38446e874ae1f19c51cc385405730773c5d2688206cff9b92538a"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 47037,
+          "sha256": "bc025a5a6f941578f29797be92b89d3bbfbb1ba44ec3b2b844a60fa75a6631e7"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_020",
+      "cells": 1348,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 45499593,
+          "sha256": "a219409c06fc04ce46d1cf17fe3ebb927b42f35c9382eacca3934ccc8ac32755"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 43481,
+          "sha256": "ea5c11721840e13cc5a3cf82a8badfb19acc2eae50f3bff0d76118c9c47e00d9"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_021",
+      "cells": 768,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 20460725,
+          "sha256": "dc6660bcefe0effaf9864fe1c1d8d6c33b90bcf9ee9bb0daf152a60e3b3ddcd5"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 25777,
+          "sha256": "b3da6c6d19190ca8a8f8742616724979ab26396f0903e694bc0c79dd9b972628"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_022",
+      "cells": 1191,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 40090097,
+          "sha256": "ba764cdbf3467dc715aba0095f53183cf67846d460faf9e1cb332d581dc5184d"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 38928,
+          "sha256": "58346a72d022f3dd76a2d6fbe71c03593466362d9d3e440251a5ab0e45bd1fe9"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_023",
+      "cells": 941,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 49967215,
+          "sha256": "321e9f3bae42f50d1914105ee756058d91b3351e7f6b9d3f93325016b1db0b66"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 31774,
+          "sha256": "b623eec8a4c1b357ca99d5af1674d5947d33f7ffc4ca2368758ca6b833ab4570"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_024",
+      "cells": 637,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 16381563,
+          "sha256": "b6b8b113ee0a48da74f770efac065f6cb573d6290bcbbb93eb7c2673894aadbb"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 22110,
+          "sha256": "1a17065ce00b3ae42c36f7b92e03c55d39d62d3f0419a17ecbfd4dd60aa2339f"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_025",
+      "cells": 1360,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 44635191,
+          "sha256": "1d5f6c58310505f2e9560ffec94c27c1d8d4bc8a9cae1aada750d20909170f6d"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 43967,
+          "sha256": "6428e303c0cc657cd0f7f93918561e8f7257936e9609800b9aa3d3aac0c4e966"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_026",
+      "cells": 682,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 23537830,
+          "sha256": "b883ebe5807d96c6c30c7b20286a2178d5fd6b372ab60c1e5127f743a16c08fb"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 23882,
+          "sha256": "b42ca70481f79f2ad41ef2c44a04264df9ba035d9d78358619b84602a93d0079"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_027",
+      "cells": 206,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 4774975,
+          "sha256": "b079b5dcce793c3121c96861dee87772fc39bb78b0a2211edf58cc78b3efa1c3"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 9220,
+          "sha256": "3ac052e1ecac0b396dce534fa5bb6b4fb5af84a0afb78c03deeee8551266efa4"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_028",
+      "cells": 733,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 25440830,
+          "sha256": "a945bc622fb40fdb4c21b4cef6217ad140007b04ea66a14f5f3de702e0ad234b"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 25340,
+          "sha256": "e58b9679677f8c010de6e35133d7fcae731d8386060f665284b1a3c358a1c4a3"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_029",
+      "cells": 704,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 31247512,
+          "sha256": "3813db3e7aa02f500ef4e0a2fbdecf92d132b6b9a60ddc8c93e802c915472d49"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 24702,
+          "sha256": "f12eb226120098beb40e2bed88bb19271c64a94e474da293fc66aa586edfdf34"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_030",
+      "cells": 751,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 41626652,
+          "sha256": "e876db0cef5997354a99f084e6c9abacad892e99d49649d7332a39c87689c399"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 26025,
+          "sha256": "75500cd48c59e97a0530e03ec21eb4770f1d2fe11281cb76f526e5b402f8a421"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_031",
+      "cells": 1012,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 31613926,
+          "sha256": "2f1cbf7af5204fed26beefb78d522e8011dfc31c070dd1d2ed00f21c2a4beb33"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 33156,
+          "sha256": "3ca48fa6a0cbd4303b969ccd3bc7aba32d1b1e0f7eb2bc62f5f729f57a33a06a"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_032",
+      "cells": 371,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 6835445,
+          "sha256": "aa406dff963dd8f6073acceb8f7c8ca2911059fe2282e2ad6ffee3bb21e3b562"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 14059,
+          "sha256": "25540c198faf77f5fdd5439f996c5e0fd07b8b6d7ea876e10f89863b9e217e0d"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_033",
+      "cells": 741,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 24157349,
+          "sha256": "c8157f0edec6be752e446838d7526e162c0d89fbb0edb6478839977c97965f85"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 25431,
+          "sha256": "ebf46b51a7b7ecac19093dac4267dc4b9e3a8d4b9fdb1a478fad11d5a99ff0cc"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_034",
+      "cells": 1213,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 47508668,
+          "sha256": "86e6a9435802fbf8f49e8875c00541f406ab305449b07a1cb86f94574b0671e6"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 40100,
+          "sha256": "8079eedfd0f4f4b284803a2677d06a16c942fdaa0756e1d142b86c367345e4dd"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_035",
+      "cells": 4553,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 158716842,
+          "sha256": "29a427ce59aad1fec6e8bd3ca8e5a43d9c15d7ab5dc050322aa2dc4e8ed1d1b7"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 134357,
+          "sha256": "022dc046a34ba7c0418ebae4242269d742412d0f19aca02e409a3d73c63ffbe1"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_036",
+      "cells": 913,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 24043635,
+          "sha256": "3c3402740511cc190736860fa9794ef01e464d2d87c50c1aafe1d5d49724426e"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 30121,
+          "sha256": "fbd451f96d7e37e2d51968250a8b9857c2fba811fc645d012a695d220c74f85d"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_037",
+      "cells": 5995,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 110109484,
+          "sha256": "ddd74babce056059d7065e44d8967d8f09c059a6a821359c717d1f1901d3780b"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 154883,
+          "sha256": "dd5d4d0a15e25db61209a58bae0596f016b4293bbdebd43c7377d519a78e6b00"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_038",
+      "cells": 1230,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 44341382,
+          "sha256": "d3ce2e63fa965c9fd7d13d62d54a5162d34ceeb18ac8973074baa4af39266855"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 40298,
+          "sha256": "4009e5a45e1efacfc3a1dc6c0b01ccf27f2d362ef6b8866ac244087759045fca"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_039",
+      "cells": 381,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 9421610,
+          "sha256": "96cb321953db9052fb3f8b70f0a5fbc14e5038b312ef28e4451d8b2f24af0675"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 14477,
+          "sha256": "bd1d4f3585ab9a90091166863c24867bb0708055c5803f529bd2f7d5b40392e8"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_040",
+      "cells": 868,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 21142460,
+          "sha256": "54905d2fb8b6f9768be6c21c9cf59f3031a2efb07262da592057bbddc2536283"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 28859,
+          "sha256": "f9dc216a2e7aad7cb8d0e125859abf0e84776e2bb6180260c884dca3c1f4907b"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_041",
+      "cells": 3090,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 95981602,
+          "sha256": "d02bfcd29bf1e35b2b25943aca37acf495706a9e81f64bf077520b66acd74310"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 91601,
+          "sha256": "1dcf4b879b750946dc68b1814c40a5a4bac82f9affcb4e8aa41bc297ef7c064c"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_042",
+      "cells": 1326,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 58412206,
+          "sha256": "6aee3d7bf456f67ad313fb33b20e8f0747c300e96c9588a50874a79cd9354e03"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 43696,
+          "sha256": "b61b35edd44a97eb8414f6daaa2d5fb6c7784e519a314e94f311a6e7878f5bdc"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_043",
+      "cells": 1073,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 52588483,
+          "sha256": "f3db524d345fe2a964064a5a4bcbc7ab1a5763b053e77c61f865bde7f15a9f7c"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 36104,
+          "sha256": "65edfaa15e946310e757c0841f8a3830fd26aea526326a9ea16f00a49760af04"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_044",
+      "cells": 85,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 1260867,
+          "sha256": "f7aaa1739496f34d3b5b52e13fddab61c2d352f94d4c2e566a5d8dec74050b8e"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 5560,
+          "sha256": "f5294d92cb8ae13923b96e361c367e0c30f7e718ba47629a5357c2bd7820f991"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_045",
+      "cells": 1180,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 54076986,
+          "sha256": "2d751991ed5e22ff0927c562f0c02a4ca17a9f54e019151600a7649418abaccf"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 39488,
+          "sha256": "81d2e4273a9e937c0ee91b792c1495d0fffe7a0629e5736da2982699769e123f"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    },
+    {
+      "directory": "sample_046",
+      "cells": 1536,
+      "genes": 22897,
+      "exact_roundtrip": true,
+      "files": [
+        {
+          "name": "counts.mtx",
+          "bytes": 60834472,
+          "sha256": "75f6f3a2ab1aa8af4f8b732ced50333f6225d924b8f875352cfec7a53be22d47"
+        },
+        {
+          "name": "obs.parquet",
+          "bytes": 49784,
+          "sha256": "b19054835f8225c7649fa6257beffc50c6cea76ec241a779462fa86f2e627e38"
+        },
+        {
+          "name": "var.tsv",
+          "bytes": 172079,
+          "sha256": "64c99f3e40806753c410f80362db0a96a37fdbc8a3a18b6e7ac9a7967daf9ecf"
+        }
+      ]
+    }
+  ]
+}

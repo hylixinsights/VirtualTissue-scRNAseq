@@ -1,0 +1,22 @@
+[
+  {
+    "file": "Entire_TME.rds",
+    "url": "https://rdr.kuleuven.be/api/access/datafile/210951",
+    "bytes": 2718597537,
+    "md5": "fbb62e4c67f02d34c16eaa077e27d846",
+    "sha256": "3028b345add584ce3287416a16f41167a9dc8f54265f5d58760d57a77e15a675",
+    "status": "verified",
+    "seconds": 216.97196458408143,
+    "license": "CC-BY-NC-SA-4.0"
+  },
+  {
+    "file": "Malignant_cells.rds",
+    "url": "https://rdr.kuleuven.be/api/access/datafile/28868",
+    "bytes": 864438613,
+    "md5": "f94e6421eaf685954f8c07719ebcc32a",
+    "sha256": "ae1d66ea2e132c41d1d54eb9daeb73bbad9c9c6d3d345f8fbf3c07616cc44563",
+    "status": "verified",
+    "seconds": 70.40133391600102,
+    "license": "CC-BY-NC-SA-4.0"
+  }
+]

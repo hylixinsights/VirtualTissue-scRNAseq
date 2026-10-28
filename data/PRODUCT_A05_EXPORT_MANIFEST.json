@@ -1,0 +1,26 @@
+{
+  "scope": "A05 technical exports; no outcome/state analysis; not clinical gate evidence",
+  "licence": "CC-BY-NC-SA-4.0",
+  "exports": [
+    {
+      "directory": "../data/SPECIAL/derived/tme-A05-v1",
+      "source_sha256": "3028b345add584ce3287416a16f41167a9dc8f54265f5d58760d57a77e15a675",
+      "cells": 59170,
+      "genes": 22897,
+      "samples": 46,
+      "exact_roundtrip": true,
+      "validation": "reports/product-v04/tme-export.json",
+      "validation_sha256": "74732fe790959035e3ba848445aa4e88032100e8d5094976393fa1474de1e862"
+    },
+    {
+      "directory": "../data/SPECIAL/derived/malignant-A05-v1",
+      "source_sha256": "ae1d66ea2e132c41d1d54eb9daeb73bbad9c9c6d3d345f8fbf3c07616cc44563",
+      "cells": 14208,
+      "genes": 22897,
+      "samples": 35,
+      "exact_roundtrip": true,
+      "validation": "reports/product-v04/malignant-export.json",
+      "validation_sha256": "870bedd0ec09994cd2987bdfbe03dd16de68303d6b37f9a39d7b581607581fc4"
+    }
+  ]
+}

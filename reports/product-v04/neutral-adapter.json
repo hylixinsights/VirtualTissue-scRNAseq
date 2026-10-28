@@ -1,0 +1,53 @@
+[
+  {
+    "directory": "../data/SPECIAL/derived/immune/sc5rCMA061",
+    "shape_cells_genes": [
+      190,
+      22897
+    ],
+    "obs_columns": [
+      "sample_id",
+      "qc_total_counts",
+      "qc_detected_genes",
+      "qc_mito_fraction"
+    ],
+    "count_sum": 807731,
+    "first_barcode": "AAACCTGAGGAACTGC-1_14",
+    "outcome_columns_loaded": false,
+    "source_counts_sha256": "fde2be2e017f3a777f586d2b145ec6d892816fa91d94e73bf8f96a076b2012d7"
+  },
+  {
+    "directory": "../data/SPECIAL/derived/tme-A05-v1/sample_001",
+    "shape_cells_genes": [
+      247,
+      22897
+    ],
+    "obs_columns": [
+      "sample_id",
+      "qc_total_counts",
+      "qc_detected_genes",
+      "qc_mito_fraction"
+    ],
+    "count_sum": 1157193,
+    "first_barcode": "AAACCTGAGGAACTGC-1_14",
+    "outcome_columns_loaded": false,
+    "source_counts_sha256": "2d7710457c7a2b39edb067b4eb5d0eb65b0e60953093e1a57e85104a9981743a"
+  },
+  {
+    "directory": "../data/SPECIAL/derived/malignant-A05-v1/sample_001",
+    "shape_cells_genes": [
+      168,
+      22897
+    ],
+    "obs_columns": [
+      "sample_id",
+      "qc_total_counts",
+      "qc_detected_genes",
+      "qc_mito_fraction"
+    ],
+    "count_sum": 3517952,
+    "first_barcode": "AACACGTTCTCTAGGA-1_18",
+    "outcome_columns_loaded": false,
+    "source_counts_sha256": "9414269d04dc099cfc5263aced5c85dca0e2eea60cfd560d8453d618c6ddff55"
+  }
+]
