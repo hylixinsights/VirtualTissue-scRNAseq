@@ -1,0 +1,41 @@
+# Context declaration for the psoriasis use case (draft for schema task B1 in docs/PLAN.md).
+# Not yet read by vtsc v0.5; it documents the fields the v0.6 loader will validate.
+schema_version: 1
+organism: human
+tissue:
+  name: skin (trunk and extremities, full thickness biopsy)
+  uberon: UBERON:0002097
+disease:
+  name: psoriasis (plaque type)
+  mondo: MONDO:0005083
+assay:
+  type: scRNA-seq            # scRNA-seq | snRNA-seq
+  chemistry: 10x Genomics 3'
+library:
+  type: whole_tissue         # whole_tissue | enriched
+  enrichment: null           # e.g. {method: FACS, markers: [CD45+]} when type is enriched
+  frequency_source: observed # observed | reference_table | user_declared
+dissociation_bias:
+  - Neutrophils and mast cells may be under-represented after enzymatic dissociation.
+source:
+  accession: GEO:GSE173706
+  citation: Ma F et al. Nat Commun 14, 3455 (2023). doi:10.1038/s41467-023-39020-4
+columns:
+  cell_type: cell_type
+  sample: sample_id
+  donor: donor_id
+  condition: condition
+conditions:
+  healthy: {obs_values: [NS], description: Skin from healthy donors}
+  non_lesional: {obs_values: [PN], description: Clinically uninvolved skin from psoriasis patients}
+  lesional: {obs_values: [PP], description: Psoriatic plaque}
+baseline_condition: non_lesional
+perturbations:
+  psoriatic_lesion:
+    target_condition: lesional
+    prompt: >-
+      The tissue is becoming a psoriatic plaque: an IL-23/IL-17 driven inflammatory
+      milieu with IL-36 and TNF amplification, keratinocyte hyperproliferation and
+      immune cell recruitment.
+    schedule: {start_hour: 0, end_hour: null}
+layout_template: skin_layered
