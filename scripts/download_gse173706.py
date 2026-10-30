@@ -19,19 +19,23 @@ columns gsm, sample_id, donor_id, condition, assay (assay = scRNA or spatial);
 rows in that file override the parsed values. The build writes the sample table
 it used next to the output so the choice is recorded.
 
-Network: needs ftp.ncbi.nlm.nih.gov (HTTPS). Data never goes into Git.
+Network: needs ftp.ncbi.nlm.nih.gov (HTTPS). `download` uses only the Python standard
+library, resumes interrupted transfers and retries; rerun the same command after a
+failure. Data never goes into Git.
 """
 import argparse
 import gzip
 import hashlib
 import json
 import re
-import shutil
 import sys
 import tarfile
 import time
+import urllib.error
 import urllib.request
 from pathlib import Path
+
+import numpy as np
 
 ACCESSION = "GSE173706"
 BASE = "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE173nnn/GSE173706"
@@ -54,15 +58,49 @@ def sha256(path):
     return h.hexdigest()
 
 
-def fetch(url, dest):
-    if dest.exists() and dest.stat().st_size > 0:
-        print(f"exists: {dest.name}")
-        return
+def remote_size(url):
+    req = urllib.request.Request(url, method="HEAD")
+    with urllib.request.urlopen(req, timeout=120) as r:
+        n = r.headers.get("Content-Length")
+    return int(n) if n else None
+
+
+def fetch(url, dest, retries=8):
+    """Download url to dest. Resumes a partial .part file and retries with backoff.
+
+    A finished file is kept only if its size matches the server's Content-Length.
+    """
     tmp = dest.with_suffix(dest.suffix + ".part")
-    print(f"downloading {url}")
-    with urllib.request.urlopen(url, timeout=600) as r, open(tmp, "wb") as f:
-        shutil.copyfileobj(r, f, 1 << 20)
-    tmp.rename(dest)
+    for attempt in range(retries + 1):
+        try:
+            total = remote_size(url)
+            if dest.exists() and (total is None or dest.stat().st_size == total):
+                print(f"exists: {dest.name}")
+                return
+            done = tmp.stat().st_size if tmp.exists() else 0
+            req = urllib.request.Request(url, headers={"Range": f"bytes={done}-"} if done else {})
+            print(f"downloading {url}" + (f" (resuming at {done / 1e6:.0f} MB)" if done else ""))
+            with urllib.request.urlopen(req, timeout=600) as r:
+                if done and r.status != 206:  # server ignored Range: start over
+                    done = 0
+                with open(tmp, "ab" if done else "wb") as f:
+                    got, step = done, 0
+                    for block in iter(lambda: r.read(1 << 20), b""):
+                        f.write(block)
+                        got += len(block)
+                        if got // (100 << 20) > step:
+                            step = got // (100 << 20)
+                            print(f"  {got / 1e6:.0f} MB" + (f" of {total / 1e6:.0f} MB" if total else ""), flush=True)
+            if total is not None and tmp.stat().st_size != total:
+                raise OSError(f"size {tmp.stat().st_size} != expected {total}")
+            tmp.replace(dest)
+            return
+        except (OSError, urllib.error.URLError) as e:
+            if attempt == retries:
+                sys.exit(f"failed to download {url}: {e}. Rerun the same command to resume.")
+            wait = min(2 ** attempt, 60)
+            print(f"  error: {e}; retrying in {wait}s", file=sys.stderr)
+            time.sleep(wait)
 
 
 def download(outdir):
@@ -72,9 +110,14 @@ def download(outdir):
         fetch(url, outdir / name)
     extracted = outdir / "RAW"
     if not extracted.exists():
-        with tarfile.open(outdir / "GSE173706_RAW.tar") as tar:
-            members = [m for m in tar.getmembers() if m.isfile() and "/" not in m.name and not m.name.startswith(".")]
-            tar.extractall(extracted, members=members, filter="data")
+        partial = outdir / "RAW.extracting"
+        try:
+            with tarfile.open(outdir / "GSE173706_RAW.tar") as tar:
+                members = [m for m in tar.getmembers() if m.isfile() and "/" not in m.name and not m.name.startswith(".")]
+                tar.extractall(partial, members=members, filter="data")
+        except tarfile.TarError as e:
+            sys.exit(f"GSE173706_RAW.tar is damaged ({e}); delete it and rerun download.")
+        partial.rename(extracted)
     sums = {p.relative_to(outdir).as_posix(): sha256(p)
             for p in sorted(outdir.rglob("*")) if p.is_file() and p.name not in ("SHA256SUMS", "SOURCE.json")}
     (outdir / "SHA256SUMS").write_text("".join(f"{v}  {k}\n" for k, v in sums.items()))
@@ -118,7 +161,11 @@ def classify(gsm, meta):
                      else "lesional" if "lesion" in low or "psoria" in low
                      else "healthy" if re.search(r"healthy|normal|control", low) else "")
     assay = "spatial" if SPATIAL_WORDS.search(text + " " + meta["library"]) else "scRNA"
-    donor = re.sub(r"[^A-Za-z0-9]+", "_", re.sub(rf"(^|[^A-Za-z])(PP|PN|NS)([^A-Za-z]|$)", r"\1\3", meta["title"])).strip("_")
+    # GEO titles look like "Psoriatic skin from donor 30696 [PP-30696]": the bracket tag is the
+    # reliable patient ID (the free text has typos, e.g. "donor 3696 [PN-30696]")
+    tag = re.search(r"\[\s*(?:PP|PN|NS)[-_ ]?([^\]]+?)\s*\]", meta["title"])
+    donor = (re.sub(r"[^A-Za-z0-9]+", "_", tag.group(1)) if tag else
+             re.sub(r"[^A-Za-z0-9]+", "_", re.sub(rf"(^|[^A-Za-z])(PP|PN|NS)([^A-Za-z]|$)", r"\1\3", meta["title"]))).strip("_")
     return {"gsm": gsm, "sample_id": meta["title"] or gsm, "donor_id": f"donor_{donor}" if donor else gsm,
             "condition": condition, "assay": assay}
 
@@ -136,21 +183,51 @@ def genes_are_columns(index, columns):
 
 
 def read_counts(path):
-    """Read a CSV/TSV count matrix (optionally gzipped); return (sparse cells x genes, cells, genes)."""
+    """Read one sample's counts; return (sparse cells x genes, cells, genes).
+
+    Accepts a CSV/TSV matrix (optionally gzipped, either orientation, read in chunks so a
+    dense genes x cells file never sits in memory as float64), a 10x .h5, or a 10x
+    matrix.mtx(.gz) whose barcodes/features files sit beside it with the same prefix.
+    """
     import pandas as pd
     import scipy.sparse as sp
-    sep = "\t" if re.search(r"\.(tsv|txt)(\.gz)?$", path.name) else ","
-    df = pd.read_csv(path, sep=sep, index_col=0)
-    if genes_are_columns(df.index, df.columns):
-        df = df.T
-    # df is now genes x cells
-    m = sp.csr_matrix(df.to_numpy().T)
-    return m, [str(c) for c in df.columns], [str(g) for g in df.index]
+    name = path.name
+    if name.endswith(".h5"):
+        import scanpy as sc
+        a = sc.read_10x_h5(path)
+        a.var_names_make_unique()
+        return sp.csr_matrix(a.X), list(a.obs_names), list(a.var_names)
+    if re.search(r"matrix\.mtx(\.gz)?$", name):
+        import scipy.io
+        prefix = name[:name.index("matrix.mtx")]
+        side = lambda stems: next((path.parent / f"{prefix}{s}{z}" for s in stems for z in (".gz", "")
+                                   if (path.parent / f"{prefix}{s}{z}").exists()), None)
+        bc, ft = side(["barcodes.tsv"]), side(["features.tsv", "genes.tsv"])
+        if bc is None or ft is None:
+            sys.exit(f"{name}: barcodes/features files with prefix '{prefix}' not found")
+        m = scipy.io.mmread(path).tocsr()  # genes x cells
+        cells = pd.read_csv(bc, sep="\t", header=None)[0].astype(str).tolist()
+        feats = pd.read_csv(ft, sep="\t", header=None)
+        genes = feats[1 if feats.shape[1] > 1 else 0].astype(str).tolist()
+        return m.T.tocsr(), cells, genes
+    sep = "\t" if re.search(r"\.(tsv|txt)(\.gz)?$", name) else ","
+    header = pd.read_csv(path, sep=sep, index_col=0, nrows=5)
+    blocks, rows = [], []
+    for chunk in pd.read_csv(path, sep=sep, index_col=0, chunksize=2000):
+        blocks.append(sp.csr_matrix(chunk.to_numpy(dtype=np.float32)))
+        rows += [str(x) for x in chunk.index]
+    m = sp.vstack(blocks).tocsr()
+    cols = [str(c) for c in header.columns]
+    if genes_are_columns(rows, cols):  # rows are cells
+        return m, rows, cols
+    return m.T.tocsr(), cols, rows
+
+
+MATRIX = re.compile(r"\.(csv|tsv|txt)(\.gz)?$|\.h5$|matrix\.mtx(\.gz)?$")
 
 
 def build(indir, out, samples_tsv=None, include_spatial=False):
     import anndata as ad
-    import numpy as np
     import pandas as pd
     indir, out = Path(indir), Path(out)
     meta = parse_series_matrix(indir / "GSE173706_series_matrix.txt.gz")
@@ -161,7 +238,8 @@ def build(indir, out, samples_tsv=None, include_spatial=False):
     files = {}
     for p in sorted((indir / "RAW").iterdir()):
         m = re.match(r"(GSM\d+)", p.name)
-        if m and re.search(r"\.(csv|tsv|txt)(\.gz)?$", p.name):
+        if m and MATRIX.search(p.name) and not re.search(r"(barcodes|features|genes)\.tsv", p.name) \
+                and not re.search(r"spatial|position|scalefactor|image", p.name, re.I):
             files.setdefault(m.group(1), []).append(p)
     table["files"] = [";".join(f.name for f in files.get(g, [])) for g in table.index]
     out.parent.mkdir(parents=True, exist_ok=True)

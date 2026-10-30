@@ -1,0 +1,124 @@
+# Marker sets for two-level annotation of whole human skin (healthy, psoriasis).
+# Used by scripts/sc_annotate.py. Labels are the canonical English names that the
+# guidebook will use; cl_id is the Cell Ontology term (the closest parent term when
+# no exact term exists, flagged with cl_exact: false). Sources: Ma et al. 2023
+# (Nat Commun 14:3455), Reynolds et al. 2021 (Science 371:eaba6500), Tabib et al. 2018.
+#
+# Level 1 is assigned per Leiden cluster on the whole object. Level 2 re-clusters the
+# cells of one level-1 type and assigns the subtypes listed under it. A level-1 type
+# without subtypes keeps its level-1 label at level 2.
+#
+# negative: genes whose expression lowers the score (subtracted at half weight).
+version: skin_v1
+tissue: skin
+level1:
+  keratinocyte:
+    cl_id: "CL:0000312"
+    markers: [KRT5, KRT14, KRT1, KRT10, KRTDAP, SFN, DMKN, PERP]
+    subtypes:
+      keratinocyte_basal:
+        cl_id: "CL:0002187"
+        markers: [KRT15, COL17A1, KRT5, KRT14, CXCL14, DST]
+        negative: [KRT1, KRT10]
+      keratinocyte_spinous:
+        cl_id: "CL:0000312"
+        cl_exact: false
+        markers: [KRT1, KRT10, KRTDAP, DMKN, KRT2]
+      keratinocyte_granular:
+        cl_id: "CL:0000312"
+        cl_exact: false
+        markers: [LOR, FLG, FLG2, CNFN, LCE2B, HOPX]
+      keratinocyte_cycling:
+        cl_id: "CL:0000312"
+        cl_exact: false
+        markers: [MKI67, TOP2A, CENPF, NUSAP1, TYMS]
+      keratinocyte_inflammatory:
+        cl_id: "CL:0000312"
+        cl_exact: false
+        markers: [KRT16, KRT6A, KRT6B, KRT17, S100A7, S100A8, S100A9, SERPINB4, SERPINB3, DEFB4A, PI3]
+  sweat_gland_cell:
+    cl_id: "CL:1000448"
+    markers: [DCD, SCGB2A2, SCGB1D2, MUCL1, PIP]
+  fibroblast:
+    cl_id: "CL:0000057"
+    markers: [COL1A1, COL1A2, COL3A1, DCN, LUM, PDGFRA]
+    subtypes:
+      fibroblast_SFRP2:
+        cl_id: "CL:0000057"
+        cl_exact: false
+        markers: [SFRP2, CCN5, WISP2, PI16, MFAP5, CTHRC1]
+      fibroblast_SFRP1_COL11A1:
+        cl_id: "CL:0000057"
+        cl_exact: false
+        markers: [SFRP1, COL11A1, APCDD1, COL18A1, TNC]
+      fibroblast_inflammatory:
+        cl_id: "CL:0000057"
+        cl_exact: false
+        markers: [CCL19, CXCL9, CXCL10, APOE, CD74, IL32]
+  vascular_endothelial_cell:
+    cl_id: "CL:0000115"
+    markers: [PECAM1, VWF, CDH5, AQP1, ACKR1, SELE]
+    negative: [PROX1, LYVE1, CCL21]
+  lymphatic_endothelial_cell:
+    cl_id: "CL:0002138"
+    markers: [PROX1, LYVE1, CCL21, TFF3, PDPN]
+  pericyte_smooth_muscle:
+    cl_id: "CL:0000669"
+    markers: [ACTA2, RGS5, TAGLN, MYH11, PDGFRB, NOTCH3]
+  melanocyte:
+    cl_id: "CL:0000148"
+    markers: [PMEL, MLANA, TYRP1, DCT, TYR]
+  schwann_cell:
+    cl_id: "CL:0002573"
+    markers: [S100B, NRXN1, PLP1, SCN7A, MPZ]
+    negative: [PMEL, MLANA]
+  T_NK_cell:
+    cl_id: "CL:0000084"
+    markers: [PTPRC, CD3D, CD3E, CD2, NKG7, GNLY, CD247]
+    subtypes:
+      T_CD4:
+        cl_id: "CL:0000624"
+        markers: [CD4, IL7R, CD40LG, CCR7, TCF7]
+        negative: [CD8A, CD8B]
+      T_CD8:
+        cl_id: "CL:0000625"
+        markers: [CD8A, CD8B, GZMK, CCL5]
+        negative: [CD4, FOXP3]
+      T_reg:
+        cl_id: "CL:0000815"
+        markers: [FOXP3, IL2RA, CTLA4, TIGIT, BATF]
+      T_IL17:
+        cl_id: "CL:0000084"
+        cl_exact: false
+        markers: [IL17A, IL17F, IL26, IL23R, CCR6, RORC]
+      NK_cell:
+        cl_id: "CL:0000623"
+        markers: [NKG7, GNLY, KLRD1, KLRF1, FCGR3A]
+        negative: [CD3D, CD3E]
+  myeloid_cell:
+    cl_id: "CL:0000763"
+    markers: [PTPRC, LYZ, CD74, HLA-DRA, AIF1, TYROBP]
+    subtypes:
+      macrophage:
+        cl_id: "CL:0000235"
+        markers: [CD163, C1QA, C1QB, C1QC, CD14, MS4A7, F13A1]
+      dendritic_cell_cDC1:
+        cl_id: "CL:0000990"
+        markers: [CLEC9A, XCR1, CADM1, IRF8]
+      dendritic_cell_cDC2:
+        cl_id: "CL:0000990"
+        cl_exact: false
+        markers: [CD1C, CLEC10A, FCER1A, CD1E]
+      dendritic_cell_mature_LAMP3:
+        cl_id: "CL:0000451"
+        cl_exact: false
+        markers: [LAMP3, CCR7, CCL22, IDO1, FSCN1]
+      langerhans_cell:
+        cl_id: "CL:0000453"
+        markers: [CD207, CD1A, FCGBP]
+  mast_cell:
+    cl_id: "CL:0000097"
+    markers: [TPSAB1, TPSB2, CPA3, KIT, MS4A2]
+  B_plasma_cell:
+    cl_id: "CL:0000236"
+    markers: [MS4A1, CD79A, CD79B, JCHAIN, MZB1, IGKC]
