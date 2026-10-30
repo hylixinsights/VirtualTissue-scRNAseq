@@ -33,6 +33,8 @@ import time
 import urllib.request
 from pathlib import Path
 
+import numpy as np
+
 ACCESSION = "GSE173706"
 BASE = "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE173nnn/GSE173706"
 FILES = {
@@ -136,21 +138,51 @@ def genes_are_columns(index, columns):
 
 
 def read_counts(path):
-    """Read a CSV/TSV count matrix (optionally gzipped); return (sparse cells x genes, cells, genes)."""
+    """Read one sample's counts; return (sparse cells x genes, cells, genes).
+
+    Accepts a CSV/TSV matrix (optionally gzipped, either orientation, read in chunks so a
+    dense genes x cells file never sits in memory as float64), a 10x .h5, or a 10x
+    matrix.mtx(.gz) whose barcodes/features files sit beside it with the same prefix.
+    """
     import pandas as pd
     import scipy.sparse as sp
-    sep = "\t" if re.search(r"\.(tsv|txt)(\.gz)?$", path.name) else ","
-    df = pd.read_csv(path, sep=sep, index_col=0)
-    if genes_are_columns(df.index, df.columns):
-        df = df.T
-    # df is now genes x cells
-    m = sp.csr_matrix(df.to_numpy().T)
-    return m, [str(c) for c in df.columns], [str(g) for g in df.index]
+    name = path.name
+    if name.endswith(".h5"):
+        import scanpy as sc
+        a = sc.read_10x_h5(path)
+        a.var_names_make_unique()
+        return sp.csr_matrix(a.X), list(a.obs_names), list(a.var_names)
+    if re.search(r"matrix\.mtx(\.gz)?$", name):
+        import scipy.io
+        prefix = name[:name.index("matrix.mtx")]
+        side = lambda stems: next((path.parent / f"{prefix}{s}{z}" for s in stems for z in (".gz", "")
+                                   if (path.parent / f"{prefix}{s}{z}").exists()), None)
+        bc, ft = side(["barcodes.tsv"]), side(["features.tsv", "genes.tsv"])
+        if bc is None or ft is None:
+            sys.exit(f"{name}: barcodes/features files with prefix '{prefix}' not found")
+        m = scipy.io.mmread(path).tocsr()  # genes x cells
+        cells = pd.read_csv(bc, sep="\t", header=None)[0].astype(str).tolist()
+        feats = pd.read_csv(ft, sep="\t", header=None)
+        genes = feats[1 if feats.shape[1] > 1 else 0].astype(str).tolist()
+        return m.T.tocsr(), cells, genes
+    sep = "\t" if re.search(r"\.(tsv|txt)(\.gz)?$", name) else ","
+    header = pd.read_csv(path, sep=sep, index_col=0, nrows=5)
+    blocks, rows = [], []
+    for chunk in pd.read_csv(path, sep=sep, index_col=0, chunksize=2000):
+        blocks.append(sp.csr_matrix(chunk.to_numpy(dtype=np.float32)))
+        rows += [str(x) for x in chunk.index]
+    m = sp.vstack(blocks).tocsr()
+    cols = [str(c) for c in header.columns]
+    if genes_are_columns(rows, cols):  # rows are cells
+        return m, rows, cols
+    return m.T.tocsr(), cols, rows
+
+
+MATRIX = re.compile(r"\.(csv|tsv|txt)(\.gz)?$|\.h5$|matrix\.mtx(\.gz)?$")
 
 
 def build(indir, out, samples_tsv=None, include_spatial=False):
     import anndata as ad
-    import numpy as np
     import pandas as pd
     indir, out = Path(indir), Path(out)
     meta = parse_series_matrix(indir / "GSE173706_series_matrix.txt.gz")
@@ -161,7 +193,8 @@ def build(indir, out, samples_tsv=None, include_spatial=False):
     files = {}
     for p in sorted((indir / "RAW").iterdir()):
         m = re.match(r"(GSM\d+)", p.name)
-        if m and re.search(r"\.(csv|tsv|txt)(\.gz)?$", p.name):
+        if m and MATRIX.search(p.name) and not re.search(r"(barcodes|features|genes)\.tsv", p.name) \
+                and not re.search(r"spatial|position|scalefactor|image", p.name, re.I):
             files.setdefault(m.group(1), []).append(p)
     table["files"] = [";".join(f.name for f in files.get(g, [])) for g in table.index]
     out.parent.mkdir(parents=True, exist_ok=True)

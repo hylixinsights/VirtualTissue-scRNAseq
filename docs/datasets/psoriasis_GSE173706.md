@@ -49,6 +49,10 @@ was written.** If a sample is misclassified, or the donor pairing is wrong, copy
 the TSV, fix the rows and rerun with `--samples fixed.tsv`. The loader stops with
 a message if a condition cannot be parsed, or if a GSM has more than one matrix.
 It warns if values are not integers (normalised rather than raw counts).
+Accepted per-sample formats: CSV/TSV (either orientation, gzipped or not, read in
+chunks), 10x `.h5`, and 10x `matrix.mtx(.gz)` with `barcodes.tsv` and
+`features.tsv`/`genes.tsv` sharing the same file prefix. Files that look like
+spatial assets (positions, scale factors, images) are ignored.
 
 Expected checks after the build:
 
@@ -56,24 +60,74 @@ Expected checks after the build:
 - Every PN sample has a PP sample with the same `donor_id`.
 - Cell numbers per sample are in the range the paper reports.
 
-## Cell-type annotation is required
+## Cell-type annotation, frequencies, trajectory, communication
 
-GEO has **no per-cell labels** for this series. Before a guidebook can be built
-(plan task A2):
+GEO has **no per-cell labels** for this series, so the pipeline annotates them.
+Install the extras once with `pip install -e ".[scrna]"`, then run everything in
+order with `bash scripts/run_psoriasis_inputs.sh`, or step by step:
 
-1. QC per sample (genes, UMIs, mitochondrial fraction), doublet removal.
-2. Integrate across donors (for example scVI or Harmony with `donor_id` as batch).
-3. Cluster and annotate with the paper's marker sets, at the resolution the
-   guidebook needs: keratinocyte layers (basal KRT5/KRT14, spinous KRT1/KRT10,
-   supraspinous/granular, proliferating MKI67), psoriasis-activated keratinocytes
-   (KRT16, KRT6A, S100A7/8/9, SERPINB4), fibroblasts including SFRP2+ and
-   WISP2+ subsets, endothelial cells, pericytes/smooth muscle, melanocytes,
-   T-cell subsets (CD4, CD8, Treg, IL17A+ Tc17/Th17), NK/ILC, dendritic cells
-   (including LAMP3+ mature DC), macrophages, mast cells.
-4. Map labels to the canonical vocabulary with Cell Ontology IDs (plan task B2).
-5. Compare per-condition type frequencies with the paper's figures; record the
-   agreement in an annotation report.
+| Step | Plan task | Command | Depends on | Output under `data/psoriasis/` |
+|---|---|---|---|---|
+| 1 | A1 | `download_gse173706.py download` then `build` | network | `GSE173706_raw.h5ad`, `GSE173706_raw.samples.tsv` |
+| 2 | A2 | `sc_annotate.py` | 1 | `annotated/` |
+| 3 | A3 | `sc_trajectory.py --lineage keratinocyte:keratinocyte_basal --lineage fibroblast:fibroblast_SFRP2` | 2 | `trajectory/` |
+| 4 | A4 | `sc_communication.py` | 2 (parallel with 3) | `communication/` |
 
-Two shortcuts, both optional: ask the authors for their annotated object, or
-transfer labels from the annotated Reynolds et al. 2021 skin atlas (ArrayExpress
-E-MTAB-8142), which also includes psoriasis lesional and non-lesional skin.
+**Step 2, `scripts/sc_annotate.py`** (generic; works for any tissue given a marker file):
+
+1. Per-sample QC: fewer than 200 genes, MAD outliers (5 MADs) of log counts and log
+   genes, more than 20 % mitochondrial counts; Scrublet doublets per sample.
+2. Normalise (10^4, log1p), 3000 HVGs (Seurat v3, per batch), PCA, Harmony on
+   `donor_id`, Leiden clustering, UMAP.
+3. Level 1: each Leiden cluster gets the type with the highest median marker score
+   from `resources/markers/skin_v1.yaml`. Level 2: cells of each level-1 type with
+   subtypes are re-clustered and assigned subtypes (keratinocyte basal / spinous /
+   granular / cycling / inflammatory; fibroblast SFRP2+ / SFRP1+COL11A1+ /
+   inflammatory; T CD4 / CD8 / Treg / IL17 / NK; macrophage, cDC1, cDC2, mature
+   LAMP3+ DC, Langerhans). Clusters with a weak or ambiguous best score stay
+   `unassigned_<cluster>` instead of being forced into a type.
+4. Labels: `obs.cell_type_l1`, `obs.cell_type_l2`, `obs.cell_type` (= level 2),
+   `obs.cl_id` (Cell Ontology; closest parent term where no exact term exists,
+   marked `cl_exact: false` in the marker file).
+5. Writes `annotation_report.md`, cluster score tables, detected marker genes, and
+   frequency tables per sample and per condition (pooled fraction, mean and SD of
+   per-sample fractions). The per-sample fractions are what the tissue initializer
+   samples from.
+
+Read the report before using the labels: check unassigned clusters, small margins,
+and whether the detected genes per label make sense. Then compare the per-condition
+fractions with the paper's figures and record the agreement.
+
+**Step 3, `scripts/sc_trajectory.py`**: diffusion pseudotime per lineage rooted in
+the named level-2 state, and PAGA connectivities between level-2 states (all cells and
+per condition). `transitions_<lineage>.tsv` lists edges directed from lower to higher
+median pseudotime; these become the allowed state transitions in the guidebook.
+
+**Step 4, `scripts/sc_communication.py`**: ligand-receptor interactions per
+condition. It uses liana-py (`rank_aggregate`, consensus resource) when installed;
+otherwise a built-in CellPhoneDB-style score (ligand mean in source x receptor mean
+in target, label-permutation p-values) over the curated skin/psoriasis table
+`resources/ligand_receptor/skin_core_v1.tsv` (45 pairs: IL17, IL23, IL22, IL36, TNF,
+IFN-II, chemokines, growth factors, contact pairs). The built-in table is a starting
+set, not a replacement for CellChatDB; a CellChat run in R can be exported to the same
+columns and used instead.
+
+Two optional cross-checks: ask the authors for their annotated object, or transfer
+labels from the annotated Reynolds et al. 2021 skin atlas (ArrayExpress E-MTAB-8142),
+which also includes psoriasis lesional and non-lesional skin (plan task A5).
+
+## Where the data lives
+
+Nothing in `data/raw/` or `data/psoriasis/` is committed (see `.gitignore`). To
+regenerate everything, rerun `scripts/run_psoriasis_inputs.sh`; `SHA256SUMS` and
+`SOURCE.json` in `data/raw/GSE173706/` pin the download, and each output folder
+records its parameters (`uns["annotation"]` in the h5ad, `summary.json`,
+`SOURCE.json`).
+
+## Status
+
+The code is tested on synthetic files only (`tests/test_sc_pipeline.py`): loader
+formats, QC, annotation, frequencies, trajectory and communication run end to end and
+recover the planted labels. It has **not yet run on the real GSE173706 files**,
+because `ftp.ncbi.nlm.nih.gov` was not reachable from the environment where it was
+written.
