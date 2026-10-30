@@ -7,13 +7,47 @@
 #
 # Needs Python 3.12 or 3.13 and internet access to ftp.ncbi.nlm.nih.gov. Safe to rerun:
 # downloads resume, finished steps are reused. Everything lands under data/ (git-ignored).
-# Set PYTHON=/path/to/python3.12 to pick an interpreter.
+# Finds python3.13/python3.12 (or lets uv install 3.12); set PYTHON=/path/to/python3.12 to choose.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-PY=${PYTHON:-python3}
 VENV=.venv-scrna
 
+ok_version() {  # true if interpreter $1 is Python 3.12 or 3.13
+  "$1" -c 'import sys; sys.exit(0 if (3, 12) <= sys.version_info[:2] < (3, 14) else 1)' 2>/dev/null
+}
+
+find_python() {
+  local c
+  for c in ${PYTHON:-} python3.13 python3.12 python3 python; do
+    if command -v "$c" >/dev/null 2>&1 && ok_version "$(command -v "$c")"; then
+      command -v "$c"; return 0
+    fi
+  done
+  if command -v uv >/dev/null 2>&1; then  # uv can fetch a standalone Python without admin rights
+    uv python install 3.12 >&2 && uv python find 3.12 && return 0
+  fi
+  return 1
+}
+
+VPY="$VENV/bin/python"; [ -x "$VPY" ] || VPY="$VENV/Scripts/python.exe"
+if [ -x "$VPY" ] && ! ok_version "$VPY"; then
+  echo "Removing $VENV: it was created with $("$VPY" --version 2>&1), which is too old."
+  rm -rf "$VENV"
+fi
 if [ ! -x "$VENV/bin/python" ] && [ ! -x "$VENV/Scripts/python.exe" ]; then
+  if ! PY=$(find_python); then
+    cat >&2 <<'MSG'
+This pipeline needs Python 3.12 or 3.13, and none was found (macOS ships 3.9).
+Install one of these, then rerun this script:
+  - uv (recommended, no admin rights):  curl -LsSf https://astral.sh/uv/install.sh | sh
+    then open a new terminal; the script will let uv download Python 3.12 itself
+  - Homebrew:                           brew install python@3.12
+  - python.org installer:               https://www.python.org/downloads/
+Or point to an interpreter explicitly:   PYTHON=/path/to/python3.12 bash scripts/local_psoriasis.sh
+MSG
+    exit 1
+  fi
+  echo "Using $PY ($("$PY" --version 2>&1))"
   "$PY" -m venv "$VENV"
 fi
 VPY="$VENV/bin/python"; [ -x "$VPY" ] || VPY="$VENV/Scripts/python.exe"

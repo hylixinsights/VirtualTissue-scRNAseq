@@ -79,7 +79,10 @@ No live Jev or biological equivalence is claimed.
 The public psoriasis dataset (lesional, non-lesional and healthy skin; Ma et al.
 2023, GEO GSE173706) is downloaded from NCBI, so run this where
 `ftp.ncbi.nlm.nih.gov` is reachable. Needs Python 3.12 or 3.13, a few GB of free disk
-and 16 GB of RAM for the full pipeline.
+and 16 GB of RAM for the full pipeline. The script finds `python3.13`/`python3.12`;
+if only an older Python exists (macOS ships 3.9) it uses [uv](https://docs.astral.sh/uv/)
+to fetch 3.12 when uv is installed (`curl -LsSf https://astral.sh/uv/install.sh | sh`),
+and otherwise stops with install instructions.
 
 ```bash
 git clone https://github.com/hylixinsights/VirtualTissue-scRNAseq.git
