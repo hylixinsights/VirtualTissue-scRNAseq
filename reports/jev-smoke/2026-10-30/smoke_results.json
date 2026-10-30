@@ -1,0 +1,526 @@
+{
+ "endpoint": "https://api.typesafe.ai/v1/systemone",
+ "date_utc": "2026-10-30T11:13:56Z",
+ "results": {
+  "lesional_two_cells": {
+   "http_status": 200,
+   "latency_s": 0.41,
+   "request": {
+    "model": "jev-1.14.0",
+    "questions": {
+     "c1": {
+      "type": "choice",
+      "instructions": {
+       "task": "Choose one permitted local behavior for this cell.",
+       "local_observation": {
+        "cell_type": "basal keratinocyte",
+        "neighbors": [
+         "Th17 cell",
+         "dendritic cell"
+        ],
+        "exposure": {
+         "IL17A": "high",
+         "IL22": "high",
+         "TNF": "moderate"
+        },
+        "markers_up": [
+         "KRT16",
+         "KRT6A",
+         "MKI67"
+        ]
+       }
+      },
+      "criteria": {
+       "proliferate": "Enter the cell cycle and divide if space allows.",
+       "differentiate": "Progress toward terminal cornified differentiation and move suprabasally.",
+       "secrete_inflammatory": "Secrete antimicrobial peptides and chemokines (e.g. S100A7/8/9, CXCL1/8, CCL20) that recruit immune cells.",
+       "rest": "Maintain current state until the next checkpoint."
+      }
+     },
+     "c2": {
+      "type": "choice",
+      "instructions": {
+       "task": "Choose one permitted local behavior for this cell.",
+       "local_observation": {
+        "cell_type": "spinous keratinocyte",
+        "neighbors": [
+         "keratinocyte"
+        ],
+        "exposure": {
+         "IL17A": "none",
+         "IL22": "low"
+        },
+        "markers_up": [
+         "KRT10",
+         "KRT1"
+        ]
+       }
+      },
+      "criteria": {
+       "proliferate": "Enter the cell cycle and divide if space allows.",
+       "differentiate": "Progress toward terminal cornified differentiation and move suprabasally.",
+       "secrete_inflammatory": "Secrete antimicrobial peptides and chemokines (e.g. S100A7/8/9, CXCL1/8, CCL20) that recruit immune cells.",
+       "rest": "Maintain current state until the next checkpoint."
+      }
+     }
+    },
+    "state": {
+     "setting": "Psoriatic lesional skin (plaque), whole-tissue scRNA-seq reconstruction; positions assumed.",
+     "prompt_version": "vtsc-probe-psoriasis-1",
+     "semantics": "Observations are inferred RNA summaries, not protein activity. Choose a permitted behavior; probabilities rank choices, not kinetic rates."
+    }
+   },
+   "response": {
+    "model": "jev-1.14.0",
+    "answers": {
+     "c1": {
+      "type": "choice",
+      "choice": "proliferate",
+      "confidence": 0.8,
+      "probabilities": {
+       "proliferate": 0.85,
+       "differentiate": 0.01,
+       "secrete_inflammatory": 0.14,
+       "rest": 0.0
+      }
+     },
+     "c2": {
+      "type": "choice",
+      "choice": "differentiate",
+      "confidence": 0.87,
+      "probabilities": {
+       "proliferate": 0.02,
+       "differentiate": 0.9,
+       "secrete_inflammatory": 0.04,
+       "rest": 0.04
+      }
+     }
+    },
+    "usage": {
+     "input_tokens": 859,
+     "output_tokens": 117
+    }
+   }
+  },
+  "nonlesional_two_cells": {
+   "http_status": 200,
+   "latency_s": 0.16,
+   "request": {
+    "model": "jev-1.14.0",
+    "questions": {
+     "c1": {
+      "type": "choice",
+      "instructions": {
+       "task": "Choose one permitted local behavior for this cell.",
+       "local_observation": {
+        "cell_type": "basal keratinocyte",
+        "neighbors": [
+         "Th17 cell",
+         "dendritic cell"
+        ],
+        "exposure": {
+         "IL17A": "high",
+         "IL22": "high",
+         "TNF": "moderate"
+        },
+        "markers_up": [
+         "KRT16",
+         "KRT6A",
+         "MKI67"
+        ]
+       }
+      },
+      "criteria": {
+       "proliferate": "Enter the cell cycle and divide if space allows.",
+       "differentiate": "Progress toward terminal cornified differentiation and move suprabasally.",
+       "secrete_inflammatory": "Secrete antimicrobial peptides and chemokines (e.g. S100A7/8/9, CXCL1/8, CCL20) that recruit immune cells.",
+       "rest": "Maintain current state until the next checkpoint."
+      }
+     },
+     "c2": {
+      "type": "choice",
+      "instructions": {
+       "task": "Choose one permitted local behavior for this cell.",
+       "local_observation": {
+        "cell_type": "spinous keratinocyte",
+        "neighbors": [
+         "keratinocyte"
+        ],
+        "exposure": {
+         "IL17A": "none",
+         "IL22": "low"
+        },
+        "markers_up": [
+         "KRT10",
+         "KRT1"
+        ]
+       }
+      },
+      "criteria": {
+       "proliferate": "Enter the cell cycle and divide if space allows.",
+       "differentiate": "Progress toward terminal cornified differentiation and move suprabasally.",
+       "secrete_inflammatory": "Secrete antimicrobial peptides and chemokines (e.g. S100A7/8/9, CXCL1/8, CCL20) that recruit immune cells.",
+       "rest": "Maintain current state until the next checkpoint."
+      }
+     }
+    },
+    "state": {
+     "setting": "Non-lesional skin from a psoriasis patient, whole-tissue scRNA-seq reconstruction; positions assumed.",
+     "prompt_version": "vtsc-probe-psoriasis-1",
+     "semantics": "Observations are inferred RNA summaries, not protein activity. Choose a permitted behavior; probabilities rank choices, not kinetic rates."
+    }
+   },
+   "response": {
+    "model": "jev-1.14.0",
+    "answers": {
+     "c1": {
+      "type": "choice",
+      "choice": "proliferate",
+      "confidence": 0.76,
+      "probabilities": {
+       "proliferate": 0.82,
+       "differentiate": 0.01,
+       "secrete_inflammatory": 0.17,
+       "rest": 0.0
+      }
+     },
+     "c2": {
+      "type": "choice",
+      "choice": "differentiate",
+      "confidence": 0.85,
+      "probabilities": {
+       "proliferate": 0.02,
+       "differentiate": 0.89,
+       "secrete_inflammatory": 0.03,
+       "rest": 0.06
+      }
+     }
+    },
+    "usage": {
+     "input_tokens": 860,
+     "output_tokens": 117
+    }
+   }
+  },
+  "lesional_quiet_basal": {
+   "http_status": 200,
+   "latency_s": 0.15,
+   "request": {
+    "model": "jev-1.14.0",
+    "questions": {
+     "c1": {
+      "type": "choice",
+      "instructions": {
+       "task": "Choose one permitted local behavior for this cell.",
+       "local_observation": {
+        "cell_type": "basal keratinocyte",
+        "neighbors": [
+         "keratinocyte"
+        ],
+        "exposure": {
+         "IL17A": "none"
+        },
+        "markers_up": [
+         "KRT5",
+         "KRT14"
+        ]
+       }
+      },
+      "criteria": {
+       "proliferate": "Enter the cell cycle and divide if space allows.",
+       "differentiate": "Progress toward terminal cornified differentiation and move suprabasally.",
+       "secrete_inflammatory": "Secrete antimicrobial peptides and chemokines (e.g. S100A7/8/9, CXCL1/8, CCL20) that recruit immune cells.",
+       "rest": "Maintain current state until the next checkpoint."
+      }
+     }
+    },
+    "state": {
+     "setting": "Psoriatic lesional skin (plaque), whole-tissue scRNA-seq reconstruction; positions assumed.",
+     "prompt_version": "vtsc-probe-psoriasis-1",
+     "semantics": "Observations are inferred RNA summaries, not protein activity. Choose a permitted behavior; probabilities rank choices, not kinetic rates."
+    }
+   },
+   "response": {
+    "model": "jev-1.14.0",
+    "answers": {
+     "c1": {
+      "type": "choice",
+      "choice": "proliferate",
+      "confidence": 0.52,
+      "probabilities": {
+       "proliferate": 0.64,
+       "differentiate": 0.08,
+       "secrete_inflammatory": 0.02,
+       "rest": 0.26
+      }
+     }
+    },
+    "usage": {
+     "input_tokens": 577,
+     "output_tokens": 60
+    }
+   }
+  },
+  "lesional_quiet_basal_repeat": {
+   "http_status": 200,
+   "latency_s": 0.15,
+   "request": {
+    "model": "jev-1.14.0",
+    "questions": {
+     "c1": {
+      "type": "choice",
+      "instructions": {
+       "task": "Choose one permitted local behavior for this cell.",
+       "local_observation": {
+        "cell_type": "basal keratinocyte",
+        "neighbors": [
+         "keratinocyte"
+        ],
+        "exposure": {
+         "IL17A": "none"
+        },
+        "markers_up": [
+         "KRT5",
+         "KRT14"
+        ]
+       }
+      },
+      "criteria": {
+       "proliferate": "Enter the cell cycle and divide if space allows.",
+       "differentiate": "Progress toward terminal cornified differentiation and move suprabasally.",
+       "secrete_inflammatory": "Secrete antimicrobial peptides and chemokines (e.g. S100A7/8/9, CXCL1/8, CCL20) that recruit immune cells.",
+       "rest": "Maintain current state until the next checkpoint."
+      }
+     }
+    },
+    "state": {
+     "setting": "Psoriatic lesional skin (plaque), whole-tissue scRNA-seq reconstruction; positions assumed.",
+     "prompt_version": "vtsc-probe-psoriasis-1",
+     "semantics": "Observations are inferred RNA summaries, not protein activity. Choose a permitted behavior; probabilities rank choices, not kinetic rates."
+    }
+   },
+   "response": {
+    "model": "jev-1.14.0",
+    "answers": {
+     "c1": {
+      "type": "choice",
+      "choice": "proliferate",
+      "confidence": 0.53,
+      "probabilities": {
+       "proliferate": 0.65,
+       "differentiate": 0.07,
+       "secrete_inflammatory": 0.02,
+       "rest": 0.26
+      }
+     }
+    },
+    "usage": {
+     "input_tokens": 577,
+     "output_tokens": 60
+    }
+   }
+  },
+  "lesional_quiet_basal_with_prior": {
+   "http_status": 200,
+   "latency_s": 0.15,
+   "request": {
+    "model": "jev-1.14.0",
+    "questions": {
+     "c1": {
+      "type": "choice",
+      "instructions": {
+       "task": "Choose one permitted local behavior for this cell.",
+       "local_observation": {
+        "cell_type": "basal keratinocyte",
+        "neighbors": [
+         "keratinocyte"
+        ],
+        "exposure": {
+         "IL17A": "none"
+        },
+        "markers_up": [
+         "KRT5",
+         "KRT14"
+        ],
+        "guidebook_prior": {
+         "source": "empirical frequencies from lesional scRNA-seq",
+         "proliferate": 0.2,
+         "differentiate": 0.2,
+         "secrete_inflammatory": 0.55,
+         "rest": 0.05
+        }
+       }
+      },
+      "criteria": {
+       "proliferate": "Enter the cell cycle and divide if space allows.",
+       "differentiate": "Progress toward terminal cornified differentiation and move suprabasally.",
+       "secrete_inflammatory": "Secrete antimicrobial peptides and chemokines (e.g. S100A7/8/9, CXCL1/8, CCL20) that recruit immune cells.",
+       "rest": "Maintain current state until the next checkpoint."
+      }
+     }
+    },
+    "state": {
+     "setting": "Psoriatic lesional skin (plaque), whole-tissue scRNA-seq reconstruction; positions assumed.",
+     "prompt_version": "vtsc-probe-psoriasis-1",
+     "semantics": "Observations are inferred RNA summaries, not protein activity. Choose a permitted behavior; probabilities rank choices, not kinetic rates."
+    }
+   },
+   "response": {
+    "model": "jev-1.14.0",
+    "answers": {
+     "c1": {
+      "type": "choice",
+      "choice": "secrete_inflammatory",
+      "confidence": 0.68,
+      "probabilities": {
+       "proliferate": 0.14,
+       "differentiate": 0.09,
+       "secrete_inflammatory": 0.76,
+       "rest": 0.01
+      }
+     }
+    },
+    "usage": {
+     "input_tokens": 648,
+     "output_tokens": 62
+    }
+   }
+  },
+  "error_unknown_model": {
+   "http_status": 400,
+   "latency_s": 0.12,
+   "request": {
+    "model": "jev-0.0.1",
+    "questions": {
+     "c1": {
+      "type": "choice",
+      "instructions": {
+       "task": "Choose one permitted local behavior for this cell.",
+       "local_observation": {
+        "cell_type": "basal keratinocyte",
+        "neighbors": [
+         "keratinocyte"
+        ],
+        "exposure": {
+         "IL17A": "none"
+        },
+        "markers_up": [
+         "KRT5",
+         "KRT14"
+        ]
+       }
+      },
+      "criteria": {
+       "proliferate": "Enter the cell cycle and divide if space allows.",
+       "differentiate": "Progress toward terminal cornified differentiation and move suprabasally.",
+       "secrete_inflammatory": "Secrete antimicrobial peptides and chemokines (e.g. S100A7/8/9, CXCL1/8, CCL20) that recruit immune cells.",
+       "rest": "Maintain current state until the next checkpoint."
+      }
+     }
+    },
+    "state": {
+     "setting": "Psoriatic lesional skin (plaque), whole-tissue scRNA-seq reconstruction; positions assumed.",
+     "prompt_version": "vtsc-probe-psoriasis-1",
+     "semantics": "Observations are inferred RNA summaries, not protein activity. Choose a permitted behavior; probabilities rank choices, not kinetic rates."
+    }
+   },
+   "response": {
+    "detail": {
+     "error_type": "api_usage_error",
+     "message": "Unknown model: jev-0.0.1"
+    }
+   }
+  },
+  "error_missing_state": {
+   "http_status": 422,
+   "latency_s": 0.14,
+   "request": {
+    "model": "jev-1.14.0",
+    "questions": {
+     "c1": {
+      "type": "choice",
+      "instructions": {
+       "task": "Choose one permitted local behavior for this cell.",
+       "local_observation": {
+        "cell_type": "basal keratinocyte",
+        "neighbors": [
+         "keratinocyte"
+        ],
+        "exposure": {
+         "IL17A": "none"
+        },
+        "markers_up": [
+         "KRT5",
+         "KRT14"
+        ]
+       }
+      },
+      "criteria": {
+       "proliferate": "Enter the cell cycle and divide if space allows.",
+       "differentiate": "Progress toward terminal cornified differentiation and move suprabasally.",
+       "secrete_inflammatory": "Secrete antimicrobial peptides and chemokines (e.g. S100A7/8/9, CXCL1/8, CCL20) that recruit immune cells.",
+       "rest": "Maintain current state until the next checkpoint."
+      }
+     }
+    }
+   },
+   "response": {
+    "detail": [
+     {
+      "type": "missing",
+      "loc": [
+       "body",
+       "state"
+      ],
+      "msg": "Field required"
+     }
+    ]
+   }
+  },
+  "error_bad_key": {
+   "http_status": 401,
+   "latency_s": 0.12,
+   "request": {
+    "model": "jev-1.14.0",
+    "questions": {
+     "c1": {
+      "type": "choice",
+      "instructions": {
+       "task": "Choose one permitted local behavior for this cell.",
+       "local_observation": {
+        "cell_type": "basal keratinocyte",
+        "neighbors": [
+         "keratinocyte"
+        ],
+        "exposure": {
+         "IL17A": "none"
+        },
+        "markers_up": [
+         "KRT5",
+         "KRT14"
+        ]
+       }
+      },
+      "criteria": {
+       "proliferate": "Enter the cell cycle and divide if space allows.",
+       "differentiate": "Progress toward terminal cornified differentiation and move suprabasally.",
+       "secrete_inflammatory": "Secrete antimicrobial peptides and chemokines (e.g. S100A7/8/9, CXCL1/8, CCL20) that recruit immune cells.",
+       "rest": "Maintain current state until the next checkpoint."
+      }
+     }
+    },
+    "state": {
+     "setting": "Psoriatic lesional skin (plaque), whole-tissue scRNA-seq reconstruction; positions assumed.",
+     "prompt_version": "vtsc-probe-psoriasis-1",
+     "semantics": "Observations are inferred RNA summaries, not protein activity. Choose a permitted behavior; probabilities rank choices, not kinetic rates."
+    }
+   },
+   "response": {
+    "detail": {
+     "error_type": "authentication_error",
+     "message": "Cannot authenticate with the server. Please check your API key and try again."
+    }
+   }
+  }
+ }
+}

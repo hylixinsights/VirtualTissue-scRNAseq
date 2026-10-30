@@ -39,3 +39,6 @@ example_data/
 *.key
 secrets*.json
 *.provider.jsonl
+data/raw/
+data/psoriasis/
+.env
