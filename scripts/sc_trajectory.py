@@ -30,7 +30,11 @@ def paga_edges(a, label, min_conn):
     import scanpy as sc
     if a.obs[label].nunique() < 2:
         return pd.DataFrame(columns=["a", "b", "paga_connectivity"])
-    sc.tl.paga(a, groups=label)
+    try:
+        sc.tl.paga(a, groups=label)
+    except ValueError:  # scanpy/igraph fail when no two states share a neighbour edge
+        print(f"warning: no neighbour edges between {label} states; no transitions", file=sys.stderr)
+        return pd.DataFrame(columns=["a", "b", "paga_connectivity"])
     cats = list(a.obs[label].cat.categories)
     conn = a.uns["paga"]["connectivities"].toarray()
     rows = [{"a": cats[i], "b": cats[j], "paga_connectivity": float(conn[i, j])}

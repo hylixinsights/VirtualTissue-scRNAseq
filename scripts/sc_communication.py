@@ -29,14 +29,14 @@ import numpy as np
 import pandas as pd
 
 
-def type_means(X, labels, genes_idx):
-    """Return (mean expression, fraction expressing) per label for the given gene indices."""
+def type_means(X, labels, genes_idx=None):
+    """Return (mean expression, fraction expressing) per label for the given gene indices (all if None)."""
     import scipy.sparse as sp
     cats = pd.Categorical(labels)
     onehot = sp.csr_matrix((np.ones(len(cats)), (cats.codes, np.arange(len(cats)))),
                            shape=(len(cats.categories), len(cats)))
     sizes = np.asarray(onehot.sum(1)).ravel()[:, None]
-    m = X[:, genes_idx]
+    m = X if genes_idx is None else X[:, genes_idx]
     m = sp.csr_matrix(m) if not sp.issparse(m) else m.tocsr()
     mean = np.asarray((onehot @ m).todense()) / sizes
     frac = np.asarray((onehot @ (m > 0).astype(np.float32)).todense()) / sizes
@@ -59,7 +59,8 @@ def builtin(adata, label, pairs, min_frac, n_perm, min_cells, seed):
     labels = a.obs[label].astype(str).to_numpy()
     all_idx = sorted({i for _, l, r in rows for i in l + r})
     pos = {g: k for k, g in enumerate(all_idx)}
-    cats, mean, frac = type_means(a.X, labels, all_idx)
+    sub = a.X[:, all_idx]  # slice once; permutations reuse it
+    cats, mean, frac = type_means(sub, labels)
 
     def complex_stat(arr, idx):
         return arr[:, [pos[i] for i in idx]].min(1)
@@ -68,7 +69,7 @@ def builtin(adata, label, pairs, min_frac, n_perm, min_cells, seed):
     rng = np.random.default_rng(seed)
     exceed = np.zeros_like(obs)
     for _ in range(n_perm):
-        _, pm, _ = type_means(a.X, rng.permutation(labels), all_idx)
+        _, pm, _ = type_means(sub, rng.permutation(labels))
         perm = np.stack([np.outer(complex_stat(pm, l), complex_stat(pm, r)) for _, l, r in rows])
         exceed += perm >= obs
     pval = (exceed + 1) / (n_perm + 1)

@@ -74,3 +74,13 @@ def test_fetch_replaces_truncated_file(tmp_path, monkeypatch):
         assert dest.read_bytes() == PAYLOAD
     finally:
         srv.shutdown()
+
+
+def test_classify_pairs_donors_from_geo_tag():
+    meta = lambda t: {"title": t, "source": "", "characteristics": "", "library": ""}
+    pn = dl.classify("GSM1", meta("Peripheral normal skin from donor 3696 [PN-30696]"))  # GEO text typo
+    pp = dl.classify("GSM2", meta("Psoriatic skin from donor 30696 [PP-30696]"))
+    ns = dl.classify("GSM3", meta("Normal skin from donor AR001 [NS-AR001]"))
+    assert (pn["condition"], pp["condition"], ns["condition"]) == ("non_lesional", "lesional", "healthy")
+    assert pn["donor_id"] == pp["donor_id"] == "donor_30696"
+    assert ns["donor_id"] == "donor_AR001"

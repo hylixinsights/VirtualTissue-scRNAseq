@@ -46,7 +46,11 @@ def qc(adata, sample_key, max_mito, min_genes, nmads, doublets, seed):
     import scanpy as sc
     adata.var["mt"] = adata.var_names.str.upper().str.startswith("MT-")
     adata.var["ribo"] = adata.var_names.str.upper().str.match(r"^RP[SL]\d")
-    sc.pp.calculate_qc_metrics(adata, qc_vars=["mt", "ribo"], percent_top=None, log1p=True, inplace=True)
+    qc_vars = [v for v in ("mt", "ribo") if adata.var[v].any()]  # an empty gene set breaks scanpy
+    sc.pp.calculate_qc_metrics(adata, qc_vars=qc_vars, percent_top=None, log1p=True, inplace=True)
+    if "pct_counts_mt" not in adata.obs:
+        print("warning: no MT- genes found; mitochondrial filter skipped", file=sys.stderr)
+        adata.obs["pct_counts_mt"] = 0.0
     rows = []
     keep = np.ones(adata.n_obs, bool)
     for s, idx in adata.obs.groupby(sample_key, observed=True).indices.items():
@@ -62,17 +66,48 @@ def qc(adata, sample_key, max_mito, min_genes, nmads, doublets, seed):
                      "median_genes": float(np.median(o["n_genes_by_counts"])),
                      "median_umis": float(np.median(o["total_counts"])),
                      "median_pct_mito": float(np.median(o["pct_counts_mt"]))})
-    adata = adata[keep].copy()
     table = pd.DataFrame(rows).set_index("sample")
     table["doublets"] = 0
     if doublets:
-        sc.pp.scrublet(adata, batch_key=sample_key, random_state=seed)
-        d = adata.obs["predicted_doublet"].astype(bool)
-        table["doublets"] = d.groupby(adata.obs[sample_key], observed=True).sum().reindex(table.index).fillna(0).astype(int)
-        adata = adata[~d.to_numpy()].copy()
+        # one sample at a time on a counts-only AnnData: scanpy's batch mode copies the whole object
+        import anndata as ad
+        for s, idx in adata.obs.groupby(sample_key, observed=True).indices.items():
+            idx = idx[keep[idx]]
+            if len(idx) < 50:
+                continue
+            one = ad.AnnData(X=adata.X[idx].copy())
+            sc.pp.scrublet(one, random_state=seed)
+            d = one.obs["predicted_doublet"].to_numpy(bool)
+            keep[idx[d]] = False
+            table.loc[s, "doublets"] = int(d.sum())
+            del one
+    adata = adata[keep].copy()
     table["cells_out"] = adata.obs[sample_key].value_counts().reindex(table.index).fillna(0).astype(int)
     sc.pp.filter_genes(adata, min_cells=3)
     return adata, table
+
+
+def select_hvg(adata, n_top, batch):
+    """Seurat v3 HVGs on counts; fall back when its loess fit fails (small or sparse batches).
+
+    The loess in seurat_v3 can fail with "near singularities" on a batch with few cells, so
+    the fallbacks are seurat_v3 without batches, then the dispersion-based "seurat" flavor on
+    log-normalised X. Returns the flavor that worked.
+    """
+    import scanpy as sc
+    attempts = [("seurat_v3", dict(flavor="seurat_v3", layer="counts", batch_key=batch)),
+                ("seurat_v3_no_batch", dict(flavor="seurat_v3", layer="counts")),
+                ("seurat", dict(flavor="seurat", batch_key=batch))]
+    for name, kw in attempts:
+        if name == "seurat_v3_no_batch" and batch is None:
+            continue
+        try:
+            sc.pp.highly_variable_genes(adata, n_top_genes=n_top, subset=False, **kw)
+            print(f"HVG selection: {name}")
+            return name
+        except ValueError as e:
+            print(f"warning: HVG flavor {name} failed ({str(e).strip()[:80]}); trying the next one", file=sys.stderr)
+    raise SystemExit("highly variable gene selection failed with every flavor")
 
 
 def embed(adata, batch_key, n_hvg, n_pcs, seed):
@@ -80,8 +115,7 @@ def embed(adata, batch_key, n_hvg, n_pcs, seed):
     sc.pp.normalize_total(adata, target_sum=1e4)
     sc.pp.log1p(adata)
     batch = batch_key if batch_key and adata.obs[batch_key].nunique() > 1 else None
-    sc.pp.highly_variable_genes(adata, n_top_genes=min(n_hvg, adata.n_vars - 1), flavor="seurat_v3",
-                                layer="counts", batch_key=batch, subset=False)
+    adata.uns["hvg_flavor"] = select_hvg(adata, min(n_hvg, adata.n_vars - 1), batch)
     n_pcs = min(n_pcs, adata.n_obs - 1, int(adata.var["highly_variable"].sum()) - 1)
     sc.pp.pca(adata, n_comps=n_pcs, mask_var="highly_variable", random_state=seed)
     rep = "X_pca"
@@ -187,10 +221,12 @@ def run(inp, outdir, markers, sample_key, batch_key, condition_key, max_mito, mi
         if k not in adata.obs:
             sys.exit(f"obs column '{k}' missing; available: {list(adata.obs.columns)}")
     if "counts" in adata.layers:
-        adata.X = adata.layers["counts"].copy()
-    adata.layers["counts"] = adata.X.copy()
+        adata.X = adata.layers.pop("counts")
+    for k in [k for k in adata.layers if k is not None]:  # one matrix until QC is done (None is X in anndata >= 0.13)
+        del adata.layers[k]
 
     adata, qc_table = qc(adata, sample_key, max_mito, min_genes, nmads, doublets, seed)
+    adata.layers["counts"] = adata.X.copy()
     qc_table.to_csv(outdir / "qc_per_sample.tsv", sep="\t")
     print(f"QC kept {adata.n_obs} cells x {adata.n_vars} genes")
 
@@ -210,7 +246,11 @@ def run(inp, outdir, markers, sample_key, batch_key, condition_key, max_mito, mi
         mask = (adata.obs["cell_type_l1"] == parent).to_numpy()
         if not subtypes or mask.sum() < 30:
             continue
-        sub = adata[mask].copy()
+        # lean copy: the integrated embedding plus only the subtype marker genes
+        genes = sorted({g for st in subtypes.values() for g in st["markers"] + st.get("negative", [])}
+                       & set(adata.var_names))
+        sub = ad.AnnData(X=adata[mask, genes].X.copy(), obs=adata.obs.loc[mask, []].copy(),
+                         var=pd.DataFrame(index=genes), obsm={rep: adata.obsm[rep][mask]})
         neighbours_and_cluster(sub, rep, res2, seed, "leiden_sub")
         used[parent] = score_types(sub, subtypes, "score_l2_")
         labels, t2 = label_clusters(sub, "leiden_sub", subtypes, "score_l2_", min_score, min_margin)
@@ -239,17 +279,25 @@ def run(inp, outdir, markers, sample_key, batch_key, condition_key, max_mito, mi
     valid = groups[groups >= 10].index.tolist()
     top = pd.DataFrame()
     if len(valid) > 1:
-        sc.tl.rank_genes_groups(adata, "cell_type", groups=valid, method="wilcoxon", pts=True)
-        top = (sc.get.rank_genes_groups_df(adata, None).groupby("group", observed=True).head(15))
+        # at most 500 cells per label: enough for a review table, bounded memory on large objects
+        rng = np.random.default_rng(seed)
+        pick = np.concatenate([rng.choice(ix, min(len(ix), 500), replace=False) for lab, ix in
+                               adata.obs.groupby("cell_type", observed=True).indices.items() if lab in valid])
+        de = ad.AnnData(X=adata.X[np.sort(pick)], obs=adata.obs.iloc[np.sort(pick)][["cell_type"]].copy(),
+                        var=pd.DataFrame(index=adata.var_names))
+        de.uns["log1p"] = {"base": None}
+        sc.tl.rank_genes_groups(de, "cell_type", groups=valid, method="wilcoxon", pts=True)
+        top = (sc.get.rank_genes_groups_df(de, None).groupby("group", observed=True).head(15))
         top.to_csv(outdir / "markers_detected.tsv", sep="\t", index=False)
-        del adata.uns["rank_genes_groups"]
+        del de
 
     adata.uns["annotation"] = json.loads(json.dumps({
         "markers": spec.get("version", str(markers)), "markers_used": used,
         "params": dict(sample_key=sample_key, batch_key=batch_key, condition_key=condition_key,
                        max_mito=max_mito, min_genes=min_genes, nmads=nmads, doublets=doublets,
                        n_hvg=n_hvg, n_pcs=n_pcs, res_l1=res1, res_l2=res2, min_score=min_score,
-                       min_margin=min_margin, seed=seed, representation=rep),
+                       min_margin=min_margin, seed=seed, representation=rep,
+                       hvg_flavor=adata.uns.get("hvg_flavor")),
         "method": "cluster-level marker scoring (z-scored mean), two levels"}))
     adata.write_h5ad(outdir / "annotated.h5ad", compression="gzip")
     write_report(outdir, adata, qc_table, t1, t2, condition_key, sample_key, top)

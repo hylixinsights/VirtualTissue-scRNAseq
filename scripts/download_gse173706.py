@@ -161,7 +161,11 @@ def classify(gsm, meta):
                      else "lesional" if "lesion" in low or "psoria" in low
                      else "healthy" if re.search(r"healthy|normal|control", low) else "")
     assay = "spatial" if SPATIAL_WORDS.search(text + " " + meta["library"]) else "scRNA"
-    donor = re.sub(r"[^A-Za-z0-9]+", "_", re.sub(rf"(^|[^A-Za-z])(PP|PN|NS)([^A-Za-z]|$)", r"\1\3", meta["title"])).strip("_")
+    # GEO titles look like "Psoriatic skin from donor 30696 [PP-30696]": the bracket tag is the
+    # reliable patient ID (the free text has typos, e.g. "donor 3696 [PN-30696]")
+    tag = re.search(r"\[\s*(?:PP|PN|NS)[-_ ]?([^\]]+?)\s*\]", meta["title"])
+    donor = (re.sub(r"[^A-Za-z0-9]+", "_", tag.group(1)) if tag else
+             re.sub(r"[^A-Za-z0-9]+", "_", re.sub(rf"(^|[^A-Za-z])(PP|PN|NS)([^A-Za-z]|$)", r"\1\3", meta["title"]))).strip("_")
     return {"gsm": gsm, "sample_id": meta["title"] or gsm, "donor_id": f"donor_{donor}" if donor else gsm,
             "condition": condition, "assay": assay}
 
