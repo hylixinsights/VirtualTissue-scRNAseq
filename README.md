@@ -74,6 +74,28 @@ Unlike Xenium, scRNAseq starts from assumed geometry and has one generic cue,
 not measured polygons and ten fields. RNA score representations also differ.
 No live Jev or biological equivalence is claimed.
 
+## Psoriasis skin data on your own computer (GSE173706)
+
+The public psoriasis dataset (lesional, non-lesional and healthy skin; Ma et al.
+2023, GEO GSE173706) is downloaded from NCBI, so run this where
+`ftp.ncbi.nlm.nih.gov` is reachable. Needs Python 3.12 or 3.13, a few GB of free disk
+and 16 GB of RAM for the full pipeline.
+
+```bash
+git clone https://github.com/hylixinsights/VirtualTissue-scRNAseq.git
+cd VirtualTissue-scRNAseq
+bash scripts/local_psoriasis.sh            # download, build, annotate, trajectory, communication
+# or: bash scripts/local_psoriasis.sh download   (only the raw-count .h5ad)
+```
+
+The script creates `.venv-scrna/`, downloads into `data/raw/GSE173706/` (resumes and
+retries; rerun the same command after an interruption) and writes everything else to
+`data/psoriasis/`: `GSE173706_raw.h5ad`, `annotated/` (labels, report, frequency
+tables), `trajectory/`, `communication/`, and `psoriasis_results_small.zip` with
+only the tables and reports. On Windows use WSL or Git Bash, or run the Python
+commands inside the script one by one. Details:
+[docs/datasets/psoriasis_GSE173706.md](docs/datasets/psoriasis_GSE173706.md).
+
 ## Bring your own biopsy
 
 Inputs: H5AD (`X`, `layers['counts']` or `.raw.X`), Cell Ranger v3+ H5, or 10x

@@ -19,17 +19,19 @@ columns gsm, sample_id, donor_id, condition, assay (assay = scRNA or spatial);
 rows in that file override the parsed values. The build writes the sample table
 it used next to the output so the choice is recorded.
 
-Network: needs ftp.ncbi.nlm.nih.gov (HTTPS). Data never goes into Git.
+Network: needs ftp.ncbi.nlm.nih.gov (HTTPS). `download` uses only the Python standard
+library, resumes interrupted transfers and retries; rerun the same command after a
+failure. Data never goes into Git.
 """
 import argparse
 import gzip
 import hashlib
 import json
 import re
-import shutil
 import sys
 import tarfile
 import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -56,15 +58,49 @@ def sha256(path):
     return h.hexdigest()
 
 
-def fetch(url, dest):
-    if dest.exists() and dest.stat().st_size > 0:
-        print(f"exists: {dest.name}")
-        return
+def remote_size(url):
+    req = urllib.request.Request(url, method="HEAD")
+    with urllib.request.urlopen(req, timeout=120) as r:
+        n = r.headers.get("Content-Length")
+    return int(n) if n else None
+
+
+def fetch(url, dest, retries=8):
+    """Download url to dest. Resumes a partial .part file and retries with backoff.
+
+    A finished file is kept only if its size matches the server's Content-Length.
+    """
     tmp = dest.with_suffix(dest.suffix + ".part")
-    print(f"downloading {url}")
-    with urllib.request.urlopen(url, timeout=600) as r, open(tmp, "wb") as f:
-        shutil.copyfileobj(r, f, 1 << 20)
-    tmp.rename(dest)
+    for attempt in range(retries + 1):
+        try:
+            total = remote_size(url)
+            if dest.exists() and (total is None or dest.stat().st_size == total):
+                print(f"exists: {dest.name}")
+                return
+            done = tmp.stat().st_size if tmp.exists() else 0
+            req = urllib.request.Request(url, headers={"Range": f"bytes={done}-"} if done else {})
+            print(f"downloading {url}" + (f" (resuming at {done / 1e6:.0f} MB)" if done else ""))
+            with urllib.request.urlopen(req, timeout=600) as r:
+                if done and r.status != 206:  # server ignored Range: start over
+                    done = 0
+                with open(tmp, "ab" if done else "wb") as f:
+                    got, step = done, 0
+                    for block in iter(lambda: r.read(1 << 20), b""):
+                        f.write(block)
+                        got += len(block)
+                        if got // (100 << 20) > step:
+                            step = got // (100 << 20)
+                            print(f"  {got / 1e6:.0f} MB" + (f" of {total / 1e6:.0f} MB" if total else ""), flush=True)
+            if total is not None and tmp.stat().st_size != total:
+                raise OSError(f"size {tmp.stat().st_size} != expected {total}")
+            tmp.replace(dest)
+            return
+        except (OSError, urllib.error.URLError) as e:
+            if attempt == retries:
+                sys.exit(f"failed to download {url}: {e}. Rerun the same command to resume.")
+            wait = min(2 ** attempt, 60)
+            print(f"  error: {e}; retrying in {wait}s", file=sys.stderr)
+            time.sleep(wait)
 
 
 def download(outdir):
@@ -74,9 +110,14 @@ def download(outdir):
         fetch(url, outdir / name)
     extracted = outdir / "RAW"
     if not extracted.exists():
-        with tarfile.open(outdir / "GSE173706_RAW.tar") as tar:
-            members = [m for m in tar.getmembers() if m.isfile() and "/" not in m.name and not m.name.startswith(".")]
-            tar.extractall(extracted, members=members, filter="data")
+        partial = outdir / "RAW.extracting"
+        try:
+            with tarfile.open(outdir / "GSE173706_RAW.tar") as tar:
+                members = [m for m in tar.getmembers() if m.isfile() and "/" not in m.name and not m.name.startswith(".")]
+                tar.extractall(partial, members=members, filter="data")
+        except tarfile.TarError as e:
+            sys.exit(f"GSE173706_RAW.tar is damaged ({e}); delete it and rerun download.")
+        partial.rename(extracted)
     sums = {p.relative_to(outdir).as_posix(): sha256(p)
             for p in sorted(outdir.rglob("*")) if p.is_file() and p.name not in ("SHA256SUMS", "SOURCE.json")}
     (outdir / "SHA256SUMS").write_text("".join(f"{v}  {k}\n" for k, v in sums.items()))

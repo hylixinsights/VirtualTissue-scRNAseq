@@ -18,6 +18,28 @@ GEO: [GSE173706](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE173706).
 
 ## Download and build
 
+**On your own computer, one command:** `bash scripts/local_psoriasis.sh` sets up a
+virtual environment, downloads, builds and runs every step below (add `download` to
+stop after the raw `.h5ad`). Downloads resume after an interruption: rerun the same
+command. Expected files:
+
+```
+data/raw/GSE173706/GSE173706_RAW.tar              GEO supplementary archive
+data/raw/GSE173706/GSE173706_series_matrix.txt.gz sample metadata
+data/raw/GSE173706/RAW/                           one count matrix per GSM
+data/raw/GSE173706/SHA256SUMS, SOURCE.json        checksums and provenance of this download
+data/psoriasis/GSE173706_raw.h5ad                 raw counts + sample/donor/condition
+data/psoriasis/GSE173706_raw.samples.tsv          sample table used (check it)
+data/psoriasis/annotated/ trajectory/ communication/
+data/psoriasis/psoriasis_results_small.zip        tables and reports only, easy to share
+```
+
+GEO publishes no checksums for these files; `SHA256SUMS` records the ones of your
+download so that a second download can be compared with it. If you already have the
+files from elsewhere, put them at the paths above and run only `build` and later steps.
+
+Manual equivalent:
+
 Needs `ftp.ncbi.nlm.nih.gov` reachable over HTTPS (about 250 MB download).
 Data goes under `data/raw/` and `data/psoriasis/`, which are git-ignored.
 
